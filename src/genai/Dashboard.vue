@@ -24,17 +24,21 @@ const getHandler = async () => {
   metadatas.value = [];
   for (let content of contents.value) {
     states.value.push(
-      await Agent.state(content, users.value[selectedUser.value])
+      await Agent.state(content, users.value[selectedUser.value].auth.id)
     );
     metadatas.value.push(
-      await Agent.metadata(content, users.value[selectedUser.value])
+      await Agent.metadata(content, users.value[selectedUser.value].auth.id)
     );
   }
 };
 
 onMounted(async () => {
   let urlParams = new URLSearchParams(window.location.search);
-  users.value = urlParams.getAll("user");
+  users.value = await Promise.all(
+    urlParams
+      .getAll("user")
+      .map(id => Agent.environment(id))
+  );
   contents.value = urlParams.getAll("content");
   getHandler();
 });
@@ -161,7 +165,7 @@ const caseStudy = {
       <!-- User Selection -->
       <select v-model="selectedUser" class="w-full select select-bordered">
         <option v-for="(user, index) in users" :key="index" :value="index">
-          Student {{ user }}
+          {{ user.auth.info.name }}
         </option>
       </select>
       <!-- Refresh Button -->
