@@ -4,7 +4,7 @@ import { ref, onMounted, watch } from "vue";
 import { BIconArrowClockwise } from "bootstrap-icons-vue";
 import { S1, S2, S3, S4 } from "./states";
 import { store } from "../store";
-import DbAnswer from "../components/DbAnswer.vue";
+import DbAnswer from "../util/DbAnswer.vue";
 
 store.title = "Generative AI Module Dashboard";
 
@@ -35,9 +35,7 @@ const getHandler = async () => {
 onMounted(async () => {
   let urlParams = new URLSearchParams(window.location.search);
   users.value = await Promise.all(
-    urlParams
-      .getAll("user")
-      .map(id => Agent.environment(id))
+    urlParams.getAll("user").map((id) => Agent.environment(id))
   );
   contents.value = urlParams.getAll("content");
   getHandler();

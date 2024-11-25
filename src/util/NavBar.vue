@@ -2,7 +2,6 @@
 import { store } from "../store";
 import Agent from "@knowlearning/agents/browser.js";
 import {
-  BIconX,
   BIconArrowClockwise,
   BIconCodeSlash,
   BIconBoxArrowRight,
@@ -14,14 +13,9 @@ const restart = async () => {
 </script>
 
 <template>
-  <div
-    class="flex flex-col lg:flex-row items-center p-2 gap-4 bg-primary text-white"
-  >
+  <div class="flex flex-row items-center py-2 px-4 gap-4 bg-primary text-white">
     <!-- Left Content -->
     <div class="flex items-center gap-4 w-full">
-      <button class="btn btn-error btn-xs btn-circle" @click="Agent.close()">
-        <BIconX class="w-5 h-5" style="color: white" />
-      </button>
       <img src="/pila-logo.png" alt="PILA Logo" class="h-6" />
       <h3>{{ store.title }}</h3>
     </div>
@@ -46,6 +40,13 @@ const restart = async () => {
       >
         <BIconBoxArrowRight />
       </button>
+      <a
+        href="https://jordanfung.com"
+        target="_blank"
+        class="btn btn-xs btn-neutral btn-outline outline-white text-white btn-circle"
+      >
+        JF
+      </a>
     </div>
   </div>
 
@@ -71,16 +72,9 @@ const restart = async () => {
       <h3 class="text-lg font-bold">User</h3>
       <p class="py-4">{{ store.auth.user }} ({{ store.auth.provider }})</p>
       <h3 class="text-lg font-bold">State</h3>
-      <pre class="text-xs py-4">{{ store.state }}</pre>
+      <div class="text-xs py-4">{{ store.state }}</div>
       <h3 class="text-lg font-bold">Metadata</h3>
-      <pre class="text-xs py-4">{{ store.metadata }}</pre>
-      <a
-        href="https://jordanfung.com"
-        target="_blank"
-        class="btn btn-xs btn-outline"
-      >
-        Developed by Jordan Fung
-      </a>
+      <div class="text-xs py-4">{{ store.metadata }}</div>
       <div class="modal-action">
         <form method="dialog">
           <button class="btn">Close</button>

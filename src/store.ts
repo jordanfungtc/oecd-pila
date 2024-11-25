@@ -6,7 +6,4 @@ export const store = reactive({
   state: {} as { [key: string]: any }, // KnowLearning state
   metadata: {} as { [key: string]: any }, // KnowLearning metadata
   title: "", // Page title in navbar
-  scrollToTop: () => {
-    window.scrollTo(0, 0);
-  },
 });
