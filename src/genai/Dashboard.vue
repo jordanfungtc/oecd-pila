@@ -4,14 +4,15 @@ import { ref, onMounted, watch } from "vue";
 import { BIconArrowClockwise } from "bootstrap-icons-vue";
 import { S1, S2, S3, S4 } from "./states";
 import { store } from "../store";
-import DbAnswer from "../components/DbAnswer.vue";
-
-store.title = "Generative AI Module Dashboard";
-
+import DbAnswer from "../util/DbAnswer.vue";
+import DbVertical from "../util/DbVertical.vue";
+import DbHorizontal from "../util/DbHorizontal.vue";
 import section1Icon from "/s1/s1-icon.png";
 import section2Icon from "/s2/s2-icon.png";
 import section3Icon from "/s3/s3-icon.png";
 import section4Icon from "/s4/s4-icon.png";
+
+store.title = "Generative AI Module Dashboard";
 
 const users = ref();
 const contents = ref();
@@ -35,9 +36,7 @@ const getHandler = async () => {
 onMounted(async () => {
   let urlParams = new URLSearchParams(window.location.search);
   users.value = await Promise.all(
-    urlParams
-      .getAll("user")
-      .map(id => Agent.environment(id))
+    urlParams.getAll("user").map((id) => Agent.environment(id))
   );
   contents.value = urlParams.getAll("content");
   getHandler();
@@ -74,17 +73,21 @@ const appBrainstorm = {
 };
 
 const llmSingle = {
-  "Selected Prompt": S2.LLM_PROMPT,
-  "Generated Simple": S2.LLM_SIMPLE_GENERATED,
-  "Generated Refined": S2.LLM_REFINED_GENERATED,
-  Technique: S2.LLM_PROMPT_TECHNIQUE,
+  "": {
+    "Selected Prompt": S2.LLM_PROMPT,
+    "Generated Simple": S2.LLM_SIMPLE_GENERATED,
+    "Generated Refined": S2.LLM_REFINED_GENERATED,
+    Technique: S2.LLM_PROMPT_TECHNIQUE,
+  },
 };
 
 const llmConv = {
-  Generated: S2.LLM_CONV_GENERATED,
-  "Fact Check IPOA": S2.LLM_FACT_IPOA,
-  "Fact Check NASA": S2.LLM_FACT_NASA,
-  "Fact Check EUREO": S2.LLM_FACT_EUREO,
+  "": {
+    Generated: S2.LLM_CONV_GENERATED,
+    "Fact Check IPOA": S2.LLM_FACT_IPOA,
+    "Fact Check NASA": S2.LLM_FACT_NASA,
+    "Fact Check EUREO": S2.LLM_FACT_EUREO,
+  },
 };
 
 const llmBrainstorm = {
@@ -110,16 +113,20 @@ const embs = {
 };
 
 const analogy = {
-  Male: S3.EMB_KING_MALE,
-  Female: S3.EMB_KING_FEMALE,
-  Royal: S3.EMB_KING_ROYAL,
+  "": {
+    Male: S3.EMB_KING_MALE,
+    Female: S3.EMB_KING_FEMALE,
+    Royal: S3.EMB_KING_ROYAL,
+  },
 };
 
 const analogyBrainstorm = {
-  Base: S3.ANALOGY_BASE,
-  Subtract: S3.ANALOGY_SUB,
-  Add: S3.ANALOGY_ADD,
-  Ouputs: S3.ANALOGY_OUT,
+  "": {
+    Base: S3.ANALOGY_BASE,
+    Subtract: S3.ANALOGY_SUB,
+    Add: S3.ANALOGY_ADD,
+    Ouputs: S3.ANALOGY_OUT,
+  },
 };
 
 const rag = {
@@ -130,18 +137,26 @@ const rag = {
 };
 
 const biasEmb = {
-  Type: S4.BIAS_TYPE,
-  "Attribute Word": S4.BIAS_ATTRIBUTE,
-  "Target 1 Similarity": S4.BIAS_TARGET1_SIM,
-  "Target 2 Similarity": S4.BIAS_TARGET2_SIM,
+  "": {
+    Type: S4.BIAS_TYPE,
+    "Attribute Word": S4.BIAS_ATTRIBUTE,
+    "Target 1 Similarity": S4.BIAS_TARGET1_SIM,
+    "Target 2 Similarity": S4.BIAS_TARGET2_SIM,
+  },
+};
+
+const biasLlm = {
+  Explanation: S4.BIAS_LLM,
 };
 
 const regs = {
-  "Job Recruiting": S4.REG_RISK_JOB,
-  "Homework LLM": S4.REG_RISK_HOMEWORK,
-  "Fake News": S4.REG_RISK_FAKE,
-  "Judge Cases": S4.REG_RISK_JUDGE,
-  "Predictive Policing": S4.REG_RISK_POLICE,
+  "": {
+    "Job Recruiting": S4.REG_RISK_JOB,
+    "Homework LLM": S4.REG_RISK_HOMEWORK,
+    "Fake News": S4.REG_RISK_FAKE,
+    "Judge Cases": S4.REG_RISK_JUDGE,
+    "Predictive Policing": S4.REG_RISK_POLICE,
+  },
 };
 
 const caseStudy = {
@@ -181,45 +196,16 @@ const caseStudy = {
         <img :src="section1Icon" />
       </div>
       <div class="w-4/5 flex flex-col p-4 border rounded-xl my-8">
-        <!-- AI Application Matching -->
         <h4 class="mt-0">
           <div class="badge">1.2 - 1.6</div>
           AI Application Matching
         </h4>
-        <table class="table table-sm w-full my-0">
-          <tbody>
-            <tr>
-              <th></th>
-              <th v-for="(_value, key) in appMatch.Input" :key="key">
-                {{ key }}
-              </th>
-            </tr>
-            <tr v-for="(row, r_i) in Object.keys(appMatch)" :key="r_i">
-              <th>{{ row }}</th>
-              <td
-                v-for="(question, q_i) in appMatch[row as keyof typeof appMatch]"
-                :key="q_i"
-              >
-                <DbAnswer :states="states" :question="question" />
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <!-- AI Application Brainstorming -->
+        <DbHorizontal :states="states" :questions="appMatch" />
         <h4>
           <div class="badge">1.7 - 1.10</div>
           AI Application Brainstorming
         </h4>
-        <table class="table table-sm w-full my-0">
-          <tbody>
-            <tr v-for="(question, key) in appBrainstorm" :key="key">
-              <th>{{ key }}</th>
-              <td class="w-full">
-                <DbAnswer :states="states" :question="question" />
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <DbVertical :states="states" :questions="appBrainstorm" />
       </div>
     </div>
 
@@ -229,57 +215,21 @@ const caseStudy = {
         <img :src="section2Icon" />
       </div>
       <div class="w-4/5 flex flex-col p-4 border rounded-xl my-8">
-        <!-- Prompt Engineering -->
         <h4 class="mt-0">
           <div class="badge">2.2 - 2.5</div>
           Prompt Engineering
         </h4>
-        <table class="table table-sm w-full my-0">
-          <tbody>
-            <tr>
-              <th v-for="(_value, key) in llmSingle" :key="key">{{ key }}</th>
-            </tr>
-            <tr>
-              <td v-for="(question, key) in llmSingle" :key="key">
-                <DbAnswer :states="states" :question="question" />
-              </td>
-            </tr>
-          </tbody>
-        </table>
-
-        <!-- Conversational AI -->
+        <DbHorizontal :states="states" :questions="llmSingle" />
         <h4>
           <div class="badge">2.6 - 2.7</div>
           Conversational AI
         </h4>
-        <table class="table table-sm w-full my-0">
-          <tbody>
-            <tr>
-              <th v-for="(_value, key) in llmConv" :key="key">{{ key }}</th>
-            </tr>
-            <tr>
-              <td v-for="(question, key) in llmConv" :key="key">
-                <DbAnswer :states="states" :question="question" />
-              </td>
-            </tr>
-          </tbody>
-        </table>
-
-        <!-- LLM Brainstorming -->
+        <DbHorizontal :states="states" :questions="llmConv" />
         <h4>
           <div class="badge">2.9</div>
           LLM Brainstorming
         </h4>
-        <table class="table table-sm w-full my-0">
-          <tbody>
-            <tr v-for="(question, key) in llmBrainstorm" :key="key">
-              <th>{{ key }}</th>
-              <td class="w-full">
-                <DbAnswer :states="states" :question="question" />
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <DbVertical :states="states" :questions="llmBrainstorm" />
       </div>
     </div>
 
@@ -289,32 +239,11 @@ const caseStudy = {
         <img :src="section3Icon" />
       </div>
       <div class="w-4/5 flex flex-col p-4 border rounded-xl my-8">
-        <!-- Word Embeddings -->
         <h4 class="mt-0">
           <div class="badge">3.2</div>
           Word Embeddings
         </h4>
-        <table class="table table-sm w-full my-0">
-          <tbody>
-            <tr>
-              <th></th>
-              <th v-for="(_value, key) in embs.Dog" :key="key">
-                {{ key }}
-              </th>
-            </tr>
-            <tr v-for="(row, r_i) in Object.keys(embs)" :key="r_i">
-              <th>{{ row }}</th>
-              <td
-                v-for="(question, q_i) in embs[row as keyof typeof embs]"
-                :key="q_i"
-              >
-                <DbAnswer :states="states" :question="question" />
-              </td>
-            </tr>
-          </tbody>
-        </table>
-
-        <!-- Similarity Score -->
+        <DbHorizontal :states="states" :questions="embs" />
         <h4>
           <div class="badge">3.4</div>
           Similarity Score
@@ -329,62 +258,21 @@ const caseStudy = {
             </tr>
           </tbody>
         </table>
-
-        <!-- Word Analogy -->
         <h4>
           <div class="badge">3.5</div>
           Word Analogy
         </h4>
-        <table class="table table-sm w-full my-0">
-          <tbody>
-            <tr>
-              <th></th>
-              <th v-for="(_value, key) in analogy" :key="key">{{ key }}</th>
-            </tr>
-            <tr>
-              <th>King</th>
-              <td v-for="(question, key) in analogy" :key="key">
-                <DbAnswer :states="states" :question="question" />
-              </td>
-            </tr>
-          </tbody>
-        </table>
-
-        <!-- Word Analogy Brainstorming -->
+        <DbHorizontal :states="states" :questions="analogy" />
         <h4>
           <div class="badge">3.6</div>
           Word Analogy Brainstorming
         </h4>
-        <table class="table table-sm w-full my-0">
-          <tbody>
-            <tr>
-              <th v-for="(_value, key) in analogyBrainstorm" :key="key">
-                {{ key }}
-              </th>
-            </tr>
-            <tr>
-              <td v-for="(question, key) in analogyBrainstorm" :key="key">
-                <DbAnswer :states="states" :question="question" />
-              </td>
-            </tr>
-          </tbody>
-        </table>
-
-        <!-- Retrieval-Augmented Generation -->
+        <DbHorizontal :states="states" :questions="analogyBrainstorm" />
         <h4>
           <div class="badge">3.9 - 3.10</div>
           Retrieval-Augmented Generation
         </h4>
-        <table class="table table-sm w-full my-0">
-          <tbody>
-            <tr v-for="(question, key) in rag" :key="key">
-              <th>{{ key }}</th>
-              <td class="w-full">
-                <DbAnswer :states="states" :question="question" />
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <DbVertical :states="states" :questions="rag" />
       </div>
     </div>
 
@@ -394,80 +282,31 @@ const caseStudy = {
         <img :src="section4Icon" />
       </div>
       <div class="w-4/5 flex flex-col p-4 border rounded-xl my-8">
-        <!-- Bias in Word Embedding -->
         <h4 class="mt-0">
           <div class="badge">4.2</div>
-          Bias in Word Embedding
+          Bias in Word Embeddings
         </h4>
-        <table class="table table-sm w-full my-0">
-          <tbody>
-            <tr>
-              <th v-for="(_value, key) in biasEmb" :key="key">{{ key }}</th>
-            </tr>
-            <tr>
-              <td v-for="(question, key) in biasEmb" :key="key">
-                <DbAnswer :states="states" :question="question" />
-              </td>
-            </tr>
-          </tbody>
-        </table>
-
-        <!-- Bias in LLM Responses -->
+        <DbHorizontal :states="states" :questions="biasEmb" />
         <h4>
           <div class="badge">4.3</div>
           Bias in LLM Responses
         </h4>
-        <table class="table table-sm w-full my-0">
-          <tbody>
-            <tr>
-              <th>Explanation</th>
-              <td class="w-full">
-                <DbAnswer :states="states" :question="S4.BIAS_LLM" />
-              </td>
-            </tr>
-          </tbody>
-        </table>
-
-        <!-- Regulation Risk Levels -->
+        <DbVertical :states="states" :questions="biasLlm" />
         <h4>
           <div class="badge">4.5</div>
           Regulation Risk Levels
         </h4>
-        <table class="table table-sm w-full my-0">
-          <tbody>
-            <tr>
-              <th v-for="(_value, key) in regs" :key="key">{{ key }}</th>
-            </tr>
-            <tr>
-              <td v-for="(question, key) in regs" :key="key">
-                <DbAnswer :states="states" :question="question" />
-              </td>
-            </tr>
-          </tbody>
-        </table>
-
-        <!-- Sustainability of AI -->
+        <DbHorizontal :states="states" :questions="regs" />
         <h4>
           <div class="badge">4.6 - 4.7</div>
           Sustainability of AI
         </h4>
         <span>Interactive Exercise</span>
-
-        <!-- Case Study -->
         <h4>
           <div class="badge">4.9 - 4.10</div>
           Case Study
         </h4>
-        <table class="table table-sm w-full my-0">
-          <tbody>
-            <tr v-for="(question, key) in caseStudy" :key="key">
-              <th>{{ key }}</th>
-              <td class="w-full">
-                <DbAnswer :states="states" :question="question" />
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <DbVertical :states="states" :questions="caseStudy" />
       </div>
     </div>
 

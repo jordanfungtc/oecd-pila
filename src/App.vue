@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Agent from "@knowlearning/agents/browser.js";
 import { store } from "./store";
-import NavBar from "./components/NavBar.vue";
+import NavBar from "./util/NavBar.vue";
 import { inject } from "@vercel/analytics";
 
 Agent.environment().then(async ({ auth }) => {
