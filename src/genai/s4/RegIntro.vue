@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { BIconFileEarmarkTextFill } from "bootstrap-icons-vue";
 import oecdAiIcon from "/s4/oecd-ai-logo.jpg";
 import aiActIcon from "/s4/ai-act-logo.png";
 </script>
