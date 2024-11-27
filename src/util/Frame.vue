@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import Agent from "@knowlearning/agents/browser.js";
 import { BIconChevronLeft, BIconChevronRight } from "bootstrap-icons-vue";
 import { store } from "../store";
 import { ref } from "vue";
@@ -7,11 +6,6 @@ import { ref } from "vue";
 store.title = "Generative AI Module";
 const props = defineProps(["steps"]);
 const step = ref(0);
-
-const submitHandler = () => {
-  // @ts-ignore
-  Agent.close({ success: true });
-};
 </script>
 
 <template>
@@ -47,7 +41,8 @@ const submitHandler = () => {
     <!-- Next/Submit Button -->
     <button
       class="btn btn-circle w-16 h-16 btn-neutral"
-      @click="step < props.steps - 1 ? step++ : submitHandler"
+      @click="step++"
+      :disabled="step === props.steps - 1"
     >
       <BIconChevronRight class="w-8 h-8" />
     </button>
