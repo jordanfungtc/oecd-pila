@@ -17,8 +17,6 @@ const S1: Record<string, any> = {
   APP_BRAINSTORM_PROBLEM: { state: "app_brainstorm_problem", answer: null },
   APP_BRAINSTORM_INPUT: { state: "app_brainstorm_input", answer: null },
   APP_BRAINSTORM_OUTPUT: { state: "app_brainstorm_output", answer: null },
-  APP_BRAINSTORM_CHALLENGE: { state: "app_brainstorm_challenge", answer: null },
-  APP_BRAINSTORM_SOLUTION: { state: "app_brainstorm_solution", answer: null },
 };
 
 const S2: Record<string, any> = {

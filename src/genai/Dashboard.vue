@@ -68,8 +68,6 @@ const appBrainstorm = {
   Problem: S1.APP_BRAINSTORM_PROBLEM,
   Input: S1.APP_BRAINSTORM_INPUT,
   Output: S1.APP_BRAINSTORM_OUTPUT,
-  Challenge: S1.APP_BRAINSTORM_CHALLENGE,
-  Solution: S1.APP_BRAINSTORM_SOLUTION,
 };
 
 const llmSingle = {
