@@ -16,18 +16,6 @@ import sectionIcon from "/s3/s3-icon.png";
         to represent the meaning of words, sentences, entire documents, or even
         images and videos.
       </p>
-      <h4>In this section</h4>
-      <ul>
-        <li>Create the embeddings for words based on predefined features</li>
-        <li>
-          Calculate the similarity score between embeddings and explore word
-          analogies
-        </li>
-        <li>
-          Experience retrieval-augmented generation (RAG) and brainstorm its
-          applications
-        </li>
-      </ul>
       <a
         href="https://www.youtube.com/watch?v=wgfSDrqYMJ4"
         target="_blank"

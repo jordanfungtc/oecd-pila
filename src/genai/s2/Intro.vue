@@ -15,20 +15,6 @@ import sectionIcon from "/s2/s2-icon.png";
         as output. LLMs and other Generative AI models have gained popularity in
         recent years due to their wide-ranging applications.
       </p>
-      <h4>In this section</h4>
-      <ul>
-        <li>
-          Generate responses using LLMs and learn prompt engineering techniques
-        </li>
-        <li>
-          Experience the conversational capabilities of LLMs and identify their
-          limitations
-        </li>
-        <li>
-          Brainstorm everyday applications of LLMs and write prompts for
-          specific tasks
-        </li>
-      </ul>
       <a
         href="https://www.youtube.com/watch?v=iR2O2GPbB0E"
         target="_blank"

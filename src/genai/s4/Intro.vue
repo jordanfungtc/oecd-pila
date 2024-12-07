@@ -14,25 +14,6 @@ import sectionIcon from "/s4/s4-icon.png";
         challenges is crucial to ensuring that AI systems are fair, equitable,
         and inclusive for all users.
       </p>
-      <h4>In this section</h4>
-      <ul>
-        <li>
-          Investigate bias in word embeddings and large language model (LLM)
-          responses
-        </li>
-        <li>
-          Explore the regulation of AI systems under the EU Artificial
-          Intelligence Act
-        </li>
-        <li>
-          Assess the environmental impact of AI systems in the training and
-          inference phases
-        </li>
-        <li>
-          Evaluate a case study scenario in the context of AI ethics and
-          sustainability
-        </li>
-      </ul>
       <a
         href="https://www.youtube.com/watch?v=VqFqWIqOB1g"
         target="_blank"

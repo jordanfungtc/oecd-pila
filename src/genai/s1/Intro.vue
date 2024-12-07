@@ -15,20 +15,6 @@ import sectionIcon from "/s1/s1-icon.png";
         mathematical models using large amounts of data, which can then be used
         to make predictions or decisions based on new data.
       </p>
-      <h4>In this section</h4>
-      <ul>
-        <li>
-          Learn about the applications of AI and the inputs and outputs they
-          require
-        </li>
-        <li>
-          Identify a sector where AI could be beneficial and brainstorm a
-          problem to solve
-        </li>
-        <li>
-          Design an AI solution to the problem and consider potential challenges
-        </li>
-      </ul>
       <a
         href="https://www.youtube.com/watch?v=reUZRyXxUs4"
         target="_blank"
