@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { BIconPlayBtn } from "bootstrap-icons-vue";
 import sectionIcon from "/s1/s1-icon.png";
 </script>
 
@@ -12,15 +13,23 @@ import sectionIcon from "/s1/s1-icon.png";
         commands, how your email filters out spam, how your car's navigation
         system finds the best route, or how your favourite music streaming
         service suggests songs you might like? These tasks are all accomplished
-        with the help of Artificial Intelligence (AI).
+        with the help of artificial intelligence (AI).
       </p>
       <p>
         AI is a branch of computer science that enables machines to perform
-        tasks that typically require human intelligence, like making predictions
-        and decisions or solving problems. A key area of AI is machine learning
-        (ML), where computers learn patterns from large amounts of data and
-        build a mathematical model.
+        tasks that typically require human intelligence, like making
+        predictions, decision-making or solving problems. A key area of AI is
+        machine learning (ML), where computers learn patterns from large amounts
+        of data and build a mathematical model.
       </p>
+      <a
+        href="https://www.youtube.com/watch?v=reUZRyXxUs4"
+        target="_blank"
+        class="no-underline flex gap-2 items-center text-primary mt-8"
+      >
+        <BIconPlayBtn /> TED Talk: How AI Could Empower Any Business by Andrew
+        Ng
+      </a>
     </div>
   </div>
 </template>
