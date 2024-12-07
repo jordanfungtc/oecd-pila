@@ -102,7 +102,7 @@ const outputs = {
   </div>
   <p>
     <strong>Task: </strong>
-    To apply AI to the above sector, can you guess what the inputs to the AI
+    To use AI for the above application, can you guess what the inputs to the AI
     system would be and what the expected outputs are? Select the correct
     options from the dropdowns below, then read the explanation to learn more.
   </p>

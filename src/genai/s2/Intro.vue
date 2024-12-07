@@ -7,13 +7,21 @@ import sectionIcon from "/s2/s2-icon.png";
   <div class="flex gap-16">
     <img :src="sectionIcon" class="w-48 h-48 mt-12" />
     <div>
-      <h2>Large Language Models</h2>
+      <h2>Generative AI</h2>
       <p>
-        Large language models (LLMs) are ML models that are trained on vast
-        amounts of text data to learn patterns and structures in human language.
-        They take text as input (called a prompt) and generate a text response
-        as output. LLMs and other Generative AI models have gained popularity in
-        recent years due to their wide-ranging applications.
+        In the last section, we explored how AI systems analyze input data to
+        make predictions, offer recommendations, or solve problems by
+        identifying patterns in data. In this section, we will focus on
+        Generative AI, a type of AI designed to generate new content, including
+        text, images, music, and more.
+      </p>
+      <p>
+        A common type of Generative AI are Large Language Models (LLMs). LLMs
+        are machine learning models trained on large amounts of text data to
+        learn the pattern, structure, and nuances of human language. They take
+        text as input (called a prompt) and generate coherent and contextually
+        relevant text as output (response). Many popular AI chatbot systems are
+        powered by LLMs, including ChatGPT, Gemini, and LLaMA.
       </p>
       <a
         href="https://www.youtube.com/watch?v=iR2O2GPbB0E"

@@ -32,8 +32,8 @@ import navigationIcon from "/s1/navigation.png";
         <div>
           <h4 class="mt-0">Music Streaming Services</h4>
           <p class="text-sm my-0">
-            Inputs: Listening history, preferences → Outputs: Song
-            recommendations
+            Inputs: Listening history, preferences<br />
+            Outputs: Song recommendations
           </p>
         </div>
       </div>
@@ -42,7 +42,8 @@ import navigationIcon from "/s1/navigation.png";
         <div>
           <h4 class="mt-0">Smartphone Assistants</h4>
           <p class="text-sm my-0">
-            Inputs: Voice commands, user data → Outputs: Actions to perform
+            Inputs: Voice commands, user data<br />
+            Outputs: Actions to perform
           </p>
         </div>
       </div>
@@ -51,8 +52,8 @@ import navigationIcon from "/s1/navigation.png";
         <div>
           <h4 class="mt-0">Spam Filters</h4>
           <p class="text-sm my-0">
-            Inputs: Email sender, text content → Outputs: Classification as spam
-            or not spam
+            Inputs: Email sender, text content<br />
+            Outputs: Spam or not spam
           </p>
         </div>
       </div>
@@ -61,8 +62,8 @@ import navigationIcon from "/s1/navigation.png";
         <div>
           <h4 class="mt-0">Navigation Systems</h4>
           <p class="text-sm my-0">
-            Inputs: Current location, destination, traffic data → Outputs: Best
-            route to take
+            Inputs: Current location, destination, map<br />
+            Outputs: Best route to take
           </p>
         </div>
       </div>
