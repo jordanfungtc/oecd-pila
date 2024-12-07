@@ -17,17 +17,17 @@ import navigationIcon from "/s1/navigation.png";
       <p>
         Without inputs, the AI system would have no data to process, making it
         incapable of making predictions, offering recommendations, or performing
-        tasks. Having suitable outputs is equally as important, as it determines
-        the usefulness of the AI system to the user.
+        tasks. Having suitable outputs is equally as important to ensure that
+        the AI system is useful and relevant for the user.
       </p>
       <p>
-        Let's examine some examples of common AI systems and their inputs and
-        outputs!
+        Some examples of AI systems and their inputs and outputs are provided on
+        the right.
       </p>
     </div>
 
-    <div class="w-1/2 flex flex-col gap-4 mt-2">
-      <div class="flex gap-8 p-4 border rounded-xl">
+    <div class="w-1/2 flex flex-col gap-2 mt-6">
+      <div class="flex gap-6 p-4 border rounded-xl">
         <img :src="musicIcon" class="w-16 h-16 my-0" />
         <div>
           <h4 class="mt-0">Music Streaming Services</h4>
@@ -37,7 +37,7 @@ import navigationIcon from "/s1/navigation.png";
           </p>
         </div>
       </div>
-      <div class="flex gap-8 p-4 border rounded-xl">
+      <div class="flex gap-6 p-4 border rounded-xl">
         <img :src="assistantIcon" class="w-16 h-16 my-0" />
         <div>
           <h4 class="mt-0">Smartphone Assistants</h4>
@@ -46,7 +46,7 @@ import navigationIcon from "/s1/navigation.png";
           </p>
         </div>
       </div>
-      <div class="flex gap-8 p-4 border rounded-xl">
+      <div class="flex gap-6 p-4 border rounded-xl">
         <img :src="spamIcon" class="w-16 h-16 my-0" />
         <div>
           <h4 class="mt-0">Spam Filters</h4>
@@ -56,7 +56,7 @@ import navigationIcon from "/s1/navigation.png";
           </p>
         </div>
       </div>
-      <div class="flex gap-8 p-4 border rounded-xl">
+      <div class="flex gap-6 p-4 border rounded-xl">
         <img :src="navigationIcon" class="w-16 h-16 my-0" />
         <div>
           <h4 class="mt-0">Navigation Systems</h4>
