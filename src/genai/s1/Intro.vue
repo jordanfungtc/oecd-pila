@@ -9,18 +9,18 @@ import sectionIcon from "/s1/s1-icon.png";
     <div>
       <h2>What is AI?</h2>
       <p>
-        Have you ever wondered how your smartphone recognizes your voice
-        commands, how your email filters out spam, how your car's navigation
-        system finds the best route, or how your favourite music streaming
-        service suggests songs you might like? These tasks are all accomplished
-        with the help of artificial intelligence (AI).
+        Have you ever wondered how your favourite music streaming service
+        suggests songs you might like, how your smartphone recognizes your voice
+        commands, how your email filters out spam, or how a navigation app finds
+        the best route? These tasks are all accomplished with the help of
+        artificial intelligence (AI).
       </p>
       <p>
         AI is a branch of computer science that enables machines to perform
         tasks that typically require human intelligence, like making
-        predictions, decision-making or solving problems. A key area of AI is
-        machine learning (ML), where computers learn patterns from large amounts
-        of data and build a mathematical model.
+        predictions, decisions or solving problems. A key area of AI is machine
+        learning (ML), where computers learn patterns from large amounts of data
+        and build a mathematical model.
       </p>
       <a
         href="https://www.youtube.com/watch?v=reUZRyXxUs4"

@@ -102,8 +102,9 @@ const outputs = {
   </div>
   <p>
     <strong>Task: </strong>
-    For this application, what are the inputs to the AI system and what outputs
-    is it designed to predict?
+    To apply AI to this sector, can you guess what the inputs to the AI system
+    would be and what the expected outputs are? Select the correct options from
+    the dropdowns below, then read the explanation to learn more.
   </p>
   <div class="flex flex-row gap-2 w-full items-center">
     <!-- Input Select -->
@@ -153,7 +154,7 @@ const outputs = {
       store.state[apps[props.i].in.state] === apps[props.i].in.answer &&
       store.state[apps[props.i].out.state] === apps[props.i].out.answer
     "
-    class="flex gap-12 items-center mt-8"
+    class="flex gap-12 items-center mt-4"
   >
     <!-- Image -->
     <img
