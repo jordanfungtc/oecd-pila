@@ -27,7 +27,7 @@ import navigationIcon from "/s1/navigation.png";
     </div>
 
     <div class="w-1/2 flex flex-col gap-2 mt-6">
-      <div class="flex gap-6 p-4 border rounded-xl">
+      <div class="flex gap-8 p-4 border rounded-xl items-center">
         <img :src="musicIcon" class="w-16 h-16 my-0" />
         <div>
           <h4 class="mt-0">Music Streaming Services</h4>
@@ -37,7 +37,7 @@ import navigationIcon from "/s1/navigation.png";
           </p>
         </div>
       </div>
-      <div class="flex gap-6 p-4 border rounded-xl">
+      <div class="flex gap-8 p-4 border rounded-xl items-center">
         <img :src="assistantIcon" class="w-16 h-16 my-0" />
         <div>
           <h4 class="mt-0">Smartphone Assistants</h4>
@@ -47,7 +47,7 @@ import navigationIcon from "/s1/navigation.png";
           </p>
         </div>
       </div>
-      <div class="flex gap-6 p-4 border rounded-xl">
+      <div class="flex gap-8 p-4 border rounded-xl items-center">
         <img :src="spamIcon" class="w-16 h-16 my-0" />
         <div>
           <h4 class="mt-0">Spam Filters</h4>
@@ -57,7 +57,7 @@ import navigationIcon from "/s1/navigation.png";
           </p>
         </div>
       </div>
-      <div class="flex gap-6 p-4 border rounded-xl">
+      <div class="flex gap-8 p-4 border rounded-xl items-center">
         <img :src="navigationIcon" class="w-16 h-16 my-0" />
         <div>
           <h4 class="mt-0">Navigation Systems</h4>

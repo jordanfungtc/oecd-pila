@@ -109,7 +109,7 @@ const outputs = {
   <div class="flex flex-row gap-2 w-full items-center">
     <!-- Input Select -->
     <select
-      class="select select-bordered w-full bg-white"
+      class="select select-bordered w-full"
       v-model="store.state[apps[props.i].in.state]"
       v-bind:class="{
         'select-success':
@@ -128,7 +128,7 @@ const outputs = {
     <span>→</span>
     <!-- Output Select -->
     <select
-      class="select select-bordered w-full bg-white"
+      class="select select-bordered w-full"
       v-model="store.state[apps[props.i].out.state]"
       v-bind:class="{
         'select-success':
