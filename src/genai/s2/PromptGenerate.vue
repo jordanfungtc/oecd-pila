@@ -26,7 +26,7 @@ const generateHandler = () => {
 </script>
 
 <template>
-  <h2>{{ props.i === "0" ? "Simple" : "Refined" }} Prompt</h2>
+  <h2>Prompt {{ props.i === "0" ? "A" : "B" }}</h2>
   <div class="flex gap-4 items-center">
     <textarea
       class="textarea textarea-lg textarea-bordered w-full leading-normal"
