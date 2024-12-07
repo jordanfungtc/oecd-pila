@@ -8,17 +8,17 @@ import navigationIcon from "/s1/navigation.png";
 <template>
   <div class="flex gap-12">
     <div class="w-1/2">
-      <h2>Inputs and Outputs</h2>
+      <h2>Identifying Inputs and Outputs</h2>
       <p>
-        To use AI and ML effectively, we need to understand the importance of
-        inputs and outputs. Inputs are the information that the AI system needs
-        to function, whereas outputs are the results it provides to the user.
+        To effectively use AI and ML, we need to clearly identify the inputs and
+        outputs. Inputs are the information that the AI system needs in order to
+        operate, while outputs are the results it provides to the user.
       </p>
       <p>
         Without inputs, the AI system would have no data to process, making it
         incapable of making predictions, offering recommendations, or performing
-        tasks. Having suitable outputs is equally as important to ensure that
-        the AI system is useful and relevant for the user.
+        tasks. Similarly, having appropriate outputs is crucial to ensuring that
+        the AI system is useful and relevant to the user.
       </p>
       <p>
         Some examples of AI systems and their inputs and outputs are provided on

@@ -9,14 +9,14 @@ import healthcareIcon from "/s1/b-healthcare.png";
     <div class="w-2/5">
       <h2>Designing an AI System</h2>
       <p>
-        As we saw in all these applications, there is a clear problem that the
-        AI system is trying to solve. The AI system is designed to take some
-        relevant input data, which it then analyzes and predicts an output.
-        Finally, the output can be used by the user to solve the problem.
+        As we saw in each of the applications, there is a clear problem that
+        needs to be solved using AI. The AI system is designed to take relevant
+        input data, analyze it, and predict an output. Finally, the output can
+        be used by the user to solve the problem.
       </p>
       <p>
-        Now is your turn to design an AI system. We must first identify a
-        problem that we want to solve in a specific sector. Some examples are
+        Now it is your turn to design an AI system. You must first identify a
+        problem that you want to solve in a specific sector. Some examples are
         provided on the right.
       </p>
     </div>

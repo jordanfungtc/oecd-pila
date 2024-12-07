@@ -17,10 +17,11 @@ import sectionIcon from "/s1/s1-icon.png";
       </p>
       <p>
         AI is a branch of computer science that enables machines to perform
-        tasks that typically require human intelligence, like making
-        predictions, decisions or solving problems. A key area of AI is machine
-        learning (ML), where computers learn patterns from large amounts of data
-        and build a mathematical model.
+        tasks that typically require human intelligence. One important part of
+        AI is called machine learning (ML). With ML, computers learn from lots
+        of data and find patterns to make predictions or decisions without the
+        need for humans to explicitly program them. AI and ML are used in a wide
+        range of applications and have radically transformed many industries.
       </p>
       <a
         href="https://www.youtube.com/watch?v=reUZRyXxUs4"
