@@ -196,7 +196,7 @@ const caseStudy = {
       <div class="w-4/5 flex flex-col p-4 border rounded-xl my-8">
         <h4 class="mt-0">
           <div class="badge">1.3 - 1.7</div>
-          Input-Output Matching
+          Identifying Inputs and Outputs
         </h4>
         <DbHorizontal :states="states" :questions="appMatch" />
         <h4>
@@ -225,7 +225,7 @@ const caseStudy = {
         <DbHorizontal :states="states" :questions="llmConv" />
         <h4>
           <div class="badge">2.9</div>
-          LLM Brainstorming
+          LLMs in Everyday Life
         </h4>
         <DbVertical :states="states" :questions="llmBrainstorm" />
       </div>
@@ -238,24 +238,14 @@ const caseStudy = {
       </div>
       <div class="w-4/5 flex flex-col p-4 border rounded-xl my-8">
         <h4 class="mt-0">
-          <div class="badge">3.2</div>
-          Word Embeddings
+          <div class="badge">3.2-3.3</div>
+          Creating Word Embeddings
         </h4>
         <DbHorizontal :states="states" :questions="embs" />
         <h4>
           <div class="badge">3.4</div>
           Similarity Score
         </h4>
-        <table class="table table-sm w-full my-0">
-          <tbody>
-            <tr>
-              <th>Cat/Car</th>
-              <td class="w-full">
-                <DbAnswer :states="states" :question="S3.SIM_CAT_CAR" />
-              </td>
-            </tr>
-          </tbody>
-        </table>
         <h4>
           <div class="badge">3.5</div>
           Word Analogy
@@ -299,7 +289,6 @@ const caseStudy = {
           <div class="badge">4.6 - 4.7</div>
           Sustainability of AI
         </h4>
-        <span>Interactive Exercise</span>
         <h4>
           <div class="badge">4.9 - 4.10</div>
           Case Study

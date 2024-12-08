@@ -43,7 +43,6 @@ const S3: Record<string, any> = {
   EMB_CAR_MAMMAL: { state: "emb_car_mammal", answer: 0 },
   EMB_CAR_WHEEL: { state: "emb_car_wheel", answer: 1 },
   EMB_CAR_TAIL: { state: "emb_car_tail", answer: 0 },
-  SIM_CAT_CAR: { state: "sim_cat_car", answer: 0.408 },
   EMB_KING_MALE: { state: "emb_king_male", answer: 1 },
   EMB_KING_FEMALE: { state: "emb_king_female", answer: 0 },
   EMB_KING_ROYAL: { state: "emb_king_royal", answer: 1 },

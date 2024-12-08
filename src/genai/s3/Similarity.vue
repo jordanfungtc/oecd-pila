@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import { VueLatex } from "vatex";
+import { BIconCalculator } from "bootstrap-icons-vue";
+import { S3 } from "../states";
+import { store } from "../../store";
 </script>
 
 <template>
@@ -65,4 +68,50 @@ import { VueLatex } from "vatex";
       <button class="btn btn-xs btn-circle">?</button>
     </div>
   </div>
+
+  <h2>Similarity Score</h2>
+  <p>
+    <strong>Task:</strong>
+    Calculate the similarity score between the word embeddings of "😼 cat"
+    (0,1,1,0,1) and "🚗 car" (0,1,0,1,0). Which of the pairs of words are more
+    related: cat and car, or cat and dog?
+  </p>
+
+  <!-- Dot Product -->
+  <VueLatex
+    expression="\text{Cat}\cdot\text{Car}=0\times0+1\times1+1\times0+0\times1+1\times0=1"
+    display-mode
+  />
+
+  <!-- Magnitudes -->
+  <div>
+    <VueLatex
+      expression="\Vert\text{Cat}\Vert=\sqrt{0^2+1^2+1^2+0^2+1^2}=1.732"
+      display-mode
+    />
+    <VueLatex
+      expression="\Vert\text{Car}\Vert=\sqrt{0^2+1^2+0^2+1^2+0^2}=1.414"
+      display-mode
+    />
+  </div>
+
+  <!-- Task Similarity -->
+  <VueLatex
+    expression="\text{Similarity}=\frac{\text{Cat}\cdot\text{Car}}{\Vert\text{Cat}\Vert\cdot\Vert\text{Car}\Vert}=\frac{1}{1.732\times1.414}=0.408"
+    display-mode
+  />
+
+  <a
+    href="https://www.omnicalculator.com/math/cosine-similarity"
+    target="_blank"
+    class="no-underline flex gap-2 items-center text-primary"
+  >
+    <BIconCalculator class="w-5 h-5" />
+  </a>
+
+  <p>
+    As expected, the similarity score between the words 'cat' and 'car' (0.408)
+    is lower than that between 'cat' and 'dog' (0.866), as cars are less similar
+    to cats than dogs are.
+  </p>
 </template>

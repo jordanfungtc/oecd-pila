@@ -16,11 +16,15 @@ import sectionIcon from "/s3/s3-icon.png";
         embeddings.
       </p>
       <p>
-        We can think of embeddings as a way to change words into numbers that
-        carry information about the words' meanings and relationships to other
-        words. These numerical representations are not only used by LLMs to
-        generate text but also has many other fascinating uses which we will
-        explore in this section.
+        We can think of word embeddings as a way to represent words as numbers
+        that carry information about their meanings and relationships to other
+        words. Embeddings can also be used represent the meaning of sentences,
+        entire documents, or even images.
+      </p>
+      <p>
+        These numerical representations are not only used in LLMs to generate
+        text but also has many other fascinating uses which we will explore in
+        this section.
       </p>
       <a
         href="https://www.youtube.com/watch?v=wgfSDrqYMJ4"

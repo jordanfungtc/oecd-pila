@@ -7,7 +7,7 @@ import sectionIcon from "/s1/s1-icon.png";
   <div class="flex gap-16">
     <img :src="sectionIcon" class="w-48 h-48 mt-12" />
     <div>
-      <h2>Introduction to Artificial Intelligence</h2>
+      <h2>AI and Machine Learning</h2>
       <p>
         Have you ever wondered how your favourite music streaming service
         suggests songs you might like, how your smartphone recognizes your voice

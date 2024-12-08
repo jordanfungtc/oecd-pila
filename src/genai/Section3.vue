@@ -2,9 +2,9 @@
 import { store } from "../store";
 import Frame from "../util/Frame.vue";
 import Intro from "./s3/Intro.vue";
-import Embeddings from "./s3/Embeddings.vue";
-import SimilarityExample from "./s3/SimilarityExample.vue";
-import SimilarityTask from "./s3/SimilarityTask.vue";
+import EmbIntro from "./s3/EmbIntro.vue";
+import EmbTask from "./s3/EmbTask.vue";
+import Similarity from "./s3/Similarity.vue";
 import AnalogyTask from "./s3/AnalogyTask.vue";
 import AnalogyBrainstorm from "./s3/AnalogyBrainstorm.vue";
 import RagIntro from "./s3/RagIntro.vue";
@@ -18,9 +18,9 @@ store.title = "Generative AI Module";
 <template>
   <Frame :steps="10">
     <template #0><Intro /></template>
-    <template #1><Embeddings /></template>
-    <template #2><SimilarityExample /></template>
-    <template #3><SimilarityTask /></template>
+    <template #1><EmbIntro /></template>
+    <template #2><EmbTask /></template>
+    <template #3><Similarity /></template>
     <template #4><AnalogyTask /></template>
     <template #5><AnalogyBrainstorm /></template>
     <template #6><RagIntro /></template>

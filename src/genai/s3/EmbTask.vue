@@ -35,21 +35,14 @@ const embs = {
 </script>
 
 <template>
-  <h2>Word Embeddings</h2>
-  <p>
-    When we think of the word "😼 cat," we can associate it with features such
-    as "mammal," "can move," and "has a tail." To create a word embedding,
-    language models can assign values to these features based on how closely
-    they are associated with the word "😼 cat." For instance, we can use 1 and 0
-    to indicate the presence or absence of a feature.
-  </p>
+  <h2>Creating Word Embeddings</h2>
   <p>
     <strong>Task:</strong>
     Can you think of how language models might assign embeddings to the words
     "🐶 dog" and "🚗 car"?
   </p>
   <div class="flex justify-center">
-    <table class="table table-sm my-0">
+    <table class="table table-sm">
       <tbody>
         <tr>
           <th></th>
