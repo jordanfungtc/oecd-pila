@@ -16,7 +16,7 @@ store.title = "Generative AI Module";
 </script>
 
 <template>
-  <Frame :steps="11">
+  <Frame :steps="10">
     <template #0><Intro /></template>
     <template #1><EmbIntro /></template>
     <template #2><EmbTask /></template>
