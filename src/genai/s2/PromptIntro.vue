@@ -11,7 +11,7 @@ import programmingIcon from "/s2/programming.png";
       <p>
         The prompt is the input that you provide to the LLM, which can be in the
         form of questions or instructions. The LLM will then generate a response
-        based on the data that it has been trained on.
+        to the prompt based on the data that it has been trained on.
       </p>
       <p>
         LLMs can be used on a wide range of tasks, including question answering,

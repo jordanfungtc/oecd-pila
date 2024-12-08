@@ -20,7 +20,7 @@ import intelPropIcon from "/s2/intel-prop.png";
       </p>
     </div>
     <div class="w-2/3 flex flex-col gap-4 mt-12">
-      <div class="flex gap-8 p-4 border rounded-xl">
+      <div class="flex gap-8 py-3 px-6 border rounded-xl">
         <img :src="dataCutoffIcon" class="w-16 h-16 my-4" />
         <div>
           <h4 class="mt-0">Data Cut-off</h4>
@@ -31,7 +31,7 @@ import intelPropIcon from "/s2/intel-prop.png";
           </p>
         </div>
       </div>
-      <div class="flex gap-8 p-4 border rounded-xl">
+      <div class="flex gap-8 py-3 px-6 border rounded-xl">
         <img :src="hallucinationIcon" class="w-16 h-16 my-4" />
         <div>
           <h4 class="mt-0">Hallucinations</h4>
@@ -42,7 +42,7 @@ import intelPropIcon from "/s2/intel-prop.png";
           </p>
         </div>
       </div>
-      <div class="flex gap-8 p-4 border rounded-xl">
+      <div class="flex gap-8 py-3 px-6 border rounded-xl">
         <img :src="intelPropIcon" class="w-16 h-16 my-4" />
         <div>
           <h4 class="mt-0">Intellectual Property</h4>

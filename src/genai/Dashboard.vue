@@ -220,7 +220,7 @@ const caseStudy = {
         <DbHorizontal :states="states" :questions="llmSingle" />
         <h4>
           <div class="badge">2.6 - 2.7</div>
-          Conversational AI
+          Limitations of LLMs
         </h4>
         <DbHorizontal :states="states" :questions="llmConv" />
         <h4>

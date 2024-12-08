@@ -21,7 +21,7 @@ import healthcareIcon from "/s1/b-healthcare.png";
       </p>
     </div>
     <div class="w-3/5 flex flex-col gap-4 mt-8">
-      <div class="flex gap-8 p-4 border rounded-xl items-center">
+      <div class="flex gap-8 py-3 px-6 border rounded-xl items-center">
         <img :src="transportIcon" class="w-20 h-20 my-0" />
         <div>
           <h4 class="mt-0">Sector: Transportation</h4>
@@ -32,7 +32,7 @@ import healthcareIcon from "/s1/b-healthcare.png";
           </p>
         </div>
       </div>
-      <div class="flex gap-8 p-4 border rounded-xl items-center">
+      <div class="flex gap-8 py-3 px-6 border rounded-xl items-center">
         <img :src="environmentIcon" class="w-20 h-20 my-0" />
         <div>
           <h4 class="mt-0">Sector: Environment</h4>
@@ -43,7 +43,7 @@ import healthcareIcon from "/s1/b-healthcare.png";
           </p>
         </div>
       </div>
-      <div class="flex gap-8 p-4 border rounded-xl items-center">
+      <div class="flex gap-8 py-3 px-6 border rounded-xl items-center">
         <img :src="healthcareIcon" class="w-20 h-20 my-0" />
         <div>
           <h4 class="mt-0">Sector: Healthcare</h4>

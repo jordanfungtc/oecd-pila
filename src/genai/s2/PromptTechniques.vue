@@ -15,8 +15,8 @@ const promptTechniques = [
   <h2>Prompt Engineering Techniques</h2>
   <p>
     <strong>Task: </strong>
-    When writing prompts for LLMs, which of the following techniques should you
-    consider?
+    When writing prompts for LLMs, which of the following techniques do you
+    think should you consider?
   </p>
   <div
     v-for="(technique, index) in promptTechniques"
