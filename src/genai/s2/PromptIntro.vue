@@ -1,19 +1,58 @@
 <script setup lang="ts">
-import { BIconFileEarmarkTextFill } from "bootstrap-icons-vue";
+import qaIcon from "/s2/qa.png";
+import contentIcon from "/s2/content.png";
+import programmingIcon from "/s2/programming.png";
 </script>
 
 <template>
-  <h2>Prompt Engineering</h2>
-  <p>
-    Prompt engineering is the process of crafting effective prompts in the form
-    of questions or instructions to guide LLMs in generating the desired output.
-    Mastering this skill can significantly enhance the quality of the responses.
-  </p>
-  <a
-    href="https://www.promptingguide.ai/"
-    target="_blank"
-    class="no-underline flex gap-2 items-center text-primary"
-  >
-    <BIconFileEarmarkTextFill /> DAIR.AI: Prompt Engineering Guide
-  </a>
+  <div class="flex gap-12">
+    <div class="w-2/5">
+      <h2>Writing Prompts</h2>
+      <p>
+        The prompt is the input that you provide to the LLM, which can be in the
+        form of questions or instructions. The LLM will then generate a response
+        based on the data that it has been trained on.
+      </p>
+      <p>
+        LLMs can be used on a wide range of tasks, including question answering,
+        content creation, programming, and more. Some examples of prompts are
+        provided on the right.
+      </p>
+    </div>
+    <div class="w-3/5 flex flex-col gap-4 mt-8">
+      <div class="flex gap-8 py-3 px-6 border rounded-xl items-center">
+        <img :src="qaIcon" class="w-20 h-20 my-0" />
+        <div>
+          <h4 class="mt-0">Question Answering</h4>
+          <ul class="text-sm my-0">
+            <li>Who invented the first light bulb?</li>
+            <li>Explain the concept of gravity.</li>
+            <li>How can I improve my writing skills?</li>
+          </ul>
+        </div>
+      </div>
+      <div class="flex gap-8 py-3 px-6 border rounded-xl items-center">
+        <img :src="contentIcon" class="w-20 h-20 my-0" />
+        <div>
+          <h4 class="mt-0">Content Creation</h4>
+          <ul class="text-sm my-0">
+            <li>Write an essay outline about climate change.</li>
+            <li>Compose a poem about the beauty of autumn.</li>
+            <li>Draft an email to offer refund to a customer.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="flex gap-8 py-3 px-6 border rounded-xl items-center">
+        <img :src="programmingIcon" class="w-20 h-20 my-0" />
+        <div>
+          <h4 class="mt-0">Programming</h4>
+          <ul class="text-sm my-0">
+            <li>Write a Python function to calculate the factorial.</li>
+            <li>Debug the following code: priint("Hello, World!").</li>
+            <li>Create a website to showcase my projects.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>

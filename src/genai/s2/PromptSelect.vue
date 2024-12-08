@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { BIconFileEarmarkTextFill } from "bootstrap-icons-vue";
 import { singleExamples } from "./gptExamples";
 import { store } from "../../store";
 import { S2 } from "../states";
@@ -6,6 +7,17 @@ import { S2 } from "../states";
 
 <template>
   <h2>Prompt Example</h2>
+  <p>
+    Prompt engineering is the skill of crafting effective prompts which can
+    significantly enhance the quality of the responses.
+  </p>
+  <a
+    href="https://www.promptingguide.ai/"
+    target="_blank"
+    class="no-underline flex gap-2 items-center text-primary"
+  >
+    <BIconFileEarmarkTextFill /> DAIR.AI: Prompt Engineering Guide
+  </a>
   <p>
     <strong>Task: </strong>
     To explore the capabilities of LLMs and illustrate the process of prompt
