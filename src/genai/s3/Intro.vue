@@ -7,14 +7,20 @@ import sectionIcon from "/s3/s3-icon.png";
   <div class="flex gap-16">
     <img :src="sectionIcon" class="w-48 h-48 mt-12" />
     <div>
-      <h2>Word Embeddings</h2>
+      <h2>Large Langauge Models (II)</h2>
       <p>
-        To understand the underlying principles of how language models work, we
-        need to explore how computers process and interpret human language.
-        Instead of seeing words as plain text, embeddings turn them into numbers
-        that correspond to certain features of the words. Embeddings can be used
-        to represent the meaning of words, sentences, entire documents, or even
-        images and videos.
+        As we saw in the previous section, Large Language Models (LLMs) are a
+        type of Generative AI models designed to understand and generate human
+        language. However, computers can't understand words the way we see them.
+        Instead, they convert words into numbers using a process called
+        embeddings.
+      </p>
+      <p>
+        We can think of embeddings as a way to change words into numbers that
+        carry information about the words' meanings and relationships to other
+        words. These numerical representations are not only used by LLMs to
+        generate text but also has many other fascinating uses which we will
+        explore in this section.
       </p>
       <a
         href="https://www.youtube.com/watch?v=wgfSDrqYMJ4"

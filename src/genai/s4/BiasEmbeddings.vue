@@ -97,7 +97,7 @@ const biasHandler = async () => {
       <p>
         As you now know, langauge models are trained with lots of text data and
         learn to find patterns in them. However, these data are created by
-        humans who harbour many biases and prejudices.
+        humans who harbor many biases and prejudices.
       </p>
       <p>
         For example, if in the data the word “nurse” is associated more often

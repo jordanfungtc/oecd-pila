@@ -7,13 +7,13 @@ import sectionIcon from "/s1/s1-icon.png";
   <div class="flex gap-16">
     <img :src="sectionIcon" class="w-48 h-48 mt-12" />
     <div>
-      <h2>What is AI?</h2>
+      <h2>Introduction to Artificial Intelligence</h2>
       <p>
         Have you ever wondered how your favourite music streaming service
         suggests songs you might like, how your smartphone recognizes your voice
         commands, how your email filters out spam, or how a navigation app finds
         the best route? These tasks are all accomplished with the help of
-        artificial intelligence (AI).
+        Artificial Intelligence (AI).
       </p>
       <p>
         AI is a branch of computer science that enables machines to perform

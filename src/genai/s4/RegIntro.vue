@@ -9,7 +9,7 @@ import aiActIcon from "/s4/ai-act-logo.png";
   <p>
     As AI technologies continue to advance, there is a growing need for
     regulation to ensure that the risks posed by AI systems are addressed
-    appropriately. National governments and organisations such as the OECD and
+    appropriately. National governments and organizations such as the OECD and
     the European Union have published documents detailing safe, responsible AI
     use cases and identifying those with high or unacceptable risks.
   </p>
@@ -17,7 +17,7 @@ import aiActIcon from "/s4/ai-act-logo.png";
     <div>
       <img :src="oecdAiIcon" class="h-16 w-auto mt-6" />
       <p>
-        The OECD's values-based principles for AI aims to promote the use of AI
+        The OECD's values-based principles for AI aim to promote the use of AI
         that is innovative and trustworthy and that respects human rights and
         democratic values.
       </p>
