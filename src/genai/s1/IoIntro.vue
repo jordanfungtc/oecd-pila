@@ -11,8 +11,8 @@ import navigationIcon from "/s1/navigation.png";
       <h2>Identifying Inputs and Outputs</h2>
       <p>
         To effectively use AI and ML, we need to clearly identify the inputs and
-        outputs. Inputs are the information that the AI system needs in order to
-        operate, while outputs are the results it provides to the user.
+        outputs. Inputs are the information that we need to provide to the AI
+        system, while outputs are the results it gives back to the user.
       </p>
       <p>
         Without inputs, the AI system would have no data to process, making it

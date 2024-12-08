@@ -98,11 +98,11 @@ const outputs = {
   <!-- App Icon and Label -->
   <div class="flex gap-4 items-center mt-8">
     <img :src="apps[props.i].icon" alt="App Icon" class="w-12 h-12 my-0" />
-    <h3 class="my-0">{{ apps[props.i].label }}</h3>
+    <h3 class="my-0">AI for {{ apps[props.i].label }}</h3>
   </div>
   <p>
     <strong>Task: </strong>
-    To use AI for the above application, can you guess what the inputs to the AI
+    To use AI for this application, can you guess what the inputs to the AI
     system would be and what the expected outputs are? Select the correct
     options from the dropdowns below, then read the explanation to learn more.
   </p>

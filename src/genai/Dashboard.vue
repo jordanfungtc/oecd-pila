@@ -195,13 +195,13 @@ const caseStudy = {
       </div>
       <div class="w-4/5 flex flex-col p-4 border rounded-xl my-8">
         <h4 class="mt-0">
-          <div class="badge">1.2 - 1.6</div>
-          AI Application Matching
+          <div class="badge">1.3 - 1.7</div>
+          Input-Output Matching
         </h4>
         <DbHorizontal :states="states" :questions="appMatch" />
         <h4>
-          <div class="badge">1.7 - 1.10</div>
-          AI Application Brainstorming
+          <div class="badge">1.8 - 1.10</div>
+          Designing and AI System
         </h4>
         <DbVertical :states="states" :questions="appBrainstorm" />
       </div>
