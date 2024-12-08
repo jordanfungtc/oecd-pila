@@ -54,10 +54,11 @@ const generateHandler = () => {
       class="mt-[-10px]"
     ></div>
     <p v-else>
+      <strong>Task: </strong>
       {{
         props.i === "0"
-          ? "Generate a response using the simple prompt above and examine the response."
-          : "Generate a response using the refined prompt above and compare the responses to the simple prompt."
+          ? "For the prompt above, click the button to generate with the LLM simulator and observe the response."
+          : "Similarly, generate a response using the prompt above and compare the responses to the previous prompt. Can you see the importance of prompt engineering?"
       }}
     </p>
   </div>

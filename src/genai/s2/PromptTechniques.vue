@@ -16,7 +16,7 @@ const promptTechniques = [
   <p>
     <strong>Task: </strong>
     When writing prompts for LLMs, which of the following techniques do you
-    think should you consider?
+    think you should consider?
   </p>
   <div
     v-for="(technique, index) in promptTechniques"
