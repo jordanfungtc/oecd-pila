@@ -9,14 +9,14 @@ import intelPropIcon from "/s2/intel-prop.png";
     <div class="w-1/3">
       <h2>Limitations of LLMs</h2>
       <p>
-        LLMs have limitations that can affect the quality and reliability of
-        their responses. It is crucial to approach their outputs with caution
-        and verify information independently.
+        As you have seen, LLMs have limitations that can affect the quality and
+        reliability of their responses.
       </p>
       <p>
-        For instance, you can look for sources online that confirm the
-        information provided by the LLM, check the credibility of the author,
-        and ensure that the data is up-to-date.
+        Therefore, it is essential to approach LLM responses with caution and
+        always verify information independently using search engines such as
+        Google. You should also check the credibility of the author and ensure
+        that the data is up-to-date.
       </p>
     </div>
     <div class="w-2/3 flex flex-col gap-4 mt-8">

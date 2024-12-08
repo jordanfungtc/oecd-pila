@@ -19,32 +19,45 @@ const facts = [
 </script>
 
 <template>
-  <h2>Fact Checking</h2>
-  <p>
-    As you may have noticed in the conversation, the LLM sometimes gives you
-    responses that are not entirely accurate but may seem so at first glance.
-    This is because LLMs are not truly “intelligent”. They are also not a search
-    engine.
-  </p>
-  <p>
-    <strong>Task: </strong>
-    Using an Internet search engine, verify the accuracy of the following
-    statistics included in the response.
-  </p>
-  <table class="table table-sm my-0">
-    <thead>
-      <tr>
-        <th>Statistics</th>
-        <th>Accuracy</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr v-for="(fact, index) in facts" :key="index">
-        <td>{{ fact.stat }}</td>
-        <td>
-          <SelectTf :state="fact.state.state" :answer="fact.state.answer" />
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="flex gap-12">
+    <div class="w-1/3">
+      <h2>Fact Checking</h2>
+      <p>
+        LLMs create responses by predicting the next word based on their
+        training data – they are not truly intelligent. As such, LLMs can
+        sometimes produce responses that seem accurate at first glance but are
+        not entirely reliable.
+      </p>
+      <p>
+        In fact, in the conversation you just had with the LLM, some of the
+        statistics included in the generated essay were inaccurate. Can you
+        identify which ones?
+      </p>
+    </div>
+    <div class="w-2/3 mt-8">
+      <p>
+        <strong>Task: </strong>
+        Using an Internet search engine, verify the accuracy of the following
+        statistics included in the response.
+      </p>
+      <table class="table table-sm">
+        <thead>
+          <tr>
+            <th>Statistics</th>
+            <th>Accuracy</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(fact, index) in facts" :key="index">
+            <td>
+              <i>"{{ fact.stat }}"</i>
+            </td>
+            <td>
+              <SelectTf :state="fact.state.state" :answer="fact.state.answer" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </template>

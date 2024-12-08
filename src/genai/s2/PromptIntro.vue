@@ -15,8 +15,8 @@ import programmingIcon from "/s2/programming.png";
       </p>
       <p>
         LLMs can be used on a wide range of tasks, including question answering,
-        content creation, programming, and more. Some examples of prompts are
-        provided on the right.
+        content creation, programming, and more. Some examples of prompts for
+        different tasks are provided on the right.
       </p>
     </div>
     <div class="w-3/5 flex flex-col gap-4 mt-8">

@@ -25,16 +25,15 @@ import { S2 } from "../states";
       >
         <BIconFileEarmarkTextFill /> DAIR.AI: Prompt Engineering Guide
       </a>
-      <p>
-        <strong>Task: </strong>
-        To explore the capabilities of LLMs and illustrate the process of prompt
-        engineering, choose one of the prompt examples on the right and move on
-        to the next step.
-      </p>
     </div>
-    <div class="w-1/2">
+    <div class="w-1/2 mt-8">
       <div class="flex flex-col gap-4">
-        <h4>Choose a prompt example:</h4>
+        <p>
+          <strong>Task: </strong>
+          To explore the capabilities of LLMs and illustrate the process of
+          prompt engineering, choose one of the following prompt examples and
+          move on to the next step.
+        </p>
         <div
           v-for="(example, key) in singleExamples"
           :key="key"
