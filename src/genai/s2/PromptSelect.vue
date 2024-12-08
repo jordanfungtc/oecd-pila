@@ -43,7 +43,7 @@ import { S2 } from "../states";
           }"
         >
           <label class="label cursor-pointer">
-            <span class="label-text text-lg">{{ example.label }}</span>
+            <span class="label-text text-lg py-2">{{ example.label }}</span>
             <input
               type="radio"
               name="radio-10"

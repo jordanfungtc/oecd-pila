@@ -12,7 +12,7 @@ const feats = [
 
 const embs = {
   dog: {
-    label: "🐶 dog",
+    label: "🐶",
     states: [
       S3.EMB_DOG_BARK,
       S3.EMB_DOG_MOVE,
@@ -22,7 +22,7 @@ const embs = {
     ],
   },
   car: {
-    label: "🚗 car",
+    label: "🚗",
     states: [
       S3.EMB_CAR_BARK,
       S3.EMB_CAR_MOVE,
@@ -37,38 +37,51 @@ const embs = {
 <template>
   <h2>Creating Word Embeddings</h2>
   <p>
-    <strong>Task:</strong>
-    Can you think of how language models might assign embeddings to the words
-    "🐶 dog" and "🚗 car"?
+    Word embeddings help computers understand the meaning of words by looking at
+    their features. For example, “cat” and “dog” might have similar embeddings
+    because they share features such as “is a mammal” and “has a tail.” On the
+    other hand, “car” would have very different embeddings.
   </p>
-  <div class="flex justify-center">
-    <table class="table table-sm">
-      <tbody>
-        <tr>
-          <th></th>
-          <th v-for="(feat, i) in Object.keys(feats)" :key="i">
-            <h3 class="my-0 text-center">
-              {{ feats[feat as keyof typeof feats] }}
-            </h3>
-          </th>
-        </tr>
-        <tr>
-          <td><h3 class="my-0 text-center">😼 cat</h3></td>
-          <td><div class="text-center">0</div></td>
-          <td><div class="text-center">1</div></td>
-          <td><div class="text-center">1</div></td>
-          <td><div class="text-center">0</div></td>
-          <td><div class="text-center">1</div></td>
-        </tr>
-        <tr v-for="(emb, word) in embs" :key="word">
-          <td>
-            <h3 class="my-0 text-center">{{ emb.label }}</h3>
-          </td>
-          <td v-for="(feat, i) in emb.states" :key="i">
-            <SelectEmb :state="feat.state" :answer="feat.answer" />
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+  <p>
+    <strong>Task:</strong>
+    Using the same features, can you create the embeddings for the words "dog"
+    and "car"?
+  </p>
+
+  <table class="table table-sm my-0">
+    <tbody>
+      <tr>
+        <th></th>
+        <th v-for="(feat, i) in Object.keys(feats)" :key="i">
+          <h3 class="my-0 text-center">
+            {{ feats[feat as keyof typeof feats] }}
+          </h3>
+        </th>
+      </tr>
+      <tr>
+        <td>
+          <h3 class="my-0 text-center flex gap-4 items-center">
+            <div class="text-3xl">😺</div>
+            cat
+          </h3>
+        </td>
+        <td><div class="text-center">0</div></td>
+        <td><div class="text-center">1</div></td>
+        <td><div class="text-center">1</div></td>
+        <td><div class="text-center">0</div></td>
+        <td><div class="text-center">1</div></td>
+      </tr>
+      <tr v-for="(emb, word) in embs" :key="word">
+        <td>
+          <h3 class="my-0 text-center flex gap-4 items-center">
+            <div class="text-3xl">{{ emb.label }}</div>
+            {{ word }}
+          </h3>
+        </td>
+        <td v-for="(feat, i) in emb.states" :key="i">
+          <SelectEmb :state="feat.state" :answer="feat.answer" />
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </template>

@@ -11,32 +11,49 @@ const feats = [
 <template>
   <h2>Creating Word Embeddings</h2>
   <p>
-    When we think of the word "😺 cat," we can associate it with features such
-    as "mammal," "can move," and "has a tail." To create a word embedding,
-    language models can assign values to these features based on how closely
-    they are associated with the word "😺 cat." For instance, we can use 1 and 0
-    to indicate the presence or absence of a feature.
+    When you think of the word "cat," how would you describe it? You may think
+    of it being a mammal, it can move, has a tail, and so on. These are features
+    that can help describe what a cat is. One way of creating word embeddings is
+    by assigning numerical values to these features to show how closely related
+    the features are to the word, for example:
   </p>
-  <div class="flex justify-center">
-    <table class="table table-sm">
-      <tbody>
-        <tr>
-          <th></th>
-          <th v-for="(feat, i) in Object.keys(feats)" :key="i">
-            <h3 class="my-0 text-center">
-              {{ feats[feat as keyof typeof feats] }}
-            </h3>
-          </th>
-        </tr>
-        <tr>
-          <td><h3 class="my-0 text-center">😺 cat</h3></td>
-          <td><div class="text-center">0</div></td>
-          <td><div class="text-center">1</div></td>
-          <td><div class="text-center">1</div></td>
-          <td><div class="text-center">0</div></td>
-          <td><div class="text-center">1</div></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+  <ul>
+    <li>
+      assign 1 to show that the word "cat" is associated with the feature (e.g.,
+      has a tail)
+    </li>
+    <li>
+      assign 0 to show that the word "cat" is not associated with the feature
+      (e.g., has wheels)
+    </li>
+  </ul>
+  <p>
+    Using the 5 features below, we obtain the word embeddings for "cat" to be
+    (0,1,1,0,1):
+  </p>
+  <table class="table table-sm">
+    <tbody>
+      <tr>
+        <th></th>
+        <th v-for="(feat, i) in Object.keys(feats)" :key="i">
+          <h3 class="my-0 text-center">
+            {{ feats[feat as keyof typeof feats] }}
+          </h3>
+        </th>
+      </tr>
+      <tr>
+        <td>
+          <h3 class="my-0 text-center flex gap-4 items-center">
+            <div class="text-3xl">😺</div>
+            cat
+          </h3>
+        </td>
+        <td><div class="text-center">0</div></td>
+        <td><div class="text-center">1</div></td>
+        <td><div class="text-center">1</div></td>
+        <td><div class="text-center">0</div></td>
+        <td><div class="text-center">1</div></td>
+      </tr>
+    </tbody>
+  </table>
 </template>

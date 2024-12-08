@@ -40,7 +40,7 @@ const facts = [
         Using an Internet search engine, verify the accuracy of the following
         statistics included in the response.
       </p>
-      <table class="table table-sm">
+      <table class="table">
         <thead>
           <tr>
             <th>Statistics</th>
