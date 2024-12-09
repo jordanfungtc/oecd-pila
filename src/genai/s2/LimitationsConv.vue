@@ -27,12 +27,9 @@ const convHandler = () => {
       <h2>Conversational AI</h2>
       <p>
         You can also engage in conversations with LLMs. This is done by
-        including previous prompts and responses so it remembers what you've
-        said.
-      </p>
-      <p>
-        This allows LLMs to generate more relevant responses over time, without
-        the need to repeat information.
+        providing it with previous prompts and responses so it remembers what
+        you've said. This allows LLMs to generate more relevant responses over
+        time, without the need for you to repeat information.
       </p>
       <p>
         <strong>Task: </strong>

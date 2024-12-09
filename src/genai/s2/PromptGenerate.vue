@@ -58,7 +58,7 @@ const generateHandler = () => {
       {{
         props.i === "0"
           ? "For the prompt above, click the button to generate with the LLM simulator and observe the response."
-          : "Similarly, generate a response using the prompt above and compare the responses to the previous prompt. Can you see the importance of prompt engineering?"
+          : "Similarly, click the button to generate a response using the prompt above and compare the responses to the previous prompt. Can you see the importance of prompt engineering?"
       }}
     </p>
   </div>

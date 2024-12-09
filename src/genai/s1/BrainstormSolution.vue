@@ -9,8 +9,7 @@ import { S1 } from "../states";
     <strong>Task: </strong>
     Now that you have identified a problem, it is time to design an AI system
     that can solve it. What would be the inputs to the AI system and what would
-    be the expected outputs? Write your answers in the input and output fields
-    below.
+    be the expected outputs? Write your answers in the fields below.
   </p>
   <h4>Input</h4>
   <textarea

@@ -4,7 +4,8 @@ import { store } from "../store";
 import { ref } from "vue";
 
 store.title = "Generative AI Module";
-const props = defineProps(["steps"]);
+const props = defineProps(["steps", "ending"]);
+// steps = total no. of steps, ending = true for ending congrats step
 const step = ref(0);
 </script>
 
@@ -31,6 +32,7 @@ const step = ref(0);
           :key="i - 1"
           :class="{ 'step-neutral': step >= i - 1 }"
           @click="step = i - 1"
+          :data-content="i === props.steps && ending ? '🎉' : i"
         ></li>
       </ul>
 

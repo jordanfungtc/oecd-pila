@@ -9,7 +9,7 @@ import { S2 } from "../states";
     <strong>Task: </strong>
     Now that you have seen how LLMs work and some of their known limitations,
     can you think of ways you can use them to assist you in your everyday life?
-    What prompts would you use? Enter your answer in the fields below.
+    What prompts would you use? Write your answers in the fields below.
   </p>
   <h4>I think LLMs can be used for:</h4>
   <input

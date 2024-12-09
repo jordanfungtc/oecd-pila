@@ -17,7 +17,7 @@ store.title = "Generative AI Module";
 </script>
 
 <template>
-  <Frame :steps="11">
+  <Frame :steps="11" :ending="true">
     <template #0><Intro /></template>
     <template #1><BiasEmbeddings /></template>
     <template #2><BiasLlm /></template>

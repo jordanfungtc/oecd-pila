@@ -40,24 +40,29 @@ const facts = [
         Using an Internet search engine, verify the accuracy of the following
         statistics included in the response.
       </p>
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Statistics</th>
-            <th>Accuracy</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="(fact, index) in facts" :key="index">
-            <td>
-              <i>"{{ fact.stat }}"</i>
-            </td>
-            <td>
-              <SelectTf :state="fact.state.state" :answer="fact.state.answer" />
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="border rounded-xl">
+        <table class="table my-0">
+          <thead>
+            <tr>
+              <th>Statistics</th>
+              <th>Accuracy</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(fact, index) in facts" :key="index">
+              <td>
+                <i>"{{ fact.stat }}"</i>
+              </td>
+              <td>
+                <SelectTf
+                  :state="fact.state.state"
+                  :answer="fact.state.answer"
+                />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </template>

@@ -44,8 +44,8 @@ const embs = {
   </p>
   <p>
     <strong>Task:</strong>
-    Using the same features, create the embeddings for the words "dog" and "car"
-    using the dropdowns below.
+    Using the same set of features, create the embeddings for the words "dog"
+    and "car" using the dropdowns below.
   </p>
 
   <table class="table table-sm my-0">

@@ -5,7 +5,7 @@ import kingQueen from "/s3/king-queen.png";
 <template>
   <h2>What is a Word Analogy?</h2>
   <p>
-    You've learned that word embeddings represent the meanings of words as
+    You've now learned that word embeddings represent the meanings of words as
     numbers and that similarity scores help measure how closely related two
     words are. But these tools do more than just compare words – they can also
     help computers understand relationships between words through word
@@ -19,6 +19,6 @@ import kingQueen from "/s3/king-queen.png";
     king:queen::man:woman. This is known as a word analogy.
   </p>
   <div class="flex justify-center">
-    <img :src="kingQueen" class="w-1/2 my-4" />
+    <img :src="kingQueen" class="w-auto h-32 my-4" />
   </div>
 </template>
