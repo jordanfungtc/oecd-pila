@@ -47,7 +47,7 @@ const S3: Record<string, any> = {
   SIM_Q2: { state: "sim_q2", answer: 1 },
   EMB_KING_MALE: { state: "emb_king_male", answer: 1 },
   EMB_KING_FEMALE: { state: "emb_king_female", answer: 0 },
-  EMB_KING_ROYAL: { state: "emb_king_royal", answer: 1 },
+  EMB_KING_RULER: { state: "emb_king_ruler", answer: 1 },
   ANALOGY_BASE: { state: "analogy_base", answer: null },
   ANALOGY_SUB: { state: "analogy_sub", answer: null },
   ANALOGY_ADD: { state: "analogy_add", answer: null },

@@ -113,14 +113,14 @@ const sim = {
   "": {
     "Similar Words": S3.SIM_Q1,
     "Lower Score": S3.SIM_Q2,
-  }
-}
+  },
+};
 
 const analogy = {
-  "": {
+  King: {
     Male: S3.EMB_KING_MALE,
     Female: S3.EMB_KING_FEMALE,
-    Royal: S3.EMB_KING_ROYAL,
+    Ruler: S3.EMB_KING_RULER,
   },
 };
 

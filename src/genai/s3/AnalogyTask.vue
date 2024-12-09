@@ -89,8 +89,8 @@ import SelectEmb from "../../util/SelectEmb.vue";
         <td class="text-center">=</td>
         <td>
           <SelectEmb
-            :state="S3.EMB_KING_ROYAL.state"
-            :answer="S3.EMB_KING_ROYAL.answer"
+            :state="S3.EMB_KING_RULER.state"
+            :answer="S3.EMB_KING_RULER.answer"
           />
         </td>
       </tr>
