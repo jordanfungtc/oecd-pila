@@ -1,16 +1,21 @@
 <script setup lang="ts">
 import { VueLatex } from "vatex";
 import { BIconCalculator } from "bootstrap-icons-vue";
-import { BIcon1Circle, BIcon2Circle, BIcon3Circle } from "bootstrap-icons-vue";
+import {
+  BIcon1Circle,
+  BIcon2Circle,
+  BIcon3Circle,
+  BIconEyeFill,
+} from "bootstrap-icons-vue";
 </script>
 
 <template>
   <div class="flex gap-12">
     <div class="w-2/5">
-      <h2>Similarity Score: Calculation</h2>
+      <h2>Calculating Similarity Score</h2>
       <p>
-        Let’s take a closer look at the math and calculate the similarity score
-        between “cat” (0,1,1,0,1) and “dog” (1,1,1,0,1).
+        Let’s take a closer look at the math on the right and calculate the
+        similarity score between “cat” (0,1,1,0,1) and “dog” (1,1,1,0,1).
       </p>
       <p>
         We obtain that the similarity score between the embeddings of "cat" and
@@ -21,10 +26,12 @@ import { BIcon1Circle, BIcon2Circle, BIcon3Circle } from "bootstrap-icons-vue";
         Calculate the similarity score between the embeddings of "cat"
         (0,1,1,0,1) and "car" (0,1,0,1,0).
       </p>
-      <button class="btn" onclick="bonus_modal.showModal()">
+      <button class="btn" onclick="optional_modal.showModal()">
+        <BIconEyeFill class="w-5 h-5" />
         Reveal Answer
       </button>
     </div>
+
     <div class="w-3/5">
       <div class="flex flex-col gap-4 mt-8">
         <div class="pt-3 px-6 border rounded-xl items-center">
@@ -66,7 +73,7 @@ import { BIcon1Circle, BIcon2Circle, BIcon3Circle } from "bootstrap-icons-vue";
         <div class="pt-3 px-6 border rounded-xl items-center">
           <!-- Similarity -->
           <h4 class="mt-0 flex gap-2 items-center">
-            <BIcon3Circle class="w-5 h-5" />Similarity score
+            <BIcon3Circle class="w-5 h-5" />Cosine similarity score
           </h4>
           <p class="text-sm my-0">
             Divide the dot product by the product of the magnitudes
@@ -82,8 +89,8 @@ import { BIcon1Circle, BIcon2Circle, BIcon3Circle } from "bootstrap-icons-vue";
     </div>
   </div>
 
-  <!-- Bonus Modal -->
-  <dialog id="bonus_modal" class="modal">
+  <!-- Optional Task Modal -->
+  <dialog id="optional_modal" class="modal">
     <div class="modal-box">
       <h2 class="mt-0">Optional Task</h2>
       <p>

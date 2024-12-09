@@ -23,11 +23,11 @@ const analogyHandler = async () => {
 </script>
 
 <template>
-  <h2>Word Analogy</h2>
+  <h2>Brainstorming Word Analogies</h2>
   <p>
     This property of word embeddings is crucial for many natural language
-    processing (NLP) tasks, including for language models to understand the
-    relationships between words and generate accurate outputs.
+    processing (NLP) tasks, including for language models like LLMs to
+    understand the relationships between words and generate accurate outputs.
   </p>
   <p>
     <strong>Task:</strong>

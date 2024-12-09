@@ -26,7 +26,7 @@ const questions = [
       <h2>Similarity Score</h2>
       <p>
         As humans, we can intuitively understand how similar two words are. But
-        how do computers figure out how similar two words are?
+        how do computers figure out the similarity between words?
       </p>
       <p>
         Computers can use a method called the cosine similarity score. This
@@ -35,7 +35,7 @@ const questions = [
       </p>
       <p>
         <strong>Task:</strong>
-        Answer the questions on the right to show your understanding.
+        Answer the questions on the right by selecting the correct checkboxes.
       </p>
     </div>
     <div class="w-3/5">
