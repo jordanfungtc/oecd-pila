@@ -6,7 +6,7 @@ import { S2 } from "../states";
 </script>
 
 <template>
-  <div class="flex gap-12 items-center">
+  <div class="flex gap-12">
     <div class="w-1/2">
       <h2>Prompt Engineering</h2>
       <p>
@@ -43,7 +43,9 @@ import { S2 } from "../states";
           }"
         >
           <label class="label cursor-pointer">
-            <span class="label-text text-lg py-2">{{ example.label }}</span>
+            <span class="label-text text-lg p-2"
+              >Example: {{ example.label }}</span
+            >
             <input
               type="radio"
               name="radio-10"

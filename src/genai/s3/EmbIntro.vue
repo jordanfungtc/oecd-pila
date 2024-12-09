@@ -9,13 +9,13 @@ const feats = [
 </script>
 
 <template>
-  <h2>Creating Word Embeddings</h2>
+  <h2>What are Word Embeddings?</h2>
   <p>
     When you think of the word "cat," how would you describe it? You may think
     of it being a mammal, it can move, has a tail, and so on. These are features
     that can help describe what a cat is. One way of creating word embeddings is
-    by assigning numerical values to these features to show how closely related
-    the features are to the word, for example:
+    by assigning numerical values to a set of features to show how closely
+    related the word are to the features, for example:
   </p>
   <ul>
     <li>
@@ -35,8 +35,12 @@ const feats = [
     <tbody>
       <tr>
         <th></th>
-        <th v-for="(feat, i) in Object.keys(feats)" :key="i">
-          <h3 class="my-0 text-center">
+        <th
+          v-for="(feat, i) in Object.keys(feats)"
+          :key="i"
+          class="text-center"
+        >
+          <h3 class="my-0">
             {{ feats[feat as keyof typeof feats] }}
           </h3>
         </th>

@@ -4,7 +4,6 @@ import { ref, onMounted, watch } from "vue";
 import { BIconArrowClockwise } from "bootstrap-icons-vue";
 import { S1, S2, S3, S4 } from "./states";
 import { store } from "../store";
-import DbAnswer from "../util/DbAnswer.vue";
 import DbVertical from "../util/DbVertical.vue";
 import DbHorizontal from "../util/DbHorizontal.vue";
 import section1Icon from "/s1/s1-icon.png";
@@ -109,6 +108,13 @@ const embs = {
     Tail: S3.EMB_CAR_TAIL,
   },
 };
+
+const sim = {
+  "": {
+    "Similar Words": S3.SIM_Q1,
+    "Lower Score": S3.SIM_Q2,
+  }
+}
 
 const analogy = {
   "": {
@@ -246,6 +252,7 @@ const caseStudy = {
           <div class="badge">3.4</div>
           Similarity Score
         </h4>
+        <DbHorizontal :states="states" :questions="sim" />
         <h4>
           <div class="badge">3.5</div>
           Word Analogy

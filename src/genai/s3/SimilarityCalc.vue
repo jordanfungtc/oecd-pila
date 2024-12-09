@@ -7,28 +7,30 @@ import { BIcon1Circle, BIcon2Circle, BIcon3Circle } from "bootstrap-icons-vue";
 <template>
   <div class="flex gap-12">
     <div class="w-2/5">
-      <h2>Similarity Score</h2>
-      <p>
-        As humans, we can intuitively understand how similar two words are. But
-        how do computers make sense of the similarity between two words?
-      </p>
-      <p>
-        Computers use similarity score, typically a number between -1 and 1. A
-        score closer to 1 means the words are very similar, while a score near
-        -1 means they’re very different.
-      </p>
+      <h2>Similarity Score: Calculation</h2>
       <p>
         Let’s take a closer look at the math and calculate the similarity score
         between “cat” (0,1,1,0,1) and “dog” (1,1,1,0,1).
       </p>
-      <button class="btn" onclick="bonus_modal.showModal()">Bonus</button>
+      <p>
+        We obtain that the similarity score between the embeddings of "cat" and
+        "dog" is 0.866, which shows that they are quite similar.
+      </p>
+      <p>
+        <strong>Optional Task:</strong>
+        Calculate the similarity score between the embeddings of "cat"
+        (0,1,1,0,1) and "car" (0,1,0,1,0).
+      </p>
+      <button class="btn" onclick="bonus_modal.showModal()">
+        Reveal Answer
+      </button>
     </div>
     <div class="w-3/5">
       <div class="flex flex-col gap-4 mt-8">
         <div class="pt-3 px-6 border rounded-xl items-center">
           <!-- Dot Product -->
           <h4 class="mt-0 flex gap-2 items-center">
-            <BIcon1Circle class="w-5 h-5" />Dot Product
+            <BIcon1Circle class="w-5 h-5" />Dot product between embeddings
           </h4>
           <p class="text-sm my-0">
             Multiply each corresponding pair of numbers and add them up
@@ -37,12 +39,13 @@ import { BIcon1Circle, BIcon2Circle, BIcon3Circle } from "bootstrap-icons-vue";
             class="flex-grow"
             expression="\text{Cat}\cdot\text{Dog}=0\times1+1\times1+1\times1+0\times0+1\times1=3"
             display-mode
+            :fontsize="15"
           />
         </div>
         <div class="pt-3 px-6 border rounded-xl items-center">
           <!-- Magnitudes -->
           <h4 class="mt-0 flex gap-2 items-center">
-            <BIcon2Circle class="w-5 h-5" />Magnitudes
+            <BIcon2Circle class="w-5 h-5" />Magnitudes of each embeddings
           </h4>
           <p class="text-sm my-0">
             Square each number, add them up, and take square root of the sum
@@ -51,17 +54,19 @@ import { BIcon1Circle, BIcon2Circle, BIcon3Circle } from "bootstrap-icons-vue";
             <VueLatex
               expression="\Vert\text{Cat}\Vert=\sqrt{0^2+1^2+1^2+0^2+1^2}=1.732"
               display-mode
+              :fontsize="15"
             />
             <VueLatex
               expression="\Vert\text{Dog}\Vert=\sqrt{1^2+1^2+1^2+0^2+1^2}=2"
               display-mode
+              :fontsize="15"
             />
           </div>
         </div>
         <div class="pt-3 px-6 border rounded-xl items-center">
           <!-- Similarity -->
           <h4 class="mt-0 flex gap-2 items-center">
-            <BIcon3Circle class="w-5 h-5" />Similarity Score
+            <BIcon3Circle class="w-5 h-5" />Similarity score
           </h4>
           <p class="text-sm my-0">
             Divide the dot product by the product of the magnitudes
@@ -70,6 +75,7 @@ import { BIcon1Circle, BIcon2Circle, BIcon3Circle } from "bootstrap-icons-vue";
             class="flex-grow"
             expression="\text{Similarity}=\frac{\text{Cat}\cdot\text{Dog}}{\Vert\text{Cat}\Vert\cdot\Vert\text{Dog}\Vert}=\frac{3}{1.732\times2}=0.866"
             display-mode
+            :fontsize="15"
           />
         </div>
       </div>
@@ -79,14 +85,10 @@ import { BIcon1Circle, BIcon2Circle, BIcon3Circle } from "bootstrap-icons-vue";
   <!-- Bonus Modal -->
   <dialog id="bonus_modal" class="modal">
     <div class="modal-box">
-      <h2 class="mt-0">Bonus Exercise</h2>
+      <h2 class="mt-0">Optional Task</h2>
       <p>
-        Which pair of words has a higher similarity score: cat and car, or cat
-        and dog?
-      </p>
-      <p>
-        Calculate the similarity score between the word embeddings of "😼 cat"
-        (0,1,1,0,1) and "🚗 car" (0,1,0,1,0).
+        Calculate the similarity score between the embeddings of "cat"
+        (0,1,1,0,1) and "car" (0,1,0,1,0).
       </p>
       <!-- Dot Product -->
       <VueLatex
