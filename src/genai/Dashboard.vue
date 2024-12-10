@@ -180,7 +180,8 @@ const caseStudy = {
 
 <template>
   <div class="max-w-4xl w-full">
-    <div class="flex gap-2 items-center">
+    <div class="flex gap-2 items-center p-8 rounded-xl mb-8 bg-white shadow-md">
+      <h4 class="my-0">Student Selection</h4>
       <!-- User Selection -->
       <select v-model="selectedUser" class="w-full select select-bordered">
         <option v-for="(user, index) in users" :key="index" :value="index">
@@ -188,18 +189,19 @@ const caseStudy = {
         </option>
       </select>
       <!-- Refresh Button -->
-      <button @click="getHandler" class="btn">
+      <button @click="getHandler" class="btn btn-neutral">
         <BIconArrowClockwise class="w-5 h-5" />
         Refresh
       </button>
     </div>
 
-    <div class="flex gap-12">
+    <!-- Section 1 -->
+    <div class="flex gap-12 p-8 rounded-xl mb-8 bg-white shadow-md">
       <div class="w-1/5">
-        <h2>Section 1</h2>
+        <h2 class="mt-0">Section 1</h2>
         <img :src="section1Icon" />
       </div>
-      <div class="w-4/5 flex flex-col p-4 border rounded-xl my-8">
+      <div class="w-4/5 flex flex-col">
         <h4 class="mt-0">
           <div class="badge">1.3 - 1.7</div>
           Identifying Inputs and Outputs
@@ -213,12 +215,13 @@ const caseStudy = {
       </div>
     </div>
 
-    <div class="flex gap-12">
+    <!-- Section 2 -->
+    <div class="flex gap-12 p-8 rounded-xl mb-8 bg-white shadow-md">
       <div class="w-1/5">
-        <h2>Section 2</h2>
+        <h2 class="mt-0">Section 2</h2>
         <img :src="section2Icon" />
       </div>
-      <div class="w-4/5 flex flex-col p-4 border rounded-xl my-8">
+      <div class="w-4/5 flex flex-col">
         <h4 class="mt-0">
           <div class="badge">2.2 - 2.5</div>
           Prompt Engineering
@@ -237,12 +240,13 @@ const caseStudy = {
       </div>
     </div>
 
-    <div class="flex gap-12">
+    <!-- Section 3 -->
+    <div class="flex gap-12 p-8 rounded-xl mb-8 bg-white shadow-md">
       <div class="w-1/5">
-        <h2>Section 3</h2>
+        <h2 class="mt-0">Section 3</h2>
         <img :src="section3Icon" />
       </div>
-      <div class="w-4/5 flex flex-col p-4 border rounded-xl my-8">
+      <div class="w-4/5 flex flex-col">
         <h4 class="mt-0">
           <div class="badge">3.2-3.3</div>
           Creating Word Embeddings
@@ -271,12 +275,13 @@ const caseStudy = {
       </div>
     </div>
 
-    <div class="flex gap-12">
+    <!-- Section 4 -->
+    <div class="flex gap-12 p-8 rounded-xl mb-8 bg-white shadow-md">
       <div class="w-1/5">
-        <h2>Section 4</h2>
+        <h2 class="mt-0">Section 4</h2>
         <img :src="section4Icon" />
       </div>
-      <div class="w-4/5 flex flex-col p-4 border rounded-xl my-8">
+      <div class="w-4/5 flex flex-col">
         <h4 class="mt-0">
           <div class="badge">4.2</div>
           Bias in Word Embeddings

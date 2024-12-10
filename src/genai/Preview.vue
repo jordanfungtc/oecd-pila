@@ -9,7 +9,7 @@ store.title = "Generative AI Module";
 </script>
 
 <template>
-  <div class="flex flex-col gap-24 w-full justify-center items-center mb-20">
+  <div class="flex flex-col gap-24 w-full justify-center items-center">
     <Section1 />
     <Section2 />
     <Section3 />

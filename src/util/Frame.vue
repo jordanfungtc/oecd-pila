@@ -21,8 +21,7 @@ const step = ref(0);
     </button>
 
     <div
-      class="max-w-5xl w-full min-h-[38rem] px-16 py-8 rounded-3xl"
-      style="box-shadow: 0px 0px 10px 5px #eee"
+      class="max-w-5xl w-full min-h-[38rem] px-16 py-8 rounded-3xl bg-white shadow-md"
     >
       <!-- Steps -->
       <ul class="steps my-0 px-0 w-full">
