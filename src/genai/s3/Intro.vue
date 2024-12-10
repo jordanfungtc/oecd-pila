@@ -7,7 +7,7 @@ import sectionIcon from "/s3/s3-icon.png";
   <div class="flex gap-16">
     <img :src="sectionIcon" class="w-48 h-48 mt-12" />
     <div>
-      <h2>Large Langauge Models (II)</h2>
+      <h2>Natural Language Processing and RAG</h2>
       <p>
         As we saw in the previous section, Large Language Models (LLMs) are a
         type of Generative AI models designed to understand and generate human

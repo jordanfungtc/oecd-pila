@@ -7,7 +7,7 @@ import sectionIcon from "/s2/s2-icon.png";
   <div class="flex gap-16">
     <img :src="sectionIcon" class="w-48 h-48 mt-12" />
     <div>
-      <h2>Large Langauge Models (I)</h2>
+      <h2>Large Langauge Models</h2>
       <p>
         In the last section, we explored how AI systems analyze data to identify
         patterns and make predictions, offer recommendations, or solve problems.

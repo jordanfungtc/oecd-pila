@@ -31,8 +31,9 @@ const analogyHandler = async () => {
   </p>
   <p>
     <strong>Task:</strong>
-    Can you think of other word analogies to explore? Choose one of the examples
-    below or create your own analogy.
+    Choose one of the following examples or come up with your own word analogy.
+    Then, enter the base word, the word to subtract from it, and the word to add
+    to it in the fields below. Click the Find button to see the resulting words.
   </p>
   <div>
     <span class="badge badge-ghost mr-2 p-4">
@@ -42,7 +43,7 @@ const analogyHandler = async () => {
     <span class="badge badge-ghost mr-2 p-4"> eye – see + hear = ? </span>
     <span class="badge badge-ghost mr-2 p-4"> running – run + play = ? </span>
   </div>
-  <div class="flex flex-row gap-2 items-center my-8">
+  <div class="flex flex-row gap-2 items-center my-4">
     <input
       type="text"
       class="input input-bordered w-full"
@@ -85,7 +86,7 @@ const analogyHandler = async () => {
     <span
       v-for="result in store.state[S3.ANALOGY_OUT.state]"
       :key="result.word"
-      class="badge badge-neutral badge-lg mr-2 p-4 mb-2 gap-2"
+      class="badge badge-neutral badge-lg mr-2 p-4 gap-2"
     >
       <b>{{ result.word }}</b>
       {{ result.distance.toFixed(3) }}
