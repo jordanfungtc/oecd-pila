@@ -12,8 +12,8 @@ import programmingIcon from "/s2/programming.png";
       <h2>Retrieval-Augmented Generation</h2>
       <p>
         In the last section, we learned that LLMs can answer a wide variety of
-        questions. However, when you need an LLM to answer a specific personal
-        or organizational question, it might not have the knowledge required
+        questions. However, when you need an LLM to answer a personal or
+        context-specific question, it might not have the knowledge required
         because it only knows what’s in its general training data.
       </p>
       <p>
