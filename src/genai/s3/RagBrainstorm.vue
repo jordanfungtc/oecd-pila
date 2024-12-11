@@ -17,7 +17,7 @@ import { store } from "../../store";
     v-model="store.state[S3.RAG_BRAINSTORM_TASK.state]"
     placeholder="Task"
   />
-  <h4>The database for this RAG system would be sourced from:</h4>
+  <h4>The database for this RAG system would contain:</h4>
   <textarea
     class="textarea textarea-lg textarea-bordered w-full"
     v-model="store.state[S3.RAG_BRAINSTORM_DATABASE.state]"

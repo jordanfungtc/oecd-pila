@@ -21,26 +21,17 @@ const training = [
     <div class="w-1/3">
       <h2>Sustainability of AI</h2>
       <p>
-        As AI grow in complexity and scale, they consume significant amounts of
-        energy and computational resources.
+        Apart from ethical considerations, the environmental impact of LLMs is
+        also a growing concern. Training LLMs involves processing vast amounts
+        of data, which requires significant electricity and computing power.
+        This can be particularly problematic if the energy is sourced from
+        non-renewable resources, such as fossil fuels.
       </p>
       <p>
         <strong>Task: </strong>
-        Use the slider to examine the environmental impact of LLM models in the
-        training phase.
+        Use the slider to examine how much energy it takes to train an LLM based
+        on their size.
       </p>
-      <div class="alert">
-        <span>
-          <strong>Did you know?</strong>
-          The largest Meta LLaMA 3 model has 405 billion parameters
-          <a
-            href="https://arxiv.org/abs/2407.21783"
-            target="_blank"
-            class="text-sm"
-            >(arXiv)</a
-          >.
-        </span>
-      </div>
     </div>
     <div class="w-2/3">
       <h3 class="mt-12">Training Phase</h3>
@@ -48,7 +39,7 @@ const training = [
 
       <!-- Slider -->
       <div class="text-center">
-        <strong>LLM Model Size (# parameters)</strong>
+        <strong>LLM Model Size (number of parameters)</strong>
       </div>
       <input
         type="range"

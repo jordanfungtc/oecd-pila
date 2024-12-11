@@ -33,14 +33,14 @@ const sliders = {
       <h2>Case Study</h2>
       <p>
         <strong>Task: </strong>
-        Now, based on the pros and cons, do you think it is worthwhile to use AI
-        for this purpose? Use the sliders to indicate your answer and explain
-        your reasoning.
+        Based on the pros and cons you identified, decide if you think using AI
+        for this purpose is worth it. Use the sliders to show your answer and
+        write a brief explanation in the field below.
       </p>
       <p>
-        Note that in the real world, you may need to consider many more
-        variables before making this decision (data protection, security, legal
-        considerations, and so on).
+        Note that in real life, you would also need to think about other factors
+        such as data protection, security, and regulations before making a
+        decision.
       </p>
     </div>
     <div class="w-2/3 mt-12 flex flex-col gap-8">

@@ -69,6 +69,7 @@ const S4: Record<string, any> = {
   REG_RISK_FAKE: { state: "reg_risk_fake", answer: 3 },
   REG_RISK_JUDGE: { state: "reg_risk_judge", answer: 2 },
   REG_RISK_POLICE: { state: "reg_risk_police", answer: 3 },
+  SUSTAINABILITY_Q: { state: "sustainability_q", answer: 0 },
   CASE_STORY: { state: "case_story", answer: null },
   CASE_PRO_1: { state: "case_pro_1", answer: null },
   CASE_PRO_2: { state: "case_pro_2", answer: null },

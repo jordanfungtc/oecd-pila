@@ -11,7 +11,7 @@ import { S1 } from "../states";
     that can solve it. What would be the inputs to the AI system and what would
     be the expected outputs? Write your answers in the fields below.
   </p>
-  <h4>Input</h4>
+  <h4>The input to the AI system should be:</h4>
   <textarea
     class="textarea textarea-lg textarea-bordered w-full leading-normal"
     v-model="store.state[S1.APP_BRAINSTORM_INPUT.state]"
@@ -19,7 +19,7 @@ import { S1 } from "../states";
     rows="2"
   ></textarea>
   <!-- Output -->
-  <h4>Output</h4>
+  <h4>The output from the AI system should be:</h4>
   <textarea
     class="textarea textarea-lg textarea-bordered w-full leading-normal"
     v-model="store.state[S1.APP_BRAINSTORM_OUTPUT.state]"

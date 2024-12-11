@@ -36,8 +36,9 @@ const stories = {
       <h2>Case Study</h2>
       <p>
         <strong>Task: </strong>
-        Choose and read one of the following case studies and move on to the
-        next step to evaluate it.
+        As you have seen, the use of AI comes with benefits as well as risks.
+        You should choose and read one of the following case studies, then move
+        on to the next step.
       </p>
       <!-- Story Selection -->
       <div
