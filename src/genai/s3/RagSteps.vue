@@ -12,8 +12,8 @@ import {
   <h2>RAG for Customer Service Chatbot</h2>
   <p>
     RAG is often used in customer service chatbots to provide accurate and
-    relevant responses to user queries while maintaining a conversational tone.
-    Here are the steps involved in the RAG process:
+    relevant responses to customer queries while maintaining a conversational
+    tone. Here are the steps involved in the RAG process:
   </p>
   <table class="my-0">
     <tbody>

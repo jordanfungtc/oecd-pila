@@ -298,7 +298,7 @@ const caseStudy = {
         <DbVertical :states="states" :questions="biasLlm" />
         <h4>
           <div class="badge">4.5</div>
-          Regulation Risk Levels
+          Identifying AI Risk Level
         </h4>
         <DbHorizontal :states="states" :questions="regs" />
         <h4>

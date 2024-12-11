@@ -30,7 +30,7 @@ const sliders = {
 <template>
   <div class="flex gap-12">
     <div class="w-1/3">
-      <h2>Case Study</h2>
+      <h2>Case Study: Worthiness</h2>
       <p>
         <strong>Task: </strong>
         Based on the pros and cons you identified, decide if you think using AI

@@ -40,7 +40,7 @@ const embs = {
     Word embeddings help computers understand the meaning of words by looking at
     their features. For example, “cat” and “dog” might have similar embeddings
     because they share features such as “is a mammal” and “has a tail.” On the
-    other hand, “car” would have very different embeddings.
+    other hand, the word “car” would have very different embeddings.
   </p>
   <p>
     <strong>Task:</strong>

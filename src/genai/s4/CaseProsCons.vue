@@ -6,7 +6,7 @@ import caseConIcon from "/s4/case-con.png";
 </script>
 
 <template>
-  <h2>Case Study</h2>
+  <h2>Case Study: Pros and Cons</h2>
   <p>
     <strong>Task: </strong>
     Think about the potential benefits as well as the ethical and environmental

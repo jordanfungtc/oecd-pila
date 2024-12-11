@@ -21,10 +21,12 @@ const training = [
     <div class="w-1/3">
       <h2>Sustainability of AI</h2>
       <p>
-        Apart from ethical considerations, the environmental impact of LLMs is
-        also a growing concern. Training LLMs involves processing vast amounts
-        of data, which requires significant electricity and computing power.
-        This can be particularly problematic if the energy is sourced from
+        The environmental impact of LLMs is also a growing concern. Training
+        LLMs involves processing vast amounts of data, which requires
+        significant electricity and computing power.
+      </p>
+      <p>
+        This is particularly problematic if the energy is sourced from
         non-renewable resources, such as fossil fuels.
       </p>
       <p>
@@ -38,8 +40,15 @@ const training = [
       <p>One-time cost to train the LLM model (Meta LLaMA)</p>
 
       <!-- Slider -->
-      <div class="text-center">
+      <div class="justify-center items-center flex gap-2">
         <strong>LLM Model Size (number of parameters)</strong>
+
+        <div
+          class="tooltip"
+          data-tip="Parameters are the internal settings that the model adjusts during training to learn patterns from the data and make accurate predictions."
+        >
+          <button class="btn btn-xs btn-circle">?</button>
+        </div>
       </div>
       <input
         type="range"

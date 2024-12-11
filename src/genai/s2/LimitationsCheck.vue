@@ -37,8 +37,9 @@ const facts = [
     <div class="w-2/3 mt-8">
       <p>
         <strong>Task: </strong>
-        Using an Internet search engine, verify the accuracy of the following
-        statistics included in the response.
+        Using a search engine, verify the accuracy of the following statistics
+        included in the response and select the correct option from the
+        dropdowns.
       </p>
       <div class="border rounded-xl">
         <table class="table my-0">
