@@ -163,6 +163,10 @@ const regs = {
   },
 };
 
+const sustainability = {
+  "Long Term": S4.SUSTAINABILITY_Q,
+};
+
 const caseStudy = {
   Case: S4.CASE_STORY,
   "Pro 1": S4.CASE_PRO_1,
@@ -301,6 +305,7 @@ const caseStudy = {
           <div class="badge">4.6 - 4.7</div>
           Sustainability of AI
         </h4>
+        <DbVertical :states="states" :questions="sustainability" />
         <h4>
           <div class="badge">4.9 - 4.10</div>
           Case Study

@@ -34,8 +34,8 @@ const sliders = {
       <p>
         <strong>Task: </strong>
         Based on the pros and cons you identified, decide if you think using AI
-        for this purpose is worth it. Use the sliders to show your answer and
-        write a brief explanation in the field below.
+        for this purpose is worth it. Use the sliders to indicate your answer
+        and write a brief explanation in the field below.
       </p>
       <p>
         Note that in real life, you would also need to think about other factors

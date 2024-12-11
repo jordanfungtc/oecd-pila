@@ -48,8 +48,8 @@ import llamaLogo from "/s4/llama-logo.png";
         <!-- Question Text -->
         <h4 class="mt-2 mb-4">True or false</h4>
         <p>
-          Over time, the total energy that is used for running the LLMs exceed
-          the energy consumed during their initial training.
+          In the long term, the total energy that is used for running the LLMs
+          exceed the energy consumed during their initial training.
         </p>
         <!-- Answer Selection -->
         <div class="flex gap-2">

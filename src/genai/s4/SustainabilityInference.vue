@@ -17,14 +17,14 @@ const phone = query / 0.01298;
     <div class="w-1/3">
       <h2>Sustainability of AI</h2>
       <p>
-        Now that you have an understanding of the energy consumption during the
-        training phase, did you know that each time you prompt an LLM to provide
-        a response, it also consumes energy?
+        You now have an understanding of the energy consumption of LLMs during
+        the training phase. But did you know that each time you prompt an LLM to
+        generate a response, it also consumes energy?
       </p>
       <p>
         <strong>Task: </strong>
         Use the slider on the right to examine how much energy an LLM consumes
-        when it runs.
+        when it is being used.
       </p>
     </div>
     <div class="w-2/3">

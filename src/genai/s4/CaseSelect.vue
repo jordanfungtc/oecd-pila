@@ -37,8 +37,8 @@ const stories = {
       <p>
         <strong>Task: </strong>
         As you have seen, the use of AI comes with benefits as well as risks.
-        You should choose and read one of the following case studies, then move
-        on to the next step.
+        You will now choose and read one of the following case studies, then
+        move on to the next step.
       </p>
       <!-- Story Selection -->
       <div
