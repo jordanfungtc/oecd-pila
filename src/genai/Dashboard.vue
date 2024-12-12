@@ -4,7 +4,6 @@ import { ref, onMounted, watch } from "vue";
 import { BIconArrowClockwise } from "bootstrap-icons-vue";
 import { S1, S2, S3, S4 } from "./states";
 import { store } from "../store";
-import DbAnswer from "../util/DbAnswer.vue";
 import DbVertical from "../util/DbVertical.vue";
 import DbHorizontal from "../util/DbHorizontal.vue";
 import section1Icon from "/s1/s1-icon.png";
@@ -68,8 +67,6 @@ const appBrainstorm = {
   Problem: S1.APP_BRAINSTORM_PROBLEM,
   Input: S1.APP_BRAINSTORM_INPUT,
   Output: S1.APP_BRAINSTORM_OUTPUT,
-  Challenge: S1.APP_BRAINSTORM_CHALLENGE,
-  Solution: S1.APP_BRAINSTORM_SOLUTION,
 };
 
 const llmSingle = {
@@ -112,11 +109,18 @@ const embs = {
   },
 };
 
-const analogy = {
+const sim = {
   "": {
+    "Similar Words": S3.SIM_Q1,
+    "Lower Score": S3.SIM_Q2,
+  },
+};
+
+const analogy = {
+  King: {
     Male: S3.EMB_KING_MALE,
     Female: S3.EMB_KING_FEMALE,
-    Royal: S3.EMB_KING_ROYAL,
+    Ruler: S3.EMB_KING_RULER,
   },
 };
 
@@ -159,6 +163,10 @@ const regs = {
   },
 };
 
+const sustainability = {
+  "Long Term": S4.SUSTAINABILITY_Q,
+};
+
 const caseStudy = {
   Case: S4.CASE_STORY,
   "Pro 1": S4.CASE_PRO_1,
@@ -176,7 +184,8 @@ const caseStudy = {
 
 <template>
   <div class="max-w-4xl w-full">
-    <div class="flex gap-2 items-center">
+    <div class="flex gap-2 items-center p-8 rounded-xl mb-8 bg-white shadow-md">
+      <h4 class="my-0">Student Selection</h4>
       <!-- User Selection -->
       <select v-model="selectedUser" class="w-full select select-bordered">
         <option v-for="(user, index) in users" :key="index" :value="index">
@@ -184,37 +193,39 @@ const caseStudy = {
         </option>
       </select>
       <!-- Refresh Button -->
-      <button @click="getHandler" class="btn">
+      <button @click="getHandler" class="btn btn-neutral">
         <BIconArrowClockwise class="w-5 h-5" />
         Refresh
       </button>
     </div>
 
-    <div class="flex gap-12">
+    <!-- Section 1 -->
+    <div class="flex gap-12 p-8 rounded-xl mb-8 bg-white shadow-md">
       <div class="w-1/5">
-        <h2>Section 1</h2>
+        <h2 class="mt-0">Section 1</h2>
         <img :src="section1Icon" />
       </div>
-      <div class="w-4/5 flex flex-col p-4 border rounded-xl my-8">
+      <div class="w-4/5 flex flex-col">
         <h4 class="mt-0">
-          <div class="badge">1.2 - 1.6</div>
-          AI Application Matching
+          <div class="badge">1.3 - 1.7</div>
+          Identifying Inputs and Outputs
         </h4>
         <DbHorizontal :states="states" :questions="appMatch" />
         <h4>
-          <div class="badge">1.7 - 1.10</div>
-          AI Application Brainstorming
+          <div class="badge">1.8 - 1.10</div>
+          Designing and AI System
         </h4>
         <DbVertical :states="states" :questions="appBrainstorm" />
       </div>
     </div>
 
-    <div class="flex gap-12">
+    <!-- Section 2 -->
+    <div class="flex gap-12 p-8 rounded-xl mb-8 bg-white shadow-md">
       <div class="w-1/5">
-        <h2>Section 2</h2>
+        <h2 class="mt-0">Section 2</h2>
         <img :src="section2Icon" />
       </div>
-      <div class="w-4/5 flex flex-col p-4 border rounded-xl my-8">
+      <div class="w-4/5 flex flex-col">
         <h4 class="mt-0">
           <div class="badge">2.2 - 2.5</div>
           Prompt Engineering
@@ -222,42 +233,34 @@ const caseStudy = {
         <DbHorizontal :states="states" :questions="llmSingle" />
         <h4>
           <div class="badge">2.6 - 2.7</div>
-          Conversational AI
+          Limitations of LLMs
         </h4>
         <DbHorizontal :states="states" :questions="llmConv" />
         <h4>
           <div class="badge">2.9</div>
-          LLM Brainstorming
+          LLMs in Everyday Life
         </h4>
         <DbVertical :states="states" :questions="llmBrainstorm" />
       </div>
     </div>
 
-    <div class="flex gap-12">
+    <!-- Section 3 -->
+    <div class="flex gap-12 p-8 rounded-xl mb-8 bg-white shadow-md">
       <div class="w-1/5">
-        <h2>Section 3</h2>
+        <h2 class="mt-0">Section 3</h2>
         <img :src="section3Icon" />
       </div>
-      <div class="w-4/5 flex flex-col p-4 border rounded-xl my-8">
+      <div class="w-4/5 flex flex-col">
         <h4 class="mt-0">
-          <div class="badge">3.2</div>
-          Word Embeddings
+          <div class="badge">3.2-3.3</div>
+          Creating Word Embeddings
         </h4>
         <DbHorizontal :states="states" :questions="embs" />
         <h4>
           <div class="badge">3.4</div>
           Similarity Score
         </h4>
-        <table class="table table-sm w-full my-0">
-          <tbody>
-            <tr>
-              <th>Cat/Car</th>
-              <td class="w-full">
-                <DbAnswer :states="states" :question="S3.SIM_CAT_CAR" />
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <DbHorizontal :states="states" :questions="sim" />
         <h4>
           <div class="badge">3.5</div>
           Word Analogy
@@ -276,12 +279,13 @@ const caseStudy = {
       </div>
     </div>
 
-    <div class="flex gap-12">
+    <!-- Section 4 -->
+    <div class="flex gap-12 p-8 rounded-xl mb-8 bg-white shadow-md">
       <div class="w-1/5">
-        <h2>Section 4</h2>
+        <h2 class="mt-0">Section 4</h2>
         <img :src="section4Icon" />
       </div>
-      <div class="w-4/5 flex flex-col p-4 border rounded-xl my-8">
+      <div class="w-4/5 flex flex-col">
         <h4 class="mt-0">
           <div class="badge">4.2</div>
           Bias in Word Embeddings
@@ -294,14 +298,14 @@ const caseStudy = {
         <DbVertical :states="states" :questions="biasLlm" />
         <h4>
           <div class="badge">4.5</div>
-          Regulation Risk Levels
+          Identifying AI Risk Level
         </h4>
         <DbHorizontal :states="states" :questions="regs" />
         <h4>
           <div class="badge">4.6 - 4.7</div>
           Sustainability of AI
         </h4>
-        <span>Interactive Exercise</span>
+        <DbVertical :states="states" :questions="sustainability" />
         <h4>
           <div class="badge">4.9 - 4.10</div>
           Case Study

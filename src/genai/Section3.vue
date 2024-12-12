@@ -2,12 +2,15 @@
 import { store } from "../store";
 import Frame from "../util/Frame.vue";
 import Intro from "./s3/Intro.vue";
-import Embeddings from "./s3/Embeddings.vue";
-import SimilarityExample from "./s3/SimilarityExample.vue";
-import SimilarityTask from "./s3/SimilarityTask.vue";
+import EmbIntro from "./s3/EmbIntro.vue";
+import EmbTask from "./s3/EmbTask.vue";
+import SimilarityIntro from "./s3/SimilarityIntro.vue";
+import SimilarityCalc from "./s3/SimilarityCalc.vue";
+import AnalogyIntro from "./s3/AnalogyIntro.vue";
 import AnalogyTask from "./s3/AnalogyTask.vue";
 import AnalogyBrainstorm from "./s3/AnalogyBrainstorm.vue";
 import RagIntro from "./s3/RagIntro.vue";
+import RagSteps from "./s3/RagSteps.vue";
 import RagDatabase from "./s3/RagDatabase.vue";
 import RagGenerate from "./s3/RagGenerate.vue";
 import RagBrainstorm from "./s3/RagBrainstorm.vue";
@@ -16,16 +19,19 @@ store.title = "Generative AI Module";
 </script>
 
 <template>
-  <Frame :steps="10">
+  <Frame :steps="13">
     <template #0><Intro /></template>
-    <template #1><Embeddings /></template>
-    <template #2><SimilarityExample /></template>
-    <template #3><SimilarityTask /></template>
-    <template #4><AnalogyTask /></template>
-    <template #5><AnalogyBrainstorm /></template>
-    <template #6><RagIntro /></template>
-    <template #7><RagDatabase /></template>
-    <template #8><RagGenerate /></template>
-    <template #9><RagBrainstorm /></template>
+    <template #1><EmbIntro /></template>
+    <template #2><EmbTask /></template>
+    <template #3><SimilarityIntro /></template>
+    <template #4><SimilarityCalc /></template>
+    <template #5><AnalogyIntro /></template>
+    <template #6><AnalogyTask /></template>
+    <template #7><AnalogyBrainstorm /></template>
+    <template #8><RagIntro /></template>
+    <template #9><RagSteps /></template>
+    <template #10><RagDatabase /></template>
+    <template #11><RagGenerate /></template>
+    <template #12><RagBrainstorm /></template>
   </Frame>
 </template>

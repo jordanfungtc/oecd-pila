@@ -98,17 +98,18 @@ const outputs = {
   <!-- App Icon and Label -->
   <div class="flex gap-4 items-center mt-8">
     <img :src="apps[props.i].icon" alt="App Icon" class="w-12 h-12 my-0" />
-    <h3 class="my-0">{{ apps[props.i].label }}</h3>
+    <h3 class="my-0">AI for {{ apps[props.i].label }}</h3>
   </div>
   <p>
     <strong>Task: </strong>
-    For this application, what are the inputs to the AI system and what outputs
-    is it designed to predict?
+    To use AI for this application, can you guess what the inputs to the AI
+    system would be and what the expected outputs are? Select the correct
+    options from the dropdowns below, then read the explanation to learn more.
   </p>
   <div class="flex flex-row gap-2 w-full items-center">
     <!-- Input Select -->
     <select
-      class="select select-bordered w-full bg-white"
+      class="select select-bordered w-full"
       v-model="store.state[apps[props.i].in.state]"
       v-bind:class="{
         'select-success':
@@ -127,7 +128,7 @@ const outputs = {
     <span>→</span>
     <!-- Output Select -->
     <select
-      class="select select-bordered w-full bg-white"
+      class="select select-bordered w-full"
       v-model="store.state[apps[props.i].out.state]"
       v-bind:class="{
         'select-success':
@@ -153,7 +154,7 @@ const outputs = {
       store.state[apps[props.i].in.state] === apps[props.i].in.answer &&
       store.state[apps[props.i].out.state] === apps[props.i].out.answer
     "
-    class="flex gap-12 items-center mt-8"
+    class="flex gap-12 items-center mt-4"
   >
     <!-- Image -->
     <img

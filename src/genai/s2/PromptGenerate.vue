@@ -26,7 +26,7 @@ const generateHandler = () => {
 </script>
 
 <template>
-  <h2>{{ props.i === "0" ? "Simple" : "Refined" }} Prompt</h2>
+  <h2>Prompt Example {{ props.i === "0" ? "A" : "B" }}</h2>
   <div class="flex gap-4 items-center">
     <textarea
       class="textarea textarea-lg textarea-bordered w-full leading-normal"
@@ -54,10 +54,11 @@ const generateHandler = () => {
       class="mt-[-10px]"
     ></div>
     <p v-else>
+      <strong>Task: </strong>
       {{
         props.i === "0"
-          ? "Generate a response using the simple prompt above and examine the response."
-          : "Generate a response using the refined prompt above and compare the responses to the simple prompt."
+          ? "For the prompt above, click the button to generate with the LLM simulator and observe the response."
+          : "Similarly, click the button to generate a response using the prompt above and compare the responses to the previous prompt. Can you see the importance of prompt engineering?"
       }}
     </p>
   </div>

@@ -33,16 +33,17 @@ const regs = [
 </script>
 
 <template>
-  <h2>Identify the Risk Level of AI</h2>
+  <h2>Identifying AI Risk Level</h2>
   <p>
     <strong>Task: </strong>
-    Go through the AI use cases below and determine the level of risk they pose
-    under the EU AI act.
+    For each of the AI use cases below, click the link on the left column to
+    read the corresponding EU AI Act recital. Then, select the risk level of the
+    AI use case using the dropdowns.
   </p>
   <!-- Use Case Table -->
-  <table class="table table-sm w-full my-0">
+  <table class="table table-sm w-full my-[-10px]">
     <tbody>
-      <tr v-for="(reg, reg_i) in regs" :key="reg_i">
+      <tr v-for="(reg, reg_i) in regs" :key="reg_i" class="my-0">
         <td class="min-w-32">
           <a
             :href="`https://artificialintelligenceact.eu/recital/${reg.recital}`"

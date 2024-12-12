@@ -7,27 +7,25 @@ import sectionIcon from "/s3/s3-icon.png";
   <div class="flex gap-16">
     <img :src="sectionIcon" class="w-48 h-48 mt-12" />
     <div>
-      <h2>Word Embeddings</h2>
+      <h2>Natural Language Processing and RAG</h2>
       <p>
-        To understand the underlying principles of how language models work, we
-        need to explore how computers process and interpret human language.
-        Instead of seeing words as plain text, embeddings turn them into numbers
-        that correspond to certain features of the words. Embeddings can be used
-        to represent the meaning of words, sentences, entire documents, or even
-        images and videos.
+        As we saw in the previous section, Large Language Models (LLMs) are a
+        type of Generative AI models designed to understand and generate human
+        language. However, computers can't understand words the way we see them.
+        Instead, they convert words into numbers using a process called
+        embeddings.
       </p>
-      <h4>In this section</h4>
-      <ul>
-        <li>Create the embeddings for words based on predefined features</li>
-        <li>
-          Calculate the similarity score between embeddings and explore word
-          analogies
-        </li>
-        <li>
-          Experience retrieval-augmented generation (RAG) and brainstorm its
-          applications
-        </li>
-      </ul>
+      <p>
+        We can think of word embeddings as a way to represent words as numbers
+        that carry information about their meanings and relationships to other
+        words. Embeddings can also be used represent the meaning of sentences,
+        entire documents, or even images.
+      </p>
+      <p>
+        These numerical representations are not only used in LLMs to generate
+        text but also has many other fascinating uses which we will explore in
+        this section.
+      </p>
       <a
         href="https://www.youtube.com/watch?v=wgfSDrqYMJ4"
         target="_blank"

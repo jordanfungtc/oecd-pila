@@ -10,7 +10,7 @@ const base_url = "https://pila.oecd.jordanfung.com";
 
 const modules = {
   genai: {
-    name: "Generative AI",
+    name: "Generative AI Module",
     preview: "/genai/preview",
     dashboard: `/genai/dashboard?user=${store.auth.user}&content=my-state&content=fake-state`,
     sequences: [
@@ -82,7 +82,11 @@ const check = async () => {
 
 <template>
   <div class="max-w-4xl w-full">
-    <div v-for="(module, i) in modules" :key="i">
+    <div
+      v-for="(module, i) in modules"
+      :key="i"
+      class="p-8 rounded-xl mb-8 bg-white shadow-md"
+    >
       <div class="flex gap-2 items-center">
         <h2 class="my-0">{{ module.name }}</h2>
         <div class="flex-grow"></div>

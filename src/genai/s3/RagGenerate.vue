@@ -34,7 +34,7 @@ const generateHandler = async () => {
 </script>
 
 <template>
-  <h2>Customer Service Chatbot</h2>
+  <h2>RAG for Customer Service Chatbot: Usage</h2>
   <div class="grid grid-cols-2 gap-8">
     <div>
       <!-- Query Section -->

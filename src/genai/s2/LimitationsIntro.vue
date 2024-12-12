@@ -9,30 +9,30 @@ import intelPropIcon from "/s2/intel-prop.png";
     <div class="w-1/3">
       <h2>Limitations of LLMs</h2>
       <p>
-        LLMs have limitations that can affect the quality and reliability of
-        their responses. It is crucial to approach their outputs with caution
-        and verify information independently.
+        As you have seen, LLMs have limitations that can affect the quality and
+        reliability of their responses.
       </p>
       <p>
-        For instance, you can look for sources online that confirm the
-        information provided by the LLM, check the credibility of the author,
-        and ensure that the data is up-to-date.
+        Therefore, it is essential to approach LLM responses with caution and
+        always verify information independently using search engines such as
+        Google. You should also check the credibility of the author and ensure
+        that the data is up-to-date.
       </p>
     </div>
-    <div class="w-2/3 flex flex-col gap-4 mt-12">
-      <div class="flex gap-8 p-4 border rounded-xl">
-        <img :src="dataCutoffIcon" class="w-16 h-16 my-4" />
+    <div class="w-2/3 flex flex-col gap-4 mt-8">
+      <div class="flex gap-8 py-3 px-6 border rounded-xl items-center">
+        <img :src="dataCutoffIcon" class="w-20 h-20 my-4" />
         <div>
           <h4 class="mt-0">Data Cut-off</h4>
           <p class="text-sm my-0">
-            LLMs can only generate responses based on the information available
-            in their training data. If an LLM has a data cut-off in 2023, it
-            won't be able to answer questions about events in 2024.
+            LLMs can only generate responses based their training data. If an
+            LLM was trained on data up to 2023, it won't be able to answer
+            questions about events in 2024.
           </p>
         </div>
       </div>
-      <div class="flex gap-8 p-4 border rounded-xl">
-        <img :src="hallucinationIcon" class="w-16 h-16 my-4" />
+      <div class="flex gap-8 py-3 px-6 border rounded-xl items-center">
+        <img :src="hallucinationIcon" class="w-20 h-20 my-4" />
         <div>
           <h4 class="mt-0">Hallucinations</h4>
           <p class="text-sm my-0">
@@ -42,8 +42,8 @@ import intelPropIcon from "/s2/intel-prop.png";
           </p>
         </div>
       </div>
-      <div class="flex gap-8 p-4 border rounded-xl">
-        <img :src="intelPropIcon" class="w-16 h-16 my-4" />
+      <div class="flex gap-8 py-3 px-6 border rounded-xl items-center">
+        <img :src="intelPropIcon" class="w-20 h-20 my-4" />
         <div>
           <h4 class="mt-0">Intellectual Property</h4>
           <p class="text-sm my-0">

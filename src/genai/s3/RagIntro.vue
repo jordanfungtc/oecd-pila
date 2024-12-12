@@ -1,74 +1,77 @@
 <script setup lang="ts">
-import {
-  BIcon1Circle,
-  BIcon2Circle,
-  BIcon3Circle,
-  BIcon4Circle,
-  BIcon5Circle,
-  BIconPlayBtn,
-} from "bootstrap-icons-vue";
+import { BIconPlayBtn } from "bootstrap-icons-vue";
+import customerIcon from "/s3/customer.png";
+import tutorIcon from "/s3/tutor.png";
+import legalIcon from "/s3/legal.png";
+import programmingIcon from "/s2/programming.png";
 </script>
 
 <template>
-  <h2>Retrieval-Augmented Generation</h2>
-  <p>
-    As discussed earlier, LLMs only possess generic knowledge from their
-    training data. What if we need to ask questions in a specific personal or
-    organizational context? LLMs most likely won’t have this specific
-    information. To address this issue, we can use retrieval-augmented
-    generation (RAG) to provide context-specific information to the LLM.
-  </p>
-  <table class="table table-sm my-0">
-    <tbody>
-      <tr>
-        <th><BIcon1Circle class="w-5 h-5" /></th>
-        <th>Database</th>
-        <td>
-          Prepare a set of entries which contains information relevant to the
-          context.
-        </td>
-      </tr>
-      <tr>
-        <th><BIcon2Circle class="w-5 h-5" /></th>
-        <th>Query</th>
-        <td>
-          The user inputs a query prompt to ask for information within the
-          context of the database.
-        </td>
-      </tr>
-      <tr>
-        <th><BIcon3Circle class="w-5 h-5" /></th>
-        <th>Retrieve</th>
-        <td>
-          Obtain the embeddings and compute the similarity scores between the
-          query and every entry in the database.
-        </td>
-      </tr>
-      <tr>
-        <th><BIcon4Circle class="w-5 h-5" /></th>
-        <th>Augment</th>
-        <td>
-          Add the most relevant entries with the highest similarity scores to
-          the prompt.
-        </td>
-      </tr>
-      <tr>
-        <th><BIcon5Circle class="w-5 h-5" /></th>
-        <th>Generate</th>
-        <td>
-          The LLM generates a text response for the user based on the augmented
-          prompt.
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  <p>
-    <a
-      href="https://www.youtube.com/watch?v=qppV3n3YlF8"
-      target="_blank"
-      class="no-underline flex gap-2 items-center text-primary mt-8"
-    >
-      <BIconPlayBtn /> IBM Technology: RAG Explained
-    </a>
-  </p>
+  <div class="flex gap-12">
+    <div class="w-1/2">
+      <h2>Retrieval-Augmented Generation</h2>
+      <p>
+        In the last section, we learned that LLMs can answer a wide variety of
+        questions. However, when you need an LLM to answer a personal or
+        context-specific question, it might not have the knowledge required
+        because it only knows what’s in its general training data.
+      </p>
+      <p>
+        This is where Retrieval-Augmented Generation (RAG) comes in. RAG allows
+        the LLM to pull in additional, specific information from a separate
+        database to help answer questions more accurately. Some examples of RAG
+        applications are provided on the right.
+      </p>
+      <p>
+        <a
+          href="https://www.youtube.com/watch?v=qppV3n3YlF8"
+          target="_blank"
+          class="no-underline flex gap-2 items-center text-primary mt-8"
+        >
+          <BIconPlayBtn /> IBM Technology: RAG Explained
+        </a>
+      </p>
+    </div>
+    <div class="w-1/2 flex flex-col gap-4 mt-8">
+      <div class="flex gap-8 py-3 px-6 border rounded-xl items-center">
+        <img :src="customerIcon" class="w-16 h-16 my-0" />
+        <div>
+          <h4 class="mt-0">Customer Service Chatbot</h4>
+          <p class="text-sm my-0">
+            Database: product details, shipping and payment information, company
+            policies<br />
+          </p>
+        </div>
+      </div>
+      <div class="flex gap-8 py-3 px-6 border rounded-xl items-center">
+        <img :src="tutorIcon" class="w-16 h-16 my-0" />
+        <div>
+          <h4 class="mt-0">Educational Tutoring</h4>
+          <p class="text-sm my-0">
+            Database: textbooks, study guides, lecture notes, past exam
+            papers<br />
+          </p>
+        </div>
+      </div>
+      <div class="flex gap-8 py-3 px-6 border rounded-xl items-center">
+        <img :src="legalIcon" class="w-16 h-16 my-0" />
+        <div>
+          <h4 class="mt-0">Legal Research Tool</h4>
+          <p class="text-sm my-0">
+            Database: statutes, case law, legal opinions, court documents<br />
+          </p>
+        </div>
+      </div>
+      <div class="flex gap-8 py-3 px-6 border rounded-xl items-center">
+        <img :src="programmingIcon" class="w-16 h-16 my-0" />
+        <div>
+          <h4 class="mt-0">Programming Assistant</h4>
+          <p class="text-sm my-0">
+            Database: technical documentation, code snippets, error messages,
+            tutorials<br />
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>

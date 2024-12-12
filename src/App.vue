@@ -30,7 +30,7 @@ inject();
   <!-- Main App -->
   <div v-else class="prose-headings:font-['Rubik']">
     <NavBar />
-    <div class="flex p-10 prose max-w-none justify-center">
+    <div class="flex p-10 prose max-w-none justify-center bg-blue-100">
       <RouterView />
     </div>
   </div>

@@ -17,27 +17,15 @@ const phone = query / 0.01298;
     <div class="w-1/3">
       <h2>Sustainability of AI</h2>
       <p>
-        <strong>Task: </strong>
-        Try exploring the slider to see how LLMs impact the environment during
-        the inference phase.
+        You now have an understanding of the energy consumption of LLMs during
+        the training phase. But did you know that each time you prompt an LLM to
+        generate a response, it also consumes energy?
       </p>
       <p>
-        Over time, does the total energy used for running these models
-        (inference) end up being greater than the energy it took to train them
-        in the first place?
+        <strong>Task: </strong>
+        Use the slider on the right to examine how much energy an LLM consumes
+        when it is being used.
       </p>
-      <div class="alert">
-        <span>
-          <strong>Did you know?</strong>
-          ChatGPT serves more than 200 million weekly active users
-          <a
-            href="https://www.reuters.com/technology/artificial-intelligence/openai-says-chatgpts-weekly-users-have-grown-200-million-2024-08-29/"
-            target="_blank"
-            class="text-sm"
-            >(Reuters, Aug 2024)</a
-          >.
-        </span>
-      </div>
     </div>
     <div class="w-2/3">
       <h3 class="mt-12">Inference Phase</h3>

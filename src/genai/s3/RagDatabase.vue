@@ -4,12 +4,13 @@ import { database } from "./ragExamples";
 </script>
 
 <template>
-  <h2>Customer Service Chatbot</h2>
+  <h2>RAG for Customer Service Chatbot: Database</h2>
+
   <p>
     <strong>Task: </strong>
     Inspect the RAG database of a customer service chatbot for an online
-    electronics store below. Then, use it to generate a response to a customer
-    query in the next step.
+    electronics store below. Then, proceed to the next step to select a customer
+    query and generate a response using RAG.
   </p>
   <!-- Database Section -->
   <div class="flex gap-2 items-center mb-4">

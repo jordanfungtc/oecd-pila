@@ -6,12 +6,12 @@ import caseConIcon from "/s4/case-con.png";
 </script>
 
 <template>
-  <h2>Case Study</h2>
+  <h2>Case Study: Pros and Cons</h2>
   <p>
     <strong>Task: </strong>
-    Identify the pros and cons of the use of AI in this case study. Consider
-    potential benefits as well as the ethical and environmental risks while you
-    list out the pros and cons.
+    Think about the potential benefits as well as the ethical and environmental
+    risks of using AI in your chosen case study. Identify 3 pros and 3 cons and
+    write them in the fields below.
   </p>
   <div class="grid grid-cols-2 gap-8">
     <!-- Pros -->

@@ -4,31 +4,52 @@ import SelectEmb from "../../util/SelectEmb.vue";
 </script>
 
 <template>
-  <h2>Word Analogy</h2>
+  <h2>Word Analogy with Embeddings</h2>
   <p>
-    Intuitively, we know that “🤴 king” is to “👸 queen” in the same way “🙋‍♂️
-    man” is to “💁‍♀️ woman,” as they are pairs of words that share a relationship:
-    one is male, the other is female. This is known as a word analogy. Since
-    embeddings represent the meaning of words as numbers, we can perform
-    arithmetic operations on them to identify word analogies.
+    Since embeddings represent the meaning of words as numbers, we can perform
+    arithmetic operations on them to identify word analogies. By subtracting the
+    embedding of "woman" from that of "queen", we isolate the meaning of a
+    "ruler". Then, by adding the embedding of "man" to this result, we get the
+    meaning of a "male ruler", or "king".
   </p>
   <p>
     <strong>Task:</strong>
-    Let's create the embeddings for "🤴 king" in the following analogy.
+    Create the embedding of "king" by completing the analogy below using the
+    dropdowns.
   </p>
-  <table class="table table-sm my-0 pb-0">
+  <table class="table table-sm mt-0 mb-[-10px]">
     <thead>
       <th></th>
-      <th><h2 class="my-0 text-center">👸 queen</h2></th>
+      <th>
+        <h3 class="my-0 text-center flex gap-2 items-center">
+          <div class="text-xl">👸</div>
+          <div class="text-lg">queen</div>
+        </h3>
+      </th>
       <th><h2 class="my-0 text-center">–</h2></th>
-      <th><h2 class="my-0 text-center">💁‍♀️ woman</h2></th>
+      <th>
+        <h3 class="my-0 text-center flex gap-2 items-center">
+          <div class="text-xl">💁‍♀️</div>
+          <div class="text-lg">woman</div>
+        </h3>
+      </th>
       <th><h2 class="my-0 text-center">+</h2></th>
-      <th><h2 class="my-0 text-center">🙋‍♂️ man</h2></th>
+      <th>
+        <h3 class="my-0 text-center flex gap-2 items-center">
+          <div class="text-xl">🙋‍♂️</div>
+          <div class="text-lg">man</div>
+        </h3>
+      </th>
       <th><h2 class="my-0 text-center">=</h2></th>
-      <th><h2 class="my-0 text-center">🤴 king</h2></th>
+      <th>
+        <h3 class="my-0 text-center flex gap-2 items-center">
+          <div class="text-xl">🤴</div>
+          <div class="text-lg">king</div>
+        </h3>
+      </th>
     </thead>
     <tbody>
-      <tr>
+      <tr class="border-none">
         <td><h3 class="my-0 text-center">male</h3></td>
         <td class="text-center">0</td>
         <td class="text-center">–</td>
@@ -43,7 +64,7 @@ import SelectEmb from "../../util/SelectEmb.vue";
           />
         </td>
       </tr>
-      <tr>
+      <tr class="border-none">
         <td><h3 class="my-0 text-center">female</h3></td>
         <td class="text-center">1</td>
         <td class="text-center">–</td>
@@ -59,7 +80,7 @@ import SelectEmb from "../../util/SelectEmb.vue";
         </td>
       </tr>
       <tr>
-        <td><h3 class="my-0 text-center">royal</h3></td>
+        <td><h3 class="my-0 text-center">ruler</h3></td>
         <td class="text-center">1</td>
         <td class="text-center">–</td>
         <td class="text-center">0</td>
@@ -68,8 +89,8 @@ import SelectEmb from "../../util/SelectEmb.vue";
         <td class="text-center">=</td>
         <td>
           <SelectEmb
-            :state="S3.EMB_KING_ROYAL.state"
-            :answer="S3.EMB_KING_ROYAL.answer"
+            :state="S3.EMB_KING_RULER.state"
+            :answer="S3.EMB_KING_RULER.answer"
           />
         </td>
       </tr>

@@ -17,8 +17,6 @@ const S1: Record<string, any> = {
   APP_BRAINSTORM_PROBLEM: { state: "app_brainstorm_problem", answer: null },
   APP_BRAINSTORM_INPUT: { state: "app_brainstorm_input", answer: null },
   APP_BRAINSTORM_OUTPUT: { state: "app_brainstorm_output", answer: null },
-  APP_BRAINSTORM_CHALLENGE: { state: "app_brainstorm_challenge", answer: null },
-  APP_BRAINSTORM_SOLUTION: { state: "app_brainstorm_solution", answer: null },
 };
 
 const S2: Record<string, any> = {
@@ -45,10 +43,11 @@ const S3: Record<string, any> = {
   EMB_CAR_MAMMAL: { state: "emb_car_mammal", answer: 0 },
   EMB_CAR_WHEEL: { state: "emb_car_wheel", answer: 1 },
   EMB_CAR_TAIL: { state: "emb_car_tail", answer: 0 },
-  SIM_CAT_CAR: { state: "sim_cat_car", answer: 0.408 },
+  SIM_Q1: { state: "sim_q1", answer: 0 },
+  SIM_Q2: { state: "sim_q2", answer: 1 },
   EMB_KING_MALE: { state: "emb_king_male", answer: 1 },
   EMB_KING_FEMALE: { state: "emb_king_female", answer: 0 },
-  EMB_KING_ROYAL: { state: "emb_king_royal", answer: 1 },
+  EMB_KING_RULER: { state: "emb_king_ruler", answer: 1 },
   ANALOGY_BASE: { state: "analogy_base", answer: null },
   ANALOGY_SUB: { state: "analogy_sub", answer: null },
   ANALOGY_ADD: { state: "analogy_add", answer: null },
@@ -70,6 +69,7 @@ const S4: Record<string, any> = {
   REG_RISK_FAKE: { state: "reg_risk_fake", answer: 3 },
   REG_RISK_JUDGE: { state: "reg_risk_judge", answer: 2 },
   REG_RISK_POLICE: { state: "reg_risk_police", answer: 3 },
+  SUSTAINABILITY_Q: { state: "sustainability_q", answer: 0 },
   CASE_STORY: { state: "case_story", answer: null },
   CASE_PRO_1: { state: "case_pro_1", answer: null },
   CASE_PRO_2: { state: "case_pro_2", answer: null },
