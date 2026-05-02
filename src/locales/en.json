@@ -3,7 +3,6 @@
     "title": "Designing an AI System",
     "paragraph1": "As we saw in each of the examples, there is an identified problem that needs to be solved. We then design an AI system to take relevant input data, analyze it, and predict an output. Finally, the output can be used to solve the problem.",
     "paragraph2": "Now it is your turn to design an AI system. You must first identify a problem that you want to solve in a specific sector. Some examples are provided on the right.",
-    "languageLabel": "Language",
     "sectors": {
       "transportation": {
         "title": "Sector: Transportation",
