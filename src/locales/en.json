@@ -1,21 +1,141 @@
 {
-  "brainstormIntro": {
-    "title": "Designing an AI System",
-    "paragraph1": "As we saw in each of the examples, there is an identified problem that needs to be solved. We then design an AI system to take relevant input data, analyze it, and predict an output. Finally, the output can be used to solve the problem.",
-    "paragraph2": "Now it is your turn to design an AI system. You must first identify a problem that you want to solve in a specific sector. Some examples are provided on the right.",
-    "sectors": {
-      "transportation": {
-        "title": "Sector: Transportation",
-        "description": "Traffic congestion is increasingly a concern in urban areas. Could AI analyse commuter data and traffic patterns to optimise bus routes and schedules, making travel more efficient?"
-      },
-      "environment": {
-        "title": "Sector: Environment",
-        "description": "Energy wastage and pollution are major environmental issues. Could AI use data on resource consumption to identify areas for improvement and reduce waste?"
-      },
-      "healthcare": {
-        "title": "Sector: Healthcare",
-        "description": "Managing disease outbreaks is crucial for public health. Could AI use data from hospitals to support the healthcare system in identifying and responding to potential outbreaks?"
+  "s1": {
+    "intro": {
+      "title": "AI and Machine Learning",
+      "paragraph1": "Have you ever wondered how your favourite music streaming service suggests songs you might like, how your smartphone recognizes your voice commands, how your email filters out spam, or how a navigation app finds the best route? These tasks are all accomplished with the help of Artificial Intelligence (AI).",
+      "paragraph2": "AI is a branch of computer science that enables machines to perform tasks that typically require human intelligence. One important part of AI is called machine learning (ML). With ML, computers learn from lots of data and find patterns to make predictions or decisions without the need for humans to explicitly program them. AI and ML are used in a wide range of applications and have radically transformed many industries.",
+      "tedTalkLabel": "TED Talk: How AI Could Empower Any Business by Andrew Ng"
+    },
+    "ioIntro": {
+      "title": "Identifying Inputs and Outputs",
+      "paragraph1": "To effectively use AI and ML, we need to clearly identify the inputs and outputs. Inputs are the information that we need to provide to the AI system, while outputs are the results it gives back to the user.",
+      "paragraph2": "Without inputs, the AI system would have no data to process, making it incapable of making predictions, offering recommendations, or performing tasks. Similarly, having appropriate outputs is crucial to ensuring that the AI system is useful and relevant to the user.",
+      "paragraph3": "Some examples of AI systems and their inputs and outputs are provided on the right.",
+      "examples": {
+        "music": {
+          "title": "Music Streaming Services",
+          "inputs": "Inputs: Listening history, preferences",
+          "outputs": "Outputs: Song recommendations"
+        },
+        "assistant": {
+          "title": "Smartphone Assistants",
+          "inputs": "Inputs: Voice commands, user data",
+          "outputs": "Outputs: Actions to perform"
+        },
+        "spam": {
+          "title": "Spam Filters",
+          "inputs": "Inputs: Email sender, text content",
+          "outputs": "Outputs: Spam or not spam"
+        },
+        "navigation": {
+          "title": "Navigation Systems",
+          "inputs": "Inputs: Current location, destination, map",
+          "outputs": "Outputs: Best route to take"
+        }
       }
+    },
+    "ioTask": {
+      "aiForLabel": "AI for {app}",
+      "taskLabel": "Task:",
+      "taskInstruction": "To use AI for this application, can you guess what the inputs to the AI system would be and what the expected outputs are? Select the correct options from the dropdowns below, then read the explanation to learn more.",
+      "inputPlaceholder": "Input",
+      "outputPlaceholder": "Output",
+      "inputs": {
+        "sentiment": "Product customer reviews",
+        "academic": "Study habits and past performance",
+        "decoy1": "Historical weather data",
+        "medical": "Medical scan images",
+        "fraud": "Credit card transactions",
+        "video": "Past likes on videos",
+        "decoy2": "Financial news content"
+      },
+      "outputs": {
+        "fraud": "Fraudulent activity",
+        "sentiment": "Positive or negative sentiment",
+        "video": "Recommended videos to watch",
+        "decoy2": "Stock price predictions",
+        "medical": "Diagnosed medical condition",
+        "decoy1": "Probability of rain",
+        "academic": "Student's final grade"
+      },
+      "apps": {
+        "academic": {
+          "label": "Academic Performance",
+          "description": "AI can analyze a student's study habits, past performance, and demographic information to predict their final grade. This helps teachers identify students who may need additional support and enhance their academic performance.",
+          "sourceTitle": "UCI ML Repository: Student Performance Dataset"
+        },
+        "medical": {
+          "label": "Medical Diagnosis",
+          "description": "AI can analyze medical scan images to detect signs of diseases, such as cancer, fractures, or other abnormalities. This can assist doctors in making more accurate diagnoses and delivering timely treatments to patients.",
+          "sourceTitle": "Kaggle: RSNA-MICCAI Brain Tumor Radiogenomic Classification"
+        },
+        "video": {
+          "label": "Video Recommendation",
+          "description": "By analyzing a user's past interactions with videos, AI can recommend new content that the user is likely to enjoy. This is used on platforms like YouTube and Netflix to personalize the user experience and boost engagement.",
+          "sourceTitle": "Kaggle: MovieLens 20M Dataset"
+        },
+        "sentiment": {
+          "label": "Customer Sentiment",
+          "description": "AI can analyze customer reviews to determine whether the sentiment is positive or negative, helping businesses understand customer feedback and make improvements to their products or services.",
+          "sourceTitle": "Kaggle: Amazon Fine Food Reviews"
+        },
+        "fraud": {
+          "label": "Fraud Detection",
+          "description": "Financial institutions use AI to analyze patterns in credit card transactions and detect fraudulent activity. By flagging suspicious transactions in real-time, AI helps prevent financial losses for both consumers and businesses.",
+          "sourceTitle": "Kaggle: IEEE-CIS Fraud Detection"
+        }
+      }
+    },
+    "brainstormIntro": {
+      "title": "Designing an AI System",
+      "paragraph1": "As we saw in each of the examples, there is an identified problem that needs to be solved. We then design an AI system to take relevant input data, analyze it, and predict an output. Finally, the output can be used to solve the problem.",
+      "paragraph2": "Now it is your turn to design an AI system. You must first identify a problem that you want to solve in a specific sector. Some examples are provided on the right.",
+      "sectors": {
+        "transportation": {
+          "title": "Sector: Transportation",
+          "description": "Traffic congestion is increasingly a concern in urban areas. Could AI analyse commuter data and traffic patterns to optimise bus routes and schedules, making travel more efficient?"
+        },
+        "environment": {
+          "title": "Sector: Environment",
+          "description": "Energy wastage and pollution are major environmental issues. Could AI use data on resource consumption to identify areas for improvement and reduce waste?"
+        },
+        "healthcare": {
+          "title": "Sector: Healthcare",
+          "description": "Managing disease outbreaks is crucial for public health. Could AI use data from hospitals to support the healthcare system in identifying and responding to potential outbreaks?"
+        }
+      }
+    },
+    "brainstormProblem": {
+      "title": "Designing an AI System: Problem",
+      "taskLabel": "Task:",
+      "taskInstruction": "Select one of the sectors using the checkboxes below. Then, identify a specific problem within the chosen sector that you would like to solve using AI. Write a brief description of the problem in the field below.",
+      "placeholder": "Describe the problem you want to solve using AI...",
+      "sectors": {
+        "healthcare": "🏥 Healthcare",
+        "finance": "💰 Finance",
+        "education": "📚 Education",
+        "transportation": "🚗 Transportation",
+        "retail": "🛒 Retail",
+        "sports": "⚽ Sports",
+        "agriculture": "🌾 Agriculture",
+        "manufacturing": "🏭 Manufacturing",
+        "arts": "🎨 Arts & Culture",
+        "government": "🏛️ Government",
+        "environment": "🌱 Environment",
+        "legal": "⚖️ Legal",
+        "entertainment": "🎬 Entertainment",
+        "telecom": "📱 Telecom",
+        "hospitality": "🏨 Hospitality"
+      }
+    },
+    "brainstormSolution": {
+      "title": "Designing an AI System: Solution",
+      "taskLabel": "Task:",
+      "taskInstruction": "Now that you have identified a problem, it is time to design an AI system that can solve it. What would be the inputs to the AI system and what would be the expected outputs? Write your answers in the fields below.",
+      "inputPrompt": "The input to the AI system should be:",
+      "inputPlaceholder": "Write the inputs here...",
+      "outputPrompt": "The output from the AI system should be:",
+      "outputPlaceholder": "Write the outputs here..."
     }
   }
 }

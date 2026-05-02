@@ -1,34 +1,36 @@
 <script setup lang="ts">
+import { computed } from "vue";
+import { useI18n } from "vue-i18n";
 import { store } from "../../store";
 import { S1 } from "../states";
 
+const { t } = useI18n();
+
 /* Brainstorm Sectors */
-const sectors = {
-  healthcare: "🏥 Healthcare",
-  finance: "💰 Finance",
-  education: "📚 Education",
-  transportation: "🚗 Transportation",
-  retail: "🛒 Retail",
-  sports: "⚽ Sports",
-  agriculture: "🌾 Agriculture",
-  manufacturing: "🏭 Manufacturing",
-  arts: "🎨 Arts & Culture",
-  government: "🏛️ Government",
-  environment: "🌱 Environment",
-  legal: "⚖️ Legal",
-  entertainment: "🎬 Entertainment",
-  telecom: "📱 Telecom",
-  hospitality: "🏨 Hospitality",
-};
+const sectors = computed(() => ({
+  healthcare: t("s1.brainstormProblem.sectors.healthcare"),
+  finance: t("s1.brainstormProblem.sectors.finance"),
+  education: t("s1.brainstormProblem.sectors.education"),
+  transportation: t("s1.brainstormProblem.sectors.transportation"),
+  retail: t("s1.brainstormProblem.sectors.retail"),
+  sports: t("s1.brainstormProblem.sectors.sports"),
+  agriculture: t("s1.brainstormProblem.sectors.agriculture"),
+  manufacturing: t("s1.brainstormProblem.sectors.manufacturing"),
+  arts: t("s1.brainstormProblem.sectors.arts"),
+  government: t("s1.brainstormProblem.sectors.government"),
+  environment: t("s1.brainstormProblem.sectors.environment"),
+  legal: t("s1.brainstormProblem.sectors.legal"),
+  entertainment: t("s1.brainstormProblem.sectors.entertainment"),
+  telecom: t("s1.brainstormProblem.sectors.telecom"),
+  hospitality: t("s1.brainstormProblem.sectors.hospitality"),
+}));
 </script>
 
 <template>
-  <h2>Designing an AI System: Problem</h2>
+  <h2>{{ t("s1.brainstormProblem.title") }}</h2>
   <p>
-    <strong>Task: </strong>
-    Select one of the sectors using the checkboxes below. Then, identify a
-    specific problem within the chosen sector that you would like to solve using
-    AI. Write a brief description of the problem in the field below.
+    <strong>{{ t("s1.brainstormProblem.taskLabel") }} </strong>
+    {{ t("s1.brainstormProblem.taskInstruction") }}
   </p>
   <div class="grid grid-cols-5 gap-2">
     <div
@@ -54,7 +56,7 @@ const sectors = {
   <textarea
     class="textarea textarea-lg textarea-bordered w-full leading-normal mt-8"
     v-model="store.state[S1.APP_BRAINSTORM_PROBLEM.state]"
-    placeholder="Describe the problem you want to solve using AI..."
+    :placeholder="t('s1.brainstormProblem.placeholder')"
     rows="3"
   ></textarea>
 </template>

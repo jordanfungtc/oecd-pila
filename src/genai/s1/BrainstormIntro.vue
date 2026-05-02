@@ -10,39 +10,41 @@ const { t } = useI18n();
 <template>
   <div class="flex gap-12">
     <div class="w-2/5">
-      <h2>{{ t("brainstormIntro.title") }}</h2>
-      <p>
-        {{ t("brainstormIntro.paragraph1") }}
-      </p>
-      <p>
-        {{ t("brainstormIntro.paragraph2") }}
-      </p>
+      <h2>{{ t("s1.brainstormIntro.title") }}</h2>
+      <p>{{ t("s1.brainstormIntro.paragraph1") }}</p>
+      <p>{{ t("s1.brainstormIntro.paragraph2") }}</p>
     </div>
     <div class="w-3/5 flex flex-col gap-4 mt-8">
       <div class="flex gap-8 py-3 px-6 border rounded-xl items-center">
         <img :src="transportIcon" class="w-20 h-20 my-0" />
         <div>
-          <h4 class="mt-0">{{ t("brainstormIntro.sectors.transportation.title") }}</h4>
+          <h4 class="mt-0">
+            {{ t("s1.brainstormIntro.sectors.transportation.title") }}
+          </h4>
           <p class="text-sm my-0">
-            {{ t("brainstormIntro.sectors.transportation.description") }}
+            {{ t("s1.brainstormIntro.sectors.transportation.description") }}
           </p>
         </div>
       </div>
       <div class="flex gap-8 py-3 px-6 border rounded-xl items-center">
         <img :src="environmentIcon" class="w-20 h-20 my-0" />
         <div>
-          <h4 class="mt-0">{{ t("brainstormIntro.sectors.environment.title") }}</h4>
+          <h4 class="mt-0">
+            {{ t("s1.brainstormIntro.sectors.environment.title") }}
+          </h4>
           <p class="text-sm my-0">
-            {{ t("brainstormIntro.sectors.environment.description") }}
+            {{ t("s1.brainstormIntro.sectors.environment.description") }}
           </p>
         </div>
       </div>
       <div class="flex gap-8 py-3 px-6 border rounded-xl items-center">
         <img :src="healthcareIcon" class="w-20 h-20 my-0" />
         <div>
-          <h4 class="mt-0">{{ t("brainstormIntro.sectors.healthcare.title") }}</h4>
+          <h4 class="mt-0">
+            {{ t("s1.brainstormIntro.sectors.healthcare.title") }}
+          </h4>
           <p class="text-sm my-0">
-            {{ t("brainstormIntro.sectors.healthcare.description") }}
+            {{ t("s1.brainstormIntro.sectors.healthcare.description") }}
           </p>
         </div>
       </div>

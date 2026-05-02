@@ -14,7 +14,7 @@ const selectedLocale = computed({
 
 <template>
   <div class="fixed bottom-3 left-3 z-[9999]">
-    <select v-model="selectedLocale" class="select select-bordered select-sm">
+    <select v-model="selectedLocale" class="select select-bordered">
       <option value="en">en</option>
       <option value="th">th</option>
     </select>
