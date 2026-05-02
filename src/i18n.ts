@@ -3,13 +3,18 @@ import en from "./locales/en.json";
 import th from "./locales/th.json";
 
 const LOCALE_STORAGE_KEY = "app-locale";
-const savedLocale =
-  typeof window !== "undefined" ? localStorage.getItem(LOCALE_STORAGE_KEY) : null;
-const initialLocale = savedLocale === "th" || savedLocale === "en" ? savedLocale : "en";
+
+const getInitialLocale = () => {
+  const saved = localStorage.getItem(LOCALE_STORAGE_KEY);
+  if (saved === "en" || saved === "th") {
+    return saved;
+  }
+  return "en";
+};
 
 const i18n = createI18n({
   legacy: false,
-  locale: initialLocale,
+  locale: getInitialLocale(),
   fallbackLocale: "en",
   messages: {
     en,
