@@ -2,6 +2,7 @@
 import Agent from "@knowlearning/agents/browser.js";
 import { store } from "./store";
 import NavBar from "./util/NavBar.vue";
+import LangSelector from "./util/LangSelector.vue";
 import { inject } from "@vercel/analytics";
 
 Agent.environment().then(async ({ auth }) => {
@@ -33,5 +34,6 @@ inject();
     <div class="flex p-10 prose max-w-none justify-center bg-blue-100">
       <RouterView />
     </div>
+    <LangSelector />
   </div>
 </template>

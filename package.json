@@ -20,6 +20,7 @@
     "uuid": "^10.0.0",
     "vatex": "^0.1.0",
     "vue": "^3.4.37",
+    "vue-i18n": "^11.4.0",
     "vue-router": "^4.4.3"
   },
   "devDependencies": {
