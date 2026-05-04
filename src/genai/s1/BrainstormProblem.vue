@@ -29,7 +29,7 @@ const sectors = computed(() => ({
 <template>
   <h2>{{ t("s1.brainstormProblem.title") }}</h2>
   <p>
-    <strong>{{ t("s1.brainstormProblem.taskLabel") }} </strong>
+    <strong>{{ t("common.taskLabel") }} </strong>
     {{ t("s1.brainstormProblem.taskInstruction") }}
   </p>
   <div class="grid grid-cols-5 gap-2">

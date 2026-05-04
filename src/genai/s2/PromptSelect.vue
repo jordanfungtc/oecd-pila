@@ -22,7 +22,7 @@ const { t } = useI18n();
         <BIconFileEarmarkTextFill /> {{ t("s2.promptSelect.guideLabel") }}
       </a>
       <p>
-        <strong>{{ t("s2.common.taskLabel") }} </strong>
+        <strong>{{ t("common.taskLabel") }} </strong>
         {{ t("s2.promptSelect.taskInstruction") }}
       </p>
     </div>
@@ -39,7 +39,7 @@ const { t } = useI18n();
         >
           <label class="label cursor-pointer">
             <span class="label-text text-lg p-2 flex gap-4">
-              <b>{{ t("s2.common.exampleN", { n: i + 1 }) }}</b>
+              <b>{{ t("common.exampleN", { n: i + 1 }) }}</b>
               {{
                 t(
                   singleExamples[key as keyof typeof singleExamples]

@@ -13,7 +13,7 @@ const promptTechniques = computed(
 <template>
   <h2>{{ t("s2.promptTechniques.title") }}</h2>
   <p>
-    <strong>{{ t("s2.common.taskLabel") }} </strong>
+    <strong>{{ t("common.taskLabel") }} </strong>
     {{ t("s2.promptTechniques.taskInstruction") }}
   </p>
   <div

@@ -76,7 +76,7 @@ const generateHandler = () => {
       class="mt-[-10px]"
     ></div>
     <p v-else>
-      <strong>{{ t("s2.common.taskLabel") }} </strong>
+      <strong>{{ t("common.taskLabel") }} </strong>
       {{
         props.i === "0"
           ? t("s2.promptGenerate.taskInstructionA")

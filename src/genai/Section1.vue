@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useI18n } from "vue-i18n";
 import { store } from "../store";
 import Frame from "../util/Frame.vue";
 import Intro from "./s1/Intro.vue";
@@ -8,7 +9,8 @@ import BrainstormIntro from "./s1/BrainstormIntro.vue";
 import BrainstormProblem from "./s1/BrainstormProblem.vue";
 import BrainstormSolution from "./s1/BrainstormSolution.vue";
 
-store.title = "Generative AI Module";
+const { t } = useI18n();
+store.title = t("common.moduleTitle");
 </script>
 
 <template>

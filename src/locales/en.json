@@ -1,4 +1,9 @@
 {
+  "common": {
+    "taskLabel": "Task:",
+    "exampleN": "Example {n}",
+    "moduleTitle": "Generative AI Module"
+  },
   "s1": {
     "intro": {
       "title": "AI and Machine Learning",
@@ -36,7 +41,6 @@
     },
     "ioTask": {
       "aiForLabel": "AI for {app}",
-      "taskLabel": "Task:",
       "taskInstruction": "To use AI for this application, can you guess what the inputs to the AI system would be and what the expected outputs are? Select the correct options from the dropdowns below, then read the explanation to learn more.",
       "inputPlaceholder": "Input",
       "outputPlaceholder": "Output",
@@ -107,7 +111,6 @@
     },
     "brainstormProblem": {
       "title": "Designing an AI System: Problem",
-      "taskLabel": "Task:",
       "taskInstruction": "Select one of the sectors using the checkboxes below. Then, identify a specific problem within the chosen sector that you would like to solve using AI. Write a brief description of the problem in the field below.",
       "placeholder": "Describe the problem you want to solve using AI...",
       "sectors": {
@@ -130,7 +133,6 @@
     },
     "brainstormSolution": {
       "title": "Designing an AI System: Solution",
-      "taskLabel": "Task:",
       "taskInstruction": "Now that you have identified a problem, it is time to design an AI system that can solve it. What would be the inputs to the AI system and what would be the expected outputs? Write your answers in the fields below.",
       "inputPrompt": "The input to the AI system should be:",
       "inputPlaceholder": "Write the inputs here...",
@@ -176,10 +178,6 @@
         }
       }
     },
-    "common": {
-      "taskLabel": "Task:",
-      "exampleN": "Example {n}"
-    },
     "promptSelect": {
       "title": "Prompt Engineering",
       "paragraph1": "When interacting with LLMs, the way you phrase your prompts is crucial for obtaining the best responses. This is where prompt engineering comes into play.",
@@ -208,6 +206,55 @@
       ],
       "successMessage": "Well done! Considering all the prompt engineering techniques can help you craft effective prompts for LLMs.",
       "retryMessage": "That's true, but there are other techniques that you should also consider. Can you identify them?"
+    },
+    "limitationsConv": {
+      "title": "Conversational AI",
+      "paragraph1": "You can also engage in conversations with LLMs. This is done by providing it with previous prompts and responses so it remembers what you've said. This allows LLMs to generate more relevant responses over time, without the need for you to repeat information.",
+      "taskInstruction": "Generate and examine the responses in a conversation where a student asks for help with an essay on climate change.",
+      "historyTitle": "Conversation History",
+      "userPromptLabel": "User Prompt",
+      "llmResponseLabel": "LLM Response",
+      "conversationEnded": "Conversation ended"
+    },
+    "limitationsCheck": {
+      "title": "Fact Checking",
+      "paragraph1": "LLMs create responses by predicting the next word based on their training data - they are not truly intelligent. As such, LLMs can sometimes produce responses that seem accurate at first glance but are not entirely reliable.",
+      "paragraph2": "In fact, in the conversation you just had with the LLM, some of the statistics included in the generated essay were inaccurate. Can you identify which ones?",
+      "taskInstruction": "Using a search engine, verify the accuracy of the following statistics included in the response and select the correct option from the dropdowns.",
+      "statisticsHeader": "Statistics",
+      "accuracyHeader": "Accuracy",
+      "facts": [
+        "90% increase in the frequency of severe weather events over the last decade, as reported by the Intergovernmental Panel on Oceans and the Atmosphere (IPOA).",
+        "Polar ice caps are melting at a rate of 13% per decade, as highlighted by NASA.",
+        "Transitioning to renewable energy sources could reduce global greenhouse gas emissions by 150% by 2070, according to the European Renewable Energy Office (EUREO)."
+      ]
+    },
+    "limitationsIntro": {
+      "title": "Limitations of LLMs",
+      "paragraph1": "As you have seen, LLMs have limitations that can affect the quality and reliability of their responses.",
+      "paragraph2": "Therefore, it is essential to approach LLM responses with caution and always verify information independently using search engines such as Google. You should also check the credibility of the author and ensure that the data is up-to-date.",
+      "cards": {
+        "dataCutoff": {
+          "title": "Data Cut-off",
+          "description": "LLMs can only generate responses based on their training data. If an LLM was trained on data up to 2023, it will not be able to answer questions about events in 2024."
+        },
+        "hallucinations": {
+          "title": "Hallucinations",
+          "description": "LLMs can only predict the most likely response based on the given prompt and may sometimes generate plausible-sounding but incorrect responses known as \"hallucinations\"."
+        },
+        "intellectualProperty": {
+          "title": "Intellectual Property",
+          "description": "As LLMs are trained on text data from different sources, they may inadvertently generate text that resembles existing work created by others, raising ethical concerns around IP rights."
+        }
+      }
+    },
+    "brainstorm": {
+      "title": "LLMs in Everyday Life",
+      "taskInstruction": "Now that you have seen how LLMs work and some of their known limitations, can you think of ways you can use them to assist you in your everyday life? What prompts would you use? Write your answers in the fields below.",
+      "usePrompt": "I think LLMs can be used for:",
+      "taskPlaceholder": "Task",
+      "promptPrompt": "The prompt I would use is:",
+      "promptPlaceholder": "Prompt"
     },
     "gptExamples": {
       "single": {
@@ -244,7 +291,29 @@
             "<p>Improving productivity as a high school student is essential for achieving academic success and personal growth. Here are some effective tips to help you maximize your time and efforts.</p><p>First, create a structured schedule. Use a planner or digital calendar to block out time for classes, homework, and extracurricular activities. For example, dedicate specific hours each day for studying, ensuring you stay on track with assignments and projects.</p><p>Second, break tasks into smaller, manageable chunks. Instead of tackling a large project all at once, divide it into sections and set deadlines for each part. This approach not only makes tasks less overwhelming but also provides a sense of accomplishment as you complete each segment.</p><p>Additionally, minimize distractions. Find a quiet study space and limit your phone usage during study sessions. Apps that block distracting websites can also help you stay focused. For instance, try using the Pomodoro Technique: study for 25 minutes, then take a 5-minute break.</p><p>Lastly, prioritize self-care. Ensure you get enough sleep, eat well, and take breaks to recharge. A healthy mind and body are crucial for maintaining high productivity levels. Remember, consistency is key. Stay committed to these practices, and you'll see remarkable improvements in your productivity!</p>"
           ]
         }
-      }
+      },
+      "conv": [
+        {
+          "user": "Hello LLM! I am writing an essay about climate change, can you help me?",
+          "assistant": "<p>Of course! I can help you outline your essay, provide information on key topics related to climate change, or assist with specific sections. What do you need help with?</p>"
+        },
+        {
+          "user": "Can you help me create an outline of the essay with all the things I should mention?",
+          "assistant": "<p>Certainly! Here's an outline for an essay on climate change:</p><ol><li>Introduction</li><li>Causes of Climate Change</li><li>Impacts of Climate Change</li><li>Mitigation Strategies</li><li>Conclusion and call to action</li></ol><p>Feel free to modify this outline to better suit your specific needs or focus areas. If you need more detailed information on any section, let me know!</p>"
+        },
+        {
+          "user": "That's awesome, can you write the essay for me? It should have around 200 words and written in an authoritative tone.",
+          "assistant": "<p>Climate change, driven predominantly by human activities such as deforestation, fossil fuel combustion, and industrial processes, poses a profound threat to our planet.</p><p>The release of greenhouse gases, notably carbon dioxide and methane, is causing global temperatures to rise at an unprecedented rate. This warming has far-reaching consequences, including more frequent and severe weather events, rising sea levels, and disruptions to ecosystems and biodiversity.</p><p>The impacts are already visible: polar ice caps are melting, coral reefs are dying, and extreme weather patterns are becoming the norm. These changes threaten food security, water resources, and human health on a global scale.</p><p>Mitigating climate change requires immediate and decisive action. Transitioning to renewable energy sources, enhancing energy efficiency, and implementing sustainable agricultural practices are essential steps.</p><p>In conclusion, addressing climate change is not optional but imperative. The time for action is now, and collective efforts from governments, businesses, and individuals are crucial to safeguarding our future.</p>"
+        },
+        {
+          "user": "That's great, but can you add some statistics to the essay to make it more persuasive?",
+          "assistant": "<p>Climate change, driven predominantly by human activities such as deforestation, fossil fuel combustion, and industrial processes, poses a profound threat to our planet.</p><p>The release of greenhouse gases, notably carbon dioxide and methane, is causing global temperatures to rise at an unprecedented rate. This warming has far-reaching consequences, including rising sea levels and a 90% increase in the frequency of severe weather events over the last decade, as reported by the Intergovernmental Panel on Oceans and the Atmosphere (IPOA).</p><p>The impacts are already visible: polar ice caps are melting at a rate of 13% per decade, as highlighted by NASA, and coral reefs are experiencing mass bleaching events. These changes threaten food security, water resources, and human health on a global scale.</p><p>Mitigating climate change requires immediate and decisive action. Transitioning to renewable energy sources could reduce global greenhouse gas emissions by 150% by 2070, according to the European Renewable Energy Office (EUREO). Enhancing energy efficiency and implementing sustainable agricultural practices are essential steps to achieving these reductions.</p><p>In conclusion, addressing climate change is not optional but imperative. The time for action is now, and collective efforts from governments, businesses, and individuals are crucial to safeguarding our future.</p>"
+        },
+        {
+          "user": "Thank you for your help! I will submit the essay you wrote to my teacher now.",
+          "assistant": "<p>You're welcome! I'm glad I could help. Best of luck with your submission, but remember to review the essay for accuracy and plagiarism before sharing it with your teacher. If you have any more questions or need further assistance, feel free to ask!</p>"
+        }
+      ]
     }
   }
 }

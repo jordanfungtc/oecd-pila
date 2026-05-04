@@ -100,7 +100,7 @@ const outputs = computed(() => ({
     </h3>
   </div>
   <p>
-    <strong>{{ t("s1.ioTask.taskLabel") }} </strong>
+    <strong>{{ t("common.taskLabel") }} </strong>
     {{ t("s1.ioTask.taskInstruction") }}
   </p>
   <div class="flex flex-row gap-2 w-full items-center">

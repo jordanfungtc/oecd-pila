@@ -9,7 +9,7 @@ const { t } = useI18n();
 <template>
   <h2>{{ t("s1.brainstormSolution.title") }}</h2>
   <p>
-    <strong>{{ t("s1.brainstormSolution.taskLabel") }} </strong>
+    <strong>{{ t("common.taskLabel") }} </strong>
     {{ t("s1.brainstormSolution.taskInstruction") }}
   </p>
   <h4>{{ t("s1.brainstormSolution.inputPrompt") }}</h4>
