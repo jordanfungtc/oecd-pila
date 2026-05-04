@@ -12,6 +12,9 @@ import CaseSelect from "./s4/CaseSelect.vue";
 import CaseProsCons from "./s4/CaseProsCons.vue";
 import CaseWorth from "./s4/CaseWorth.vue";
 import Ending from "./s4/Ending.vue";
+import { store } from "../store";
+
+store.titleKey = "common.moduleTitle";
 </script>
 
 <template>

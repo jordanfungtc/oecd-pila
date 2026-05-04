@@ -6,6 +6,8 @@ import { store } from "./store";
 
 const base_url = "https://pila.oecd.jordanfung.com";
 
+store.titleKey = "common.homeTitle";
+
 const modules = {
   genai: {
     name: "Generative AI Module",

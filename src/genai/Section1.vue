@@ -6,6 +6,9 @@ import IoTask from "./s1/IoTask.vue";
 import BrainstormIntro from "./s1/BrainstormIntro.vue";
 import BrainstormProblem from "./s1/BrainstormProblem.vue";
 import BrainstormSolution from "./s1/BrainstormSolution.vue";
+import { store } from "../store";
+
+store.titleKey = "common.moduleTitle";
 </script>
 
 <template>
