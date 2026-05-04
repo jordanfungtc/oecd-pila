@@ -31,17 +31,17 @@ const analogyHandler = async () => {
     <strong>{{ t("common.taskLabel") }}</strong>
     {{ t("s3.analogyBrainstorm.taskInstruction") }}
   </p>
-  <div>
-    <span class="badge badge-ghost mr-2 p-4">
+  <div class="flex flex-wrap gap-2">
+    <span class="badge badge-ghost p-4">
       {{ t("s3.analogyBrainstorm.examples.example1") }}
     </span>
-    <span class="badge badge-ghost mr-2 p-4">
+    <span class="badge badge-ghost p-4">
       {{ t("s3.analogyBrainstorm.examples.example2") }}
     </span>
-    <span class="badge badge-ghost mr-2 p-4">
+    <span class="badge badge-ghost p-4">
       {{ t("s3.analogyBrainstorm.examples.example3") }}
     </span>
-    <span class="badge badge-ghost mr-2 p-4">
+    <span class="badge badge-ghost p-4">
       {{ t("s3.analogyBrainstorm.examples.example4") }}
     </span>
   </div>
