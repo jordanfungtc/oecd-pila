@@ -1,55 +1,52 @@
 <script setup lang="ts">
+import { useI18n } from "vue-i18n";
 import qaIcon from "/s2/qa.png";
 import contentIcon from "/s2/content.png";
 import programmingIcon from "/s2/programming.png";
+
+const { t } = useI18n();
 </script>
 
 <template>
   <div class="flex gap-12">
     <div class="w-2/5">
-      <h2>Writing Prompts</h2>
-      <p>
-        The prompt is the input that you provide to the LLM, which can be in the
-        form of questions or instructions. The LLM will then generate a response
-        to the prompt based on the data that it has been trained on.
-      </p>
-      <p>
-        LLMs can be used on a wide range of tasks, including question answering,
-        content creation, programming, and more. Some examples of prompts for
-        different tasks are provided on the right.
-      </p>
+      <h2>{{ t("s2.promptIntro.title") }}</h2>
+      <p>{{ t("s2.promptIntro.paragraph1") }}</p>
+      <p>{{ t("s2.promptIntro.paragraph2") }}</p>
     </div>
     <div class="w-3/5 flex flex-col gap-4 mt-8">
       <div class="flex gap-8 py-3 px-6 border rounded-xl items-center">
         <img :src="qaIcon" class="w-20 h-20 my-0" />
         <div>
-          <h4 class="mt-0">Question Answering</h4>
+          <h4 class="mt-0">{{ t("s2.promptIntro.examples.qa.title") }}</h4>
           <ul class="text-sm my-0">
-            <li>Who invented the first light bulb?</li>
-            <li>Explain the concept of gravity.</li>
-            <li>How can I improve my writing skills?</li>
+            <li>{{ t("s2.promptIntro.examples.qa.items.0") }}</li>
+            <li>{{ t("s2.promptIntro.examples.qa.items.1") }}</li>
+            <li>{{ t("s2.promptIntro.examples.qa.items.2") }}</li>
           </ul>
         </div>
       </div>
       <div class="flex gap-8 py-3 px-6 border rounded-xl items-center">
         <img :src="contentIcon" class="w-20 h-20 my-0" />
         <div>
-          <h4 class="mt-0">Content Creation</h4>
+          <h4 class="mt-0">{{ t("s2.promptIntro.examples.content.title") }}</h4>
           <ul class="text-sm my-0">
-            <li>Write an essay outline about climate change.</li>
-            <li>Compose a poem about the beauty of autumn.</li>
-            <li>Draft an email to offer refund to a customer.</li>
+            <li>{{ t("s2.promptIntro.examples.content.items.0") }}</li>
+            <li>{{ t("s2.promptIntro.examples.content.items.1") }}</li>
+            <li>{{ t("s2.promptIntro.examples.content.items.2") }}</li>
           </ul>
         </div>
       </div>
       <div class="flex gap-8 py-3 px-6 border rounded-xl items-center">
         <img :src="programmingIcon" class="w-20 h-20 my-0" />
         <div>
-          <h4 class="mt-0">Programming</h4>
+          <h4 class="mt-0">
+            {{ t("s2.promptIntro.examples.programming.title") }}
+          </h4>
           <ul class="text-sm my-0">
-            <li>Write a Python function to calculate the factorial.</li>
-            <li>Debug the following code: priint("Hello, World!").</li>
-            <li>Create a website to showcase my projects.</li>
+            <li>{{ t("s2.promptIntro.examples.programming.items.0") }}</li>
+            <li>{{ t("s2.promptIntro.examples.programming.items.1") }}</li>
+            <li>{{ t("s2.promptIntro.examples.programming.items.2") }}</li>
           </ul>
         </div>
       </div>

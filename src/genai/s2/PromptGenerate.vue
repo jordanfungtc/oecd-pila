@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { BIconArrowRightSquare } from "bootstrap-icons-vue";
+import { useI18n } from "vue-i18n";
 import { singleExamples } from "./gptExamples";
 import { store } from "../../store";
 import { S2 } from "../states";
 
+const { t } = useI18n();
 const loading = ref(false);
 
 const props = defineProps(["i"]); // 0 - simple, 1 - refined
@@ -14,7 +16,7 @@ const generated =
 
 const generateHandler = () => {
   if (!store.state[S2.LLM_PROMPT.state]) {
-    return window.alert("Please select a prompt example.");
+    return window.alert(t("s2.promptGenerate.selectPromptAlert"));
   }
   loading.value = true;
   store.state[generated.state] = false;
@@ -26,12 +28,26 @@ const generateHandler = () => {
 </script>
 
 <template>
-  <h2>Prompt Example {{ props.i === "0" ? "A" : "B" }}</h2>
+  <h2>
+    {{
+      t("s2.promptGenerate.promptExampleTitle", {
+        id: props.i === "0" ? "A" : "B",
+      })
+    }}
+  </h2>
   <div class="flex gap-4 items-center">
     <textarea
       class="textarea textarea-lg textarea-bordered w-full leading-normal"
-      :value="store.state[S2.LLM_PROMPT.state] ? singleExamples[store.state[S2.LLM_PROMPT.state] as keyof typeof singleExamples].prompt[props.i] : ''"
-      placeholder="Select a prompt example"
+      :value="
+        store.state[S2.LLM_PROMPT.state]
+          ? t(
+              singleExamples[
+                store.state[S2.LLM_PROMPT.state] as keyof typeof singleExamples
+              ].prompt[props.i] as string,
+            )
+          : ''
+      "
+      :placeholder="t('s2.promptGenerate.placeholder')"
       rows="2"
       readonly
     ></textarea>
@@ -47,18 +63,24 @@ const generateHandler = () => {
     </div>
   </div>
   <div class="h-[16rem] overflow-y-auto my-4 border rounded-xl p-4">
-    <h4 class="mt-0">Response</h4>
+    <h4 class="mt-0">{{ t("s2.promptGenerate.responseTitle") }}</h4>
     <div
       v-if="store.state[generated.state]"
-      v-html="singleExamples[store.state[S2.LLM_PROMPT.state] as keyof typeof singleExamples].response[props.i]"
+      v-html="
+        t(
+          singleExamples[
+            store.state[S2.LLM_PROMPT.state] as keyof typeof singleExamples
+          ].response[props.i] as string,
+        )
+      "
       class="mt-[-10px]"
     ></div>
     <p v-else>
-      <strong>Task: </strong>
+      <strong>{{ t("s2.common.taskLabel") }} </strong>
       {{
         props.i === "0"
-          ? "For the prompt above, click the button to generate with the LLM simulator and observe the response."
-          : "Similarly, click the button to generate a response using the prompt above and compare the responses to the previous prompt. Can you see the importance of prompt engineering?"
+          ? t("s2.promptGenerate.taskInstructionA")
+          : t("s2.promptGenerate.taskInstructionB")
       }}
     </p>
   </div>

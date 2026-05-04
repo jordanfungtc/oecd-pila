@@ -1,22 +1,20 @@
 <script setup lang="ts">
+import { computed } from "vue";
+import { useI18n } from "vue-i18n";
 import { store } from "../../store";
 import { S2 } from "../states";
 
-const promptTechniques = [
-  "Start simple and iteratively refine your prompt based on the response",
-  "Be clear and concise in your instructions and avoid ambiguity",
-  "Provide sufficient context and background information",
-  "Specify the desired length, format and tone of the response",
-  "All of the above",
-];
+const { t, tm } = useI18n();
+const promptTechniques = computed(
+  () => tm("s2.promptTechniques.options") as string[],
+);
 </script>
 
 <template>
-  <h2>Prompt Engineering Techniques</h2>
+  <h2>{{ t("s2.promptTechniques.title") }}</h2>
   <p>
-    <strong>Task: </strong>
-    When writing prompts for LLMs, which of the following techniques do you
-    think you should consider?
+    <strong>{{ t("s2.common.taskLabel") }} </strong>
+    {{ t("s2.promptTechniques.taskInstruction") }}
   </p>
   <div
     v-for="(technique, index) in promptTechniques"
@@ -49,17 +47,11 @@ const promptTechniques = [
       class="alert text-sm"
     >
       <span>✅</span>
-      <span>
-        Well done! Considering all the prompt engineering techniques can help
-        you craft effective prompts for LLMs.
-      </span>
+      <span>{{ t("s2.promptTechniques.successMessage") }}</span>
     </div>
     <div v-else class="alert text-sm">
       <span>❌</span>
-      <span>
-        That's true, but there are other techniques that you should also
-        consider. Can you identify them?
-      </span>
+      <span>{{ t("s2.promptTechniques.retryMessage") }}</span>
     </div>
   </div>
 </template>

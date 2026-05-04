@@ -1,35 +1,35 @@
 const singleExamples = {
   photosynthesis: {
-    label: "🌿 Photosynthesis",
+    labelKey: "s2.gptExamples.single.photosynthesis.label",
     prompt: [
-      "What is photosynthesis?",
-      "Explain the process of photosynthesis in plants in a way that a 5-year-old can understand. The response should have 150 words and written in a friendly and fun tone.",
+      "s2.gptExamples.single.photosynthesis.prompt.0",
+      "s2.gptExamples.single.photosynthesis.prompt.1",
     ],
     response: [
-      "<p>Photosynthesis is the process by which green plants, algae, and some bacteria convert light energy, usually from the sun, into chemical energy in the form of glucose. This process occurs mainly in the chloroplasts of plant cells, using chlorophyll to capture light energy. The general equation for photosynthesis can be summarized as:</p><p>6 CO₂ + 6 H₂O + light energy → C₆H₁₂O₆ + 6 O₂</p><p>This means that carbon dioxide and water, using light energy, are transformed into glucose and oxygen.</p>",
-      "<p>Sure! 🌞 Photosynthesis is like a magic recipe that plants use to make their food! First, they need three special things: sunshine, air, and water. 🌱☀️💧 </p><p>When the sun shines, plants open tiny little doors on their leaves to take in air, which has something called carbon dioxide. They also drink up water from the soil through their roots. Then, with the help of the sunlight, the plants mix the water and air together in their leaves. It’s like a fun science experiment! 🎉 </p><p>When they mix everything, they make their own food, which helps them grow big and strong. And guess what? They also make oxygen, which is the fresh air we breathe! So, plants are super important because they help us and make our world beautiful. 🌍💚 Isn’t that amazing?</p>",
+      "s2.gptExamples.single.photosynthesis.response.0",
+      "s2.gptExamples.single.photosynthesis.response.1",
     ],
   },
   french: {
-    label: "🇫🇷 French Revolution",
+    labelKey: "s2.gptExamples.single.french.label",
     prompt: [
-      "Tell me about the French Revolution.",
-      "Provide a detailed overview of the French Revolution, including its causes, key events, and outcomes. The response should be in bulleted lists and maintain a neutral tone.",
+      "s2.gptExamples.single.french.prompt.0",
+      "s2.gptExamples.single.french.prompt.1",
     ],
     response: [
-      "<p>The French Revolution (1789-1799) was a period of radical social and political change in France that led to the end of absolute monarchy, the rise of democracy, and the establishment of the French Republic. Key events included the Storming of the Bastille, the Declaration of the Rights of Man and of the Citizen, and the Reign of Terror. The revolution inspired movements worldwide and significantly influenced modern political ideologies.</p>",
-      "<h3>Overview of the French Revolution</h3><h4>Causes</h4><ul><li><strong>Social Inequality</strong>: France&#39;s society was divided into three estates: the clergy (First Estate), the nobility (Second Estate), and the common people (Third Estate). The Third Estate bore the tax burden and had little political power.</li><li><strong>Economic Hardship</strong>: Financial crises due to debt from wars (e.g., American Revolution), poor harvests, and extravagant spending by the monarchy led to widespread discontent.</li><li><strong>Enlightenment Ideas</strong>: Philosophers like Voltaire, Rousseau, and Montesquieu promoted ideas of liberty, equality, and fraternity, challenging traditional authority.</li><li><strong>Weak Leadership</strong>: King Louis XVI&#39;s indecisiveness and inability to address financial issues contributed to the crisis.</li></ul><h4>Key Events</h4><ul><li><strong>Estates-General (May 1789)</strong>: Convened to address the financial crisis; the Third Estate broke away to form the National Assembly.</li><li><strong>Tennis Court Oath (June 1789)</strong>: Members of the National Assembly pledged not to disband until a new constitution was established.</li><li><strong>Storming of the Bastille (July 14, 1789)</strong>: A symbolic act of revolution, it marked the uprising against the monarchy.</li><li><strong>Declaration of the Rights of Man and of the Citizen (August 1789)</strong>: A foundational document asserting individual rights and the principles of liberty and equality.</li><li><strong>Reign of Terror (1793-1794)</strong>: Led by Robespierre and the Committee of Public Safety, this period was marked by mass executions of perceived enemies of the revolution.</li><li><strong>Fall of Robespierre (July 1794)</strong>: His execution ended the Reign of Terror and led to the Thermidorian Reaction.</li></ul><h4>Outcomes</h4><ul><li><strong>End of Monarchy</strong>: The revolution led to the abolition of the monarchy and the establishment of the First French Republic.</li><li><strong>Rise of Napoleon Bonaparte</strong>: The instability following the revolution paved the way for Napoleon&#39;s rise to power, eventually leading to the Napoleonic Wars.</li><li><strong>Social Changes</strong>: The revolution promoted secularism, the spread of nationalism, and changes in class structure.</li><li><strong>Influence on Other Revolutions</strong>: The French Revolution inspired uprisings and movements for democracy and rights across Europe and the Americas.</li></ul>",
+      "s2.gptExamples.single.french.response.0",
+      "s2.gptExamples.single.french.response.1",
     ],
   },
   productivity: {
-    label: "🚀 Productivity Tips",
+    labelKey: "s2.gptExamples.single.productivity.label",
     prompt: [
-      "How can I be more productive?",
-      "Provide some productivity tips for high school students, along with practical examples. The response should be an essay of 200 words written in an encouraging tone.",
+      "s2.gptExamples.single.productivity.prompt.0",
+      "s2.gptExamples.single.productivity.prompt.1",
     ],
     response: [
-      "<p>To be more productive, try these strategies: </p><ol><li><strong>Set Clear Goals</strong>: Define specific, measurable, achievable, relevant, and time-bound (SMART) goals.</li><li><strong>Prioritize Tasks</strong>: Use methods like the Eisenhower Matrix to distinguish between what&#39;s urgent and important.</li><li><strong>Time Management</strong>: Implement techniques like the Pomodoro Technique, where you work for 25 minutes and take a 5-minute break.</li><li><strong>Limit Distractions</strong>: Identify and minimize distractions in your work environment.</li><li><strong>Use Tools</strong>: Utilize productivity apps and tools to keep track of tasks and deadlines.</li></ol><p>Consistency and reflection on your progress can also help enhance productivity over time.</p>",
-      "<p>Improving productivity as a high school student is essential for achieving academic success and personal growth. Here are some effective tips to help you maximize your time and efforts.</p><p>First, create a structured schedule. Use a planner or digital calendar to block out time for classes, homework, and extracurricular activities. For example, dedicate specific hours each day for studying, ensuring you stay on track with assignments and projects.</p><p>Second, break tasks into smaller, manageable chunks. Instead of tackling a large project all at once, divide it into sections and set deadlines for each part. This approach not only makes tasks less overwhelming but also provides a sense of accomplishment as you complete each segment.</p><p>Additionally, minimize distractions. Find a quiet study space and limit your phone usage during study sessions. Apps that block distracting websites can also help you stay focused. For instance, try using the Pomodoro Technique: study for 25 minutes, then take a 5-minute break.</p><p>Lastly, prioritize self-care. Ensure you get enough sleep, eat well, and take breaks to recharge. A healthy mind and body are crucial for maintaining high productivity levels. Remember, consistency is key—stay committed to these practices, and you’ll see remarkable improvements in your productivity!</p>",
+      "s2.gptExamples.single.productivity.response.0",
+      "s2.gptExamples.single.productivity.response.1",
     ],
   },
 };

@@ -1,34 +1,29 @@
 <script setup lang="ts">
 import { BIconFileEarmarkTextFill } from "bootstrap-icons-vue";
+import { useI18n } from "vue-i18n";
 import { singleExamples } from "./gptExamples";
 import { store } from "../../store";
 import { S2 } from "../states";
+
+const { t } = useI18n();
 </script>
 
 <template>
   <div class="flex gap-12 items-center">
     <div class="w-1/2">
-      <h2>Prompt Engineering</h2>
-      <p>
-        When interacting with LLMs, the way you phrase your prompts is crucial
-        for obtaining the best responses. This is where prompt engineering comes
-        into play.
-      </p>
-      <p>
-        Prompt engineering involves carefully crafting your prompts to guide the
-        model towards generating more accurate, relevant, and useful responses.
-      </p>
+      <h2>{{ t("s2.promptSelect.title") }}</h2>
+      <p>{{ t("s2.promptSelect.paragraph1") }}</p>
+      <p>{{ t("s2.promptSelect.paragraph2") }}</p>
       <a
         href="https://www.promptingguide.ai/"
         target="_blank"
         class="no-underline flex gap-2 items-center text-primary"
       >
-        <BIconFileEarmarkTextFill /> DAIR.AI: Prompt Engineering Guide
+        <BIconFileEarmarkTextFill /> {{ t("s2.promptSelect.guideLabel") }}
       </a>
       <p>
-        <strong>Task: </strong>
-        Choose one of the prompt examples on the right and proceed to the next
-        step.
+        <strong>{{ t("s2.common.taskLabel") }} </strong>
+        {{ t("s2.promptSelect.taskInstruction") }}
       </p>
     </div>
     <div class="w-1/2 mt-8">
@@ -44,8 +39,13 @@ import { S2 } from "../states";
         >
           <label class="label cursor-pointer">
             <span class="label-text text-lg p-2 flex gap-4">
-              <b>Example {{ i + 1 }}</b>
-              {{ singleExamples[key as keyof typeof singleExamples].label }}
+              <b>{{ t("s2.common.exampleN", { n: i + 1 }) }}</b>
+              {{
+                t(
+                  singleExamples[key as keyof typeof singleExamples]
+                    .labelKey as string,
+                )
+              }}
             </span>
             <input
               type="radio"
@@ -63,7 +63,7 @@ import { S2 } from "../states";
         class="mt-4 alert text-sm"
       >
         <span>✅</span>
-        <span> Great! You may now proceed to the next step.</span>
+        <span> {{ t("s2.promptSelect.successMessage") }}</span>
       </div>
     </div>
   </div>

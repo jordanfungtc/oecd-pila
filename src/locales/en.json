@@ -4,7 +4,7 @@
       "title": "AI and Machine Learning",
       "paragraph1": "Have you ever wondered how your favourite music streaming service suggests songs you might like, how your smartphone recognizes your voice commands, how your email filters out spam, or how a navigation app finds the best route? These tasks are all accomplished with the help of Artificial Intelligence (AI).",
       "paragraph2": "AI is a branch of computer science that enables machines to perform tasks that typically require human intelligence. One important part of AI is called machine learning (ML). With ML, computers learn from lots of data and find patterns to make predictions or decisions without the need for humans to explicitly program them. AI and ML are used in a wide range of applications and have radically transformed many industries.",
-      "tedTalkLabel": "TED Talk: How AI Could Empower Any Business by Andrew Ng"
+      "videoLabel": "TED Talk: How AI Could Empower Any Business by Andrew Ng"
     },
     "ioIntro": {
       "title": "Identifying Inputs and Outputs",
@@ -136,6 +136,115 @@
       "inputPlaceholder": "Write the inputs here...",
       "outputPrompt": "The output from the AI system should be:",
       "outputPlaceholder": "Write the outputs here..."
+    }
+  },
+  "s2": {
+    "intro": {
+      "title": "Generative AI and LLMs",
+      "paragraph1": "In the last section, we explored how AI systems analyze data to identify patterns and make predictions, offer recommendations, or solve problems. In this section, we will focus on Generative AI, a type of AI designed not only to identify patterns in data but also generate new content, including text, images, music, and more.",
+      "paragraph2": "A common type of Generative AI are Large Language Models (LLMs). LLMs are machine learning models trained on large amounts of text data to learn the pattern, structure, and nuances of human language. They take text as input (known as a prompt) and generate coherent and contextually relevant text as output. Many popular AI chatbot systems are powered by LLMs, including ChatGPT, Gemini, and LLaMA.",
+      "videoLabel": "Google for Developer: What are Large Language Models (LLMs)?"
+    },
+    "promptIntro": {
+      "title": "Writing Prompts",
+      "paragraph1": "The prompt is the input that you provide to the LLM, which can be in the form of questions or instructions. The LLM will then generate a response to the prompt based on the data that it has been trained on.",
+      "paragraph2": "LLMs can be used on a wide range of tasks, including question answering, content creation, programming, and more. Some examples of prompts for different tasks are provided on the right.",
+      "examples": {
+        "qa": {
+          "title": "Question Answering",
+          "items": [
+            "Who invented the first light bulb?",
+            "Explain the concept of gravity.",
+            "How can I improve my writing skills?"
+          ]
+        },
+        "content": {
+          "title": "Content Creation",
+          "items": [
+            "Write an essay outline about climate change.",
+            "Compose a poem about the beauty of autumn.",
+            "Draft an email to offer refund to a customer."
+          ]
+        },
+        "programming": {
+          "title": "Programming",
+          "items": [
+            "Write a Python function to calculate the factorial.",
+            "Debug the following code: priint(\"Hello, World!\").",
+            "Create a website to showcase my projects."
+          ]
+        }
+      }
+    },
+    "common": {
+      "taskLabel": "Task:",
+      "exampleN": "Example {n}"
+    },
+    "promptSelect": {
+      "title": "Prompt Engineering",
+      "paragraph1": "When interacting with LLMs, the way you phrase your prompts is crucial for obtaining the best responses. This is where prompt engineering comes into play.",
+      "paragraph2": "Prompt engineering involves carefully crafting your prompts to guide the model towards generating more accurate, relevant, and useful responses.",
+      "guideLabel": "DAIR.AI: Prompt Engineering Guide",
+      "taskInstruction": "Choose one of the prompt examples on the right and proceed to the next step.",
+      "successMessage": "Great! You may now proceed to the next step."
+    },
+    "promptGenerate": {
+      "selectPromptAlert": "Please select a prompt example.",
+      "promptExampleTitle": "Prompt Example {id}",
+      "placeholder": "Select a prompt example",
+      "responseTitle": "Response",
+      "taskInstructionA": "For the prompt above, click the button to generate with the LLM simulator and observe the response.",
+      "taskInstructionB": "Similarly, click the button to generate a response using the prompt above and compare the responses to the previous prompt. Can you see the importance of prompt engineering?"
+    },
+    "promptTechniques": {
+      "title": "Prompt Engineering Techniques",
+      "taskInstruction": "When writing prompts for LLMs, which of the following techniques do you think you should consider?",
+      "options": [
+        "Start simple and iteratively refine your prompt based on the response",
+        "Be clear and concise in your instructions and avoid ambiguity",
+        "Provide sufficient context and background information",
+        "Specify the desired length, format and tone of the response",
+        "All of the above"
+      ],
+      "successMessage": "Well done! Considering all the prompt engineering techniques can help you craft effective prompts for LLMs.",
+      "retryMessage": "That's true, but there are other techniques that you should also consider. Can you identify them?"
+    },
+    "gptExamples": {
+      "single": {
+        "photosynthesis": {
+          "label": "🌿 Photosynthesis",
+          "prompt": [
+            "What is photosynthesis?",
+            "Explain the process of photosynthesis in plants in a way that a 5-year-old can understand. The response should have 150 words and written in a friendly and fun tone."
+          ],
+          "response": [
+            "<p>Photosynthesis is the process by which green plants, algae, and some bacteria convert light energy, usually from the sun, into chemical energy in the form of glucose. This process occurs mainly in the chloroplasts of plant cells, using chlorophyll to capture light energy. The general equation for photosynthesis can be summarized as:</p><p>6 CO₂ + 6 H₂O + light energy → C₆H₁₂O₆ + 6 O₂</p><p>This means that carbon dioxide and water, using light energy, are transformed into glucose and oxygen.</p>",
+            "<p>Sure! 🌞 Photosynthesis is like a magic recipe that plants use to make their food! First, they need three special things: sunshine, air, and water. 🌱☀️💧 </p><p>When the sun shines, plants open tiny little doors on their leaves to take in air, which has something called carbon dioxide. They also drink up water from the soil through their roots. Then, with the help of the sunlight, the plants mix the water and air together in their leaves. It's like a fun science experiment! 🎉 </p><p>When they mix everything, they make their own food, which helps them grow big and strong. And guess what? They also make oxygen, which is the fresh air we breathe! So, plants are super important because they help us and make our world beautiful. 🌍💚 Isn't that amazing?</p>"
+          ]
+        },
+        "french": {
+          "label": "🇫🇷 French Revolution",
+          "prompt": [
+            "Tell me about the French Revolution.",
+            "Provide a detailed overview of the French Revolution, including its causes, key events, and outcomes. The response should be in bulleted lists and maintain a neutral tone."
+          ],
+          "response": [
+            "<p>The French Revolution (1789-1799) was a period of radical social and political change in France that led to the end of absolute monarchy, the rise of democracy, and the establishment of the French Republic. Key events included the Storming of the Bastille, the Declaration of the Rights of Man and of the Citizen, and the Reign of Terror. The revolution inspired movements worldwide and significantly influenced modern political ideologies.</p>",
+            "<h3>Overview of the French Revolution</h3><h4>Causes</h4><ul><li><strong>Social Inequality</strong>: France&#39;s society was divided into three estates: the clergy (First Estate), the nobility (Second Estate), and the common people (Third Estate). The Third Estate bore the tax burden and had little political power.</li><li><strong>Economic Hardship</strong>: Financial crises due to debt from wars (e.g., American Revolution), poor harvests, and extravagant spending by the monarchy led to widespread discontent.</li><li><strong>Enlightenment Ideas</strong>: Philosophers like Voltaire, Rousseau, and Montesquieu promoted ideas of liberty, equality, and fraternity, challenging traditional authority.</li><li><strong>Weak Leadership</strong>: King Louis XVI&#39;s indecisiveness and inability to address financial issues contributed to the crisis.</li></ul><h4>Key Events</h4><ul><li><strong>Estates-General (May 1789)</strong>: Convened to address the financial crisis; the Third Estate broke away to form the National Assembly.</li><li><strong>Tennis Court Oath (June 1789)</strong>: Members of the National Assembly pledged not to disband until a new constitution was established.</li><li><strong>Storming of the Bastille (July 14, 1789)</strong>: A symbolic act of revolution, it marked the uprising against the monarchy.</li><li><strong>Declaration of the Rights of Man and of the Citizen (August 1789)</strong>: A foundational document asserting individual rights and the principles of liberty and equality.</li><li><strong>Reign of Terror (1793-1794)</strong>: Led by Robespierre and the Committee of Public Safety, this period was marked by mass executions of perceived enemies of the revolution.</li><li><strong>Fall of Robespierre (July 1794)</strong>: His execution ended the Reign of Terror and led to the Thermidorian Reaction.</li></ul><h4>Outcomes</h4><ul><li><strong>End of Monarchy</strong>: The revolution led to the abolition of the monarchy and the establishment of the First French Republic.</li><li><strong>Rise of Napoleon Bonaparte</strong>: The instability following the revolution paved the way for Napoleon&#39;s rise to power, eventually leading to the Napoleonic Wars.</li><li><strong>Social Changes</strong>: The revolution promoted secularism, the spread of nationalism, and changes in class structure.</li><li><strong>Influence on Other Revolutions</strong>: The French Revolution inspired uprisings and movements for democracy and rights across Europe and the Americas.</li></ul>"
+          ]
+        },
+        "productivity": {
+          "label": "🚀 Productivity Tips",
+          "prompt": [
+            "How can I be more productive?",
+            "Provide some productivity tips for high school students, along with practical examples. The response should be an essay of 200 words written in an encouraging tone."
+          ],
+          "response": [
+            "<p>To be more productive, try these strategies: </p><ol><li><strong>Set Clear Goals</strong>: Define specific, measurable, achievable, relevant, and time-bound (SMART) goals.</li><li><strong>Prioritize Tasks</strong>: Use methods like the Eisenhower Matrix to distinguish between what&#39;s urgent and important.</li><li><strong>Time Management</strong>: Implement techniques like the Pomodoro Technique, where you work for 25 minutes and take a 5-minute break.</li><li><strong>Limit Distractions</strong>: Identify and minimize distractions in your work environment.</li><li><strong>Use Tools</strong>: Utilize productivity apps and tools to keep track of tasks and deadlines.</li></ol><p>Consistency and reflection on your progress can also help enhance productivity over time.</p>",
+            "<p>Improving productivity as a high school student is essential for achieving academic success and personal growth. Here are some effective tips to help you maximize your time and efforts.</p><p>First, create a structured schedule. Use a planner or digital calendar to block out time for classes, homework, and extracurricular activities. For example, dedicate specific hours each day for studying, ensuring you stay on track with assignments and projects.</p><p>Second, break tasks into smaller, manageable chunks. Instead of tackling a large project all at once, divide it into sections and set deadlines for each part. This approach not only makes tasks less overwhelming but also provides a sense of accomplishment as you complete each segment.</p><p>Additionally, minimize distractions. Find a quiet study space and limit your phone usage during study sessions. Apps that block distracting websites can also help you stay focused. For instance, try using the Pomodoro Technique: study for 25 minutes, then take a 5-minute break.</p><p>Lastly, prioritize self-care. Ensure you get enough sleep, eat well, and take breaks to recharge. A healthy mind and body are crucial for maintaining high productivity levels. Remember, consistency is key. Stay committed to these practices, and you'll see remarkable improvements in your productivity!</p>"
+          ]
+        }
+      }
     }
   }
 }
