@@ -318,5 +318,39 @@
         }
       ]
     }
+  },
+  "s3": {
+    "intro": {
+      "title": "Natural Language Processing and RAG",
+      "paragraph1": "As we saw in the previous section, Large Language Models (LLMs) are a type of Generative AI models designed to understand and generate human language. However, computers can't understand words the way we see them. Instead, they convert words into numbers using a process called embeddings.",
+      "paragraph2": "We can think of word embeddings as a way to represent words as numbers that carry information about their meanings and relationships to other words. Embeddings can also be used represent the meaning of sentences, entire documents, or even images.",
+      "paragraph3": "These numerical representations are not only used in LLMs to generate text but also has many other fascinating uses which we will explore in this section.",
+      "videoLabel": "IBM Technology: What are Word Embeddings?"
+    },
+    "embIntro": {
+      "title": "What are Word Embeddings?",
+      "paragraph1": "When you think of the word \"cat,\" how would you describe it? You may think of it being a mammal, it can move, has a tail, and so on. These are features that can help describe what a cat is. One way of creating word embeddings is by assigning numerical values to a set of features to show how closely related the word are to the features, for example:",
+      "bullet1": "assign 1 to show that the word \"cat\" is associated with the feature (e.g., has a tail)",
+      "bullet2": "assign 0 to show that the word \"cat\" is not associated with the feature (e.g., has wheels)",
+      "paragraph2": "Using the 5 features below, we obtain the word embeddings for \"cat\" to be (0,1,1,0,1):",
+      "catLabel": "cat",
+      "feats": [
+        "Can bark",
+        "Can move",
+        "Is a mammal",
+        "Has wheels",
+        "Has a tail"
+      ]
+    },
+    "embTask": {
+      "title": "Creating Word Embeddings",
+      "paragraph1": "Word embeddings help computers understand the meaning of words by looking at their features. For example, \"cat\" and \"dog\" might have similar embeddings because they share features such as \"is a mammal\" and \"has a tail.\" On the other hand, the word \"car\" would have very different embeddings.",
+      "taskInstruction": "Using the same set of features, create the embeddings for the words \"dog\" and \"car\" using the dropdowns below.",
+      "words": {
+        "cat": "cat",
+        "dog": "dog",
+        "car": "car"
+      }
+    }
   }
 }

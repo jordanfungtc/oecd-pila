@@ -1,18 +1,17 @@
 <script setup lang="ts">
+import { computed } from "vue";
+import { useI18n } from "vue-i18n";
 import { S3 } from "../states";
 import SelectEmb from "../../util/SelectEmb.vue";
 
-const feats = [
-  "Can bark",
-  "Can move",
-  "Is a mammal",
-  "Has wheels",
-  "Has a tail",
-];
+const { t, tm } = useI18n();
+
+const feats = computed(() => tm("s3.embIntro.feats") as string[]);
 
 const embs = {
   dog: {
     label: "🐶",
+    wordKey: "s3.embTask.words.dog",
     states: [
       S3.EMB_DOG_BARK,
       S3.EMB_DOG_MOVE,
@@ -23,6 +22,7 @@ const embs = {
   },
   car: {
     label: "🚗",
+    wordKey: "s3.embTask.words.car",
     states: [
       S3.EMB_CAR_BARK,
       S3.EMB_CAR_MOVE,
@@ -35,34 +35,26 @@ const embs = {
 </script>
 
 <template>
-  <h2>Creating Word Embeddings</h2>
+  <h2>{{ t("s3.embTask.title") }}</h2>
+  <p>{{ t("s3.embTask.paragraph1") }}</p>
   <p>
-    Word embeddings help computers understand the meaning of words by looking at
-    their features. For example, “cat” and “dog” might have similar embeddings
-    because they share features such as “is a mammal” and “has a tail.” On the
-    other hand, the word “car” would have very different embeddings.
-  </p>
-  <p>
-    <strong>Task:</strong>
-    Using the same set of features, create the embeddings for the words "dog"
-    and "car" using the dropdowns below.
+    <strong>{{ t("common.taskLabel") }}</strong>
+    {{ t("s3.embTask.taskInstruction") }}
   </p>
 
   <table class="table table-sm my-0">
     <tbody>
       <tr>
         <th></th>
-        <th v-for="(feat, i) in Object.keys(feats)" :key="i">
-          <h3 class="my-0 text-center">
-            {{ feats[feat as keyof typeof feats] }}
-          </h3>
+        <th v-for="(feat, i) in feats" :key="i">
+          <h3 class="my-0 text-center">{{ feat }}</h3>
         </th>
       </tr>
       <tr>
         <td>
           <h3 class="my-0 text-center flex gap-4 items-center">
             <div class="text-3xl">😺</div>
-            cat
+            {{ t("s3.embTask.words.cat") }}
           </h3>
         </td>
         <td><div class="text-center">0</div></td>
@@ -75,7 +67,7 @@ const embs = {
         <td>
           <h3 class="my-0 text-center flex gap-4 items-center">
             <div class="text-3xl">{{ emb.label }}</div>
-            {{ word }}
+            {{ t(emb.wordKey) }}
           </h3>
         </td>
         <td v-for="(feat, i) in emb.states" :key="i">
