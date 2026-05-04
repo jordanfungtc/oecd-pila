@@ -27,7 +27,7 @@ const feats = computed(() => tm("s3.embIntro.feats") as string[]);
         <td>
           <h3 class="my-0 text-center flex gap-4 items-center">
             <div class="text-3xl">😺</div>
-            {{ t("s3.embIntro.catLabel") }}
+            {{ t("s3.embTask.words.cat") }}
           </h3>
         </td>
         <td><div class="text-center">0</div></td>

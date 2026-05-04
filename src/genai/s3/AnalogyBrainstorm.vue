@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import { ref } from "vue";
+import { useI18n } from "vue-i18n";
 import { S3 } from "../states";
 import { store } from "../../store";
 import { getWordAnalogy } from "../../util/embeddings";
 
 const loading = ref(false);
+const { t } = useI18n();
 
 const analogyHandler = async () => {
   loading.value = true;
@@ -13,7 +15,7 @@ const analogyHandler = async () => {
     store.state[S3.ANALOGY_OUT.state] = await getWordAnalogy(
       store.state[S3.ANALOGY_BASE.state],
       store.state[S3.ANALOGY_ADD.state],
-      store.state[S3.ANALOGY_SUB.state]
+      store.state[S3.ANALOGY_SUB.state],
     );
   } catch (error) {
     window.alert(error);
@@ -23,31 +25,31 @@ const analogyHandler = async () => {
 </script>
 
 <template>
-  <h2>Brainstorming Word Analogies</h2>
+  <h2>{{ t("s3.analogyBrainstorm.title") }}</h2>
+  <p>{{ t("s3.analogyBrainstorm.paragraph1") }}</p>
   <p>
-    This property of word embeddings is crucial for many natural language
-    processing (NLP) tasks, including for language models like LLMs to
-    understand the relationships between words and generate accurate outputs.
-  </p>
-  <p>
-    <strong>Task:</strong>
-    Choose one of the following examples or come up with your own word analogy.
-    Then, enter the base word, the word to subtract from it, and the word to add
-    to it in the fields below. Click the Find button to see the resulting words.
+    <strong>{{ t("common.taskLabel") }}</strong>
+    {{ t("s3.analogyBrainstorm.taskInstruction") }}
   </p>
   <div>
     <span class="badge badge-ghost mr-2 p-4">
-      school – teacher + doctor = ?
+      {{ t("s3.analogyBrainstorm.examples.example1") }}
     </span>
-    <span class="badge badge-ghost mr-2 p-4"> summer – hot + cold = ? </span>
-    <span class="badge badge-ghost mr-2 p-4"> eye – see + hear = ? </span>
-    <span class="badge badge-ghost mr-2 p-4"> running – run + play = ? </span>
+    <span class="badge badge-ghost mr-2 p-4">
+      {{ t("s3.analogyBrainstorm.examples.example2") }}
+    </span>
+    <span class="badge badge-ghost mr-2 p-4">
+      {{ t("s3.analogyBrainstorm.examples.example3") }}
+    </span>
+    <span class="badge badge-ghost mr-2 p-4">
+      {{ t("s3.analogyBrainstorm.examples.example4") }}
+    </span>
   </div>
   <div class="flex flex-row gap-2 items-center my-4">
     <input
       type="text"
       class="input input-bordered w-full"
-      placeholder="Base word"
+      :placeholder="t('s3.analogyBrainstorm.placeholders.base')"
       v-model="store.state[S3.ANALOGY_BASE.state]"
       @change="store.state[S3.ANALOGY_OUT.state] = []"
     />
@@ -55,7 +57,7 @@ const analogyHandler = async () => {
     <input
       type="text"
       class="input input-bordered w-full"
-      placeholder="Subtract word"
+      :placeholder="t('s3.analogyBrainstorm.placeholders.subtract')"
       v-model="store.state[S3.ANALOGY_SUB.state]"
       @change="store.state[S3.ANALOGY_OUT.state] = []"
     />
@@ -63,14 +65,14 @@ const analogyHandler = async () => {
     <input
       type="text"
       class="input input-bordered w-full"
-      placeholder="Add word"
+      :placeholder="t('s3.analogyBrainstorm.placeholders.add')"
       v-model="store.state[S3.ANALOGY_ADD.state]"
       @change="store.state[S3.ANALOGY_OUT.state] = []"
     />
     <b>=</b>
     <button class="btn" @click="analogyHandler" :disabled="loading">
       <span class="loading loading-spinner" v-if="loading"></span>
-      <div v-else>Find</div>
+      <div v-else>{{ t("s3.analogyBrainstorm.findLabel") }}</div>
     </button>
   </div>
   <div
@@ -79,10 +81,7 @@ const analogyHandler = async () => {
       store.state[S3.ANALOGY_OUT.state].length > 0
     "
   >
-    <p>
-      Here are the 5 closest words to the analogy, along with their similarity
-      scores:
-    </p>
+    <p>{{ t("s3.analogyBrainstorm.resultsLabel") }}</p>
     <span
       v-for="result in store.state[S3.ANALOGY_OUT.state]"
       :key="result.word"

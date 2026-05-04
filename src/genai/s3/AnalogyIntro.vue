@@ -1,23 +1,14 @@
 <script setup lang="ts">
+import { useI18n } from "vue-i18n";
 import kingQueen from "/s3/king-queen.png";
+
+const { t } = useI18n();
 </script>
 
 <template>
-  <h2>What is a Word Analogy?</h2>
-  <p>
-    You've now learned that word embeddings represent the meanings of words as
-    numbers and that similarity scores help measure how closely related two
-    words are. But these tools do more than just compare words – they can also
-    help computers understand relationships between words through word
-    analogies.
-  </p>
-  <p>
-    Consider the words "king" and "queen." A king is a male ruler, and a queen
-    is a female ruler. Now, think about another pair: "man" and "woman." The
-    relationship is similar: one is male, and the other is female. In other
-    words, "king" is to "queen" as "man" is to "woman," or
-    king:queen::man:woman. This is known as a word analogy.
-  </p>
+  <h2>{{ t("s3.analogyIntro.title") }}</h2>
+  <p>{{ t("s3.analogyIntro.paragraph1") }}</p>
+  <p>{{ t("s3.analogyIntro.paragraph2") }}</p>
   <div class="flex justify-center">
     <img :src="kingQueen" class="w-auto h-32 my-4" />
   </div>

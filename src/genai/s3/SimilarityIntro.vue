@@ -28,12 +28,8 @@ const questions = [
   <div class="flex gap-12">
     <div class="w-2/5">
       <h2>{{ t("s3.similarityIntro.title") }}</h2>
-      <p>
-        {{ t("s3.similarityIntro.paragraph1") }}
-      </p>
-      <p>
-        {{ t("s3.similarityIntro.paragraph2") }}
-      </p>
+      <p>{{ t("s3.similarityIntro.paragraph1") }}</p>
+      <p>{{ t("s3.similarityIntro.paragraph2") }}</p>
       <p>
         <strong>{{ t("common.taskLabel") }}</strong>
         {{ t("s3.similarityIntro.taskInstruction") }}
@@ -58,7 +54,7 @@ const questions = [
               }"
             >
               <label class="label cursor-pointer">
-              <span class="label-text">{{ option }}</span>
+                <span class="label-text">{{ option }}</span>
                 <input
                   type="radio"
                   class="radio"
