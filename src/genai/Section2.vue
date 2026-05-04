@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { useI18n } from "vue-i18n";
 import { store } from "../store";
 import Frame from "../util/Frame.vue";
 import Intro from "./s2/Intro.vue";
@@ -12,8 +11,7 @@ import LimitationsCheck from "./s2/LimitationsCheck.vue";
 import LimitationsIntro from "./s2/LimitationsIntro.vue";
 import Brainstorm from "./s2/Brainstorm.vue";
 
-const { t } = useI18n();
-store.title = t("common.moduleTitle");
+store.title = "common.moduleTitle";
 </script>
 
 <template>

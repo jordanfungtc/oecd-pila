@@ -15,7 +15,7 @@ import RagDatabase from "./s3/RagDatabase.vue";
 import RagGenerate from "./s3/RagGenerate.vue";
 import RagBrainstorm from "./s3/RagBrainstorm.vue";
 
-store.title = "Generative AI Module";
+store.title = "common.moduleTitle";
 </script>
 
 <template>

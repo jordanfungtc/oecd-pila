@@ -1,8 +1,11 @@
 {
   "common": {
+    "homeTitle": "OECD PILA Modules",
+    "moduleTitle": "Generative AI Module",
     "taskLabel": "Task:",
     "exampleN": "Example {n}",
-    "moduleTitle": "Generative AI Module"
+    "trueLabel": "True",
+    "falseLabel": "False"
   },
   "s1": {
     "intro": {

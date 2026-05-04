@@ -5,7 +5,7 @@ import Section3 from "./Section3.vue";
 import Section4 from "./Section4.vue";
 import { store } from "../store";
 
-store.title = "Generative AI Module";
+store.title = "common.moduleTitle";
 </script>
 
 <template>

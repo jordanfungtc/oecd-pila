@@ -1,7 +1,9 @@
 <script setup lang="ts">
+import { useI18n } from "vue-i18n";
 import { store } from "../store";
 
 const props = defineProps(["state", "answer"]);
+const { t } = useI18n();
 </script>
 
 <template>
@@ -16,7 +18,7 @@ const props = defineProps(["state", "answer"]);
     }"
   >
     <option :value="undefined" disabled>-</option>
-    <option :value="1">True</option>
-    <option :value="0">False</option>
+    <option :value="1">{{ t("common.trueLabel") }}</option>
+    <option :value="0">{{ t("common.falseLabel") }}</option>
   </select>
 </template>

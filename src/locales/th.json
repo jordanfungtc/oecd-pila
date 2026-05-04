@@ -1,8 +1,11 @@
 {
   "common": {
+    "homeTitle": "โมดูล OECD PILA",
+    "moduleTitle": "โมดูลปัญญาประดิษฐ์เชิงกำเนิด",
     "taskLabel": "โจทย์:",
     "exampleN": "ตัวอย่าง {n}",
-    "moduleTitle": "โมดูลปัญญาประดิษฐ์เชิงกำเนิด"
+    "trueLabel": "จริง",
+    "falseLabel": "เท็จ"
   },
   "s1": {
     "intro": {

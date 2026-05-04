@@ -14,7 +14,7 @@ import CaseProsCons from "./s4/CaseProsCons.vue";
 import CaseWorth from "./s4/CaseWorth.vue";
 import Ending from "./s4/Ending.vue";
 
-store.title = "Generative AI Module";
+store.title = "common.moduleTitle";
 </script>
 
 <template>
