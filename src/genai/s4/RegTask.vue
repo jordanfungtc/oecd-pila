@@ -1,31 +1,34 @@
 <script setup lang="ts">
+import { useI18n } from "vue-i18n";
 import { BIconFileEarmarkTextFill } from "bootstrap-icons-vue";
 import { S4 } from "../states";
 import SelectRisk from "../../util/SelectRisk.vue";
 
+const { t } = useI18n();
+
 const regs = [
   {
-    desc: "A company uses AI to screen resumes of job applicants and automatically shortlist candidates for job interviews.",
+    descKey: "s4.regTask.regs.job.desc",
     recital: "57",
     state: S4.REG_RISK_JOB,
   },
   {
-    desc: "A student uses LLMs for assistance in homework assignments and disclose the use of AI in the submission.",
+    descKey: "s4.regTask.regs.homework.desc",
     recital: "133",
     state: S4.REG_RISK_HOMEWORK,
   },
   {
-    desc: "An organisation uses LLMs to generate fake news articles to manipulate groups of people into taking harmful actions.",
+    descKey: "s4.regTask.regs.fake.desc",
     recital: "29",
     state: S4.REG_RISK_FAKE,
   },
   {
-    desc: "A judge uses LLMs for assistance in researching and interpreting the law and for applying it to the facts of a case.",
+    descKey: "s4.regTask.regs.judge.desc",
     recital: "61",
     state: S4.REG_RISK_JUDGE,
   },
   {
-    desc: "A law enforcement agency uses AI to analyse the characteristics of citizens to predict future criminal behaviour.",
+    descKey: "s4.regTask.regs.police.desc",
     recital: "42",
     state: S4.REG_RISK_POLICE,
   },
@@ -33,12 +36,10 @@ const regs = [
 </script>
 
 <template>
-  <h2>Identifying AI Risk Level</h2>
+  <h2>{{ t("s4.regTask.title") }}</h2>
   <p>
-    <strong>Task: </strong>
-    For each of the AI use cases below, click the link on the left column to
-    read the corresponding EU AI Act recital. Then, select the risk level of the
-    AI use case using the dropdowns.
+    <strong>{{ t("common.taskLabel") }}</strong>
+    {{ t("s4.regTask.taskInstruction") }}
   </p>
   <!-- Use Case Table -->
   <table class="table table-sm w-full my-[-10px]">
@@ -51,12 +52,10 @@ const regs = [
             class="text-primary flex gap-2 items-center no-underline"
           >
             <BIconFileEarmarkTextFill />
-            Recital {{ reg.recital }}
+            {{ t("s4.regTask.recitalLabel") }} {{ reg.recital }}
           </a>
         </td>
-        <td>
-          {{ reg.desc }}
-        </td>
+        <td>{{ t(reg.descKey) }}</td>
         <td>
           <SelectRisk :state="reg.state.state" :answer="reg.state.answer" />
         </td>
