@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { useI18n } from "vue-i18n";
 import { store } from "../store";
 import Agent from "@knowlearning/agents/browser.js";
 import {
@@ -7,8 +6,6 @@ import {
   BIconCodeSlash,
   BIconBoxArrowRight,
 } from "bootstrap-icons-vue";
-
-const { t } = useI18n();
 
 const restart = async () => {
   Object.keys(store.state).forEach((key) => delete store.state[key]);
@@ -20,7 +17,6 @@ const restart = async () => {
     <!-- Left Content -->
     <div class="flex items-center gap-4 w-full">
       <img src="/pila-logo.png" alt="PILA Logo" class="h-6" />
-      <h3>{{ t(store.title) }}</h3>
     </div>
 
     <!-- Right Content -->

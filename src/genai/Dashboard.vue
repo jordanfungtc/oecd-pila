@@ -3,15 +3,12 @@ import Agent from "@knowlearning/agents/browser.js";
 import { ref, onMounted, watch } from "vue";
 import { BIconArrowClockwise } from "bootstrap-icons-vue";
 import { S1, S2, S3, S4 } from "./states";
-import { store } from "../store";
 import DbVertical from "../util/DbVertical.vue";
 import DbHorizontal from "../util/DbHorizontal.vue";
 import section1Icon from "/s1/s1-icon.png";
 import section2Icon from "/s2/s2-icon.png";
 import section3Icon from "/s3/s3-icon.png";
 import section4Icon from "/s4/s4-icon.png";
-
-store.title = "Generative AI Module Dashboard";
 
 const users = ref();
 const contents = ref();
@@ -24,10 +21,10 @@ const getHandler = async () => {
   metadatas.value = [];
   for (let content of contents.value) {
     states.value.push(
-      await Agent.state(content, users.value[selectedUser.value].auth.id)
+      await Agent.state(content, users.value[selectedUser.value].auth.id),
     );
     metadatas.value.push(
-      await Agent.metadata(content, users.value[selectedUser.value].auth.id)
+      await Agent.metadata(content, users.value[selectedUser.value].auth.id),
     );
   }
 };
@@ -35,7 +32,7 @@ const getHandler = async () => {
 onMounted(async () => {
   let urlParams = new URLSearchParams(window.location.search);
   users.value = await Promise.all(
-    urlParams.getAll("user").map((id) => Agent.environment(id))
+    urlParams.getAll("user").map((id) => Agent.environment(id)),
   );
   contents.value = urlParams.getAll("content");
   getHandler();

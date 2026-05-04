@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { store } from "../store";
 import Frame from "../util/Frame.vue";
 import Intro from "./s4/Intro.vue";
 import BiasEmbeddings from "./s4/BiasEmbeddings.vue";
@@ -13,8 +12,6 @@ import CaseSelect from "./s4/CaseSelect.vue";
 import CaseProsCons from "./s4/CaseProsCons.vue";
 import CaseWorth from "./s4/CaseWorth.vue";
 import Ending from "./s4/Ending.vue";
-
-store.title = "common.moduleTitle";
 </script>
 
 <template>

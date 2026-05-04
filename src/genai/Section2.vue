@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { store } from "../store";
 import Frame from "../util/Frame.vue";
 import Intro from "./s2/Intro.vue";
 import PromptIntro from "./s2/PromptIntro.vue";
@@ -10,8 +9,6 @@ import LimitationsConv from "./s2/LimitationsConv.vue";
 import LimitationsCheck from "./s2/LimitationsCheck.vue";
 import LimitationsIntro from "./s2/LimitationsIntro.vue";
 import Brainstorm from "./s2/Brainstorm.vue";
-
-store.title = "common.moduleTitle";
 </script>
 
 <template>

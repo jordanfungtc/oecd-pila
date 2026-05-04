@@ -3,9 +3,6 @@ import Section1 from "./Section1.vue";
 import Section2 from "./Section2.vue";
 import Section3 from "./Section3.vue";
 import Section4 from "./Section4.vue";
-import { store } from "../store";
-
-store.title = "common.moduleTitle";
 </script>
 
 <template>
