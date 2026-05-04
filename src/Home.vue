@@ -4,8 +4,6 @@ import Agent from "@knowlearning/agents/browser.js";
 import { RouterLink } from "vue-router";
 import { store } from "./store";
 
-store.title = "common.homeTitle";
-
 const base_url = "https://pila.oecd.jordanfung.com";
 
 const modules = {

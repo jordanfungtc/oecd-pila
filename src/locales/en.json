@@ -351,6 +351,55 @@
         "dog": "dog",
         "car": "car"
       }
+    },
+    "similarityIntro": {
+      "title": "Similarity Score",
+      "paragraph1": "As humans, we can intuitively understand how similar two words are. But how do computers figure out the similarity between words?",
+      "paragraph2": "Computers can use a method called the cosine similarity score. This score ranges from -1 to 1. A score close to 1 means the words are very similar, while a score near -1 means they are very different.",
+      "taskInstruction": "Answer the questions on the right by selecting the correct checkboxes.",
+      "options": ["'cat' and 'dog'", "'cat' and 'car'"],
+      "questions": {
+        "q1": {
+          "text": "Which of the following pairs of words do you think are more similar in meaning?",
+          "success": "Words that share more features are more similar.",
+          "error": "Think about the features that the words share."
+        },
+        "q2": {
+          "text": "Which of the following pairs of words do you think have a lower cosine similarity score?",
+          "success": "Less similar words have a lower similarity score.",
+          "error": "Refer to the definition of cosine similarity score."
+        }
+      },
+      "feedback": {
+        "successPrefix": "Well done!",
+        "errorPrefix": "Not quite."
+      }
+    },
+    "similarityCalc": {
+      "title": "Calculating Similarity Score",
+      "paragraph1": "Let's take a closer look at the math on the right and calculate the similarity score between \"cat\" (0,1,1,0,1) and \"dog\" (1,1,1,0,1).",
+      "paragraph2": "We obtain that the similarity score between the embeddings of \"cat\" and \"dog\" is 0.866, which shows that they are quite similar.",
+      "optionalTaskLabel": "Optional Task:",
+      "optionalTaskTitle": "Optional Task",
+      "optionalTaskInstruction": "Calculate the similarity score between the embeddings of \"cat\" (0,1,1,0,1) and \"car\" (0,1,0,1,0).",
+      "revealAnswerLabel": "Reveal Answer",
+      "steps": {
+        "dotProduct": {
+          "title": "Dot product between embeddings",
+          "description": "Multiply each corresponding pair of numbers and add them up"
+        },
+        "magnitudes": {
+          "title": "Magnitudes of each embeddings",
+          "description": "Square each number, add them up, and take square root of the sum"
+        },
+        "similarity": {
+          "title": "Cosine similarity score",
+          "description": "Divide the dot product by the product of the magnitudes"
+        }
+      },
+      "optionalTaskConclusion": "As expected, the similarity score between the words 'cat' and 'car' (0.408) is lower than that between 'cat' and 'dog' (0.866), as cars are less similar to cats than dogs are.",
+      "calculatorLinkLabel": "Omni Cosine Similarity Calculator",
+      "closeLabel": "Close"
     }
   }
 }
