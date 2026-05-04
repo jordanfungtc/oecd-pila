@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
+import { useI18n } from "vue-i18n";
 import {
   BIcon2Circle,
   BIcon3Circle,
@@ -11,11 +12,12 @@ import { S3 } from "../states";
 import { store } from "../../store";
 import { database, examples } from "./ragExamples";
 
+const { t } = useI18n();
 const generating = ref(false);
 
 const generateHandler = async () => {
   if (!store.state[S3.RAG_PROMPT.state]) {
-    return window.alert("Please select a query example.");
+    return window.alert(t("s3.ragGenerate.selectPrompt"));
   }
   generating.value = true;
   store.state[S3.RAG_GENERATED.state] = 0;
@@ -34,17 +36,17 @@ const generateHandler = async () => {
 </script>
 
 <template>
-  <h2>RAG for Customer Service Chatbot: Usage</h2>
+  <h2>{{ t("s3.ragGenerate.title") }}</h2>
   <div class="grid grid-cols-2 gap-8">
     <div>
       <!-- Query Section -->
       <div class="flex gap-2 items-center mb-4">
         <BIcon2Circle class="w-5 h-5" />
-        <h4 class="my-0">Query</h4>
+        <h4 class="my-0">{{ t("s3.ragGenerate.sections.query.title") }}</h4>
         <div class="flex-grow"></div>
         <div
           class="tooltip tooltip-left"
-          data-tip="Select a query and start the RAG process using the database"
+          :data-tip="t('s3.ragGenerate.sections.query.tooltip')"
         >
           <button class="btn btn-xs btn-circle">?</button>
         </div>
@@ -59,7 +61,7 @@ const generateHandler = async () => {
           }"
         >
           <label class="label cursor-pointer">
-            <span class="label-text">{{ example.label }}</span>
+            <span class="label-text">{{ t(example.labelKey) }}</span>
             <input
               type="radio"
               name="radio-10"
@@ -74,8 +76,16 @@ const generateHandler = async () => {
         <textarea
           type="text"
           class="textarea textarea-lg textarea-bordered w-full leading-normal"
-          :value="store.state[S3.RAG_PROMPT.state] ? examples[store.state[S3.RAG_PROMPT.state] as keyof typeof examples].query : ''"
-          placeholder="Select a query example"
+          :value="
+            store.state[S3.RAG_PROMPT.state]
+              ? t(
+                  examples[
+                    store.state[S3.RAG_PROMPT.state] as keyof typeof examples
+                  ].queryKey,
+                )
+              : ''
+          "
+          :placeholder="t('s3.ragGenerate.selectPrompt')"
           readonly
         ></textarea>
         <div class="indicator">
@@ -96,11 +106,11 @@ const generateHandler = async () => {
       <!-- Retrieve Section -->
       <div class="flex gap-2 items-center my-4">
         <BIcon3Circle class="w-5 h-5" />
-        <h4 class="my-0">Retrieve</h4>
+        <h4 class="my-0">{{ t("s3.ragGenerate.sections.retrieve.title") }}</h4>
         <div class="flex-grow"></div>
         <div
           class="tooltip tooltip-left"
-          data-tip="Similarity scores between the query and every entry in the database"
+          :data-tip="t('s3.ragGenerate.sections.retrieve.tooltip')"
         >
           <button class="btn btn-xs btn-circle">?</button>
         </div>
@@ -108,14 +118,14 @@ const generateHandler = async () => {
       <div
         v-for="i in Math.min(
           database.length,
-          store.state[S3.RAG_GENERATED.state] || 0
+          store.state[S3.RAG_GENERATED.state] || 0,
         )"
         :key="i"
         class="text-sm"
       >
         <div class="flex items-center gap-4 w-full">
           <div class="line-clamp-1 w-full">
-            {{ database[i - 1] }}
+            {{ t(database[i - 1]) }}
           </div>
           <div class="font-bold">
             {{
@@ -131,11 +141,11 @@ const generateHandler = async () => {
       <!-- Augmented Prompt Section -->
       <div class="flex gap-2 items-center mb-4">
         <BIcon4Circle class="w-5 h-5" />
-        <h4 class="my-0">Augment</h4>
+        <h4 class="my-0">{{ t("s3.ragGenerate.sections.augment.title") }}</h4>
         <div class="flex-grow"></div>
         <div
           class="tooltip tooltip-left"
-          :data-tip="`Augmented prompt with the entry that has the highest similarity score`"
+          :data-tip="t('s3.ragGenerate.sections.augment.tooltip')"
         >
           <button class="btn btn-xs btn-circle">?</button>
         </div>
@@ -146,18 +156,24 @@ const generateHandler = async () => {
       >
         <div
           class="chat-bubble bg-gray-100 text-neutral text-sm py-0"
-          v-html="examples[store.state[S3.RAG_PROMPT.state] as keyof typeof examples].augPrompt"
+          v-html="
+            t(
+              examples[
+                store.state[S3.RAG_PROMPT.state] as keyof typeof examples
+              ].augPromptKey,
+            )
+          "
         ></div>
       </div>
 
       <!-- Generate Section -->
       <div class="flex gap-2 items-center my-4">
         <BIcon5Circle class="w-5 h-5" />
-        <h4 class="my-0">Generate</h4>
+        <h4 class="my-0">{{ t("s3.ragGenerate.sections.generate.title") }}</h4>
         <div class="flex-grow"></div>
         <div
           class="tooltip tooltip-left"
-          data-tip="Response from the LLM generated using the augmented prompt"
+          :data-tip="t('s3.ragGenerate.sections.generate.tooltip')"
         >
           <button class="btn btn-xs btn-circle">?</button>
         </div>
@@ -168,7 +184,13 @@ const generateHandler = async () => {
       >
         <div
           class="chat-bubble bg-blue-100 text-neutral text-sm py-0"
-          v-html="examples[store.state[S3.RAG_PROMPT.state] as keyof typeof examples].response"
+          v-html="
+            t(
+              examples[
+                store.state[S3.RAG_PROMPT.state] as keyof typeof examples
+              ].responseKey,
+            )
+          "
         ></div>
       </div>
     </div>

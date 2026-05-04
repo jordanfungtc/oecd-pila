@@ -1,31 +1,34 @@
 <script setup lang="ts">
+import { computed } from "vue";
+import { useI18n } from "vue-i18n";
 import { BIcon1Circle } from "bootstrap-icons-vue";
 import { database } from "./ragExamples";
+
+const { t } = useI18n();
+const databaseRows = computed(() => database.map((key) => t(key)));
 </script>
 
 <template>
-  <h2>RAG for Customer Service Chatbot: Database</h2>
+  <h2>{{ t("s3.ragDatabase.title") }}</h2>
 
   <p>
-    <strong>Task: </strong>
-    Inspect the RAG database of a customer service chatbot for an online
-    electronics store below. Then, proceed to the next step to select a customer
-    query and generate a response using RAG.
+    <strong>{{ t("common.taskLabel") }} </strong>
+    {{ t("s3.ragDatabase.taskInstruction") }}
   </p>
   <!-- Database Section -->
   <div class="flex gap-2 items-center mb-4">
     <BIcon1Circle class="w-5 h-5" />
-    <h4 class="my-0">Database</h4>
+    <h4 class="my-0">{{ t("s3.ragDatabase.sectionTitle") }}</h4>
     <div class="flex-grow"></div>
     <div
       class="tooltip tooltip-left"
-      data-tip="Prepare the entries in the database that will be used for the RAG process"
+      :data-tip="t('s3.ragDatabase.tooltip')"
     >
       <button class="btn btn-xs btn-circle">?</button>
     </div>
   </div>
   <input
-    v-for="(data, index) in database"
+    v-for="(data, index) in databaseRows"
     :key="index"
     :value="data"
     type="text"

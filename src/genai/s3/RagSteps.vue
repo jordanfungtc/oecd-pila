@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { computed } from "vue";
+import { useI18n } from "vue-i18n";
 import {
   BIcon1Circle,
   BIcon2Circle,
@@ -6,61 +8,52 @@ import {
   BIcon4Circle,
   BIcon5Circle,
 } from "bootstrap-icons-vue";
+
+const { t } = useI18n();
+
+const steps = computed(
+  () =>
+    [
+      {
+        icon: BIcon1Circle,
+        titleKey: "s3.ragSteps.steps.database.title",
+        descriptionKey: "s3.ragSteps.steps.database.description",
+      },
+      {
+        icon: BIcon2Circle,
+        titleKey: "s3.ragSteps.steps.query.title",
+        descriptionKey: "s3.ragSteps.steps.query.description",
+      },
+      {
+        icon: BIcon3Circle,
+        titleKey: "s3.ragSteps.steps.retrieve.title",
+        descriptionKey: "s3.ragSteps.steps.retrieve.description",
+      },
+      {
+        icon: BIcon4Circle,
+        titleKey: "s3.ragSteps.steps.augment.title",
+        descriptionKey: "s3.ragSteps.steps.augment.description",
+      },
+      {
+        icon: BIcon5Circle,
+        titleKey: "s3.ragSteps.steps.generate.title",
+        descriptionKey: "s3.ragSteps.steps.generate.description",
+      },
+    ] as const,
+);
 </script>
 
 <template>
-  <h2>RAG for Customer Service Chatbot</h2>
-  <p>
-    RAG is often used in customer service chatbots to provide accurate and
-    relevant responses to customer queries while maintaining a conversational
-    tone. Here are the steps involved in the RAG process:
-  </p>
+  <h2>{{ t("s3.ragSteps.title") }}</h2>
+  <p>{{ t("s3.ragSteps.paragraph1") }}</p>
   <table class="my-0">
     <tbody>
-      <tr>
-        <td><BIcon1Circle class="w-5 h-5" /></td>
-        <td><strong>Database</strong></td>
+      <tr v-for="step in steps" :key="step.titleKey">
+        <td><component :is="step.icon" class="w-5 h-5" /></td>
         <td>
-          The company gathers information about their products, services and
-          policies to create a database.
+          <strong>{{ t(step.titleKey) }}</strong>
         </td>
-      </tr>
-      <tr>
-        <td><BIcon2Circle class="w-5 h-5" /></td>
-        <td><strong>Query</strong></td>
-        <td>
-          A customer asks a question related to the company, such as "Can I pay
-          with a credit card?"
-        </td>
-      </tr>
-      <tr>
-        <td><BIcon3Circle class="w-5 h-5" /></td>
-        <td><strong>Retrieve</strong></td>
-        <td>
-          The system searches through the database to find information relevant
-          to the customer's question. This is done using techniques like
-          embeddings and similarity scores between the query and database
-          entries. In this example, the system identifies a document detailing
-          the payment methods accepted by the company.
-        </td>
-      </tr>
-      <tr>
-        <td><BIcon4Circle class="w-5 h-5" /></td>
-        <td><strong>Augment</strong></td>
-        <td>
-          The retrieved information about payment methods is combined with the
-          customer's original question.
-        </td>
-      </tr>
-      <tr>
-        <td><BIcon5Circle class="w-5 h-5" /></td>
-        <td><strong>Generate</strong></td>
-        <td>
-          Using the augmented prompt, the LLM generates an accurate and
-          contextually relevant response for the customer. In this example, the
-          system produces a response confirming that credit card payments are
-          accepted.
-        </td>
+        <td>{{ t(step.descriptionKey) }}</td>
       </tr>
     </tbody>
   </table>
