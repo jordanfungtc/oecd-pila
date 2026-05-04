@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { computed, ref } from "vue";
+import { useI18n } from "vue-i18n";
 import {
   BIconArrowRightSquare,
   BIcon1Circle,
@@ -13,64 +14,71 @@ import genderBiasIcon from "/s4/gender-bias.png";
 import racialBiasIcon from "/s4/racial-bias.png";
 import religiousBiasIcon from "/s4/religious-bias.png";
 
+const { t } = useI18n();
+
 const biases = {
   gender: {
-    label: "Gender",
+    labelKey: "s4.biasEmbeddings.biasTypes.gender",
     icon: genderBiasIcon,
     target1: "man",
     target2: "woman",
     attributes: [
-      "nurse",
-      "caring",
-      "mechanic",
-      "assertive",
-      "architect",
-      "sensitive",
-      "receptionist",
-      "logical",
+      "s4.biasEmbeddings.attributeExamples.gender.nurse",
+      "s4.biasEmbeddings.attributeExamples.gender.caring",
+      "s4.biasEmbeddings.attributeExamples.gender.mechanic",
+      "s4.biasEmbeddings.attributeExamples.gender.assertive",
+      "s4.biasEmbeddings.attributeExamples.gender.architect",
+      "s4.biasEmbeddings.attributeExamples.gender.sensitive",
+      "s4.biasEmbeddings.attributeExamples.gender.receptionist",
+      "s4.biasEmbeddings.attributeExamples.gender.logical",
     ],
   },
   racial: {
-    label: "Racial",
+    labelKey: "s4.biasEmbeddings.biasTypes.racial",
     icon: racialBiasIcon,
     target1: "black",
     target2: "white",
     attributes: [
-      "janitor",
-      "lazy",
-      "police",
-      "hardworking",
-      "violent",
-      "criminal",
-      "peaceful",
-      "complacent",
+      "s4.biasEmbeddings.attributeExamples.racial.janitor",
+      "s4.biasEmbeddings.attributeExamples.racial.lazy",
+      "s4.biasEmbeddings.attributeExamples.racial.police",
+      "s4.biasEmbeddings.attributeExamples.racial.hardworking",
+      "s4.biasEmbeddings.attributeExamples.racial.violent",
+      "s4.biasEmbeddings.attributeExamples.racial.criminal",
+      "s4.biasEmbeddings.attributeExamples.racial.peaceful",
+      "s4.biasEmbeddings.attributeExamples.racial.complacent",
     ],
   },
   religious: {
-    label: "Religious",
+    labelKey: "s4.biasEmbeddings.biasTypes.religious",
     icon: religiousBiasIcon,
     target1: "muslim",
     target2: "christian",
     attributes: [
-      "terrorist",
-      "charitable",
-      "dangerous",
-      "compassionate",
-      "conservative",
-      "cult",
-      "peaceful",
+      "s4.biasEmbeddings.attributeExamples.religious.terrorist",
+      "s4.biasEmbeddings.attributeExamples.religious.charitable",
+      "s4.biasEmbeddings.attributeExamples.religious.dangerous",
+      "s4.biasEmbeddings.attributeExamples.religious.compassionate",
+      "s4.biasEmbeddings.attributeExamples.religious.conservative",
+      "s4.biasEmbeddings.attributeExamples.religious.cult",
+      "s4.biasEmbeddings.attributeExamples.religious.peaceful",
     ],
   },
 };
 
 const loading = ref(false);
+const selectedBias = computed(() =>
+  store.state[S4.BIAS_TYPE.state]
+    ? biases[store.state[S4.BIAS_TYPE.state] as keyof typeof biases]
+    : null,
+);
 
 const biasHandler = async () => {
   if (!store.state[S4.BIAS_TYPE.state]) {
-    return window.alert("Please select a type of bias");
+    return window.alert(t("s4.biasEmbeddings.alerts.selectBiasType"));
   }
   if (!store.state[S4.BIAS_ATTRIBUTE.state]) {
-    return window.alert("Please enter an attribute word");
+    return window.alert(t("s4.biasEmbeddings.alerts.enterAttribute"));
   }
   loading.value = true;
   try {
@@ -79,7 +87,7 @@ const biasHandler = async () => {
     const biasScores = await getBias(
       store.state[S4.BIAS_ATTRIBUTE.state],
       biases[store.state[S4.BIAS_TYPE.state] as keyof typeof biases].target1,
-      biases[store.state[S4.BIAS_TYPE.state] as keyof typeof biases].target2
+      biases[store.state[S4.BIAS_TYPE.state] as keyof typeof biases].target2,
     );
     store.state[S4.BIAS_TARGET1_SIM.state] = biasScores[0];
     store.state[S4.BIAS_TARGET2_SIM.state] = biasScores[1];
@@ -93,29 +101,24 @@ const biasHandler = async () => {
 <template>
   <div class="flex gap-12">
     <div class="w-1/2">
-      <h2>Bias in Word Embeddings</h2>
+      <h2>{{ t("s4.biasEmbeddings.title") }}</h2>
       <p>
-        As you now know, langauge models are trained with lots of text data and
-        learn to find patterns in them. However, these data are created by
-        humans who harbor many biases and prejudices.
+        {{ t("s4.biasEmbeddings.paragraph1") }}
       </p>
       <p>
-        For example, if in the data the word “nurse” is associated more often
-        with “she” and "architect" with “he,” the embeddings of certain jobs may
-        have higher similarity scores with specific genders. But we know that
-        anyone – both men and women – can do those jobs.
+        {{ t("s4.biasEmbeddings.paragraph2") }}
       </p>
       <p>
-        <strong>Task: </strong>
-        Select a type of bias and enter an attribute word that might be biased
-        against one of the target words.
+        <strong>{{ t("common.taskLabel") }}</strong>
+        {{ t("s4.biasEmbeddings.taskInstruction") }}
       </p>
     </div>
     <div class="w-1/2 mt-6 flex flex-col gap-4">
       <!-- Bias Type Selection -->
       <div class="p-4 border rounded-xl">
         <h4 class="mt-0 mb-2 flex gap-2 items-center">
-          <BIcon1Circle class="w-5 h-5" />Choose a type of bias
+          <BIcon1Circle class="w-5 h-5" />
+          {{ t("s4.biasEmbeddings.steps.chooseBiasType") }}
         </h4>
         <div class="my-0 grid grid-cols-3 gap-2">
           <div
@@ -127,7 +130,7 @@ const biasHandler = async () => {
             }"
           >
             <label class="label cursor-pointer">
-              <span class="label-text">{{ bias.label }}</span>
+              <span class="label-text">{{ t(bias.labelKey) }}</span>
               <input
                 type="radio"
                 name="radio-10"
@@ -150,14 +153,15 @@ const biasHandler = async () => {
       <!-- Attribute Word -->
       <div class="p-4 border rounded-xl">
         <h4 class="mt-0 mb-2 flex gap-2 items-center">
-          <BIcon2Circle class="w-5 h-5" />Enter an attribute word
+          <BIcon2Circle class="w-5 h-5" />
+          {{ t("s4.biasEmbeddings.steps.enterAttributeWord") }}
         </h4>
         <!-- Input -->
         <div class="flex gap-2 items-center">
           <input
             type="text"
             v-model="store.state[S4.BIAS_ATTRIBUTE.state]"
-            placeholder="Attribute word"
+            :placeholder="t('s4.biasEmbeddings.attributePlaceholder')"
             class="input input-bordered w-full"
           />
           <button @click="() => biasHandler()" class="btn" :disabled="loading">
@@ -168,11 +172,13 @@ const biasHandler = async () => {
         <!-- Examples -->
         <div v-if="store.state[S4.BIAS_TYPE.state]" class="mt-2">
           <span
-            v-for="attribute in biases[store.state[S4.BIAS_TYPE.state] as keyof typeof biases].attributes"
-            :key="attribute"
+            v-for="attributeKey in biases[
+              store.state[S4.BIAS_TYPE.state] as keyof typeof biases
+            ].attributes"
+            :key="attributeKey"
             class="badge badge-ghost p-2 mr-2"
           >
-            {{ attribute }}
+            {{ t(attributeKey) }}
           </span>
         </div>
       </div>
@@ -180,50 +186,39 @@ const biasHandler = async () => {
       <!--  Similarity Scores Result -->
       <div class="p-4 border rounded-xl">
         <h4 class="my-0 flex gap-2 items-center">
-          <BIcon3Circle class="w-5 h-5" /> Similarity scores
+          <BIcon3Circle class="w-5 h-5" />
+          {{ t("s4.biasEmbeddings.steps.similarityScores") }}
         </h4>
         <div class="flex gap-4 mt-2">
           <!-- Bias Icon -->
           <img
-            v-if="store.state[S4.BIAS_TYPE.state]"
-            :src="biases[store.state[S4.BIAS_TYPE.state] as keyof typeof biases].icon"
+            v-if="selectedBias"
+            :src="selectedBias.icon"
             class="w-16 h-16 my-0"
           />
           <div class="w-full">
             <!-- Target 1 -->
             <div class="badge badge-neutral badge-lg mr-2 p-4 mb-2 gap-2">
               <b>{{
-                store.state[S4.BIAS_TYPE.state]
-                  ? biases[
-                      store.state[S4.BIAS_TYPE.state] as keyof typeof biases
-                    ].target1
-                  : "--"
+                selectedBias ? selectedBias.target1 : "--"
               }}</b>
               {{ store.state[S4.BIAS_TARGET1_SIM.state]?.toFixed(3) || "--" }}
             </div>
             <!-- Target 2 -->
             <div class="badge badge-neutral badge-lg mr-2 p-4 mb-2 gap-2">
               <b>{{
-                store.state[S4.BIAS_TYPE.state]
-                  ? biases[
-                      store.state[S4.BIAS_TYPE.state] as keyof typeof biases
-                    ].target2
-                  : "--"
+                selectedBias ? selectedBias.target2 : "--"
               }}</b>
               {{ store.state[S4.BIAS_TARGET2_SIM.state]?.toFixed(3) || "--" }}
             </div>
             <!-- Result -->
             <div v-if="store.state[S4.BIAS_TARGET1_SIM.state]">
-              More associated with:
+              {{ t("s4.biasEmbeddings.resultLabel") }}
               <b>{{
                 store.state[S4.BIAS_TARGET1_SIM.state] >
                 store.state[S4.BIAS_TARGET2_SIM.state]
-                  ? biases[
-                      store.state[S4.BIAS_TYPE.state] as keyof typeof biases
-                    ].target1
-                  : biases[
-                      store.state[S4.BIAS_TYPE.state] as keyof typeof biases
-                    ].target2
+                  ? selectedBias?.target1
+                  : selectedBias?.target2
               }}</b>
             </div>
           </div>

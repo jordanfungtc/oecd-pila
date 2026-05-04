@@ -556,5 +556,67 @@
       "databasePrompt": "The database for this RAG system would contain:",
       "databasePlaceholder": "Database, e.g., websites, documents, books, etc."
     }
+  },
+  "s4": {
+    "intro": {
+      "title": "AI Ethics and Sustainability",
+      "paragraph1": "As we saw in the previous sections, AI technologies like Large Language Models (LLMs) offer significant benefits in a wide range of applications. However, they also raise important ethical and sustainability challenges that need to be addressed.",
+      "paragraph2": "For example, they can perpetuate biases present in the data they are trained on, leading to unfair outcomes for certain groups of people. Additionally, the energy consumption of training and running these models can have a significant environmental impact.",
+      "paragraph3": "Identifying and addressing these challenges is crucial to ensuring that AI systems are fair, equitable, and inclusive for all users and that they are developed and used in a sustainable manner. We will explore these topics in more detail in this section.",
+      "videoLabel": "UNESCO: Ethics of AI Challenges and Governance"
+    },
+    "biasEmbeddings": {
+      "title": "Bias in Word Embeddings",
+      "paragraph1": "As you now know, language models are trained with lots of data such as Internet texts and learn to find patterns in them. However, these data are created by humans who harbor many biases and prejudices.",
+      "paragraph2": "For example, if in the data the word \"nurse\" is associated more often with \"she\" and \"architect\" with \"he,\" the embeddings of certain jobs may have higher similarity scores with specific genders. But we know that anyone - both men and women - can do those jobs.",
+      "taskInstruction": "Select a type of bias, enter an attribute word (in English only), and compute the similarity scores.",
+      "steps": {
+        "chooseBiasType": "Choose a type of bias",
+        "enterAttributeWord": "Enter an attribute word",
+        "similarityScores": "Similarity scores"
+      },
+      "biasTypes": {
+        "gender": "Gender",
+        "racial": "Racial",
+        "religious": "Religious"
+      },
+      "attributePlaceholder": "Attribute word",
+      "resultLabel": "More associated with:",
+      "alerts": {
+        "selectBiasType": "Please select a type of bias",
+        "enterAttribute": "Please enter an attribute word"
+      },
+      "attributeExamples": {
+        "gender": {
+          "nurse": "nurse",
+          "caring": "caring",
+          "mechanic": "mechanic",
+          "assertive": "assertive",
+          "architect": "architect",
+          "sensitive": "sensitive",
+          "receptionist": "receptionist",
+          "logical": "logical"
+        },
+        "racial": {
+          "janitor": "janitor",
+          "lazy": "lazy",
+          "police": "police",
+          "hardworking": "hardworking",
+          "violent": "violent",
+          "criminal": "criminal",
+          "peaceful": "peaceful",
+          "complacent": "complacent"
+        },
+        "religious": {
+          "terrorist": "terrorist",
+          "charitable": "charitable",
+          "dangerous": "dangerous",
+          "compassionate": "compassionate",
+          "conservative": "conservative",
+          "cult": "cult",
+          "peaceful": "peaceful"
+        }
+      }
+    }
   }
 }
