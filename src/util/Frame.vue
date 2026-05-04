@@ -1,9 +1,7 @@
 <script setup lang="ts">
 import { BIconChevronLeft, BIconChevronRight } from "bootstrap-icons-vue";
-import { store } from "../store";
 import { ref } from "vue";
 
-store.title = "Generative AI Module";
 const props = defineProps(["steps", "ending"]);
 // steps = total no. of steps, ending = true for ending congrats step
 const step = ref(0);
