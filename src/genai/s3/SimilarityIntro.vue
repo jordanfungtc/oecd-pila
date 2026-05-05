@@ -5,7 +5,6 @@ import { store } from "../../store";
 import { S3 } from "../states";
 
 const { t, tm } = useI18n();
-
 const options = computed(() => tm("s3.similarityIntro.options") as string[]);
 
 const questions = [
@@ -27,14 +26,20 @@ const questions = [
 <template>
   <div class="flex gap-12">
     <div class="w-2/5">
+      <!-- Title -->
       <h2>{{ t("s3.similarityIntro.title") }}</h2>
+
+      <!-- Paragraphs -->
       <p>{{ t("s3.similarityIntro.paragraph1") }}</p>
       <p>{{ t("s3.similarityIntro.paragraph2") }}</p>
+
+      <!-- Task Instruction -->
       <p>
         <strong>{{ t("common.taskLabel") }}</strong>
         {{ t("s3.similarityIntro.taskInstruction") }}
       </p>
     </div>
+
     <div class="w-3/5">
       <div class="flex flex-col gap-4 mt-8">
         <div
@@ -44,6 +49,7 @@ const questions = [
         >
           <!-- Question Text -->
           <h4 class="mt-2 mb-4">{{ i + 1 + ". " + t(question.textKey) }}</h4>
+
           <!-- Answer Selection -->
           <div class="flex gap-2">
             <div
@@ -64,6 +70,7 @@ const questions = [
               </label>
             </div>
           </div>
+
           <!-- Feedback Message -->
           <div
             v-if="store.state[question.state.state] !== undefined"

@@ -1,9 +1,11 @@
 <script setup lang="ts">
+import { computed } from "vue";
 import { useI18n } from "vue-i18n";
 import { store } from "../../store";
 import { S2 } from "../states";
 
-const { t } = useI18n();
+const { t, tm } = useI18n();
+const options = computed(() => tm("s2.promptTechniques.options") as string[]);
 </script>
 
 <template>
@@ -18,7 +20,7 @@ const { t } = useI18n();
 
   <!-- Techniques Selection -->
   <div
-    v-for="(_, index) in S2.LLM_PROMPT_TECHNIQUE.answer + 1"
+    v-for="(option, index) in options"
     :key="index"
     class="form-control px-2 border rounded-xl mb-2"
     :class="{
@@ -26,9 +28,7 @@ const { t } = useI18n();
     }"
   >
     <label class="label cursor-pointer">
-      <span class="label-text">{{
-        t(`s2.promptTechniques.options.${index}`)
-      }}</span>
+      <span class="label-text">{{ option }}</span>
       <input
         type="radio"
         name="radio-10"

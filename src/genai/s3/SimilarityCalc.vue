@@ -15,13 +15,20 @@ const { t } = useI18n();
 <template>
   <div class="flex gap-12">
     <div class="w-2/5">
+      <!-- Title -->
       <h2>{{ t("s3.similarityCalc.title") }}</h2>
+
+      <!-- Paragraphs -->
       <p>{{ t("s3.similarityCalc.paragraph1") }}</p>
       <p>{{ t("s3.similarityCalc.paragraph2") }}</p>
+
+      <!-- Optional Task Instruction -->
       <p>
         <strong>{{ t("s3.similarityCalc.optionalTaskLabel") }}</strong>
         {{ t("s3.similarityCalc.optionalTaskInstruction") }}
       </p>
+
+      <!-- Reveal Answer Button -->
       <button class="btn" onclick="optional_modal.showModal()">
         <BIconEyeFill class="w-5 h-5" />
         {{ t("s3.similarityCalc.revealAnswerLabel") }}

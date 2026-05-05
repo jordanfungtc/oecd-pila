@@ -1,12 +1,15 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { computed, ref } from "vue";
 import { useI18n } from "vue-i18n";
 import { S3 } from "../states";
 import { store } from "../../store";
 import { getWordAnalogy } from "../../util/embeddings";
 
 const loading = ref(false);
-const { t } = useI18n();
+const { t, tm } = useI18n();
+const examples = computed(
+  () => tm("s3.analogyBrainstorm.examples") as string[],
+);
 
 const analogyHandler = async () => {
   loading.value = true;
@@ -25,27 +28,30 @@ const analogyHandler = async () => {
 </script>
 
 <template>
+  <!-- Title -->
   <h2>{{ t("s3.analogyBrainstorm.title") }}</h2>
+
+  <!-- Paragraphs -->
   <p>{{ t("s3.analogyBrainstorm.paragraph1") }}</p>
   <p>
     <strong>{{ t("common.taskLabel") }}</strong>
     {{ t("s3.analogyBrainstorm.taskInstruction") }}
   </p>
+
+  <!-- Examples -->
   <div class="flex flex-wrap gap-2">
-    <span class="badge badge-ghost p-4">
-      {{ t("s3.analogyBrainstorm.examples.example1") }}
-    </span>
-    <span class="badge badge-ghost p-4">
-      {{ t("s3.analogyBrainstorm.examples.example2") }}
-    </span>
-    <span class="badge badge-ghost p-4">
-      {{ t("s3.analogyBrainstorm.examples.example3") }}
-    </span>
-    <span class="badge badge-ghost p-4">
-      {{ t("s3.analogyBrainstorm.examples.example4") }}
+    <span
+      v-for="example in examples"
+      :key="example"
+      class="badge badge-ghost p-4"
+    >
+      {{ example }}
     </span>
   </div>
+
+  <!-- Analogy Input -->
   <div class="flex flex-row gap-2 items-center my-4">
+    <!-- Base Word -->
     <input
       type="text"
       class="input input-bordered w-full"
@@ -53,6 +59,8 @@ const analogyHandler = async () => {
       v-model="store.state[S3.ANALOGY_BASE.state]"
       @change="store.state[S3.ANALOGY_OUT.state] = []"
     />
+
+    <!-- Subtract Word -->
     <b>–</b>
     <input
       type="text"
@@ -61,6 +69,8 @@ const analogyHandler = async () => {
       v-model="store.state[S3.ANALOGY_SUB.state]"
       @change="store.state[S3.ANALOGY_OUT.state] = []"
     />
+
+    <!-- Add Word -->
     <b>+</b>
     <input
       type="text"
@@ -70,18 +80,25 @@ const analogyHandler = async () => {
       @change="store.state[S3.ANALOGY_OUT.state] = []"
     />
     <b>=</b>
+
+    <!-- Find Button -->
     <button class="btn" @click="analogyHandler" :disabled="loading">
       <span class="loading loading-spinner" v-if="loading"></span>
       <div v-else>{{ t("s3.analogyBrainstorm.findLabel") }}</div>
     </button>
   </div>
+
+  <!-- Results -->
   <div
     v-if="
       Array.isArray(store.state[S3.ANALOGY_OUT.state]) &&
       store.state[S3.ANALOGY_OUT.state].length > 0
     "
   >
+    <!-- Results Label -->
     <p>{{ t("s3.analogyBrainstorm.resultsLabel") }}</p>
+
+    <!-- Results Words -->
     <span
       v-for="result in store.state[S3.ANALOGY_OUT.state]"
       :key="result.word"

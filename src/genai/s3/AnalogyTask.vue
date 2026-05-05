@@ -7,44 +7,54 @@ const { t } = useI18n();
 </script>
 
 <template>
+  <!-- Title -->
   <h2>{{ t("s3.analogyTask.title") }}</h2>
+
+  <!-- Paragraphs -->
   <p>{{ t("s3.analogyTask.paragraph1") }}</p>
   <p>
     <strong>{{ t("common.taskLabel") }}</strong>
     {{ t("s3.analogyTask.taskInstruction") }}
   </p>
+
+  <!-- Embeddings Table -->
   <table class="table table-sm mt-0 mb-[-10px]">
     <thead>
-      <th></th>
-      <th>
-        <h3 class="my-0 text-center flex gap-2 items-center">
-          <div class="text-xl">👸</div>
-          <div class="text-lg">{{ t("s3.analogyTask.words.queen") }}</div>
-        </h3>
-      </th>
-      <th><h2 class="my-0 text-center">–</h2></th>
-      <th>
-        <h3 class="my-0 text-center flex gap-2 items-center">
-          <div class="text-xl">💁‍♀️</div>
-          <div class="text-lg">{{ t("s3.analogyTask.words.woman") }}</div>
-        </h3>
-      </th>
-      <th><h2 class="my-0 text-center">+</h2></th>
-      <th>
-        <h3 class="my-0 text-center flex gap-2 items-center">
-          <div class="text-xl">🙋‍♂️</div>
-          <div class="text-lg">{{ t("s3.analogyTask.words.man") }}</div>
-        </h3>
-      </th>
-      <th><h2 class="my-0 text-center">=</h2></th>
-      <th>
-        <h3 class="my-0 text-center flex gap-2 items-center">
-          <div class="text-xl">🤴</div>
-          <div class="text-lg">{{ t("s3.analogyTask.words.king") }}</div>
-        </h3>
-      </th>
+      <!-- Analogy -->
+      <tr>
+        <th></th>
+        <th>
+          <h3 class="my-0 text-center flex gap-2 items-center">
+            <div class="text-xl">👸</div>
+            <div class="text-lg">{{ t("s3.analogyTask.words.queen") }}</div>
+          </h3>
+        </th>
+        <th><h2 class="my-0 text-center">–</h2></th>
+        <th>
+          <h3 class="my-0 text-center flex gap-2 items-center">
+            <div class="text-xl">💁‍♀️</div>
+            <div class="text-lg">{{ t("s3.analogyTask.words.woman") }}</div>
+          </h3>
+        </th>
+        <th><h2 class="my-0 text-center">+</h2></th>
+        <th>
+          <h3 class="my-0 text-center flex gap-2 items-center">
+            <div class="text-xl">🙋‍♂️</div>
+            <div class="text-lg">{{ t("s3.analogyTask.words.man") }}</div>
+          </h3>
+        </th>
+        <th><h2 class="my-0 text-center">=</h2></th>
+        <th>
+          <h3 class="my-0 text-center flex gap-2 items-center">
+            <div class="text-xl">🤴</div>
+            <div class="text-lg">{{ t("s3.analogyTask.words.king") }}</div>
+          </h3>
+        </th>
+      </tr>
     </thead>
+
     <tbody>
+      <!-- Male Feature -->
       <tr class="border-none">
         <td>
           <h3 class="my-0 text-center">
@@ -64,6 +74,8 @@ const { t } = useI18n();
           />
         </td>
       </tr>
+
+      <!-- Female Feature -->
       <tr class="border-none">
         <td>
           <h3 class="my-0 text-center">
@@ -83,6 +95,8 @@ const { t } = useI18n();
           />
         </td>
       </tr>
+
+      <!-- Ruler Feature -->
       <tr>
         <td>
           <h3 class="my-0 text-center">

@@ -7,18 +7,29 @@ const { t } = useI18n();
 </script>
 
 <template>
+  <!-- Title -->
   <h2>{{ t("s3.ragBrainstorm.title") }}</h2>
+
+  <!-- Task Instruction -->
   <p>
     <strong>{{ t("common.taskLabel") }} </strong>
     {{ t("s3.ragBrainstorm.taskInstruction") }}
   </p>
-  <h4>{{ t("s3.ragBrainstorm.usePrompt") }}</h4>
+
+  <!-- Use Instruction -->
+  <h4>{{ t("s3.ragBrainstorm.useInstruction") }}</h4>
+
+  <!-- Task Textarea -->
   <input
     class="input input-lg input-bordered w-full"
     v-model="store.state[S3.RAG_BRAINSTORM_TASK.state]"
     :placeholder="t('s3.ragBrainstorm.taskPlaceholder')"
   />
-  <h4>{{ t("s3.ragBrainstorm.databasePrompt") }}</h4>
+
+  <!-- Database Instruction -->
+  <h4>{{ t("s3.ragBrainstorm.databaseInstruction") }}</h4>
+
+  <!-- Database Textarea -->
   <textarea
     class="textarea textarea-lg textarea-bordered w-full"
     v-model="store.state[S3.RAG_BRAINSTORM_DATABASE.state]"
