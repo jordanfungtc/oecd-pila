@@ -2,6 +2,7 @@
 import Agent from "@knowlearning/agents/browser.js";
 import { ref, onMounted, watch } from "vue";
 import { BIconArrowClockwise } from "bootstrap-icons-vue";
+import { useI18n } from "vue-i18n";
 import { S1, S2, S3, S4 } from "./states";
 import DbVertical from "../util/DbVertical.vue";
 import DbHorizontal from "../util/DbHorizontal.vue";
@@ -15,6 +16,7 @@ const contents = ref();
 const selectedUser = ref(0);
 const states = ref();
 const metadatas = ref();
+const { t } = useI18n();
 
 const getHandler = async () => {
   states.value = [];
@@ -182,7 +184,7 @@ const caseStudy = {
 <template>
   <div class="max-w-4xl w-full mx-auto">
     <div class="flex gap-2 items-center p-8 rounded-xl mb-8 bg-white shadow-md">
-      <h4 class="my-0">Student Selection</h4>
+      <h4 class="my-0">{{ t("dashboard.studentSelection") }}</h4>
       <!-- User Selection -->
       <select v-model="selectedUser" class="w-full select select-bordered">
         <option v-for="(user, index) in users" :key="index" :value="index">
@@ -192,25 +194,25 @@ const caseStudy = {
       <!-- Refresh Button -->
       <button @click="getHandler" class="btn btn-neutral">
         <BIconArrowClockwise class="w-5 h-5" />
-        Refresh
+        {{ t("dashboard.refresh") }}
       </button>
     </div>
 
     <!-- Section 1 -->
     <div class="flex gap-12 p-8 rounded-xl mb-8 bg-white shadow-md">
       <div class="w-1/5">
-        <h2 class="mt-0">Section 1</h2>
+        <h2 class="mt-0">{{ t("dashboard.section1.label") }}</h2>
         <img :src="section1Icon" />
       </div>
       <div class="w-4/5 flex flex-col">
         <h4 class="mt-0">
           <div class="badge">1.3 - 1.7</div>
-          Identifying Inputs and Outputs
+          {{ t("dashboard.section1.identifyingInputsOutputs") }}
         </h4>
         <DbHorizontal :states="states" :questions="appMatch" />
         <h4>
           <div class="badge">1.8 - 1.10</div>
-          Designing and AI System
+          {{ t("dashboard.section1.designingAiSystem") }}
         </h4>
         <DbVertical :states="states" :questions="appBrainstorm" />
       </div>
@@ -219,23 +221,23 @@ const caseStudy = {
     <!-- Section 2 -->
     <div class="flex gap-12 p-8 rounded-xl mb-8 bg-white shadow-md">
       <div class="w-1/5">
-        <h2 class="mt-0">Section 2</h2>
+        <h2 class="mt-0">{{ t("dashboard.section2.label") }}</h2>
         <img :src="section2Icon" />
       </div>
       <div class="w-4/5 flex flex-col">
         <h4 class="mt-0">
           <div class="badge">2.2 - 2.5</div>
-          Prompt Engineering
+          {{ t("dashboard.section2.promptEngineering") }}
         </h4>
         <DbHorizontal :states="states" :questions="llmSingle" />
         <h4>
           <div class="badge">2.6 - 2.7</div>
-          Limitations of LLMs
+          {{ t("dashboard.section2.limitationsOfLlms") }}
         </h4>
         <DbHorizontal :states="states" :questions="llmConv" />
         <h4>
           <div class="badge">2.9</div>
-          LLMs in Everyday Life
+          {{ t("dashboard.section2.llmsInEverydayLife") }}
         </h4>
         <DbVertical :states="states" :questions="llmBrainstorm" />
       </div>
@@ -244,33 +246,33 @@ const caseStudy = {
     <!-- Section 3 -->
     <div class="flex gap-12 p-8 rounded-xl mb-8 bg-white shadow-md">
       <div class="w-1/5">
-        <h2 class="mt-0">Section 3</h2>
+        <h2 class="mt-0">{{ t("dashboard.section3.label") }}</h2>
         <img :src="section3Icon" />
       </div>
       <div class="w-4/5 flex flex-col">
         <h4 class="mt-0">
           <div class="badge">3.2-3.3</div>
-          Creating Word Embeddings
+          {{ t("dashboard.section3.creatingWordEmbeddings") }}
         </h4>
         <DbHorizontal :states="states" :questions="embs" />
         <h4>
           <div class="badge">3.4</div>
-          Similarity Score
+          {{ t("dashboard.section3.similarityScore") }}
         </h4>
         <DbHorizontal :states="states" :questions="sim" />
         <h4>
           <div class="badge">3.5</div>
-          Word Analogy
+          {{ t("dashboard.section3.wordAnalogy") }}
         </h4>
         <DbHorizontal :states="states" :questions="analogy" />
         <h4>
           <div class="badge">3.6</div>
-          Word Analogy Brainstorming
+          {{ t("dashboard.section3.wordAnalogyBrainstorming") }}
         </h4>
         <DbHorizontal :states="states" :questions="analogyBrainstorm" />
         <h4>
           <div class="badge">3.9 - 3.10</div>
-          Retrieval-Augmented Generation
+          {{ t("dashboard.section3.rag") }}
         </h4>
         <DbVertical :states="states" :questions="rag" />
       </div>
@@ -279,33 +281,33 @@ const caseStudy = {
     <!-- Section 4 -->
     <div class="flex gap-12 p-8 rounded-xl mb-8 bg-white shadow-md">
       <div class="w-1/5">
-        <h2 class="mt-0">Section 4</h2>
+        <h2 class="mt-0">{{ t("dashboard.section4.label") }}</h2>
         <img :src="section4Icon" />
       </div>
       <div class="w-4/5 flex flex-col">
         <h4 class="mt-0">
           <div class="badge">4.2</div>
-          Bias in Word Embeddings
+          {{ t("dashboard.section4.biasInWordEmbeddings") }}
         </h4>
         <DbHorizontal :states="states" :questions="biasEmb" />
         <h4>
           <div class="badge">4.3</div>
-          Bias in LLM Responses
+          {{ t("dashboard.section4.biasInLlmResponses") }}
         </h4>
         <DbVertical :states="states" :questions="biasLlm" />
         <h4>
           <div class="badge">4.5</div>
-          Identifying AI Risk Level
+          {{ t("dashboard.section4.identifyingAiRiskLevel") }}
         </h4>
         <DbHorizontal :states="states" :questions="regs" />
         <h4>
           <div class="badge">4.6 - 4.7</div>
-          Sustainability of AI
+          {{ t("dashboard.section4.sustainabilityOfAi") }}
         </h4>
         <DbVertical :states="states" :questions="sustainability" />
         <h4>
           <div class="badge">4.9 - 4.10</div>
-          Case Study
+          {{ t("dashboard.section4.caseStudy") }}
         </h4>
         <DbVertical :states="states" :questions="caseStudy" />
       </div>

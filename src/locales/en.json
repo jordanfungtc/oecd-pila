@@ -40,6 +40,37 @@
     "taskLabel": "Task:",
     "answerPlaceholder": "Answer"
   },
+  "dashboard": {
+    "studentSelection": "Student Selection",
+    "refresh": "Refresh",
+    "section1": {
+      "label": "Section 1",
+      "identifyingInputsOutputs": "Identifying Inputs and Outputs",
+      "designingAiSystem": "Designing and AI System"
+    },
+    "section2": {
+      "label": "Section 2",
+      "promptEngineering": "Prompt Engineering",
+      "limitationsOfLlms": "Limitations of LLMs",
+      "llmsInEverydayLife": "LLMs in Everyday Life"
+    },
+    "section3": {
+      "label": "Section 3",
+      "creatingWordEmbeddings": "Creating Word Embeddings",
+      "similarityScore": "Similarity Score",
+      "wordAnalogy": "Word Analogy",
+      "wordAnalogyBrainstorming": "Word Analogy Brainstorming",
+      "rag": "Retrieval-Augmented Generation"
+    },
+    "section4": {
+      "label": "Section 4",
+      "biasInWordEmbeddings": "Bias in Word Embeddings",
+      "biasInLlmResponses": "Bias in LLM Responses",
+      "identifyingAiRiskLevel": "Identifying AI Risk Level",
+      "sustainabilityOfAi": "Sustainability of AI",
+      "caseStudy": "Case Study"
+    }
+  },
   "s1": {
     "intro": {
       "title": "AI and Machine Learning",

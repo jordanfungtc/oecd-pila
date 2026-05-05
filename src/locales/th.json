@@ -40,6 +40,37 @@
     "taskLabel": "โจทย์:",
     "answerPlaceholder": "คำตอบ"
   },
+  "dashboard": {
+    "studentSelection": "การเลือกนักเรียน",
+    "refresh": "รีเฟรช",
+    "section1": {
+      "label": "ส่วนที่ 1",
+      "identifyingInputsOutputs": "การระบุข้อมูลนำเข้าและผลลัพธ์",
+      "designingAiSystem": "การออกแบบระบบ AI"
+    },
+    "section2": {
+      "label": "ส่วนที่ 2",
+      "promptEngineering": "วิศวกรรมพรอมต์",
+      "limitationsOfLlms": "ข้อจำกัดของ LLMs",
+      "llmsInEverydayLife": "LLMs ในชีวิตประจำวัน"
+    },
+    "section3": {
+      "label": "ส่วนที่ 3",
+      "creatingWordEmbeddings": "การสร้าง Word Embeddings",
+      "similarityScore": "คะแนนความคล้ายคลึง",
+      "wordAnalogy": "อุปมาอุปไมยของคำ",
+      "wordAnalogyBrainstorming": "การระดมความคิดอุปมาอุปไมยของคำ",
+      "rag": "Retrieval-Augmented Generation"
+    },
+    "section4": {
+      "label": "ส่วนที่ 4",
+      "biasInWordEmbeddings": "อคติใน Word Embeddings",
+      "biasInLlmResponses": "อคติในคำตอบของ LLM",
+      "identifyingAiRiskLevel": "การระบุระดับความเสี่ยงของ AI",
+      "sustainabilityOfAi": "ความยั่งยืนของ AI",
+      "caseStudy": "กรณีศึกษา"
+    }
+  },
   "s1": {
     "intro": {
       "title": "ปัญญาประดิษฐ์และการเรียนรู้ของเครื่อง",
