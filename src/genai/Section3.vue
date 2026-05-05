@@ -15,7 +15,7 @@ import RagGenerate from "./s3/RagGenerate.vue";
 import RagBrainstorm from "./s3/RagBrainstorm.vue";
 import { store } from "../store";
 
-store.titleKey = "common.moduleTitle";
+store.titleKey = "common.genaiTitle";
 </script>
 
 <template>

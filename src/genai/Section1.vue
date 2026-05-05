@@ -8,7 +8,7 @@ import BrainstormProblem from "./s1/BrainstormProblem.vue";
 import BrainstormSolution from "./s1/BrainstormSolution.vue";
 import { store } from "../store";
 
-store.titleKey = "common.moduleTitle";
+store.titleKey = "common.genaiTitle";
 </script>
 
 <template>
