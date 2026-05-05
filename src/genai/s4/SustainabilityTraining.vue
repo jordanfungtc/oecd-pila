@@ -75,7 +75,9 @@ const training = [
           <img :src="powerIcon" class="w-12 h-auto my-2" />
           <div>
             <p class="my-0">{{ t("s4.sustainability.powerConsumption") }}</p>
-            <h3 class="my-0">{{ training[modelSize].power }} MWh</h3>
+            <h3 class="my-0">
+              {{ training[modelSize].power }} {{ t("s4.sustainability.mwh") }}
+            </h3>
           </div>
         </div>
 
@@ -100,7 +102,10 @@ const training = [
             <p class="my-0">
               {{ t("s4.sustainabilityTraining.carbonEmission") }}
             </p>
-            <h3 class="my-0">{{ training[modelSize].carbon }} tonnes</h3>
+            <h3 class="my-0">
+              {{ training[modelSize].carbon }}
+              {{ t("s4.sustainability.tonnes") }}
+            </h3>
           </div>
         </div>
 

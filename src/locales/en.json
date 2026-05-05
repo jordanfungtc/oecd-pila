@@ -676,7 +676,9 @@
       "title": "Sustainability of AI",
       "powerConsumption": "Power consumption",
       "annualElectricityUseOf": "Annual electricity use of",
-      "homes": "homes"
+      "homes": "homes",
+      "mwh": "MWh",
+      "tonnes": "tonnes"
     },
     "sustainabilityTraining": {
       "paragraph1": "The environmental impact of LLMs is also a growing concern. Training LLMs involves processing vast amounts of data, which requires significant electricity and computing power.",

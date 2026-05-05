@@ -58,7 +58,8 @@ const phone = query / 0.01298;
           <div>
             <p class="my-0">{{ t("s4.sustainability.powerConsumption") }}</p>
             <h3 class="my-0">
-              {{ parseFloat((usage * query).toPrecision(2)) }} MWh
+              {{ parseFloat((usage * query).toPrecision(2)) }}
+              {{ t("s4.sustainability.mwh") }}
             </h3>
           </div>
         </div>
