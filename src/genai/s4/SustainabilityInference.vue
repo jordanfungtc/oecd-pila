@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import { ref } from "vue";
+import { useI18n } from "vue-i18n";
 import powerIcon from "/s4/power.png";
 import homeIcon from "/s4/home.png";
 import googleIcon from "/s4/google.png";
 import phoneIcon from "/s4/phone.png";
 
+const { t } = useI18n();
 const usage = ref(1);
 const home = 2.7;
 const query = 0.0029;
@@ -15,25 +17,20 @@ const phone = query / 0.01298;
 <template>
   <div class="flex gap-12">
     <div class="w-1/3">
-      <h2>Sustainability of AI</h2>
+      <h2>{{ t("s4.sustainability.title") }}</h2>
+      <p>{{ t("s4.sustainabilityInference.paragraph1") }}</p>
       <p>
-        You now have an understanding of the energy consumption of LLMs during
-        the training phase. But did you know that each time you prompt an LLM to
-        generate a response, it also consumes energy?
-      </p>
-      <p>
-        <strong>Task: </strong>
-        Use the slider on the right to examine how much energy an LLM consumes
-        when it is being used.
+        <strong>{{ t("common.taskLabel") }}</strong>
+        {{ t("s4.sustainabilityInference.taskInstruction") }}
       </p>
     </div>
     <div class="w-2/3">
-      <h3 class="mt-12">Inference Phase</h3>
-      <p>Ongoing cost to use the LLM model (OpenAI ChatGPT)</p>
+      <h3 class="mt-12">{{ t("s4.sustainabilityInference.phaseTitle") }}</h3>
+      <p>{{ t("s4.sustainabilityInference.phaseDescription") }}</p>
 
       <!-- Slider -->
       <div class="text-center">
-        <strong>Number of LLM queries</strong>
+        <strong>{{ t("s4.sustainabilityInference.sliderLabel") }}</strong>
       </div>
       <input type="range" min="1" max="200000" class="range" v-model="usage" />
       <div class="flex w-full justify-between px-2 text-sm mb-8">
@@ -49,7 +46,7 @@ const phone = query / 0.01298;
         <div class="flex gap-4 items-center">
           <img :src="powerIcon" class="w-12 h-auto my-2" />
           <div>
-            <p class="my-0">Power consumption</p>
+            <p class="my-0">{{ t("s4.sustainability.powerConsumption") }}</p>
             <h3 class="my-0">
               {{ parseFloat((usage * query).toPrecision(2)) }} MWh
             </h3>
@@ -58,28 +55,30 @@ const phone = query / 0.01298;
         <div class="flex gap-4 items-center">
           <img :src="homeIcon" class="w-12 h-auto my-2" />
           <div>
-            <p class="my-0">Annual electricity use of</p>
+            <p class="my-0">{{ t("s4.sustainability.annualElectricityUseOf") }}</p>
             <h3 class="my-0">
               {{ parseFloat(((usage * query) / home).toPrecision(2)) }}
-              homes
+              {{ t("s4.sustainability.homes") }}
             </h3>
           </div>
         </div>
         <div class="flex gap-4 items-center">
           <img :src="googleIcon" class="w-12 h-auto my-2" />
           <div>
-            <p class="my-0">Searching on Google</p>
+            <p class="my-0">{{ t("s4.sustainabilityInference.searchingOnGoogle") }}</p>
             <h3 class="my-0">
-              {{ parseFloat((usage * google).toPrecision(2)) }} times
+              {{ parseFloat((usage * google).toPrecision(2)) }}
+              {{ t("s4.sustainabilityInference.times") }}
             </h3>
           </div>
         </div>
         <div class="flex gap-4 items-center">
           <img :src="phoneIcon" class="w-12 h-auto my-2" />
           <div>
-            <p class="my-0">Charging a mobile phone</p>
+            <p class="my-0">{{ t("s4.sustainabilityInference.chargingMobilePhone") }}</p>
             <h3 class="my-0">
-              {{ parseFloat((usage * phone).toPrecision(2)) }} times
+              {{ parseFloat((usage * phone).toPrecision(2)) }}
+              {{ t("s4.sustainabilityInference.times") }}
             </h3>
           </div>
         </div>
@@ -87,14 +86,12 @@ const phone = query / 0.01298;
 
       <!-- Sources -->
       <p class="text-xs my-8">
-        De Vries, A. (2023). The growing energy footprint of artificial
-        intelligence.
+        {{ t("s4.sustainabilityInference.sourcePrefix") }}
         <a
           href="https://www.sciencedirect.com/science/article/pii/S2542435123003653"
           target="_blank"
           >(ScienceDirect)</a
-        >. Assumes ChatGPT 2.9Wh and Google search 0.3Wh per query, iPhone 15
-        battery 12.98Wh.
+        >. {{ t("s4.sustainabilityInference.sourceSuffix") }}
       </p>
     </div>
   </div>

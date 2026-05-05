@@ -670,6 +670,55 @@
           "desc": "A law enforcement agency uses AI to analyse the characteristics of citizens to predict future criminal behaviour."
         }
       }
+    },
+    "sustainability": {
+      "title": "Sustainability of AI",
+      "powerConsumption": "Power consumption",
+      "annualElectricityUseOf": "Annual electricity use of",
+      "homes": "homes"
+    },
+    "sustainabilityTraining": {
+      "paragraph1": "The environmental impact of LLMs is also a growing concern. Training LLMs involves processing vast amounts of data, which requires significant electricity and computing power.",
+      "paragraph2": "This is particularly problematic if the energy is sourced from non-renewable resources, such as fossil fuels.",
+      "taskInstruction": "Use the slider to examine how much energy it takes to train an LLM based on its size.",
+      "phaseTitle": "Training Phase",
+      "phaseDescription": "One-time cost to train the LLM model (Meta LLaMA)",
+      "sliderLabel": "LLM Model Size (number of parameters)",
+      "parametersTooltip": "Parameters are the internal settings that the model adjusts during training to learn patterns from the data and make accurate predictions.",
+      "modelSizes": {
+        "7b": "7 billion",
+        "13b": "13 billion",
+        "33b": "33 billion",
+        "65b": "65 billion"
+      },
+      "carbonEmission": "Carbon emission",
+      "annualCarbonAbsorptionOf": "Annual carbon absorption of",
+      "trees": "trees",
+      "sourcePrefix": "Touvron et al. (2023) LLaMA: Open and Efficient Foundation Language Models.",
+      "sourceMiddle": "Assumes 2.7MWh per medium-sized home",
+      "sourceSuffix": "and 24.62kgCO2 per tree annually"
+    },
+    "sustainabilityInference": {
+      "paragraph1": "You now have an understanding of the energy consumption of LLMs during the training phase. But did you know that each time you prompt an LLM to generate a response, it also consumes energy?",
+      "taskInstruction": "Use the slider on the right to examine how much energy an LLM consumes when it is being used.",
+      "phaseTitle": "Inference Phase",
+      "phaseDescription": "Ongoing cost to use the LLM model (OpenAI ChatGPT)",
+      "sliderLabel": "Number of LLM queries",
+      "searchingOnGoogle": "Searching on Google",
+      "chargingMobilePhone": "Charging a mobile phone",
+      "times": "times",
+      "sourcePrefix": "De Vries, A. (2023). The growing energy footprint of artificial intelligence.",
+      "sourceSuffix": "Assumes ChatGPT 2.9Wh and Google search 0.3Wh per query, iPhone 15 battery 12.98Wh."
+    },
+    "sustainabilityTask": {
+      "paragraph1": "As chatbots powered by LLMs are becoming increasingly popular and advanced, we must be aware of their environmental impact to ensure sustainability.",
+      "llamaFactPrefix": "The largest Meta LLaMA 3 model has 405 billion parameters",
+      "chatgptFactPrefix": "ChatGPT serves more than 200 million weekly active users",
+      "taskInstruction": "Answer the following question by selecting the correct checkbox.",
+      "questionType": "True or false",
+      "questionText": "In the long term, the total energy used for running LLMs exceeds the energy consumed during their initial training.",
+      "successMessage": "Well done! The cost of inference can add up over time and exceed that of training.",
+      "retryMessage": "Not quite."
     }
   }
 }
