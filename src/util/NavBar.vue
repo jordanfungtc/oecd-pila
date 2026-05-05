@@ -26,9 +26,6 @@ const restart = async () => {
     <!-- Right Content -->
     <div class="flex items-center justify-end gap-2 w-full">
       <p class="text-sm">{{ store.auth?.info?.name }}</p>
-      <button class="btn btn-xs btn-circle" onclick="restart_modal.showModal()">
-        <BIconArrowClockwise />
-      </button>
       <button class="btn btn-xs btn-circle" onclick="dev_modal.showModal()">
         <BIconCodeSlash />
       </button>
@@ -53,28 +50,17 @@ const restart = async () => {
     </div>
   </div>
 
-  <!-- Restart Modal -->
-  <dialog id="restart_modal" class="modal">
-    <div class="modal-box">
-      <h3 class="text-lg font-bold">Restart</h3>
-      <p class="py-4">
-        Are you sure you want to restart? All progress will be lost.
-      </p>
-      <div class="modal-action">
-        <form method="dialog">
-          <button class="btn btn-neutral mr-2" @click="restart">Restart</button>
-          <button class="btn">Cancel</button>
-        </form>
-      </div>
-    </div>
-  </dialog>
-
   <!-- Dev Modal -->
   <dialog id="dev_modal" class="modal">
     <div class="modal-box">
       <h3 class="text-lg font-bold">User</h3>
       <p class="py-4">{{ store.auth.user }} ({{ store.auth.provider }})</p>
-      <h3 class="text-lg font-bold">State</h3>
+      <div class="flex flex-row gap-2">
+        <h3 class="text-lg font-bold">State</h3>
+        <button class="btn btn-xs btn-circle" @click="restart">
+          <BIconArrowClockwise />
+        </button>
+      </div>
       <div class="text-xs py-4">{{ store.state }}</div>
       <h3 class="text-lg font-bold">Metadata</h3>
       <div class="text-xs py-4">{{ store.metadata }}</div>

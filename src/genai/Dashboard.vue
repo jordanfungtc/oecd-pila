@@ -180,7 +180,7 @@ const caseStudy = {
 </script>
 
 <template>
-  <div class="max-w-4xl w-full">
+  <div class="max-w-4xl w-full mx-auto">
     <div class="flex gap-2 items-center p-8 rounded-xl mb-8 bg-white shadow-md">
       <h4 class="my-0">Student Selection</h4>
       <!-- User Selection -->

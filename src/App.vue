@@ -29,9 +29,11 @@ inject();
   </div>
 
   <!-- Main App -->
-  <div v-else class="prose-headings:font-['Rubik']">
+  <div v-else class="flex flex-col h-screen prose-headings:font-['Rubik']">
     <NavBar />
-    <div class="flex p-10 prose max-w-none justify-center bg-blue-100">
+    <div
+      class="flex-1 overflow-y-auto p-10 prose max-w-none justify-center bg-blue-100"
+    >
       <RouterView />
     </div>
     <LangSelector />
