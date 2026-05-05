@@ -1,28 +1,42 @@
 <script setup lang="ts">
+import { useI18n } from "vue-i18n";
 import { S4 } from "../states";
 import { store } from "../../store";
 
+const { t } = useI18n();
 const sliders = {
   ethical: {
-    label: "Ethical Risk",
-    range: ["low", "medium", "high", "unacceptable"],
+    labelKey: "s4.caseWorth.sliders.ethical.label",
+    rangeKeys: [
+      "s4.caseWorth.sliders.ethical.range.low",
+      "s4.caseWorth.sliders.ethical.range.medium",
+      "s4.caseWorth.sliders.ethical.range.high",
+      "s4.caseWorth.sliders.ethical.range.unacceptable",
+    ],
     state: S4.CASE_ETHICAL,
-    tooltip:
-      "Think about the possible ethical problems of using an AI solution for this issue, including privacy concerns, bias and fairness, safety and security, and environmental impact.",
+    tooltipKey: "s4.caseWorth.sliders.ethical.tooltip",
   },
   technical: {
-    label: "Technical Feasibility",
-    range: ["easy", "difficult", "very difficult", "impossible"],
+    labelKey: "s4.caseWorth.sliders.technical.label",
+    rangeKeys: [
+      "s4.caseWorth.sliders.technical.range.easy",
+      "s4.caseWorth.sliders.technical.range.difficult",
+      "s4.caseWorth.sliders.technical.range.veryDifficult",
+      "s4.caseWorth.sliders.technical.range.impossible",
+    ],
     state: S4.CASE_TECHNICAL,
-    tooltip:
-      "Think about how realistic it is to build and use the AI, including the complexity of the problem, data availability and quality, scalability, and invegration.",
+    tooltipKey: "s4.caseWorth.sliders.technical.tooltip",
   },
   cost: {
-    label: "Cost Efficiency",
-    range: ["low cost", "medium cost", "high cost", "unaffordable"],
+    labelKey: "s4.caseWorth.sliders.cost.label",
+    rangeKeys: [
+      "s4.caseWorth.sliders.cost.range.lowCost",
+      "s4.caseWorth.sliders.cost.range.mediumCost",
+      "s4.caseWorth.sliders.cost.range.highCost",
+      "s4.caseWorth.sliders.cost.range.unaffordable",
+    ],
     state: S4.CASE_COST,
-    tooltip:
-      "Think about the costs of building and running the AI, including initial development and setup costs, ongoing maintenance and support, training and operational costs, return on investment (ROI), and alternative solutions.",
+    tooltipKey: "s4.caseWorth.sliders.cost.tooltip",
   },
 };
 </script>
@@ -30,25 +44,19 @@ const sliders = {
 <template>
   <div class="flex gap-12">
     <div class="w-1/3">
-      <h2>Case Study: Worthiness</h2>
+      <h2>{{ t("s4.caseWorth.title") }}</h2>
       <p>
-        <strong>Task: </strong>
-        Based on the pros and cons you identified, decide if you think using AI
-        for this purpose is worth it. Use the sliders to indicate your answer
-        and write a brief explanation in the field below.
+        <strong>{{ t("common.taskLabel") }}</strong>
+        {{ t("s4.caseWorth.taskInstruction") }}
       </p>
-      <p>
-        Note that in real life, you would also need to think about other factors
-        such as data protection, security, and regulations before making a
-        decision.
-      </p>
+      <p>{{ t("s4.caseWorth.note") }}</p>
     </div>
     <div class="w-2/3 mt-12 flex flex-col gap-8">
       <!-- Slider -->
       <div class="flex" v-for="(slider, i) in sliders" :key="i">
         <div class="w-1/5">
           <h4 class="my-0">
-            {{ slider.label }}
+            {{ t(slider.labelKey) }}
           </h4>
         </div>
         <div class="w-4/5 flex gap-4">
@@ -62,23 +70,23 @@ const sliders = {
               v-model="store.state[slider.state.state]"
             />
             <div class="flex w-full justify-between px-2 text-sm">
-              <span v-for="(range, j) in slider.range" :key="j">
-                {{ range }}
+              <span v-for="(rangeKey, j) in slider.rangeKeys" :key="j">
+                {{ t(rangeKey) }}
               </span>
             </div>
           </div>
-          <div class="tooltip" :data-tip="slider.tooltip">
+          <div class="tooltip" :data-tip="t(slider.tooltipKey)">
             <button class="btn btn-xs btn-circle">?</button>
           </div>
         </div>
       </div>
       <!-- Explanation -->
       <div>
-        <h4>Explanation</h4>
+        <h4>{{ t("s4.caseWorth.explanationTitle") }}</h4>
         <textarea
           class="textarea textarea-lg textarea-bordered w-full leading-normal"
           v-model="store.state[S4.CASE_EXPLAIN.state]"
-          placeholder="Explanation"
+          :placeholder="t('s4.caseWorth.explanationPlaceholder')"
           rows="3"
         ></textarea>
       </div>

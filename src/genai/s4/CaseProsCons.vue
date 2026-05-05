@@ -1,31 +1,32 @@
 <script setup lang="ts">
+import { useI18n } from "vue-i18n";
 import { S4 } from "../states";
 import { store } from "../../store";
 import caseProIcon from "/s4/case-pro.png";
 import caseConIcon from "/s4/case-con.png";
+
+const { t } = useI18n();
 </script>
 
 <template>
-  <h2>Case Study: Pros and Cons</h2>
+  <h2>{{ t("s4.caseProsCons.title") }}</h2>
   <p>
-    <strong>Task: </strong>
-    Think about the potential benefits as well as the ethical and environmental
-    risks of using AI in your chosen case study. Identify 3 pros and 3 cons and
-    write them in the fields below.
+    <strong>{{ t("common.taskLabel") }}</strong>
+    {{ t("s4.caseProsCons.taskInstruction") }}
   </p>
   <div class="grid grid-cols-2 gap-8">
     <!-- Pros -->
     <div>
       <div class="flex gap-4 items-center">
         <img :src="caseProIcon" class="w-8 h-8 my-4" />
-        <h3 class="my-0">Pros</h3>
+        <h3 class="my-0">{{ t("s4.caseProsCons.prosTitle") }}</h3>
       </div>
       <div class="flex flex-col gap-4">
         <input
           v-for="(p, i) in [S4.CASE_PRO_1, S4.CASE_PRO_2, S4.CASE_PRO_3]"
           type="text"
           class="input input-bordered w-full"
-          :placeholder="'Pro ' + (i + 1)"
+          :placeholder="`${t('s4.caseProsCons.proPlaceholderPrefix')} ${i + 1}`"
           v-model="store.state[p.state]"
         />
       </div>
@@ -34,14 +35,14 @@ import caseConIcon from "/s4/case-con.png";
     <div>
       <div class="flex gap-4 items-center">
         <img :src="caseConIcon" class="w-8 h-8 my-4" />
-        <h3 class="my-0">Cons</h3>
+        <h3 class="my-0">{{ t("s4.caseProsCons.consTitle") }}</h3>
       </div>
       <div class="flex flex-col gap-4">
         <input
           v-for="(c, i) in [S4.CASE_CON_1, S4.CASE_CON_2, S4.CASE_CON_3]"
           type="text"
           class="input input-bordered w-full"
-          :placeholder="'Con ' + (i + 1)"
+          :placeholder="`${t('s4.caseProsCons.conPlaceholderPrefix')} ${i + 1}`"
           v-model="store.state[c.state]"
         />
       </div>
