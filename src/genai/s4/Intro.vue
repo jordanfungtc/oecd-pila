@@ -8,12 +8,19 @@ const { t } = useI18n();
 
 <template>
   <div class="flex gap-16">
+    <!-- Section Icon -->
     <img :src="sectionIcon" class="w-48 h-48 mt-12" />
+
     <div>
+      <!-- Title -->
       <h2>{{ t("s4.intro.title") }}</h2>
+
+      <!-- Paragraphs -->
       <p>{{ t("s4.intro.paragraph1") }}</p>
       <p>{{ t("s4.intro.paragraph2") }}</p>
       <p>{{ t("s4.intro.paragraph3") }}</p>
+
+      <!-- Video Link -->
       <a
         href="https://www.youtube.com/watch?v=VqFqWIqOB1g"
         target="_blank"

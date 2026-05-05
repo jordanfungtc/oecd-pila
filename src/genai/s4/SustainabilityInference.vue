@@ -17,15 +17,24 @@ const phone = query / 0.01298;
 <template>
   <div class="flex gap-12">
     <div class="w-1/3">
+      <!-- Title -->
       <h2>{{ t("s4.sustainability.title") }}</h2>
+
+      <!-- Paragraphs -->
       <p>{{ t("s4.sustainabilityInference.paragraph1") }}</p>
+
+      <!-- Task Instruction -->
       <p>
         <strong>{{ t("common.taskLabel") }}</strong>
         {{ t("s4.sustainabilityInference.taskInstruction") }}
       </p>
     </div>
+
     <div class="w-2/3">
+      <!-- Phase Title -->
       <h3 class="mt-12">{{ t("s4.sustainabilityInference.phaseTitle") }}</h3>
+
+      <!-- Phase Description -->
       <p>{{ t("s4.sustainabilityInference.phaseDescription") }}</p>
 
       <!-- Slider -->
@@ -43,6 +52,7 @@ const phone = query / 0.01298;
 
       <!-- Statistics -->
       <div class="grid grid-cols-2 gap-2">
+        <!-- Power Consumption -->
         <div class="flex gap-4 items-center">
           <img :src="powerIcon" class="w-12 h-auto my-2" />
           <div>
@@ -52,30 +62,42 @@ const phone = query / 0.01298;
             </h3>
           </div>
         </div>
+
+        <!-- Annual Electricity Use of Homes -->
         <div class="flex gap-4 items-center">
           <img :src="homeIcon" class="w-12 h-auto my-2" />
           <div>
-            <p class="my-0">{{ t("s4.sustainability.annualElectricityUseOf") }}</p>
+            <p class="my-0">
+              {{ t("s4.sustainability.annualElectricityUseOf") }}
+            </p>
             <h3 class="my-0">
               {{ parseFloat(((usage * query) / home).toPrecision(2)) }}
               {{ t("s4.sustainability.homes") }}
             </h3>
           </div>
         </div>
+
+        <!-- Searching on Google -->
         <div class="flex gap-4 items-center">
           <img :src="googleIcon" class="w-12 h-auto my-2" />
           <div>
-            <p class="my-0">{{ t("s4.sustainabilityInference.searchingOnGoogle") }}</p>
+            <p class="my-0">
+              {{ t("s4.sustainabilityInference.searchingOnGoogle") }}
+            </p>
             <h3 class="my-0">
               {{ parseFloat((usage * google).toPrecision(2)) }}
               {{ t("s4.sustainabilityInference.times") }}
             </h3>
           </div>
         </div>
+
+        <!-- Charging Mobile Phone -->
         <div class="flex gap-4 items-center">
           <img :src="phoneIcon" class="w-12 h-auto my-2" />
           <div>
-            <p class="my-0">{{ t("s4.sustainabilityInference.chargingMobilePhone") }}</p>
+            <p class="my-0">
+              {{ t("s4.sustainabilityInference.chargingMobilePhone") }}
+            </p>
             <h3 class="my-0">
               {{ parseFloat((usage * phone).toPrecision(2)) }}
               {{ t("s4.sustainabilityInference.times") }}
@@ -86,12 +108,13 @@ const phone = query / 0.01298;
 
       <!-- Sources -->
       <p class="text-xs my-8">
-        {{ t("s4.sustainabilityInference.sourcePrefix") }}
         <a
           href="https://www.sciencedirect.com/science/article/pii/S2542435123003653"
           target="_blank"
-          >(ScienceDirect)</a
-        >. {{ t("s4.sustainabilityInference.sourceSuffix") }}
+          class="font-normal no-underline"
+          >{{ t("s4.sustainabilityInference.sourceDeVries") }}
+        </a>
+        {{ t("s4.sustainabilityInference.sourceAssumption") }}
       </p>
     </div>
   </div>

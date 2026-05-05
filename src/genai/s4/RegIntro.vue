@@ -8,9 +8,14 @@ const { t } = useI18n();
 </script>
 
 <template>
+  <!-- Title -->
   <h2>{{ t("s4.regIntro.title") }}</h2>
+
+  <!-- Paragraph -->
   <p>{{ t("s4.regIntro.paragraph1") }}</p>
+
   <div class="grid grid-cols-2 gap-8">
+    <!-- OECD AI Principles -->
     <div>
       <img :src="oecdAiIcon" class="h-16 w-auto mt-6" />
       <p>{{ t("s4.regIntro.oecd.description") }}</p>
@@ -23,6 +28,8 @@ const { t } = useI18n();
         {{ t("s4.regIntro.oecd.linkLabel") }}
       </a>
     </div>
+
+    <!-- EU AI Act -->
     <div>
       <img :src="aiActIcon" class="h-16 w-auto mt-6" />
       <p>{{ t("s4.regIntro.eu.description") }}</p>

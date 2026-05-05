@@ -18,8 +18,8 @@ const { t } = useI18n();
     }"
   >
     <option :value="undefined" disabled>-</option>
-    <option :value="1">{{ t("common.riskLevels.low") }}</option>
-    <option :value="2">{{ t("common.riskLevels.high") }}</option>
-    <option :value="3">{{ t("common.riskLevels.unacceptable") }}</option>
+    <option :value="1">{{ t("util.selectRisk.low") }}</option>
+    <option :value="2">{{ t("util.selectRisk.high") }}</option>
+    <option :value="3">{{ t("util.selectRisk.unacceptable") }}</option>
   </select>
 </template>

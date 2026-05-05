@@ -3,16 +3,17 @@
     "homeTitle": "โมดูล OECD PILA",
     "genaiTitle": "โมดูลปัญญาประดิษฐ์เชิงกำเนิด",
     "taskLabel": "โจทย์:",
-    "riskLevels": {
-      "low": "ความเสี่ยงต่ำ",
-      "high": "ความเสี่ยงสูง",
-      "unacceptable": "ความเสี่ยงที่ยอมรับไม่ได้"
-    }
+    "answerPlaceholder": "คำตอบ"
   },
   "util": {
     "selectTf": {
       "trueLabel": "จริง",
       "falseLabel": "เท็จ"
+    },
+    "selectRisk": {
+      "low": "ความเสี่ยงต่ำ",
+      "high": "ความเสี่ยงสูง",
+      "unacceptable": "ความเสี่ยงที่ยอมรับไม่ได้"
     }
   },
   "s1": {
@@ -77,27 +78,27 @@
         "academic": {
           "label": "ผลการเรียน",
           "description": "AI สามารถวิเคราะห์พฤติกรรมการเรียน ผลการเรียนที่ผ่านมา และข้อมูลพื้นฐานของนักเรียน เพื่อคาดการณ์คะแนนสุดท้ายได้ ซึ่งช่วยให้ครูระบุนักเรียนที่อาจต้องการการสนับสนุนเพิ่มเติมและช่วยพัฒนาผลการเรียน",
-          "sourceTitle": "UCI ML Repository: Student Performance Dataset"
+          "sourceTitle": "คลังข้อมูล UCI ML: ชุดข้อมูลผลการเรียนของนักเรียน"
         },
         "medical": {
           "label": "การวินิจฉัยทางการแพทย์",
           "description": "AI สามารถวิเคราะห์ภาพสแกนทางการแพทย์เพื่อตรวจหาสัญญาณของโรค เช่น มะเร็ง กระดูกหัก หรือความผิดปกติอื่น ๆ ซึ่งช่วยให้แพทย์วินิจฉัยได้แม่นยำขึ้นและให้การรักษาได้ทันท่วงที",
-          "sourceTitle": "Kaggle: RSNA-MICCAI Brain Tumor Radiogenomic Classification"
+          "sourceTitle": "Kaggle: การจำแนกเรดิโอจีโนมิกส์เนื้องอกในสมอง RSNA-MICCAI"
         },
         "video": {
           "label": "การแนะนำวิดีโอ",
           "description": "AI สามารถวิเคราะห์พฤติกรรมการรับชมวิดีโอที่ผ่านมา เพื่อแนะนำเนื้อหาใหม่ที่ผู้ใช้น่าจะชอบได้ วิธีนี้ถูกใช้ในแพลตฟอร์มอย่าง YouTube และ Netflix เพื่อปรับประสบการณ์ให้เหมาะกับผู้ใช้และเพิ่มการมีส่วนร่วม",
-          "sourceTitle": "Kaggle: MovieLens 20M Dataset"
+          "sourceTitle": "Kaggle: ชุดข้อมูล MovieLens 20M"
         },
         "sentiment": {
           "label": "วิเคราะห์ความรู้สึกของลูกค้า",
           "description": "AI สามารถวิเคราะห์รีวิวของลูกค้าเพื่อระบุว่าเป็นความเห็นเชิงบวกหรือเชิงลบ ช่วยให้ธุรกิจเข้าใจความคิดเห็นของลูกค้าและนำไปปรับปรุงสินค้าและบริการ",
-          "sourceTitle": "Kaggle: Amazon Fine Food Reviews"
+          "sourceTitle": "Kaggle: รีวิวอาหารคุณภาพจาก Amazon"
         },
         "fraud": {
           "label": "การตรวจจับการฉ้อโกง",
           "description": "สถาบันการเงินใช้ AI วิเคราะห์รูปแบบของธุรกรรมบัตรเครดิตเพื่อตรวจจับการฉ้อโกง โดยการแจ้งเตือนธุรกรรมที่น่าสงสัยแบบเรียลไทม์ AI ช่วยลดความเสียหายทางการเงินทั้งต่อผู้บริโภคและธุรกิจ",
-          "sourceTitle": "Kaggle: IEEE-CIS Fraud Detection"
+          "sourceTitle": "Kaggle: การตรวจจับการฉ้อโกง IEEE-CIS"
         }
       }
     },
@@ -594,33 +595,33 @@
       },
       "attributeExamples": {
         "gender": {
-          "nurse": "พยาบาล (nurse)",
-          "caring": "เอาใจใส่ (caring)",
-          "mechanic": "ช่างเครื่อง (mechanic)",
-          "assertive": "กล้าแสดงออก (assertive)",
-          "architect": "สถาปนิก (architect)",
-          "sensitive": "อ่อนไหว (sensitive)",
-          "receptionist": "พนักงานต้อนรับ (receptionist)",
-          "logical": "มีเหตุผล (logical)"
+          "nurse": "nurse (พยาบาล)",
+          "caring": "caring (เอาใจใส่)",
+          "mechanic": "mechanic (ช่างเครื่อง)",
+          "assertive": "assertive (กล้าแสดงออก)",
+          "architect": "architect (สถาปนิก)",
+          "sensitive": "sensitive (อ่อนไหว)",
+          "receptionist": "receptionist (พนักงานต้อนรับ)",
+          "logical": "logical (มีเหตุผล)"
         },
         "racial": {
-          "janitor": "ภารโรง (janitor)",
-          "lazy": "ขี้เกียจ (lazy)",
-          "police": "ตำรวจ (police)",
-          "hardworking": "ขยัน (hardworking)",
-          "violent": "รุนแรง (violent)",
-          "criminal": "อาชญากร (criminal)",
-          "peaceful": "รักสงบ (peaceful)",
-          "complacent": "เฉื่อยชา (complacent)"
+          "janitor": "janitor (ภารโรง)",
+          "lazy": "lazy (ขี้เกียจ)",
+          "police": "police (ตำรวจ)",
+          "hardworking": "hardworking (ขยัน)",
+          "violent": "violent (รุนแรง)",
+          "criminal": "criminal (อาชญากร)",
+          "peaceful": "peaceful (รักสงบ)",
+          "complacent": "complacent (เฉื่อยชา)"
         },
         "religious": {
-          "terrorist": "ผู้ก่อการร้าย (terrorist)",
-          "charitable": "มีจิตกุศล (charitable)",
-          "dangerous": "อันตราย (dangerous)",
-          "compassionate": "เห็นอกเห็นใจ (compassionate)",
-          "conservative": "อนุรักษนิยม (conservative)",
-          "cult": "ลัทธิ (cult)",
-          "peaceful": "รักสงบ (peaceful)"
+          "terrorist": "terrorist (ผู้ก่อการร้าย)",
+          "charitable": "charitable (มีจิตกุศล)",
+          "dangerous": "dangerous (อันตราย)",
+          "compassionate": "compassionate (เห็นอกเห็นใจ)",
+          "conservative": "conservative (อนุรักษนิยม)",
+          "cult": "cult (ลัทธิ)",
+          "peaceful": "peaceful (รักสงบ)"
         }
       }
     },
@@ -628,8 +629,7 @@
       "title": "อคติในคำตอบของ LLM",
       "paragraph1": "อคติเหล่านี้ยังอาจปรากฏในคำตอบที่ LLM สร้างขึ้น ซึ่งอาจสะท้อนและยิ่งตอกย้ำภาพเหมารวมที่ผู้คนมีอยู่",
       "paragraph2": "สิ่งนี้อาจนำไปสู่ผลลัพธ์ที่ไม่เป็นธรรมหรือไม่ถูกต้อง โดยเฉพาะต่อกลุ่มคนชายขอบและผู้ด้อยโอกาสในสังคม",
-      "referencePrefix": "Hyzyk และคณะ (2024) Types of Bias. ใน ChatGPT in STEM Teaching: An introduction to using LLM-based tools in Higher Ed.",
-      "referenceLinkLabel": "(Pressbooks)",
+      "reference": "Hyzyk และคณะ (2024) ประเภทของอคติ ใน ChatGPT ในการสอน STEM: บทนำสู่การใช้เครื่องมือ LLM ในอุดมศึกษา Pressbooks.",
       "chat": {
         "userHeader": "คำสั่งผู้ใช้",
         "userPrompt": "พยาบาลตะโกนใส่หมอเพราะเธอมาสาย ใครมาสาย?",
@@ -695,9 +695,9 @@
       "carbonEmission": "การปล่อยคาร์บอน",
       "annualCarbonAbsorptionOf": "เทียบเท่าการดูดซับคาร์บอนต่อปีของ",
       "trees": "ต้นไม้",
-      "sourcePrefix": "Touvron et al. (2023) LLaMA: Open and Efficient Foundation Language Models.",
-      "sourceMiddle": "สมมติให้บ้านขนาดกลางใช้ไฟฟ้า 2.7MWh ต่อปี",
-      "sourceSuffix": "และต้นไม้ 1 ต้นดูดซับคาร์บอน 24.62kgCO2 ต่อปี"
+      "sourceLlama": "Touvron et al. (2023) LLaMA: Open and Efficient Foundation Language Models. (arXiv)",
+      "sourceHome": "สมมติให้บ้านขนาดกลางใช้ไฟฟ้า 2.7MWh ต่อปี (Ofgem)",
+      "sourceTree": "และต้นไม้ 1 ต้นดูดซับคาร์บอน 24.62kgCO2 ต่อปี (ForTomorrow)"
     },
     "sustainabilityInference": {
       "paragraph1": "ตอนนี้คุณเข้าใจการใช้พลังงานของ LLMs ในช่วงการฝึกแล้ว แต่รู้หรือไม่ว่า ทุกครั้งที่คุณพิมพ์คำสั่งให้ LLM สร้างคำตอบ ก็มีการใช้พลังงานเช่นกัน",
@@ -708,13 +708,13 @@
       "searchingOnGoogle": "การค้นหาบน Google",
       "chargingMobilePhone": "การชาร์จโทรศัพท์มือถือ",
       "times": "ครั้ง",
-      "sourcePrefix": "De Vries, A. (2023). The growing energy footprint of artificial intelligence.",
-      "sourceSuffix": "สมมติให้ ChatGPT ใช้พลังงาน 2.9Wh และการค้นหา Google ใช้ 0.3Wh ต่อครั้ง ส่วนแบตเตอรี่ iPhone 15 มีความจุ 12.98Wh"
+      "sourceDeVries": "เดอ ฟรีส์, เอ. (2023). รอยเท้าพลังงานที่เพิ่มขึ้นของปัญญาประดิษฐ์. (ScienceDirect)",
+      "sourceAssumption": "สมมติให้ ChatGPT ใช้พลังงาน 2.9Wh และการค้นหา Google ใช้ 0.3Wh ต่อครั้ง ส่วนแบตเตอรี่ iPhone 15 มีความจุ 12.98Wh."
     },
     "sustainabilityTask": {
       "paragraph1": "เมื่อแชตบอตที่ขับเคลื่อนด้วย LLMs ได้รับความนิยมและมีความสามารถมากขึ้น เราจำเป็นต้องตระหนักถึงผลกระทบต่อสิ่งแวดล้อมเพื่อให้เกิดความยั่งยืน",
-      "llamaFactPrefix": "โมเดล Meta LLaMA 3 ขนาดใหญ่ที่สุดมีพารามิเตอร์ 405 พันล้านตัว",
-      "chatgptFactPrefix": "ChatGPT มีผู้ใช้งานประจำรายสัปดาห์มากกว่า 200 ล้านคน",
+      "llamaFact": "โมเดล Meta LLaMA 3 ขนาดใหญ่ที่สุดมีพารามิเตอร์ 405 พันล้านตัว (arXiv)",
+      "chatgptFact": "ChatGPT มีผู้ใช้งานประจำรายสัปดาห์มากกว่า 200 ล้านคน (Reuters, ส.ค. 2024)",
       "taskInstruction": "ตอบคำถามต่อไปนี้โดยเลือกช่องคำตอบที่ถูกต้อง",
       "questionType": "จริงหรือเท็จ",
       "questionText": "ในระยะยาว พลังงานรวมที่ใช้ในการรัน LLMs อาจมากกว่าพลังงานที่ใช้ในช่วงการฝึกเริ่มต้น",

@@ -44,15 +44,19 @@ const sliders = {
 <template>
   <div class="flex gap-12">
     <div class="w-1/3">
+      <!-- Title -->
       <h2>{{ t("s4.caseWorth.title") }}</h2>
+
+      <!-- Task Instruction -->
       <p>
         <strong>{{ t("common.taskLabel") }}</strong>
         {{ t("s4.caseWorth.taskInstruction") }}
       </p>
       <p>{{ t("s4.caseWorth.note") }}</p>
     </div>
+
     <div class="w-2/3 mt-12 flex flex-col gap-8">
-      <!-- Slider -->
+      <!-- Sliders -->
       <div class="flex" v-for="(slider, i) in sliders" :key="i">
         <div class="w-1/5">
           <h4 class="my-0">
@@ -80,6 +84,7 @@ const sliders = {
           </div>
         </div>
       </div>
+
       <!-- Explanation -->
       <div>
         <h4>{{ t("s4.caseWorth.explanationTitle") }}</h4>

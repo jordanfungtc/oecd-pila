@@ -21,16 +21,25 @@ const training = [
 <template>
   <div class="flex gap-12">
     <div class="w-1/3">
+      <!-- Title -->
       <h2>{{ t("s4.sustainability.title") }}</h2>
+
+      <!-- Paragraphs -->
       <p>{{ t("s4.sustainabilityTraining.paragraph1") }}</p>
       <p>{{ t("s4.sustainabilityTraining.paragraph2") }}</p>
+
+      <!-- Task Instruction -->
       <p>
         <strong>{{ t("common.taskLabel") }}</strong>
         {{ t("s4.sustainabilityTraining.taskInstruction") }}
       </p>
     </div>
+
     <div class="w-2/3">
+      <!-- Phase Title -->
       <h3 class="mt-12">{{ t("s4.sustainabilityTraining.phaseTitle") }}</h3>
+
+      <!-- Phase Description -->
       <p>{{ t("s4.sustainabilityTraining.phaseDescription") }}</p>
 
       <!-- Slider -->
@@ -61,6 +70,7 @@ const training = [
 
       <!-- Statistics -->
       <div class="grid grid-cols-2 gap-2">
+        <!-- Power Consumption -->
         <div class="flex gap-4 items-center">
           <img :src="powerIcon" class="w-12 h-auto my-2" />
           <div>
@@ -68,27 +78,39 @@ const training = [
             <h3 class="my-0">{{ training[modelSize].power }} MWh</h3>
           </div>
         </div>
+
+        <!-- Annual Electricity Use of Homes -->
         <div class="flex gap-4 items-center">
           <img :src="homeIcon" class="w-12 h-auto my-2" />
           <div>
-            <p class="my-0">{{ t("s4.sustainability.annualElectricityUseOf") }}</p>
+            <p class="my-0">
+              {{ t("s4.sustainability.annualElectricityUseOf") }}
+            </p>
             <h3 class="my-0">
               {{ (training[modelSize].power / home).toFixed(0) }}
               {{ t("s4.sustainability.homes") }}
             </h3>
           </div>
         </div>
+
+        <!-- Carbon Emission -->
         <div class="flex gap-4 items-center">
           <img :src="carbonIcon" class="w-12 h-auto my-2" />
           <div>
-            <p class="my-0">{{ t("s4.sustainabilityTraining.carbonEmission") }}</p>
+            <p class="my-0">
+              {{ t("s4.sustainabilityTraining.carbonEmission") }}
+            </p>
             <h3 class="my-0">{{ training[modelSize].carbon }} tonnes</h3>
           </div>
         </div>
+
+        <!-- Annual Carbon Absorption of Trees -->
         <div class="flex gap-4 items-center">
           <img :src="treeIcon" class="w-12 h-auto my-2" />
           <div>
-            <p class="my-0">{{ t("s4.sustainabilityTraining.annualCarbonAbsorptionOf") }}</p>
+            <p class="my-0">
+              {{ t("s4.sustainabilityTraining.annualCarbonAbsorptionOf") }}
+            </p>
             <h3 class="my-0">
               {{ (training[modelSize].carbon / tree).toFixed(0) }}
               {{ t("s4.sustainabilityTraining.trees") }}
@@ -99,19 +121,27 @@ const training = [
 
       <!-- Sources -->
       <p class="text-xs my-8">
-        {{ t("s4.sustainabilityTraining.sourcePrefix") }}
-        <a href="https://arxiv.org/abs/2302.13971" target="_blank"> (arXiv)</a>.
-        {{ t("s4.sustainabilityTraining.sourceMiddle") }}
+        <a
+          href="https://arxiv.org/abs/2302.13971"
+          target="_blank"
+          class="font-normal no-underline"
+        >
+          {{ t("s4.sustainabilityTraining.sourceLlama") }} {{ " " }}
+        </a>
         <a
           href="https://www.ofgem.gov.uk/average-gas-and-electricity-usage"
           target="_blank"
+          class="font-normal no-underline"
         >
-          (Ofgem)</a
+          {{ t("s4.sustainabilityTraining.sourceHome") }} {{ " " }}
+        </a>
+        <a
+          href="https://www.fortomorrow.eu/en/blog/co2-tree"
+          target="_blank"
+          class="font-normal no-underline"
         >
-        {{ t("s4.sustainabilityTraining.sourceSuffix") }}
-        <a href="https://www.fortomorrow.eu/en/blog/co2-tree" target="_blank">
-          (ForTomorrow)</a
-        >.
+          {{ t("s4.sustainabilityTraining.sourceTree") }}.
+        </a>
       </p>
     </div>
   </div>

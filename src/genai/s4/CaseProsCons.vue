@@ -9,18 +9,25 @@ const { t } = useI18n();
 </script>
 
 <template>
+  <!-- Title -->
   <h2>{{ t("s4.caseProsCons.title") }}</h2>
+
+  <!-- Task Instruction -->
   <p>
     <strong>{{ t("common.taskLabel") }}</strong>
     {{ t("s4.caseProsCons.taskInstruction") }}
   </p>
+
   <div class="grid grid-cols-2 gap-8">
     <!-- Pros -->
     <div>
+      <!-- Pros Title -->
       <div class="flex gap-4 items-center">
         <img :src="caseProIcon" class="w-8 h-8 my-4" />
         <h3 class="my-0">{{ t("s4.caseProsCons.prosTitle") }}</h3>
       </div>
+
+      <!-- Pros Inputs -->
       <div class="flex flex-col gap-4">
         <input
           v-for="(p, i) in [S4.CASE_PRO_1, S4.CASE_PRO_2, S4.CASE_PRO_3]"
@@ -31,12 +38,16 @@ const { t } = useI18n();
         />
       </div>
     </div>
+
     <!-- Cons -->
     <div>
+      <!-- Cons Title -->
       <div class="flex gap-4 items-center">
         <img :src="caseConIcon" class="w-8 h-8 my-4" />
         <h3 class="my-0">{{ t("s4.caseProsCons.consTitle") }}</h3>
       </div>
+
+      <!-- Cons Inputs -->
       <div class="flex flex-col gap-4">
         <input
           v-for="(c, i) in [S4.CASE_CON_1, S4.CASE_CON_2, S4.CASE_CON_3]"

@@ -11,49 +11,62 @@ const { t } = useI18n();
 <template>
   <div class="flex gap-12">
     <div class="w-1/2">
+      <!-- Title -->
       <h2>{{ t("s4.sustainability.title") }}</h2>
+
+      <!-- Paragraphs -->
       <p>{{ t("s4.sustainabilityTask.paragraph1") }}</p>
+
+      <!-- Llama Fact -->
       <div class="alert mb-4">
         <img :src="llamaLogo" class="h-12 w-auto mt-2 mb-4" />
         <span>
-          {{ t("s4.sustainabilityTask.llamaFactPrefix") }}
           <a
             href="https://arxiv.org/abs/2407.21783"
             target="_blank"
-            class="text-sm"
-            >(arXiv)</a
-          >.
+            class="font-normal no-underline"
+            >{{ t("s4.sustainabilityTask.llamaFact") }}
+          </a>
         </span>
       </div>
+
+      <!-- ChatGPT Fact -->
       <div class="alert">
         <img :src="chatgptLogo" class="h-12 w-auto mt-2 mb-4" />
         <span>
-          {{ t("s4.sustainabilityTask.chatgptFactPrefix") }}
           <a
             href="https://www.reuters.com/technology/artificial-intelligence/openai-says-chatgpts-weekly-users-have-grown-200-million-2024-08-29/"
             target="_blank"
-            class="text-sm"
-            >(Reuters, Aug 2024)</a
-          >.
+            class="font-normal no-underline"
+          >
+            {{ t("s4.sustainabilityTask.chatgptFact") }}
+          </a>
         </span>
       </div>
     </div>
+
     <div class="w-1/2">
+      <!-- Task Instruction -->
       <p class="mt-12">
         <strong>{{ t("common.taskLabel") }}</strong>
         {{ t("s4.sustainabilityTask.taskInstruction") }}
       </p>
+
       <div class="py-3 px-6 border rounded-xl items-center">
         <!-- Question Text -->
         <h4 class="mt-2 mb-4">{{ t("s4.sustainabilityTask.questionType") }}</h4>
         <p>
           {{ t("s4.sustainabilityTask.questionText") }}
         </p>
+
         <!-- Answer Selection -->
         <div class="flex gap-2">
           <div
             class="form-control px-2 border rounded-xl w-full"
-            v-for="(option, key) in [t('common.trueLabel'), t('common.falseLabel')]"
+            v-for="(option, key) in [
+              t('util.selectTf.trueLabel'),
+              t('util.selectTf.falseLabel'),
+            ]"
             :class="{
               'border-neutral': store.state[S4.SUSTAINABILITY_Q.state] === key,
             }"
@@ -69,7 +82,8 @@ const { t } = useI18n();
             </label>
           </div>
         </div>
-        <!-- Feedback Message -->
+
+        <!-- Feedback -->
         <div
           v-if="store.state[S4.SUSTAINABILITY_Q.state] !== undefined"
           class="mt-4"

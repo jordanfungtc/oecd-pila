@@ -27,11 +27,15 @@ const stories = {
 <template>
   <div class="flex gap-12">
     <div class="w-1/3">
+      <!-- Title -->
       <h2>{{ t("s4.caseSelect.title") }}</h2>
+
+      <!-- Task Instruction -->
       <p>
         <strong>{{ t("common.taskLabel") }}</strong>
         {{ t("s4.caseSelect.taskInstruction") }}
       </p>
+
       <!-- Story Selection -->
       <div
         v-for="(story, key) in stories"
@@ -53,27 +57,31 @@ const stories = {
         </label>
       </div>
     </div>
+
+    <!-- Story -->
     <div
       class="w-2/3 p-4 border rounded-xl mt-8"
       v-if="store.state[S4.CASE_STORY.state]"
     >
+      <!-- Story Title -->
       <h3 class="mt-0">
         {{
           t(
             stories[store.state[S4.CASE_STORY.state] as keyof typeof stories]
-              .labelKey
+              .labelKey,
           )
         }}
       </h3>
+
       <!-- Story Text -->
       <div
         v-if="store.state[S4.CASE_STORY.state]"
         v-html="
-            t(
-              stories[store.state[S4.CASE_STORY.state] as keyof typeof stories]
-                .textKey
-            )
-          "
+          t(
+            stories[store.state[S4.CASE_STORY.state] as keyof typeof stories]
+              .textKey,
+          )
+        "
       ></div>
     </div>
   </div>

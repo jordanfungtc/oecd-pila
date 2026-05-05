@@ -36,15 +36,20 @@ const regs = [
 </script>
 
 <template>
+  <!-- Title -->
   <h2>{{ t("s4.regTask.title") }}</h2>
+
+  <!-- Task Instruction -->
   <p>
     <strong>{{ t("common.taskLabel") }}</strong>
     {{ t("s4.regTask.taskInstruction") }}
   </p>
+
   <!-- Use Case Table -->
   <table class="table table-sm w-full my-[-10px]">
     <tbody>
       <tr v-for="(reg, reg_i) in regs" :key="reg_i" class="my-0">
+        <!-- Recital -->
         <td class="min-w-32">
           <a
             :href="`https://artificialintelligenceact.eu/recital/${reg.recital}`"
@@ -55,7 +60,11 @@ const regs = [
             {{ t("s4.regTask.recitalLabel") }} {{ reg.recital }}
           </a>
         </td>
+
+        <!-- Description -->
         <td>{{ t(reg.descKey) }}</td>
+
+        <!-- Risk Selection -->
         <td>
           <SelectRisk :state="reg.state.state" :answer="reg.state.answer" />
         </td>

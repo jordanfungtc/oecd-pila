@@ -18,50 +18,47 @@ const { t } = useI18n();
 
 const biases = {
   gender: {
-    labelKey: "s4.biasEmbeddings.biasTypes.gender",
     icon: genderBiasIcon,
     target1: "man",
     target2: "woman",
     attributes: [
-      "s4.biasEmbeddings.attributeExamples.gender.nurse",
-      "s4.biasEmbeddings.attributeExamples.gender.caring",
-      "s4.biasEmbeddings.attributeExamples.gender.mechanic",
-      "s4.biasEmbeddings.attributeExamples.gender.assertive",
-      "s4.biasEmbeddings.attributeExamples.gender.architect",
-      "s4.biasEmbeddings.attributeExamples.gender.sensitive",
-      "s4.biasEmbeddings.attributeExamples.gender.receptionist",
-      "s4.biasEmbeddings.attributeExamples.gender.logical",
+      "nurse",
+      "caring",
+      "mechanic",
+      "assertive",
+      "architect",
+      "sensitive",
+      "receptionist",
+      "logical",
     ],
   },
   racial: {
-    labelKey: "s4.biasEmbeddings.biasTypes.racial",
     icon: racialBiasIcon,
     target1: "black",
     target2: "white",
     attributes: [
-      "s4.biasEmbeddings.attributeExamples.racial.janitor",
-      "s4.biasEmbeddings.attributeExamples.racial.lazy",
-      "s4.biasEmbeddings.attributeExamples.racial.police",
-      "s4.biasEmbeddings.attributeExamples.racial.hardworking",
-      "s4.biasEmbeddings.attributeExamples.racial.violent",
-      "s4.biasEmbeddings.attributeExamples.racial.criminal",
-      "s4.biasEmbeddings.attributeExamples.racial.peaceful",
-      "s4.biasEmbeddings.attributeExamples.racial.complacent",
+      "janitor",
+      "lazy",
+      "police",
+      "hardworking",
+      "violent",
+      "criminal",
+      "peaceful",
+      "complacent",
     ],
   },
   religious: {
-    labelKey: "s4.biasEmbeddings.biasTypes.religious",
     icon: religiousBiasIcon,
     target1: "muslim",
     target2: "christian",
     attributes: [
-      "s4.biasEmbeddings.attributeExamples.religious.terrorist",
-      "s4.biasEmbeddings.attributeExamples.religious.charitable",
-      "s4.biasEmbeddings.attributeExamples.religious.dangerous",
-      "s4.biasEmbeddings.attributeExamples.religious.compassionate",
-      "s4.biasEmbeddings.attributeExamples.religious.conservative",
-      "s4.biasEmbeddings.attributeExamples.religious.cult",
-      "s4.biasEmbeddings.attributeExamples.religious.peaceful",
+      "terrorist",
+      "charitable",
+      "dangerous",
+      "compassionate",
+      "conservative",
+      "cult",
+      "peaceful",
     ],
   },
 };
@@ -101,18 +98,24 @@ const biasHandler = async () => {
 <template>
   <div class="flex gap-12">
     <div class="w-1/2">
+      <!-- Title -->
       <h2>{{ t("s4.biasEmbeddings.title") }}</h2>
+
+      <!-- Paragraphs -->
       <p>
         {{ t("s4.biasEmbeddings.paragraph1") }}
       </p>
       <p>
         {{ t("s4.biasEmbeddings.paragraph2") }}
       </p>
+
+      <!-- Task Instruction -->
       <p>
         <strong>{{ t("common.taskLabel") }}</strong>
         {{ t("s4.biasEmbeddings.taskInstruction") }}
       </p>
     </div>
+
     <div class="w-1/2 mt-6 flex flex-col gap-4">
       <!-- Bias Type Selection -->
       <div class="p-4 border rounded-xl">
@@ -122,7 +125,7 @@ const biasHandler = async () => {
         </h4>
         <div class="my-0 grid grid-cols-3 gap-2">
           <div
-            v-for="(bias, key) in biases"
+            v-for="(_, key) in biases"
             :key="key"
             class="form-control px-2 border rounded-xl"
             :class="{
@@ -130,7 +133,9 @@ const biasHandler = async () => {
             }"
           >
             <label class="label cursor-pointer">
-              <span class="label-text">{{ t(bias.labelKey) }}</span>
+              <span class="label-text">{{
+                t(`s4.biasEmbeddings.biasTypes.${key}`)
+              }}</span>
               <input
                 type="radio"
                 name="radio-10"
@@ -156,6 +161,7 @@ const biasHandler = async () => {
           <BIcon2Circle class="w-5 h-5" />
           {{ t("s4.biasEmbeddings.steps.enterAttributeWord") }}
         </h4>
+
         <!-- Input -->
         <div class="flex gap-2 items-center">
           <input
@@ -169,16 +175,21 @@ const biasHandler = async () => {
             <span v-else><BIconArrowRightSquare class="w-5 h-5" /></span>
           </button>
         </div>
+
         <!-- Examples -->
         <div v-if="store.state[S4.BIAS_TYPE.state]" class="mt-2">
           <span
-            v-for="attributeKey in biases[
+            v-for="attributeWord in biases[
               store.state[S4.BIAS_TYPE.state] as keyof typeof biases
             ].attributes"
-            :key="attributeKey"
+            :key="attributeWord"
             class="badge badge-ghost p-2 mr-2"
           >
-            {{ t(attributeKey) }}
+            {{
+              t(
+                `s4.biasEmbeddings.attributeExamples.${store.state[S4.BIAS_TYPE.state]}.${attributeWord}`,
+              )
+            }}
           </span>
         </div>
       </div>
@@ -189,6 +200,7 @@ const biasHandler = async () => {
           <BIcon3Circle class="w-5 h-5" />
           {{ t("s4.biasEmbeddings.steps.similarityScores") }}
         </h4>
+
         <div class="flex gap-4 mt-2">
           <!-- Bias Icon -->
           <img
@@ -199,18 +211,16 @@ const biasHandler = async () => {
           <div class="w-full">
             <!-- Target 1 -->
             <div class="badge badge-neutral badge-lg mr-2 p-4 mb-2 gap-2">
-              <b>{{
-                selectedBias ? selectedBias.target1 : "--"
-              }}</b>
+              <b>{{ selectedBias ? selectedBias.target1 : "--" }}</b>
               {{ store.state[S4.BIAS_TARGET1_SIM.state]?.toFixed(3) || "--" }}
             </div>
+
             <!-- Target 2 -->
             <div class="badge badge-neutral badge-lg mr-2 p-4 mb-2 gap-2">
-              <b>{{
-                selectedBias ? selectedBias.target2 : "--"
-              }}</b>
+              <b>{{ selectedBias ? selectedBias.target2 : "--" }}</b>
               {{ store.state[S4.BIAS_TARGET2_SIM.state]?.toFixed(3) || "--" }}
             </div>
+            
             <!-- Result -->
             <div v-if="store.state[S4.BIAS_TARGET1_SIM.state]">
               {{ t("s4.biasEmbeddings.resultLabel") }}
