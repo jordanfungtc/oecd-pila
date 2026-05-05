@@ -19,8 +19,7 @@ Agent.environment().then(async ({ auth }) => {
   }
 });
 
-// inject();
-store.isLoading = false;
+inject();
 </script>
 
 <template>
