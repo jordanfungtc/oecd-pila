@@ -2,45 +2,43 @@
 import { ref } from "vue";
 import Agent from "@knowlearning/agents/browser.js";
 import { RouterLink } from "vue-router";
+import { useI18n } from "vue-i18n";
 import { store } from "./store";
 
 const base_url = "https://pila.oecd.jordanfung.com";
 
-store.titleKey = "common.homeTitle";
+store.titleKey = "main.homeTitle";
+const { t } = useI18n();
 
 const modules = {
   genai: {
-    name: "Generative AI Module",
+    nameKey: "main.modules.genai.name",
     preview: "/genai/preview",
     dashboard: `/genai/dashboard?user=${store.auth.user}&content=my-state&content=fake-state`,
     sequences: [
       {
-        name: "Generative AI Module",
+        nameKey: "main.modules.genai.name",
         uuid: "085f62f0-87a4-11ef-861e-a9ea128200f7",
       },
       {
-        name: "Generative AI Assessment",
+        nameKey: "main.modules.genai.assessment",
         uuid: "a95c5870-9c21-11ef-90a1-b33fe74cf711",
       },
     ],
     sections: [
       {
-        name: "Generative AI (I)",
         url: "/genai/1",
         uuid: "9a01ba82-f19f-4507-ae84-faea96133744",
       },
       {
-        name: "Generative AI (II)",
         url: "/genai/2",
         uuid: "b39a1ebc-e19e-4fb3-a98a-3597787c7e8e",
       },
       {
-        name: "Generative AI (III)",
         url: "/genai/3",
         uuid: "7970039f-b917-43cf-8dee-0b7df9f661bf",
       },
       {
-        name: "Generative AI (IV)",
         url: "/genai/4",
         uuid: "27511e40-f72d-4179-8547-0f6f429bc197",
       },
@@ -81,70 +79,77 @@ const check = async () => {
 </script>
 
 <template>
-  <div class="max-w-4xl w-full">
+  <div class="max-w-4xl w-full mx-auto">
     <div
       v-for="(module, i) in modules"
       :key="i"
       class="p-8 rounded-xl mb-8 bg-white shadow-md"
     >
       <div class="flex gap-2 items-center">
-        <h2 class="my-0">{{ module.name }}</h2>
+        <!-- Module Name -->
+        <h2 class="my-0">{{ t(module.nameKey) }}</h2>
         <div class="flex-grow"></div>
+
+        <!-- Preview Module Button -->
         <RouterLink :to="module.preview" class="btn btn-neutral">
-          Preview Module
+          {{ t("main.previewModule") }}
         </RouterLink>
+
+        <!-- Preview Dashboard Button -->
         <RouterLink :to="module.dashboard" class="btn btn-neutral">
-          Preview Dashboard
+          {{ t("main.previewDashboard") }}
         </RouterLink>
       </div>
 
+      <!-- Sequences Title -->
+      <h3>{{ t("main.sequences.title") }}</h3>
+
+      <!-- Sequences Description -->
+      <p>{{ t("main.sequences.description") }}</p>
+
       <!-- Sequences Table -->
-      <h3>Sequences</h3>
-      <p>
-        You can add the following sequence UUIDs directly to PILA, or clone them
-        in PILA Create to edit them.
-      </p>
       <div class="overflow-x-auto">
-        <table class="table table-sm mt-0">
+        <table class="table table-sm my-0">
           <thead>
             <tr>
-              <th>Name</th>
-              <th>UUID</th>
+              <th>{{ t("main.columns.name") }}</th>
+              <th>{{ t("main.columns.uuid") }}</th>
             </tr>
           </thead>
           <tbody>
             <tr v-for="sequence in module.sequences" :key="sequence.uuid">
-              <td>{{ sequence.name }}</td>
+              <td>{{ t(sequence.nameKey) }}</td>
               <td>{{ sequence.uuid }}</td>
             </tr>
           </tbody>
         </table>
       </div>
 
+      <!-- Sections Title -->
+      <h3>{{ t("main.sections.title") }}</h3>
+
+      <!-- Sections Description -->
+      <p>{{ t("main.sections.description") }}</p>
+
       <!-- Sections Table -->
-      <h3>Sections</h3>
-      <p>
-        You can also use these individual section UUIDs as part of your own PILA
-        sequences.
-      </p>
       <div class="overflow-x-auto">
-        <table class="table table-sm mt-0">
+        <table class="table table-sm my-0">
           <thead>
             <tr>
-              <th>Name</th>
-              <th>URL</th>
-              <th>UUID</th>
-              <th>Actions</th>
+              <th>#</th>
+              <th>{{ t("main.columns.url") }}</th>
+              <th>{{ t("main.columns.uuid") }}</th>
+              <th>{{ t("main.columns.actions") }}</th>
             </tr>
           </thead>
           <tbody>
-            <tr v-for="section in module.sections" :key="section.name">
-              <td>{{ section.name }}</td>
+            <tr v-for="(section, index) in module.sections" :key="index">
+              <td>{{ index + 1 }}</td>
               <td>{{ base_url + section.url }}</td>
               <td>{{ section.uuid }}</td>
               <td>
                 <RouterLink :to="section.url" class="btn btn-xs">
-                  Open
+                  {{ t("main.open") }}
                 </RouterLink>
               </td>
             </tr>

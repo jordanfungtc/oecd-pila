@@ -14,7 +14,7 @@ import CaseWorth from "./s4/CaseWorth.vue";
 import Ending from "./s4/Ending.vue";
 import { store } from "../store";
 
-store.titleKey = "common.genaiTitle";
+store.titleKey = "main.modules.genai.name";
 </script>
 
 <template>
