@@ -34,7 +34,7 @@ const facts = [
     <div class="w-2/3 mt-8">
       <!-- Task Instruction -->
       <p>
-        <strong>{{ t("common.taskLabel") }} </strong>
+        <strong>{{ t("common.task") }} </strong>
         {{ t("s2.limitationsCheck.taskInstruction") }}
       </p>
 

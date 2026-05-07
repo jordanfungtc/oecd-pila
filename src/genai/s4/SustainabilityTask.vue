@@ -64,8 +64,8 @@ const { t } = useI18n();
           <div
             class="form-control px-2 border rounded-xl w-full"
             v-for="(option, key) in [
-              t('util.selectTf.trueLabel'),
-              t('util.selectTf.falseLabel'),
+              t('common.selectTf.trueLabel'),
+              t('common.selectTf.falseLabel'),
             ]"
             :class="{
               'border-neutral': store.state[S4.SUSTAINABILITY_Q.state] === key,

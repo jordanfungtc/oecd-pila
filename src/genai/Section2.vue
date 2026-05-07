@@ -11,7 +11,7 @@ import LimitationsIntro from "./s2/LimitationsIntro.vue";
 import Brainstorm from "./s2/Brainstorm.vue";
 import { store } from "../store";
 
-store.titleKey = "main.modules.genai.name";
+store.titleKey = "main.genaiModule";
 </script>
 
 <template>

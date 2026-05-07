@@ -56,7 +56,7 @@ const { t } = useI18n();
       <textarea
         class="textarea textarea-bordered textarea-lg w-full leading-normal"
         v-model="store.state[S4.BIAS_LLM.state]"
-        :placeholder="t('common.answerPlaceholder')"
+        :placeholder="t('s4.biasLlm.answerPlaceholder')"
         rows="3"
       ></textarea>
     </div>

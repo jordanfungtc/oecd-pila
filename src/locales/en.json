@@ -1,62 +1,70 @@
 {
   "main": {
     "homeTitle": "OECD PILA Modules",
-    "developedBy": "Developed by {name}",
+    "genaiModule": "Generative AI Module",
+    "genaiAssessment": "Generative AI Assessment",
+    "genaiDashboard": "Generative AI Dashboard",
     "previewModule": "Preview Module",
     "previewDashboard": "Preview Dashboard",
-    "sequences": {
-      "title": "Sequences",
-      "description": "You can add the following sequence UUIDs directly to PILA, or clone them in PILA Create to edit them."
-    },
-    "sections": {
-      "title": "Sections",
-      "description": "You can also use these individual section UUIDs as part of your own PILA sequences."
-    },
-    "columns": {
-      "name": "Name",
-      "url": "URL",
-      "uuid": "UUID",
-      "actions": "Actions"
-    },
+    "sequences": "Sequences",
+    "sequencesDescription": "You can add the following sequence UUIDs directly to PILA, or clone them in PILA Create to edit them.",
+    "sections": "Sections",
+    "sectionsDescription": "You can also use these individual section UUIDs as part of your own PILA sequences.",
+    "name": "Name",
+    "url": "URL",
+    "uuid": "UUID",
+    "actions": "Actions",
     "open": "Open",
-    "modules": {
-      "genai": {
-        "name": "Generative AI Module",
-        "assessment": "Generative AI Assessment",
-        "dashboard": "Generative AI Module Dashboard"
-      }
-    }
+    "developedBy": "Developed by {name}"
   },
-  "util": {
-    "selectTf": {
-      "trueLabel": "True",
-      "falseLabel": "False"
-    },
-    "selectRisk": {
-      "low": "Low Risk",
-      "high": "High Risk",
-      "unacceptable": "Unacceptable Risk"
-    }
-  },
+
   "common": {
-    "taskLabel": "Task:",
-    "answerPlaceholder": "Answer"
+    "true": "True",
+    "false": "False",
+    "lowRisk": "Low Risk",
+    "highRisk": "High Risk",
+    "unacceptableRisk": "Unacceptable Risk",
+    "task": "Task:",
+    "answer": "Answer"
   },
+
   "dashboard": {
     "studentSelection": "Student Selection",
     "refresh": "Refresh",
-    "section1": {
+
+    "s1": {
       "label": "Section 1",
       "identifyingInputsOutputs": "Identifying Inputs and Outputs",
-      "designingAiSystem": "Designing and AI System"
+      "designingAiSystem": "Designing an AI System",
+      "input": "Input",
+      "output": "Output",
+      "academic": "Academic",
+      "medical": "Medical",
+      "video": "Video",
+      "sentiment": "Sentiment",
+      "fraud": "Fraud",
+      "sector": "Sector",
+      "problem": "Problem"
     },
-    "section2": {
+
+    "s2": {
       "label": "Section 2",
       "promptEngineering": "Prompt Engineering",
       "limitationsOfLlms": "Limitations of LLMs",
-      "llmsInEverydayLife": "LLMs in Everyday Life"
+      "llmsInEverydayLife": "LLMs in Everyday Life",
+      "selectedPrompt": "Selected Prompt",
+      "generatedSimple": "Generated (Simple)",
+      "generatedRefined": "Generated (Refined)",
+      "technique": "Technique",
+      "generated": "Generated",
+      "factCheckIpoa": "Fact Check (IPOA)",
+      "factCheckNasa": "Fact Check (NASA)",
+      "factCheckEureo": "Fact Check (EUREO)",
+      "task": "Task",
+      "prompt": "Prompt"
     },
-    "section3": {
+
+    "s3": {
       "label": "Section 3",
       "creatingWordEmbeddings": "Creating Word Embeddings",
       "similarityScore": "Similarity Score",
@@ -64,7 +72,8 @@
       "wordAnalogyBrainstorming": "Word Analogy Brainstorming",
       "rag": "Retrieval-Augmented Generation"
     },
-    "section4": {
+
+    "s4": {
       "label": "Section 4",
       "biasInWordEmbeddings": "Bias in Word Embeddings",
       "biasInLlmResponses": "Bias in LLM Responses",
@@ -72,40 +81,8 @@
       "sustainabilityOfAi": "Sustainability of AI",
       "caseStudy": "Case Study"
     },
+
     "table": {
-      "apps": {
-        "academic": "Academic",
-        "medical": "Medical",
-        "video": "Video",
-        "sentiment": "Sentiment",
-        "fraud": "Fraud"
-      },
-      "appMatch": {
-        "input": "Input",
-        "output": "Output"
-      },
-      "appBrainstorm": {
-        "sector": "Sector",
-        "problem": "Problem",
-        "input": "Input",
-        "output": "Output"
-      },
-      "llmSingle": {
-        "selectedPrompt": "Selected Prompt",
-        "generatedSimple": "Generated (Simple)",
-        "generatedRefined": "Generated (Refined)",
-        "technique": "Technique"
-      },
-      "llmConv": {
-        "generated": "Generated",
-        "factCheckIpoa": "Fact Check (IPOA)",
-        "factCheckNasa": "Fact Check (NASA)",
-        "factCheckEureo": "Fact Check (EUREO)"
-      },
-      "llmBrainstorm": {
-        "task": "Task",
-        "prompt": "Prompt"
-      },
       "embs": {
         "dog": "Dog",
         "car": "Car",
@@ -165,6 +142,7 @@
       }
     }
   },
+
   "s1": {
     "intro": {
       "title": "AI and Machine Learning",
@@ -172,6 +150,7 @@
       "paragraph2": "AI is a branch of computer science that enables machines to perform tasks that typically require human intelligence. One important part of AI is called machine learning (ML). With ML, computers learn from lots of data and find patterns to make predictions or decisions without the need for humans to explicitly program them. AI and ML are used in a wide range of applications and have radically transformed many industries.",
       "videoLabel": "TED Talk: How AI Could Empower Any Business by Andrew Ng"
     },
+
     "ioIntro": {
       "title": "Identifying Inputs and Outputs",
       "paragraph1": "To effectively use AI and ML, we need to clearly identify the inputs and outputs. Inputs are the information that we need to provide to the AI system, while outputs are the results it gives back to the user.",
@@ -200,6 +179,7 @@
         }
       }
     },
+
     "ioTask": {
       "taskInstruction": "To use AI for this application, can you guess what the inputs to the AI system would be and what the expected outputs are? Select the correct options from the dropdowns below, then read the explanation to learn more.",
       "inputPlaceholder": "Input",
@@ -250,6 +230,7 @@
         }
       }
     },
+
     "brainstormIntro": {
       "title": "Designing an AI System",
       "paragraph1": "As we saw in each of the examples, there is an identified problem that needs to be solved. We then design an AI system to take relevant input data, analyze it, and predict an output. Finally, the output can be used to solve the problem.",
@@ -269,10 +250,10 @@
         }
       }
     },
+
     "brainstormProblem": {
       "title": "Designing an AI System: Problem",
       "taskInstruction": "Select one of the sectors using the checkboxes below. Then, identify a specific problem within the chosen sector that you would like to solve using AI. Write a brief description of the problem in the field below.",
-      "placeholder": "Describe the problem you want to solve using AI...",
       "sectors": {
         "healthcare": "Healthcare",
         "finance": "Finance",
@@ -291,15 +272,15 @@
         "hospitality": "Hospitality"
       }
     },
+
     "brainstormSolution": {
       "title": "Designing an AI System: Solution",
       "taskInstruction": "Now that you have identified a problem, it is time to design an AI system that can solve it. What would be the inputs to the AI system and what would be the expected outputs? Write your answers in the fields below.",
       "inputInstruction": "The input to the AI system should be:",
-      "inputPlaceholder": "Write the inputs here...",
-      "outputInstruction": "The output from the AI system should be:",
-      "outputPlaceholder": "Write the outputs here..."
+      "outputInstruction": "The output from the AI system should be:"
     }
   },
+
   "s2": {
     "intro": {
       "title": "Generative AI and LLMs",
@@ -307,6 +288,7 @@
       "paragraph2": "A common type of Generative AI are Large Language Models (LLMs). LLMs are machine learning models trained on large amounts of text data to learn the pattern, structure, and nuances of human language. They take text as input (known as a prompt) and generate coherent and contextually relevant text as output. Many popular AI chatbot systems are powered by LLMs, including ChatGPT, Gemini, and LLaMA.",
       "videoLabel": "Google for Developer: What are Large Language Models (LLMs)?"
     },
+
     "promptIntro": {
       "title": "Writing Prompts",
       "paragraph1": "The prompt is the input that you provide to the LLM, which can be in the form of questions or instructions. The LLM will then generate a response to the prompt based on the data that it has been trained on.",
@@ -338,23 +320,28 @@
         }
       }
     },
+
     "promptSelect": {
       "title": "Prompt Engineering",
       "paragraph1": "When interacting with LLMs, the way you phrase your prompts is crucial for obtaining the best responses. This is where prompt engineering comes into play.",
       "paragraph2": "Prompt engineering involves carefully crafting your prompts to guide the model towards generating more accurate, relevant, and useful responses.",
       "guideLabel": "DAIR.AI: Prompt Engineering Guide",
       "taskInstruction": "Choose one of the prompt examples on the right and proceed to the next step.",
-      "exampleN": "Example {n}",
+      "example1": "Example 1",
+      "example2": "Example 2",
+      "example3": "Example 3",
       "successMessage": "Great! You may now proceed to the next step."
     },
+
     "promptGenerate": {
-      "selectPromptAlert": "Please select a prompt example.",
-      "promptExampleTitle": "Prompt Example {id}",
-      "placeholder": "Select a prompt example",
+      "promptExampleA": "Prompt Example A",
+      "promptExampleB": "Prompt Example B",
+      "selectPrompt": "Select a prompt example",
       "responseTitle": "Response",
       "taskInstructionA": "For the prompt above, click the button to generate with the LLM simulator and observe the response.",
       "taskInstructionB": "Similarly, click the button to generate a response using the prompt above and compare the responses to the previous prompt. Can you see the importance of prompt engineering?"
     },
+
     "promptTechniques": {
       "title": "Prompt Engineering Techniques",
       "taskInstruction": "When writing prompts for LLMs, which of the following techniques do you think you should consider?",
@@ -368,6 +355,7 @@
       "successMessage": "Well done! Considering all the prompt engineering techniques can help you craft effective prompts for LLMs.",
       "retryMessage": "That's true, but there are other techniques that you should also consider. Can you identify them?"
     },
+
     "limitationsConv": {
       "title": "Conversational AI",
       "paragraph1": "You can also engage in conversations with LLMs. This is done by providing it with previous prompts and responses so it remembers what you've said. This allows LLMs to generate more relevant responses over time, without the need for you to repeat information.",
@@ -377,6 +365,7 @@
       "llmResponseLabel": "LLM Response",
       "conversationEnded": "Conversation ended"
     },
+
     "limitationsCheck": {
       "title": "Fact Checking",
       "paragraph1": "LLMs create responses by predicting the next word based on their training data - they are not truly intelligent. As such, LLMs can sometimes produce responses that seem accurate at first glance but are not entirely reliable.",
@@ -390,6 +379,7 @@
         "Transitioning to renewable energy sources could reduce global greenhouse gas emissions by 150% by 2070, according to the European Renewable Energy Office (EUREO)."
       ]
     },
+
     "limitationsIntro": {
       "title": "Limitations of LLMs",
       "paragraph1": "As you have seen, LLMs have limitations that can affect the quality and reliability of their responses.",
@@ -409,14 +399,14 @@
         }
       }
     },
+
     "brainstorm": {
       "title": "LLMs in Everyday Life",
       "taskInstruction": "Now that you have seen how LLMs work and some of their known limitations, can you think of ways you can use them to assist you in your everyday life? What prompts would you use? Write your answers in the fields below.",
       "useInstruction": "I think LLMs can be used for:",
-      "taskPlaceholder": "Task",
-      "promptInstruction": "The prompt I would use is:",
-      "promptPlaceholder": "Prompt"
+      "promptInstruction": "The prompt I would use is:"
     },
+
     "singleExamples": {
       "photosynthesis": {
         "label": "Photosynthesis",
@@ -452,6 +442,7 @@
         ]
       }
     },
+
     "convExample": [
       {
         "user": "Hello LLM! I am writing an essay about climate change, can you help me?",
@@ -475,6 +466,7 @@
       }
     ]
   },
+
   "s3": {
     "intro": {
       "title": "Natural Language Processing and RAG",

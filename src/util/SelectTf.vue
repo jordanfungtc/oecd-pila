@@ -18,7 +18,7 @@ const { t } = useI18n();
     }"
   >
     <option :value="undefined" disabled>-</option>
-    <option :value="1">{{ t("util.selectTf.trueLabel") }}</option>
-    <option :value="0">{{ t("util.selectTf.falseLabel") }}</option>
+    <option :value="1">{{ t("common.true") }}</option>
+    <option :value="0">{{ t("common.false") }}</option>
   </select>
 </template>

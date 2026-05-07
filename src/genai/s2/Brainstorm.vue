@@ -12,7 +12,7 @@ const { t } = useI18n();
 
   <!-- Task Instruction -->
   <p>
-    <strong>{{ t("common.taskLabel") }} </strong>
+    <strong>{{ t("common.task") }} </strong>
     {{ t("s2.brainstorm.taskInstruction") }}
   </p>
 
@@ -23,7 +23,7 @@ const { t } = useI18n();
   <input
     class="input input-lg input-bordered w-full"
     v-model="store.state[S2.LLM_BRAINSTORM_TASK.state]"
-    :placeholder="t('s2.brainstorm.taskPlaceholder')"
+    :placeholder="t('common.answer')"
   />
 
   <!-- Prompt Instruction -->
@@ -33,7 +33,7 @@ const { t } = useI18n();
   <textarea
     class="textarea textarea-lg textarea-bordered w-full leading-normal"
     v-model="store.state[S2.LLM_BRAINSTORM_PROMPT.state]"
-    :placeholder="t('s2.brainstorm.promptPlaceholder')"
+    :placeholder="t('common.answer')"
     rows="3"
   ></textarea>
 </template>

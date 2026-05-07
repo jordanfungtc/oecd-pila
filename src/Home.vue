@@ -10,16 +10,16 @@ const { t } = useI18n();
 
 const modules = {
   genai: {
-    nameKey: "main.modules.genai.name",
+    nameKey: "main.genaiModule",
     preview: "/genai/preview",
     dashboard: `/genai/dashboard?user=${store.auth.user}&content=my-state&content=fake-state`,
     sequences: [
       {
-        nameKey: "main.modules.genai.name",
+        nameKey: "main.genaiModule",
         uuid: "085f62f0-87a4-11ef-861e-a9ea128200f7",
       },
       {
-        nameKey: "main.modules.genai.assessment",
+        nameKey: "main.genaiAssessment",
         uuid: "a95c5870-9c21-11ef-90a1-b33fe74cf711",
       },
     ],
@@ -43,7 +43,6 @@ const modules = {
     ],
   },
 };
-
 </script>
 
 <template>
@@ -70,18 +69,18 @@ const modules = {
       </div>
 
       <!-- Sequences Title -->
-      <h3>{{ t("main.sequences.title") }}</h3>
+      <h3>{{ t("main.sequences") }}</h3>
 
       <!-- Sequences Description -->
-      <p>{{ t("main.sequences.description") }}</p>
+      <p>{{ t("main.sequencesDescription") }}</p>
 
       <!-- Sequences Table -->
       <div class="overflow-x-auto">
         <table class="table table-sm my-0">
           <thead>
             <tr>
-              <th>{{ t("main.columns.name") }}</th>
-              <th>{{ t("main.columns.uuid") }}</th>
+              <th>{{ t("main.name") }}</th>
+              <th>{{ t("main.uuid") }}</th>
             </tr>
           </thead>
           <tbody>
@@ -94,10 +93,10 @@ const modules = {
       </div>
 
       <!-- Sections Title -->
-      <h3>{{ t("main.sections.title") }}</h3>
+      <h3>{{ t("main.sections") }}</h3>
 
       <!-- Sections Description -->
-      <p>{{ t("main.sections.description") }}</p>
+      <p>{{ t("main.sectionsDescription") }}</p>
 
       <!-- Sections Table -->
       <div class="overflow-x-auto">
@@ -105,9 +104,9 @@ const modules = {
           <thead>
             <tr>
               <th>#</th>
-              <th>{{ t("main.columns.url") }}</th>
-              <th>{{ t("main.columns.uuid") }}</th>
-              <th>{{ t("main.columns.actions") }}</th>
+              <th>{{ t("main.url") }}</th>
+              <th>{{ t("main.uuid") }}</th>
+              <th>{{ t("main.actions") }}</th>
             </tr>
           </thead>
           <tbody>

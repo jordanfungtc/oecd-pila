@@ -10,16 +10,20 @@ const loading = ref(false);
 const convLength = S2.LLM_CONV_GENERATED.answer;
 
 const convHandler = () => {
+  // Initialize state if not started
   if (!store.state[S2.LLM_CONV_GENERATED.state]) {
     store.state[S2.LLM_CONV_GENERATED.state] = 0;
   }
+
+  // Check that conversation is not ended
   if (store.state[S2.LLM_CONV_GENERATED.state] < convLength) {
+    // Generate response with loading delay
     loading.value = true;
     setTimeout(() => {
       store.state[S2.LLM_CONV_GENERATED.state]++;
       loading.value = false;
 
-      // Scroll to the new user prompt
+      // Scroll to new user prompt location
       nextTick(() => {
         const idx = store.state[S2.LLM_CONV_GENERATED.state] - 1;
         const container = document.getElementById("conv-container");
@@ -47,13 +51,12 @@ const convHandler = () => {
 
       <!-- Task Instruction -->
       <p>
-        <strong>{{ t("common.taskLabel") }} </strong>
+        <strong>{{ t("common.task") }} </strong>
         {{ t("s2.limitationsConv.taskInstruction") }}
       </p>
     </div>
 
     <div class="w-2/3">
-      <!-- Conversation Bubbles -->
       <div
         id="conv-container"
         class="h-[21rem] overflow-y-auto mt-8 mb-4 border rounded-xl p-4"

@@ -70,7 +70,7 @@ const inputKeys = [
   "fraud",
   "video",
   "decoy2",
-] as const;
+];
 
 const outputKeys = [
   "fraud",
@@ -80,13 +80,13 @@ const outputKeys = [
   "medical",
   "decoy1",
   "academic",
-] as const;
+];
 </script>
 
 <template>
   <div class="flex gap-4 items-center mt-8">
     <!-- App Icon -->
-    <img :src="apps[props.i].icon" alt="App Icon" class="w-12 h-12 my-0" />
+    <img :src="apps[props.i].icon" class="w-12 h-12 my-0" />
 
     <!-- App Label -->
     <h3 class="my-0">
@@ -96,7 +96,7 @@ const outputKeys = [
 
   <!-- Task Instruction -->
   <p>
-    <strong>{{ t("common.taskLabel") }} </strong>
+    <strong>{{ t("common.task") }} </strong>
     {{ t("s1.ioTask.taskInstruction") }}
   </p>
 

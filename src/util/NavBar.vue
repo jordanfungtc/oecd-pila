@@ -6,6 +6,7 @@ import {
   BIconArrowClockwise,
   BIconBoxArrowRight,
   BIconInfo,
+  BIconCodeSlash,
 } from "bootstrap-icons-vue";
 
 const { t } = useI18n();
@@ -17,21 +18,26 @@ const restart = async () => {
 
 <template>
   <div class="flex flex-row items-center py-2 px-4 gap-4 bg-primary text-white">
-    <!-- Left Content -->
     <div class="flex items-center gap-4 w-full">
-      <img src="/pila-logo.png" alt="PILA Logo" class="h-6" />
+      <!-- PILA Logo -->
+      <img src="/pila-logo.png" class="h-6" />
+
+      <!-- Page Title -->
       <h3>{{ t(store.titleKey) }}</h3>
     </div>
 
-    <!-- Right Content -->
     <div class="flex items-center justify-end gap-2 w-full">
+      <!-- User Name -->
       <p class="text-sm">{{ store.auth?.info?.name }}</p>
+
+      <!-- Info Button -->
       <button class="btn btn-xs btn-circle" onclick="info_modal.showModal()">
         <BIconInfo class="w-4 h-4" />
       </button>
+
+      <!-- Logout Button -->
       <button
         class="btn btn-xs btn-circle"
-        title="Logout"
         @click="
           store.auth.provider === 'anonymous'
             ? Agent.login('google')
@@ -62,27 +68,28 @@ const restart = async () => {
         href="https://jordanfung.com"
         target="_blank"
         rel="noopener noreferrer"
-        class="mt-4 font-normal no-underline hover:underline text-sm"
+        class="mt-4 font-normal no-underline hover:underline text-md"
       >
         {{ t("main.developedBy", { name: "Jordan Fung" }) }}
       </a>
 
-      <hr class="my-8" />
-
       <!-- Debug Info -->
-      <p class="text-xs">
-        User: {{ store.auth.user }} ({{ store.auth.provider }})
-      </p>
-      <p class="text-xs">State: {{ store.state }}</p>
-      <p class="text-xs mb-8">Metadata: {{ store.metadata }}</p>
+      <details class="collapse">
+        <summary class="collapse-title"></summary>
+        <div class="collapse-content text-sm">
+          <!-- Debug Info -->
+          <p class="text-xs">
+            User: {{ store.auth.user }} ({{ store.auth.provider }})
+          </p>
+          <p class="text-xs">State: {{ store.state }}</p>
+          <p class="text-xs mb-8">Metadata: {{ store.metadata }}</p>
 
-      <!-- Restart Button -->
-      <button
-        class="btn btn-xs btn-circle btn-outline btn-error"
-        @click="restart"
-      >
-        <BIconArrowClockwise />
-      </button>
+          <!-- Restart Button -->
+          <button class="btn btn-xs btn-outline btn-error" @click="restart">
+            <BIconArrowClockwise /> Restart
+          </button>
+        </div>
+      </details>
     </div>
   </dialog>
 </template>

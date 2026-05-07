@@ -30,7 +30,7 @@ const sectors = [
 
   <!-- Task Instruction -->
   <p>
-    <strong>{{ t("common.taskLabel") }} </strong>
+    <strong>{{ t("common.task") }} </strong>
     {{ t("s1.brainstormProblem.taskInstruction") }}
   </p>
 
@@ -65,7 +65,7 @@ const sectors = [
   <textarea
     class="textarea textarea-lg textarea-bordered w-full leading-normal mt-8"
     v-model="store.state[S1.APP_BRAINSTORM_PROBLEM.state]"
-    :placeholder="t('s1.brainstormProblem.placeholder')"
+    :placeholder="t('common.answer')"
     rows="3"
   ></textarea>
 </template>

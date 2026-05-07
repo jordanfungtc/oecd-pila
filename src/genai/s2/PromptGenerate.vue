@@ -12,9 +12,12 @@ const generated =
   props.i === "0" ? S2.LLM_SIMPLE_GENERATED : S2.LLM_REFINED_GENERATED;
 
 const generateHandler = () => {
+  // Check that prompt is selected
   if (!store.state[S2.LLM_PROMPT.state]) {
-    return window.alert(t("s2.promptGenerate.selectPromptAlert"));
+    return window.alert(t("s2.promptGenerate.selectPrompt"));
   }
+
+  // Generate response with loading delay
   loading.value = true;
   store.state[generated.state] = false;
   setTimeout(() => {
@@ -28,11 +31,12 @@ const generateHandler = () => {
   <!-- Title -->
   <h2>
     {{
-      t("s2.promptGenerate.promptExampleTitle", {
-        id: props.i === "0" ? "A" : "B",
-      })
+      props.i === "0"
+        ? t("s2.promptGenerate.promptExampleA")
+        : t("s2.promptGenerate.promptExampleB")
     }}
   </h2>
+
   <div class="flex gap-4 items-center">
     <!-- Prompt -->
     <textarea
@@ -44,7 +48,7 @@ const generateHandler = () => {
             )
           : ''
       "
-      :placeholder="t('s2.promptGenerate.placeholder')"
+      :placeholder="t('s2.promptGenerate.selectPrompt')"
       rows="2"
       readonly
     ></textarea>
@@ -79,7 +83,7 @@ const generateHandler = () => {
 
     <!-- Task Instruction -->
     <p v-else>
-      <strong>{{ t("common.taskLabel") }} </strong>
+      <strong>{{ t("common.task") }} </strong>
       {{
         props.i === "0"
           ? t("s2.promptGenerate.taskInstructionA")

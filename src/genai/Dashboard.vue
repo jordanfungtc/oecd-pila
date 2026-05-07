@@ -3,6 +3,7 @@ import Agent from "@knowlearning/agents/browser.js";
 import { ref, onMounted, watch } from "vue";
 import { BIconArrowClockwise } from "bootstrap-icons-vue";
 import { useI18n } from "vue-i18n";
+import { store } from "../store";
 import { S1, S2, S3, S4 } from "./states";
 import DbVertical from "../util/DbVertical.vue";
 import DbHorizontal from "../util/DbHorizontal.vue";
@@ -10,9 +11,8 @@ import section1Icon from "/s1/s1-icon.png";
 import section2Icon from "/s2/s2-icon.png";
 import section3Icon from "/s3/s3-icon.png";
 import section4Icon from "/s4/s4-icon.png";
-import { store } from "../store";
 
-store.titleKey = "main.modules.genai.dashboard";
+store.titleKey = "main.genaiDashboard";
 
 const users = ref();
 const contents = ref();
@@ -47,52 +47,58 @@ watch(selectedUser, () => {
   getHandler();
 });
 
+/* SECTION 1 */
+
 const appMatch = {
-  "dashboard.table.appMatch.input": {
-    "dashboard.table.apps.academic": S1.APP_ACADEMIC_IN,
-    "dashboard.table.apps.medical": S1.APP_MEDICAL_IN,
-    "dashboard.table.apps.video": S1.APP_VIDEO_IN,
-    "dashboard.table.apps.sentiment": S1.APP_SENTIMENT_IN,
-    "dashboard.table.apps.fraud": S1.APP_FRAUD_IN,
+  "dashboard.s1.input": {
+    "dashboard.s1.academic": S1.APP_ACADEMIC_IN,
+    "dashboard.s1.medical": S1.APP_MEDICAL_IN,
+    "dashboard.s1.video": S1.APP_VIDEO_IN,
+    "dashboard.s1.sentiment": S1.APP_SENTIMENT_IN,
+    "dashboard.s1.fraud": S1.APP_FRAUD_IN,
   },
-  "dashboard.table.appMatch.output": {
-    "dashboard.table.apps.academic": S1.APP_ACADEMIC_OUT,
-    "dashboard.table.apps.medical": S1.APP_MEDICAL_OUT,
-    "dashboard.table.apps.video": S1.APP_VIDEO_OUT,
-    "dashboard.table.apps.sentiment": S1.APP_SENTIMENT_OUT,
-    "dashboard.table.apps.fraud": S1.APP_FRAUD_OUT,
+  "dashboard.s1.output": {
+    "dashboard.s1.academic": S1.APP_ACADEMIC_OUT,
+    "dashboard.s1.medical": S1.APP_MEDICAL_OUT,
+    "dashboard.s1.video": S1.APP_VIDEO_OUT,
+    "dashboard.s1.sentiment": S1.APP_SENTIMENT_OUT,
+    "dashboard.s1.fraud": S1.APP_FRAUD_OUT,
   },
 };
 
 const appBrainstorm = {
-  "dashboard.table.appBrainstorm.sector": S1.APP_BRAINSTORM_SECTOR,
-  "dashboard.table.appBrainstorm.problem": S1.APP_BRAINSTORM_PROBLEM,
-  "dashboard.table.appBrainstorm.input": S1.APP_BRAINSTORM_INPUT,
-  "dashboard.table.appBrainstorm.output": S1.APP_BRAINSTORM_OUTPUT,
+  "dashboard.s1.sector": S1.APP_BRAINSTORM_SECTOR,
+  "dashboard.s1.problem": S1.APP_BRAINSTORM_PROBLEM,
+  "dashboard.s1.input": S1.APP_BRAINSTORM_INPUT,
+  "dashboard.s1.output": S1.APP_BRAINSTORM_OUTPUT,
 };
+
+/* SECTION 2 */
 
 const llmSingle = {
   "": {
-    "dashboard.table.llmSingle.selectedPrompt": S2.LLM_PROMPT,
-    "dashboard.table.llmSingle.generatedSimple": S2.LLM_SIMPLE_GENERATED,
-    "dashboard.table.llmSingle.generatedRefined": S2.LLM_REFINED_GENERATED,
-    "dashboard.table.llmSingle.technique": S2.LLM_PROMPT_TECHNIQUE,
+    "dashboard.s2.selectedPrompt": S2.LLM_PROMPT,
+    "dashboard.s2.generatedSimple": S2.LLM_SIMPLE_GENERATED,
+    "dashboard.s2.generatedRefined": S2.LLM_REFINED_GENERATED,
+    "dashboard.s2.technique": S2.LLM_PROMPT_TECHNIQUE,
   },
 };
 
 const llmConv = {
   "": {
-    "dashboard.table.llmConv.generated": S2.LLM_CONV_GENERATED,
-    "dashboard.table.llmConv.factCheckIpoa": S2.LLM_FACT_IPOA,
-    "dashboard.table.llmConv.factCheckNasa": S2.LLM_FACT_NASA,
-    "dashboard.table.llmConv.factCheckEureo": S2.LLM_FACT_EUREO,
+    "dashboard.s2.generated": S2.LLM_CONV_GENERATED,
+    "dashboard.s2.factCheckIpoa": S2.LLM_FACT_IPOA,
+    "dashboard.s2.factCheckNasa": S2.LLM_FACT_NASA,
+    "dashboard.s2.factCheckEureo": S2.LLM_FACT_EUREO,
   },
 };
 
 const llmBrainstorm = {
-  "dashboard.table.llmBrainstorm.task": S2.LLM_BRAINSTORM_TASK,
-  "dashboard.table.llmBrainstorm.prompt": S2.LLM_BRAINSTORM_PROMPT,
+  "dashboard.s2.task": S2.LLM_BRAINSTORM_TASK,
+  "dashboard.s2.prompt": S2.LLM_BRAINSTORM_PROMPT,
 };
+
+/* SECTION 3 */
 
 const embs = {
   "dashboard.table.embs.dog": {
@@ -142,6 +148,8 @@ const rag = {
   "dashboard.table.rag.database": S3.RAG_BRAINSTORM_DATABASE,
 };
 
+/* SECTION 4 */
+
 const biasEmb = {
   "": {
     "dashboard.table.biasEmb.type": S4.BIAS_TYPE,
@@ -187,13 +195,16 @@ const caseStudy = {
 <template>
   <div class="max-w-4xl w-full mx-auto">
     <div class="flex gap-2 items-center p-8 rounded-xl mb-8 bg-white shadow-md">
+      <!-- Student Selection -->
       <h4 class="my-0">{{ t("dashboard.studentSelection") }}</h4>
-      <!-- User Selection -->
+
+      <!-- Selection Dropdown -->
       <select v-model="selectedUser" class="w-full select select-bordered">
         <option v-for="(user, index) in users" :key="index" :value="index">
           {{ user.auth.info.name }}
         </option>
       </select>
+
       <!-- Refresh Button -->
       <button @click="getHandler" class="btn btn-neutral">
         <BIconArrowClockwise class="w-5 h-5" />
@@ -201,46 +212,46 @@ const caseStudy = {
       </button>
     </div>
 
-    <!-- Section 1 -->
+    <!-- SECTION 1 -->
     <div class="flex gap-12 p-8 rounded-xl mb-8 bg-white shadow-md">
       <div class="w-1/5">
-        <h2 class="mt-0">{{ t("dashboard.section1.label") }}</h2>
+        <h2 class="mt-0">{{ t("dashboard.s1.label") }}</h2>
         <img :src="section1Icon" />
       </div>
       <div class="w-4/5 flex flex-col">
         <h4 class="mt-0">
           <div class="badge">1.3 - 1.7</div>
-          {{ t("dashboard.section1.identifyingInputsOutputs") }}
+          {{ t("dashboard.s1.identifyingInputsOutputs") }}
         </h4>
         <DbHorizontal :states="states" :questions="appMatch" />
         <h4>
           <div class="badge">1.8 - 1.10</div>
-          {{ t("dashboard.section1.designingAiSystem") }}
+          {{ t("dashboard.s1.designingAiSystem") }}
         </h4>
         <DbVertical :states="states" :questions="appBrainstorm" />
       </div>
     </div>
 
-    <!-- Section 2 -->
+    <!-- SECTION 2 -->
     <div class="flex gap-12 p-8 rounded-xl mb-8 bg-white shadow-md">
       <div class="w-1/5">
-        <h2 class="mt-0">{{ t("dashboard.section2.label") }}</h2>
+        <h2 class="mt-0">{{ t("dashboard.s2.label") }}</h2>
         <img :src="section2Icon" />
       </div>
       <div class="w-4/5 flex flex-col">
         <h4 class="mt-0">
           <div class="badge">2.2 - 2.5</div>
-          {{ t("dashboard.section2.promptEngineering") }}
+          {{ t("dashboard.s2.promptEngineering") }}
         </h4>
         <DbHorizontal :states="states" :questions="llmSingle" />
         <h4>
           <div class="badge">2.6 - 2.7</div>
-          {{ t("dashboard.section2.limitationsOfLlms") }}
+          {{ t("dashboard.s2.limitationsOfLlms") }}
         </h4>
         <DbHorizontal :states="states" :questions="llmConv" />
         <h4>
           <div class="badge">2.9</div>
-          {{ t("dashboard.section2.llmsInEverydayLife") }}
+          {{ t("dashboard.s2.llmsInEverydayLife") }}
         </h4>
         <DbVertical :states="states" :questions="llmBrainstorm" />
       </div>
@@ -249,33 +260,33 @@ const caseStudy = {
     <!-- Section 3 -->
     <div class="flex gap-12 p-8 rounded-xl mb-8 bg-white shadow-md">
       <div class="w-1/5">
-        <h2 class="mt-0">{{ t("dashboard.section3.label") }}</h2>
+        <h2 class="mt-0">{{ t("dashboard.s3.label") }}</h2>
         <img :src="section3Icon" />
       </div>
       <div class="w-4/5 flex flex-col">
         <h4 class="mt-0">
-          <div class="badge">3.2-3.3</div>
-          {{ t("dashboard.section3.creatingWordEmbeddings") }}
+          <div class="badge">3.2 - 3.3</div>
+          {{ t("dashboard.s3.creatingWordEmbeddings") }}
         </h4>
         <DbHorizontal :states="states" :questions="embs" />
         <h4>
           <div class="badge">3.4</div>
-          {{ t("dashboard.section3.similarityScore") }}
+          {{ t("dashboard.s3.similarityScore") }}
         </h4>
         <DbHorizontal :states="states" :questions="sim" />
         <h4>
           <div class="badge">3.5</div>
-          {{ t("dashboard.section3.wordAnalogy") }}
+          {{ t("dashboard.s3.wordAnalogy") }}
         </h4>
         <DbHorizontal :states="states" :questions="analogy" />
         <h4>
           <div class="badge">3.6</div>
-          {{ t("dashboard.section3.wordAnalogyBrainstorming") }}
+          {{ t("dashboard.s3.wordAnalogyBrainstorming") }}
         </h4>
         <DbHorizontal :states="states" :questions="analogyBrainstorm" />
         <h4>
           <div class="badge">3.9 - 3.10</div>
-          {{ t("dashboard.section3.rag") }}
+          {{ t("dashboard.s3.rag") }}
         </h4>
         <DbVertical :states="states" :questions="rag" />
       </div>
@@ -284,42 +295,42 @@ const caseStudy = {
     <!-- Section 4 -->
     <div class="flex gap-12 p-8 rounded-xl mb-8 bg-white shadow-md">
       <div class="w-1/5">
-        <h2 class="mt-0">{{ t("dashboard.section4.label") }}</h2>
+        <h2 class="mt-0">{{ t("dashboard.s4.label") }}</h2>
         <img :src="section4Icon" />
       </div>
       <div class="w-4/5 flex flex-col">
         <h4 class="mt-0">
           <div class="badge">4.2</div>
-          {{ t("dashboard.section4.biasInWordEmbeddings") }}
+          {{ t("dashboard.s4.biasInWordEmbeddings") }}
         </h4>
         <DbHorizontal :states="states" :questions="biasEmb" />
         <h4>
           <div class="badge">4.3</div>
-          {{ t("dashboard.section4.biasInLlmResponses") }}
+          {{ t("dashboard.s4.biasInLlmResponses") }}
         </h4>
         <DbVertical :states="states" :questions="biasLlm" />
         <h4>
           <div class="badge">4.5</div>
-          {{ t("dashboard.section4.identifyingAiRiskLevel") }}
+          {{ t("dashboard.s4.identifyingAiRiskLevel") }}
         </h4>
         <DbHorizontal :states="states" :questions="regs" />
         <h4>
           <div class="badge">4.6 - 4.7</div>
-          {{ t("dashboard.section4.sustainabilityOfAi") }}
+          {{ t("dashboard.s4.sustainabilityOfAi") }}
         </h4>
         <DbVertical :states="states" :questions="sustainability" />
         <h4>
           <div class="badge">4.9 - 4.10</div>
-          {{ t("dashboard.section4.caseStudy") }}
+          {{ t("dashboard.s4.caseStudy") }}
         </h4>
         <DbVertical :states="states" :questions="caseStudy" />
       </div>
     </div>
 
     <!-- Developer Utility -->
-    <div class="collapse collapse-arrow border my-20">
+    <div class="collapse">
       <input type="checkbox" />
-      <div class="collapse-title">Developer Utility</div>
+      <div class="collapse-title"></div>
       <div class="collapse-content">
         <p>Users: {{ users }}</p>
         <p>Contents: {{ contents }}</p>

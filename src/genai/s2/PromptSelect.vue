@@ -10,7 +10,7 @@ const prompts = [
   { key: "photosynthesis", emoji: "🌿" },
   { key: "french", emoji: "🇫🇷" },
   { key: "productivity", emoji: "🚀" },
-] as const;
+];
 </script>
 
 <template>
@@ -34,7 +34,7 @@ const prompts = [
 
       <!-- Task Instruction -->
       <p>
-        <strong>{{ t("common.taskLabel") }} </strong>
+        <strong>{{ t("common.task") }} </strong>
         {{ t("s2.promptSelect.taskInstruction") }}
       </p>
     </div>
@@ -52,8 +52,9 @@ const prompts = [
         >
           <label class="label cursor-pointer">
             <span class="label-text text-lg p-2 flex gap-4">
-              <b>{{ t("s2.promptSelect.exampleN", { n: i + 1 }) }}</b>
-              {{ prompt.emoji }} {{ t(`s2.singleExamples.${prompt.key}.label`) }}
+              <b>{{ t(`s2.promptSelect.example${i + 1}`) }}</b>
+              {{ prompt.emoji }}
+              {{ t(`s2.singleExamples.${prompt.key}.label`) }}
             </span>
             <input
               type="radio"
