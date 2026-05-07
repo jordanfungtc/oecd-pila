@@ -2,9 +2,9 @@ import { createApp } from "vue";
 import { createRouter, createWebHistory } from "vue-router";
 import "./style.css";
 import i18n from "./i18n";
-
 import App from "./App.vue";
 import Home from "./Home.vue";
+import Developer from "./Developer.vue";
 import GenAiPreview from "./genai/Preview.vue";
 import GenAiDashboard from "./genai/Dashboard.vue";
 import GenAiSection1 from "./genai/Section1.vue";
@@ -13,7 +13,8 @@ import GenAiSection3 from "./genai/Section3.vue";
 import GenAiSection4 from "./genai/Section4.vue";
 
 const routes = [
-  { path: "/:catchAll(.*)", component: Home },
+  { path: "/", component: Home },
+  { path: "/developer", component: Developer },
   { path: "/genai/preview", component: GenAiPreview },
   { path: "/genai/dashboard", component: GenAiDashboard },
   { path: "/genai/1", component: GenAiSection1 },

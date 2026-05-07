@@ -89,7 +89,12 @@ const generateHandler = async () => {
               name="radio-10"
               class="radio"
               :checked="store.state[S3.RAG_PROMPT.state] === key"
-              @change="store.state[S3.RAG_PROMPT.state] = key"
+              @change="
+                () => {
+                  store.state[S3.RAG_PROMPT.state] = key;
+                  store.state[S3.RAG_GENERATED.state] = 0;
+                }
+              "
             />
           </label>
         </div>

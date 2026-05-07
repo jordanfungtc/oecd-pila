@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { ref } from "vue";
-import Agent from "@knowlearning/agents/browser.js";
 import { RouterLink } from "vue-router";
 import { useI18n } from "vue-i18n";
 import { store } from "./store";
@@ -46,36 +44,6 @@ const modules = {
   },
 };
 
-const name = ref("");
-const items = ref("");
-const uuid = ref();
-const metadata = ref({});
-const content = ref({});
-
-const create = async () => {
-  // Generate new UUID
-  uuid.value = await Agent.uuid();
-  const metadata = await Agent.metadata(uuid.value);
-  const content = await Agent.state(uuid.value);
-  // Split the section uuids, set sequence type if more than 1
-  const splitItems = items.value.split(",");
-  if (splitItems.length > 1) {
-    // @ts-ignore
-    metadata.active_type = "application/json;type=sequence";
-    // @ts-ignore
-    content.items = splitItems.map((id) => ({ id: id.trim() }));
-  } else {
-    // @ts-ignore
-    content.id = splitItems[0];
-  }
-  // @ts-ignore
-  content.name = name.value;
-};
-
-const check = async () => {
-  content.value = await Agent.state(uuid.value);
-  metadata.value = await Agent.metadata(uuid.value);
-};
 </script>
 
 <template>
@@ -155,54 +123,6 @@ const check = async () => {
             </tr>
           </tbody>
         </table>
-      </div>
-    </div>
-
-    <!-- Developer Utility -->
-    <div class="collapse collapse-arrow border">
-      <input type="checkbox" />
-      <div class="collapse-title">Developer Utility</div>
-      <div class="collapse-content">
-        <div class="flex flex-row gap-8">
-          <div class="w-full">
-            <h3>KL Create</h3>
-            <div class="flex flex-col gap-4">
-              <input
-                v-model="name"
-                class="input input-bordered"
-                placeholder="Name"
-              />
-              <textarea
-                v-model="items"
-                class="textarea textarea-bordered leading-normal"
-                placeholder="Items UUID comma-separated"
-              ></textarea>
-              <div>
-                <button class="btn" @click="create">Create</button>
-              </div>
-            </div>
-            <p>
-              If more than one item is provided, sequence type will be set
-              automatically. Clone the created UUID in PILA Create to activate
-              the sequence.
-            </p>
-          </div>
-          <div class="w-full">
-            <h3>KL Check</h3>
-            <div class="flex flex-col gap-4">
-              <input
-                v-model="uuid"
-                class="input input-bordered"
-                placeholder="UUID"
-              />
-              <div>
-                <button class="btn" @click="check">Check</button>
-              </div>
-            </div>
-            <p>Metadata: {{ JSON.stringify(metadata) }}</p>
-            <p>Content: {{ JSON.stringify(content) }}</p>
-          </div>
-        </div>
       </div>
     </div>
   </div>
