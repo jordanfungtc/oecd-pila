@@ -21,7 +21,8 @@
     "modules": {
       "genai": {
         "name": "Generative AI Module",
-        "assessment": "Generative AI Assessment"
+        "assessment": "Generative AI Assessment",
+        "dashboard": "Generative AI Module Dashboard"
       }
     }
   },
@@ -69,6 +70,104 @@
       "identifyingAiRiskLevel": "Identifying AI Risk Level",
       "sustainabilityOfAi": "Sustainability of AI",
       "caseStudy": "Case Study"
+    },
+    "table": {
+      "apps": {
+        "academic": "Academic",
+        "medical": "Medical",
+        "video": "Video",
+        "sentiment": "Sentiment",
+        "fraud": "Fraud"
+      },
+      "appMatch": {
+        "input": "Input",
+        "output": "Output"
+      },
+      "appBrainstorm": {
+        "sector": "Sector",
+        "problem": "Problem",
+        "input": "Input",
+        "output": "Output"
+      },
+      "llmSingle": {
+        "selectedPrompt": "Selected Prompt",
+        "generatedSimple": "Generated (Simple)",
+        "generatedRefined": "Generated (Refined)",
+        "technique": "Technique"
+      },
+      "llmConv": {
+        "generated": "Generated",
+        "factCheckIpoa": "Fact Check (IPOA)",
+        "factCheckNasa": "Fact Check (NASA)",
+        "factCheckEureo": "Fact Check (EUREO)"
+      },
+      "llmBrainstorm": {
+        "task": "Task",
+        "prompt": "Prompt"
+      },
+      "embs": {
+        "dog": "Dog",
+        "car": "Car",
+        "bark": "Bark",
+        "move": "Move",
+        "mammal": "Mammal",
+        "wheel": "Wheel",
+        "tail": "Tail"
+      },
+      "sim": {
+        "similarWords": "Similar Words",
+        "lowerScore": "Lower Score"
+      },
+      "analogy": {
+        "king": "King",
+        "male": "Male",
+        "female": "Female",
+        "ruler": "Ruler"
+      },
+      "analogyBrainstorm": {
+        "base": "Base",
+        "subtract": "Subtract",
+        "add": "Add",
+        "outputs": "Outputs"
+      },
+      "rag": {
+        "prompt": "Prompt",
+        "generated": "Generated",
+        "task": "Task",
+        "database": "Database"
+      },
+      "biasEmb": {
+        "type": "Type",
+        "attributeWord": "Attribute Word",
+        "target1Similarity": "Target 1 Similarity",
+        "target2Similarity": "Target 2 Similarity"
+      },
+      "biasLlm": {
+        "explanation": "Explanation"
+      },
+      "regs": {
+        "jobRecruiting": "Job Recruiting",
+        "homeworkLlm": "Homework LLM",
+        "fakeNews": "Fake News",
+        "judgeCases": "Judge Cases",
+        "predictivePolicing": "Predictive Policing"
+      },
+      "sustainability": {
+        "longTerm": "Long Term"
+      },
+      "caseStudy": {
+        "case": "Case",
+        "pro1": "Pro 1",
+        "pro2": "Pro 2",
+        "pro3": "Pro 3",
+        "con1": "Con 1",
+        "con2": "Con 2",
+        "con3": "Con 3",
+        "ethical": "Ethical",
+        "technical": "Technical",
+        "cost": "Cost",
+        "explanation": "Explanation"
+      }
     }
   },
   "s1": {
@@ -107,7 +206,6 @@
       }
     },
     "ioTask": {
-      "aiForLabel": "AI for {app}",
       "taskInstruction": "To use AI for this application, can you guess what the inputs to the AI system would be and what the expected outputs are? Select the correct options from the dropdowns below, then read the explanation to learn more.",
       "inputPlaceholder": "Input",
       "outputPlaceholder": "Output",
@@ -131,27 +229,27 @@
       },
       "apps": {
         "academic": {
-          "label": "Academic Performance",
+          "label": "AI for Academic Performance",
           "description": "AI can analyze a student's study habits, past performance, and demographic information to predict their final grade. This helps teachers identify students who may need additional support and enhance their academic performance.",
           "sourceTitle": "UCI ML Repository: Student Performance Dataset"
         },
         "medical": {
-          "label": "Medical Diagnosis",
+          "label": "AI for Medical Diagnosis",
           "description": "AI can analyze medical scan images to detect signs of diseases, such as cancer, fractures, or other abnormalities. This can assist doctors in making more accurate diagnoses and delivering timely treatments to patients.",
           "sourceTitle": "Kaggle: RSNA-MICCAI Brain Tumor Radiogenomic Classification"
         },
         "video": {
-          "label": "Video Recommendation",
+          "label": "AI for Video Recommendation",
           "description": "By analyzing a user's past interactions with videos, AI can recommend new content that the user is likely to enjoy. This is used on platforms like YouTube and Netflix to personalize the user experience and boost engagement.",
           "sourceTitle": "Kaggle: MovieLens 20M Dataset"
         },
         "sentiment": {
-          "label": "Customer Sentiment",
+          "label": "AI for Customer Sentiment",
           "description": "AI can analyze customer reviews to determine whether the sentiment is positive or negative, helping businesses understand customer feedback and make improvements to their products or services.",
           "sourceTitle": "Kaggle: Amazon Fine Food Reviews"
         },
         "fraud": {
-          "label": "Fraud Detection",
+          "label": "AI for Fraud Detection",
           "description": "Financial institutions use AI to analyze patterns in credit card transactions and detect fraudulent activity. By flagging suspicious transactions in real-time, AI helps prevent financial losses for both consumers and businesses.",
           "sourceTitle": "Kaggle: IEEE-CIS Fraud Detection"
         }

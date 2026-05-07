@@ -90,11 +90,7 @@ const outputKeys = [
 
     <!-- App Label -->
     <h3 class="my-0">
-      {{
-        t("s1.ioTask.aiForLabel", {
-          app: t(`s1.ioTask.apps.${apps[props.i].key}.label`),
-        })
-      }}
+      {{ t(`s1.ioTask.apps.${apps[props.i].key}.label`) }}
     </h3>
   </div>
 
