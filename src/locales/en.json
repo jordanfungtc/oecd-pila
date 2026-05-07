@@ -1,6 +1,7 @@
 {
   "main": {
     "homeTitle": "OECD PILA Modules",
+    "developedBy": "Developed by {name}",
     "previewModule": "Preview Module",
     "previewDashboard": "Preview Dashboard",
     "sequences": {
@@ -157,12 +158,6 @@
       },
       "caseStudy": {
         "case": "Case",
-        "pro1": "Pro 1",
-        "pro2": "Pro 2",
-        "pro3": "Pro 3",
-        "con1": "Con 1",
-        "con2": "Con 2",
-        "con3": "Con 3",
         "ethical": "Ethical",
         "technical": "Technical",
         "cost": "Cost",
@@ -903,8 +898,12 @@
       "taskInstruction": "Think about the potential benefits as well as the ethical and environmental risks of using AI in your chosen case study. Identify 3 pros and 3 cons and write them in the fields below.",
       "prosTitle": "Pros",
       "consTitle": "Cons",
-      "proPlaceholderPrefix": "Pro",
-      "conPlaceholderPrefix": "Con"
+      "pro1": "Pro 1",
+      "pro2": "Pro 2",
+      "pro3": "Pro 3",
+      "con1": "Con 1",
+      "con2": "Con 2",
+      "con3": "Con 3"
     },
     "caseWorth": {
       "title": "Case Study: Worthiness",

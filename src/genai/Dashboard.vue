@@ -171,12 +171,12 @@ const sustainability = {
 
 const caseStudy = {
   "dashboard.table.caseStudy.case": S4.CASE_STORY,
-  "dashboard.table.caseStudy.pro1": S4.CASE_PRO_1,
-  "dashboard.table.caseStudy.pro2": S4.CASE_PRO_2,
-  "dashboard.table.caseStudy.pro3": S4.CASE_PRO_3,
-  "dashboard.table.caseStudy.con1": S4.CASE_CON_1,
-  "dashboard.table.caseStudy.con2": S4.CASE_CON_2,
-  "dashboard.table.caseStudy.con3": S4.CASE_CON_3,
+  "s4.caseProsCons.pro1": S4.CASE_PRO_1,
+  "s4.caseProsCons.pro2": S4.CASE_PRO_2,
+  "s4.caseProsCons.pro3": S4.CASE_PRO_3,
+  "s4.caseProsCons.con1": S4.CASE_CON_1,
+  "s4.caseProsCons.con2": S4.CASE_CON_2,
+  "s4.caseProsCons.con3": S4.CASE_CON_3,
   "dashboard.table.caseStudy.ethical": S4.CASE_ETHICAL,
   "dashboard.table.caseStudy.technical": S4.CASE_TECHNICAL,
   "dashboard.table.caseStudy.cost": S4.CASE_COST,

@@ -33,7 +33,7 @@ const { t } = useI18n();
           v-for="(p, i) in [S4.CASE_PRO_1, S4.CASE_PRO_2, S4.CASE_PRO_3]"
           type="text"
           class="input input-bordered w-full"
-          :placeholder="`${t('s4.caseProsCons.proPlaceholderPrefix')} ${i + 1}`"
+          :placeholder="t(`s4.caseProsCons.pro${i + 1}`)"
           v-model="store.state[p.state]"
         />
       </div>
@@ -53,7 +53,7 @@ const { t } = useI18n();
           v-for="(c, i) in [S4.CASE_CON_1, S4.CASE_CON_2, S4.CASE_CON_3]"
           type="text"
           class="input input-bordered w-full"
-          :placeholder="`${t('s4.caseProsCons.conPlaceholderPrefix')} ${i + 1}`"
+          :placeholder="t(`s4.caseProsCons.con${i + 1}`)"
           v-model="store.state[c.state]"
         />
       </div>
