@@ -36,7 +36,7 @@ const analogyHandler = async () => {
   <!-- Paragraphs -->
   <p>{{ t("s3.analogyBrainstorm.paragraph1") }}</p>
   <p>
-    <strong>{{ t("common.task") }}</strong>
+    <strong>{{ t("common.task") }}:</strong>
     {{ t("s3.analogyBrainstorm.taskInstruction") }}
   </p>
 

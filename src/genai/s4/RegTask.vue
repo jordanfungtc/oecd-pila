@@ -41,7 +41,7 @@ const regs = [
 
   <!-- Task Instruction -->
   <p>
-    <strong>{{ t("common.task") }}</strong>
+    <strong>{{ t("common.task") }}:</strong>
     {{ t("s4.regTask.taskInstruction") }}
   </p>
 

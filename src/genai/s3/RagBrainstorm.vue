@@ -12,7 +12,7 @@ const { t } = useI18n();
 
   <!-- Task Instruction -->
   <p>
-    <strong>{{ t("common.task") }} </strong>
+    <strong>{{ t("common.task") }}:</strong>
     {{ t("s3.ragBrainstorm.taskInstruction") }}
   </p>
 

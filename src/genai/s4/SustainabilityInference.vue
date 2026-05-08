@@ -25,7 +25,7 @@ const phone = query / 0.01298;
 
       <!-- Task Instruction -->
       <p>
-        <strong>{{ t("common.task") }}</strong>
+        <strong>{{ t("common.task") }}:</strong>
         {{ t("s4.sustainabilityInference.taskInstruction") }}
       </p>
     </div>

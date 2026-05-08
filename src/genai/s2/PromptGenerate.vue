@@ -83,7 +83,7 @@ const generateHandler = () => {
 
     <!-- Task Instruction -->
     <p v-else>
-      <strong>{{ t("common.task") }} </strong>
+      <strong>{{ t("common.task") }}:</strong>
       {{
         props.i === "0"
           ? t("s2.promptGenerate.taskInstructionSimple")

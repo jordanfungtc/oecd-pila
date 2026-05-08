@@ -30,7 +30,7 @@ const training = [
 
       <!-- Task Instruction -->
       <p>
-        <strong>{{ t("common.task") }}</strong>
+        <strong>{{ t("common.task") }}:</strong>
         {{ t("s4.sustainabilityTraining.taskInstruction") }}
       </p>
     </div>

@@ -20,7 +20,7 @@ const { t } = useI18n();
     <div class="w-2/3 mt-8">
       <!-- Task Instruction -->
       <p>
-        <strong>{{ t("common.task") }} </strong>
+        <strong>{{ t("common.task") }}:</strong>
         {{ t("s2.limitationsCheck.taskInstruction") }}
       </p>
 

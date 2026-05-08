@@ -24,7 +24,7 @@ const { t } = useI18n();
 
       <!-- Optional Task Instruction -->
       <p>
-        <strong>{{ t("s3.similarityCalc.optionalTaskLabel") }}</strong>
+        <strong>{{ t("s3.similarityCalc.optionalTaskLabel") }}:</strong>
         {{ t("s3.similarityCalc.optionalTaskInstruction") }}
       </p>
 

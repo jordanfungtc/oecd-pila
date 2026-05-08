@@ -13,7 +13,7 @@ const database = computed(() => tm("s3.ragExamples.database") as string[]);
 
   <!-- Task Instruction -->
   <p>
-    <strong>{{ t("common.task") }} </strong>
+    <strong>{{ t("common.task") }}:</strong>
     {{ t("s3.ragDatabase.taskInstruction") }}
   </p>
 

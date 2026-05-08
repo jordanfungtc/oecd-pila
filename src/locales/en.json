@@ -25,7 +25,7 @@
     "lowRisk": "Low Risk",
     "highRisk": "High Risk",
     "unacceptableRisk": "Unacceptable Risk",
-    "task": "Task:",
+    "task": "Task",
     "answer": "Answer"
   },
 
@@ -506,7 +506,7 @@
       "title": "Calculating Similarity Score",
       "paragraph1": "Let's take a closer look at the math on the right and calculate the similarity score between 'cat' (0,1,1,0,1) and 'dog' (1,1,1,0,1).",
       "paragraph2": "We obtain that the similarity score between the embeddings of 'cat' and 'dog' is 0.866, which shows that they are quite similar.",
-      "optionalTaskLabel": "Optional Task:",
+      "optionalTaskLabel": "Optional Task",
       "optionalTaskInstruction": "Calculate the similarity score between the embeddings of 'cat' (0,1,1,0,1) and 'car' (0,1,0,1,0).",
       "revealAnswerLabel": "Reveal Answer",
       "steps": {

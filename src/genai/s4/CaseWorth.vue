@@ -19,7 +19,7 @@ const sliders = [
 
       <!-- Task Instruction -->
       <p>
-        <strong>{{ t("common.task") }}</strong>
+        <strong>{{ t("common.task") }}:</strong>
         {{ t("s4.caseWorth.taskInstruction") }}
       </p>
       <p>{{ t("s4.caseWorth.note") }}</p>

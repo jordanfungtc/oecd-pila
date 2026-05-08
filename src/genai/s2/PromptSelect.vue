@@ -34,7 +34,7 @@ const prompts = [
 
       <!-- Task Instruction -->
       <p>
-        <strong>{{ t("common.task") }} </strong>
+        <strong>{{ t("common.task") }}:</strong>
         {{ t("s2.promptSelect.taskInstruction") }}
       </p>
     </div>

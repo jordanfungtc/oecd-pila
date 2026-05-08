@@ -51,7 +51,7 @@ const convHandler = () => {
 
       <!-- Task Instruction -->
       <p>
-        <strong>{{ t("common.task") }} </strong>
+        <strong>{{ t("common.task") }}:</strong>
         {{ t("s2.limitationsConv.taskInstruction") }}
       </p>
     </div>

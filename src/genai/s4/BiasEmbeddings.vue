@@ -77,7 +77,7 @@ const biasHandler = async () => {
 
       <!-- Task Instruction -->
       <p>
-        <strong>{{ t("common.task") }}</strong>
+        <strong>{{ t("common.task") }}:</strong>
         {{ t("s4.biasEmbeddings.taskInstruction") }}
       </p>
     </div>

@@ -14,7 +14,7 @@ const options = computed(() => tm("s2.promptTechniques.options") as string[]);
 
   <!-- Task Instruction -->
   <p>
-    <strong>{{ t("common.task") }} </strong>
+    <strong>{{ t("common.task") }}:</strong>
     {{ t("s2.promptTechniques.taskInstruction") }}
   </p>
 

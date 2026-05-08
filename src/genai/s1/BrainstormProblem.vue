@@ -30,7 +30,7 @@ const sectors = [
 
   <!-- Task Instruction -->
   <p>
-    <strong>{{ t("common.task") }} </strong>
+    <strong>{{ t("common.task") }}:</strong>
     {{ t("s1.brainstormProblem.taskInstruction") }}
   </p>
 

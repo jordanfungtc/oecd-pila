@@ -96,7 +96,7 @@ const outputKeys = [
 
   <!-- Task Instruction -->
   <p>
-    <strong>{{ t("common.task") }} </strong>
+    <strong>{{ t("common.task") }}:</strong>
     {{ t("s1.ioTask.taskInstruction") }}
   </p>
 

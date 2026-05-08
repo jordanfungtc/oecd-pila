@@ -38,7 +38,7 @@ const embs = {
   <!-- Paragraphs -->
   <p>{{ t("s3.embTask.paragraph1") }}</p>
   <p>
-    <strong>{{ t("common.task") }}</strong>
+    <strong>{{ t("common.task") }}:</strong>
     {{ t("s3.embTask.taskInstruction") }}
   </p>
 

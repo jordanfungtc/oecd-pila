@@ -49,7 +49,7 @@ const { t } = useI18n();
     <div class="w-1/2">
       <!-- Task Instruction -->
       <p class="mt-12">
-        <strong>{{ t("common.task") }}</strong>
+        <strong>{{ t("common.task") }}:</strong>
         {{ t("s4.sustainabilityTask.taskInstruction") }}
       </p>
 

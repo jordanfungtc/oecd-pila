@@ -25,7 +25,7 @@ const questions = [
 
       <!-- Task Instruction -->
       <p>
-        <strong>{{ t("common.task") }}</strong>
+        <strong>{{ t("common.task") }}:</strong>
         {{ t("s3.similarityIntro.taskInstruction") }}
       </p>
     </div>
