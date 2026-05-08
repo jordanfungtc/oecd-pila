@@ -4,20 +4,6 @@ import { S2 } from "../states";
 import SelectTf from "../../util/SelectTf.vue";
 
 const { t } = useI18n();
-const facts = [
-  {
-    statKey: "s2.limitationsCheck.facts.0",
-    state: S2.LLM_FACT_IPOA,
-  },
-  {
-    statKey: "s2.limitationsCheck.facts.1",
-    state: S2.LLM_FACT_NASA,
-  },
-  {
-    statKey: "s2.limitationsCheck.facts.2",
-    state: S2.LLM_FACT_EUREO,
-  },
-];
 </script>
 
 <template>
@@ -50,18 +36,22 @@ const facts = [
           </thead>
 
           <tbody>
-            <tr v-for="(fact, index) in facts" :key="index">
+            <tr
+              v-for="(fact, index) in [
+                S2.LLM_FACT_IPOA,
+                S2.LLM_FACT_NASA,
+                S2.LLM_FACT_EUREO,
+              ]"
+              :key="index"
+            >
               <!-- Statistic Text -->
               <td>
-                <i>"{{ t(fact.statKey) }}"</i>
+                <i>"{{ t(`s2.limitationsCheck.facts.${index}`) }}"</i>
               </td>
 
               <!-- Accuracy Selection -->
               <td>
-                <SelectTf
-                  :state="fact.state.state"
-                  :answer="fact.state.answer"
-                />
+                <SelectTf :state="fact.state" :answer="fact.answer" />
               </td>
             </tr>
           </tbody>
