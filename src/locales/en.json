@@ -101,36 +101,28 @@
       "biasInLlmResponses": "Bias in LLM Responses",
       "identifyingAiRiskLevel": "Identifying AI Risk Level",
       "sustainabilityOfAi": "Sustainability of AI",
-      "caseStudy": "Case Study"
-    },
-
-    "table": {
-      "biasEmb": {
-        "type": "Type",
-        "attributeWord": "Attribute Word",
-        "target1Similarity": "Target 1 Similarity",
-        "target2Similarity": "Target 2 Similarity"
-      },
-      "biasLlm": {
-        "explanation": "Explanation"
-      },
-      "regs": {
-        "jobRecruiting": "Job Recruiting",
-        "homeworkLlm": "Homework LLM",
-        "fakeNews": "Fake News",
-        "judgeCases": "Judge Cases",
-        "predictivePolicing": "Predictive Policing"
-      },
-      "sustainability": {
-        "longTerm": "Long Term"
-      },
-      "caseStudy": {
-        "case": "Case",
-        "ethical": "Ethical",
-        "technical": "Technical",
-        "cost": "Cost",
-        "explanation": "Explanation"
-      }
+      "caseStudy": "Case Study",
+      "type": "Type",
+      "attributeWord": "Attribute Word",
+      "target1Similarity": "Target 1 Similarity",
+      "target2Similarity": "Target 2 Similarity",
+      "explanation": "Explanation",
+      "jobRecruiting": "Job Recruiting",
+      "homeworkLlm": "Homework LLM",
+      "fakeNews": "Fake News",
+      "judgeCases": "Judge Cases",
+      "predictivePolicing": "Predictive Policing",
+      "longTerm": "Long Term",
+      "case": "Case",
+      "pro1": "Pro 1",
+      "pro2": "Pro 2",
+      "pro3": "Pro 3",
+      "con1": "Con 1",
+      "con2": "Con 2",
+      "con3": "Con 3",
+      "ethical": "Ethical",
+      "technical": "Technical",
+      "cost": "Cost"
     }
   },
 
@@ -229,7 +221,7 @@
       "examples": {
         "transportation": {
           "title": "Sector: Transportation",
-          "description": "Traffic congestion is increasingly a concern in urban areas. Could AI analyse commuter data and traffic patterns to optimise bus routes and schedules, making travel more efficient?"
+          "description": "Traffic congestion is an increasing concern in urban areas. Could AI analyse commuter data and traffic patterns to optimise bus routes and schedules, making travel more efficient?"
         },
         "environment": {
           "title": "Sector: Environment",
@@ -276,7 +268,7 @@
     "intro": {
       "title": "Generative AI and LLMs",
       "paragraph1": "In the last section, we explored how AI systems analyze data to identify patterns and make predictions, offer recommendations, or solve problems. In this section, we will focus on Generative AI, a type of AI designed not only to identify patterns in data but also generate new content, including text, images, music, and more.",
-      "paragraph2": "A common type of Generative AI are Large Language Models (LLMs). LLMs are machine learning models trained on large amounts of text data to learn the pattern, structure, and nuances of human language. They take text as input (known as a prompt) and generate coherent and contextually relevant text as output. Many popular AI chatbot systems are powered by LLMs, including ChatGPT, Gemini, and LLaMA.",
+      "paragraph2": "A common type of Generative AI is the Large Language Model (LLM). LLMs are machine learning models trained on large amounts of text data to learn the patterns, structure, and nuances of human language. They take text as input (known as a prompt) and generate coherent and contextually relevant text as output. Many popular AI chatbot systems are powered by LLMs, including ChatGPT, Gemini, and LLaMA.",
       "videoLabel": "Google for Developer: What are Large Language Models (LLMs)?"
     },
 
@@ -318,19 +310,16 @@
       "paragraph2": "Prompt engineering involves carefully crafting your prompts to guide the model towards generating more accurate, relevant, and useful responses.",
       "guideLabel": "DAIR.AI: Prompt Engineering Guide",
       "taskInstruction": "Choose one of the prompt examples on the right and proceed to the next step.",
-      "example1": "Example 1",
-      "example2": "Example 2",
-      "example3": "Example 3",
       "successMessage": "Great! You may now proceed to the next step."
     },
 
     "promptGenerate": {
-      "promptExampleA": "Prompt Example A",
-      "promptExampleB": "Prompt Example B",
+      "promptExampleSimple": "Prompt Example: Simple",
+      "promptExampleRefined": "Prompt Example: Refined",
       "selectPrompt": "Select a prompt example",
       "responseTitle": "Response",
-      "taskInstructionA": "For the prompt above, click the button to generate with the LLM simulator and observe the response.",
-      "taskInstructionB": "Similarly, click the button to generate a response using the prompt above and compare the responses to the previous prompt. Can you see the importance of prompt engineering?"
+      "taskInstructionSimple": "For the prompt above, click the button to generate with the LLM simulator and observe the response.",
+      "taskInstructionRefined": "Similarly, click the button to generate a response using the prompt above and compare the responses to the previous prompt. Can you see the importance of prompt engineering?"
     },
 
     "promptTechniques": {
@@ -440,11 +429,11 @@
         "assistant": "<p>Of course! I can help you outline your essay, provide information on key topics related to climate change, or assist with specific sections. What do you need help with?</p>"
       },
       {
-        "user": "Can you help me create an outline of the essay with all the things I should mention?",
+        "user": "Can you help me create an outline of the essay with all the points I should mention?",
         "assistant": "<p>Certainly! Here's an outline for an essay on climate change:</p><ol><li>Introduction</li><li>Causes of Climate Change</li><li>Impacts of Climate Change</li><li>Mitigation Strategies</li><li>Conclusion and call to action</li></ol><p>Feel free to modify this outline to better suit your specific needs or focus areas. If you need more detailed information on any section, let me know!</p>"
       },
       {
-        "user": "That's awesome, can you write the essay for me? It should have around 200 words and written in an authoritative tone.",
+        "user": "That's awesome, can you write the essay for me? It should be around 200 words and written in an authoritative tone.",
         "assistant": "<p>Climate change, driven predominantly by human activities such as deforestation, fossil fuel combustion, and industrial processes, poses a profound threat to our planet.</p><p>The release of greenhouse gases, notably carbon dioxide and methane, is causing global temperatures to rise at an unprecedented rate. This warming has far-reaching consequences, including more frequent and severe weather events, rising sea levels, and disruptions to ecosystems and biodiversity.</p><p>The impacts are already visible: polar ice caps are melting, coral reefs are dying, and extreme weather patterns are becoming the norm. These changes threaten food security, water resources, and human health on a global scale.</p><p>Mitigating climate change requires immediate and decisive action. Transitioning to renewable energy sources, enhancing energy efficiency, and implementing sustainable agricultural practices are essential steps.</p><p>In conclusion, addressing climate change is not optional but imperative. The time for action is now, and collective efforts from governments, businesses, and individuals are crucial to safeguarding our future.</p>"
       },
       {
@@ -462,14 +451,14 @@
     "intro": {
       "title": "Natural Language Processing and RAG",
       "paragraph1": "As we saw in the previous section, Large Language Models (LLMs) are a type of Generative AI models designed to understand and generate human language. However, computers can't understand words the way we see them. Instead, they convert words into numbers using a process called embeddings.",
-      "paragraph2": "We can think of word embeddings as a way to represent words as numbers that carry information about their meanings and relationships to other words. Embeddings can also be used represent the meaning of sentences, entire documents, or even images.",
+      "paragraph2": "We can think of word embeddings as a way to represent words as numbers that carry information about their meanings and relationships to other words. Embeddings can also be used to represent the meaning of sentences, entire documents, or even images.",
       "paragraph3": "These numerical representations are not only used in LLMs to generate text but also has many other fascinating uses which we will explore in this section.",
       "videoLabel": "IBM Technology: What are Word Embeddings?"
     },
 
     "embIntro": {
       "title": "What are Word Embeddings?",
-      "paragraph1": "When you think of the word 'cat', how would you describe it? You may think of it being a mammal, it can move, has a tail, and so on. These are features that can help describe what a cat is. One way of creating word embeddings is by assigning numerical values to a set of features to show how closely related the word are to the features, for example:",
+      "paragraph1": "When you think of the word 'cat', how would you describe it? You may think of it as a mammal that can move, has a tail, and so on. These are features that can help describe what a cat is. One way of creating word embeddings is by assigning numerical values to a set of features to show how closely related the word is to the features, for example:",
       "bullet1": "assign 1 to show that the word 'cat' is associated with the feature (e.g., has a tail)",
       "bullet2": "assign 0 to show that the word 'cat' is not associated with the feature (e.g., has wheels)",
       "paragraph2": "Using the 5 features below, we obtain the word embeddings for 'cat' to be (0,1,1,0,1):",
@@ -526,7 +515,7 @@
           "description": "Multiply each corresponding pair of numbers and add them up"
         },
         "magnitudes": {
-          "title": "Magnitudes of each embeddings",
+          "title": "Magnitude of each embedding",
           "description": "Square each number, add them up, and take square root of the sum"
         },
         "similarity": {
@@ -709,10 +698,11 @@
       "paragraph3": "Identifying and addressing these challenges is crucial to ensuring that AI systems are fair, equitable, and inclusive for all users and that they are developed and used in a sustainable manner. We will explore these topics in more detail in this section.",
       "videoLabel": "UNESCO: Ethics of AI Challenges and Governance"
     },
+
     "biasEmbeddings": {
       "title": "Bias in Word Embeddings",
       "paragraph1": "As you now know, language models are trained with lots of data such as Internet texts and learn to find patterns in them. However, these data are created by humans who harbor many biases and prejudices.",
-      "paragraph2": "For example, if in the data the word \"nurse\" is associated more often with \"she\" and \"architect\" with \"he,\" the embeddings of certain jobs may have higher similarity scores with specific genders. But we know that anyone - both men and women - can do those jobs.",
+      "paragraph2": "For example, if in the data the word 'nurse' is associated more often with 'she' and 'architect' with 'he', the embeddings of certain jobs may have higher similarity scores with specific genders. But we know that anyone - both men and women - can do those jobs.",
       "taskInstruction": "Select a type of bias, enter an attribute word (in English only), and compute the similarity scores.",
       "steps": {
         "chooseBiasType": "Choose a type of bias",
@@ -726,42 +716,47 @@
       },
       "attributePlaceholder": "Attribute word",
       "resultLabel": "More associated with:",
-      "alerts": {
-        "selectBiasType": "Please select a type of bias",
-        "enterAttribute": "Please enter an attribute word"
-      },
       "attributeExamples": {
-        "gender": {
-          "nurse": "nurse",
-          "caring": "caring",
-          "mechanic": "mechanic",
-          "assertive": "assertive",
-          "architect": "architect",
-          "sensitive": "sensitive",
-          "receptionist": "receptionist",
-          "logical": "logical"
-        },
-        "racial": {
-          "janitor": "janitor",
-          "lazy": "lazy",
-          "police": "police",
-          "hardworking": "hardworking",
-          "violent": "violent",
-          "criminal": "criminal",
-          "peaceful": "peaceful",
-          "complacent": "complacent"
-        },
-        "religious": {
-          "terrorist": "terrorist",
-          "charitable": "charitable",
-          "dangerous": "dangerous",
-          "compassionate": "compassionate",
-          "conservative": "conservative",
-          "cult": "cult",
-          "peaceful": "peaceful"
-        }
+        "gender": [
+          "nurse",
+          "caring",
+          "mechanic",
+          "assertive",
+          "architect",
+          "sensitive",
+          "receptionist",
+          "logical"
+        ],
+        "racial": [
+          "janitor",
+          "lazy",
+          "police",
+          "hardworking",
+          "violent",
+          "criminal",
+          "peaceful",
+          "complacent"
+        ],
+        "religious": [
+          "terrorist",
+          "charitable",
+          "dangerous",
+          "compassionate",
+          "conservative",
+          "cult",
+          "peaceful"
+        ]
+      },
+      "targetWords": {
+        "man": "man",
+        "woman": "woman",
+        "black": "black",
+        "white": "white",
+        "muslim": "muslim",
+        "christian": "christian"
       }
     },
+
     "biasLlm": {
       "title": "Bias in LLM Responses",
       "paragraph1": "These biases can also manifest in the responses generated by LLMs, which may reflect and even amplify stereotypes people have.",
@@ -775,6 +770,7 @@
       },
       "taskInstruction": "Explain how the LLM response above is biased."
     },
+
     "regIntro": {
       "title": "Regulation of AI",
       "paragraph1": "As AI technologies continue to advance, there is a growing need for regulation to ensure that the risks posed by AI systems are addressed appropriately. National governments and organizations such as the OECD and the European Union have published documents detailing safe, responsible AI use cases and identifying those with high or unacceptable risks.",
@@ -787,36 +783,34 @@
         "linkLabel": "EU Artificial Intelligence Act Explorer"
       }
     },
+
     "regTask": {
       "title": "Identifying AI Risk Level",
       "taskInstruction": "For each of the AI use cases below, click the link on the left column to read the corresponding EU AI Act recital. Then, select the risk level of the AI use case using the dropdowns.",
-      "recitalLabel": "Recital",
       "regs": {
-        "job": {
-          "desc": "A company uses AI to screen resumes of job applicants and automatically shortlist candidates for job interviews."
-        },
-        "homework": {
-          "desc": "A student uses LLMs for assistance in homework assignments and disclose the use of AI in the submission."
-        },
-        "fake": {
-          "desc": "An organisation uses LLMs to generate fake news articles to manipulate groups of people into taking harmful actions."
-        },
-        "judge": {
-          "desc": "A judge uses LLMs for assistance in researching and interpreting the law and for applying it to the facts of a case."
-        },
-        "police": {
-          "desc": "A law enforcement agency uses AI to analyse the characteristics of citizens to predict future criminal behaviour."
-        }
+        "job": "A company uses AI to screen resumes of job applicants and automatically shortlist candidates for job interviews.",
+        "homework": "A student uses LLMs for assistance with homework assignments and discloses the use of AI in the submission.",
+        "fake": "An organisation uses LLMs to generate fake news articles to manipulate groups of people into taking harmful actions.",
+        "judge": "A judge uses LLMs for assistance in researching and interpreting the law and for applying it to the facts of a case.",
+        "police": "A law enforcement agency uses AI to analyse the characteristics of citizens to predict future criminal behaviour."
       }
     },
+
     "sustainability": {
       "title": "Sustainability of AI",
       "powerConsumption": "Power consumption",
+      "mwh": "MWh",
       "annualElectricityUseOf": "Annual electricity use of",
       "homes": "homes",
-      "mwh": "MWh",
-      "tonnes": "tonnes"
+      "carbonEmission": "Carbon emission",
+      "tonnes": "tonnes",
+      "annualCarbonAbsorptionOf": "Annual carbon absorption of",
+      "trees": "trees",
+      "searchingOnGoogle": "Searching on Google",
+      "chargingMobilePhone": "Charging a mobile phone",
+      "times": "times"
     },
+
     "sustainabilityTraining": {
       "paragraph1": "The environmental impact of LLMs is also a growing concern. Training LLMs involves processing vast amounts of data, which requires significant electricity and computing power.",
       "paragraph2": "This is particularly problematic if the energy is sourced from non-renewable resources, such as fossil fuels.",
@@ -825,41 +819,32 @@
       "phaseDescription": "One-time cost to train the LLM model (Meta LLaMA)",
       "sliderLabel": "LLM Model Size (number of parameters)",
       "parametersTooltip": "Parameters are the internal settings that the model adjusts during training to learn patterns from the data and make accurate predictions.",
-      "modelSizes": {
-        "7b": "7 billion",
-        "13b": "13 billion",
-        "33b": "33 billion",
-        "65b": "65 billion"
-      },
-      "carbonEmission": "Carbon emission",
-      "annualCarbonAbsorptionOf": "Annual carbon absorption of",
-      "trees": "trees",
       "sourceLlama": "Touvron et al. (2023) LLaMA: Open and Efficient Foundation Language Models. (arXiv)",
       "sourceHome": "Assumes 2.7MWh per medium-sized home (Ofgem)",
       "sourceTree": "and 24.62kgCO2 per tree annually (ForTomorrow)"
     },
+
     "sustainabilityInference": {
       "paragraph1": "You now have an understanding of the energy consumption of LLMs during the training phase. But did you know that each time you prompt an LLM to generate a response, it also consumes energy?",
       "taskInstruction": "Use the slider on the right to examine how much energy an LLM consumes when it is being used.",
       "phaseTitle": "Inference Phase",
       "phaseDescription": "Ongoing cost to use the LLM model (OpenAI ChatGPT)",
       "sliderLabel": "Number of LLM queries",
-      "searchingOnGoogle": "Searching on Google",
-      "chargingMobilePhone": "Charging a mobile phone",
-      "times": "times",
-      "sourceDeVries": "De Vries, A. (2023). The growing energy footprint of artificial intelligence.",
+      "sourceDeVries": "De Vries, A. (2023). The growing energy footprint of artificial intelligence. (ScienceDirect)",
       "sourceAssumption": "Assumes ChatGPT 2.9Wh and Google search 0.3Wh per query, iPhone 15 battery 12.98Wh."
     },
+
     "sustainabilityTask": {
       "paragraph1": "As chatbots powered by LLMs are becoming increasingly popular and advanced, we must be aware of their environmental impact to ensure sustainability.",
       "llamaFact": "The largest Meta LLaMA 3 model has 405 billion parameters (arXiv)",
-      "chatgptFact": "ChatGPT serves more than 200 million weekly active users (Reuters, Aug 2024)",
+      "chatgptFact": "ChatGPT serves more than 200 million weekly active users (Reuters)",
       "taskInstruction": "Answer the following question by selecting the correct checkbox.",
       "questionType": "True or false",
       "questionText": "In the long term, the total energy used for running LLMs exceeds the energy consumed during their initial training.",
       "successMessage": "Well done! The cost of inference can add up over time and exceed that of training.",
       "retryMessage": "Not quite."
     },
+
     "caseSelect": {
       "title": "Case Study",
       "taskInstruction": "As you have seen, the use of AI comes with benefits as well as risks. You will now choose and read one of the following case studies, then move on to the next step to evaluate it.",
@@ -882,57 +867,38 @@
         }
       }
     },
+
     "caseProsCons": {
       "title": "Case Study: Pros and Cons",
       "taskInstruction": "Think about the potential benefits as well as the ethical and environmental risks of using AI in your chosen case study. Identify 3 pros and 3 cons and write them in the fields below.",
       "prosTitle": "Pros",
-      "consTitle": "Cons",
-      "pro1": "Pro 1",
-      "pro2": "Pro 2",
-      "pro3": "Pro 3",
-      "con1": "Con 1",
-      "con2": "Con 2",
-      "con3": "Con 3"
+      "consTitle": "Cons"
     },
+
     "caseWorth": {
       "title": "Case Study: Worthiness",
       "taskInstruction": "Based on the pros and cons you identified, decide if you think using AI for this purpose is worth it. Use the sliders to indicate your answer and write a brief explanation in the field below.",
       "note": "Note that in real life, you would also need to think about other factors such as data protection, security, and regulations before making a decision.",
       "explanationTitle": "Explanation",
-      "explanationPlaceholder": "Explanation",
       "sliders": {
         "ethical": {
           "label": "Ethical Risk",
           "tooltip": "Think about the possible ethical problems of using an AI solution for this issue, including privacy concerns, bias and fairness, safety and security, and environmental impact.",
-          "range": {
-            "low": "low",
-            "medium": "medium",
-            "high": "high",
-            "unacceptable": "unacceptable"
-          }
+          "range": ["low", "medium", "high", "unacceptable"]
         },
         "technical": {
           "label": "Technical Feasibility",
           "tooltip": "Think about how realistic it is to build and use the AI, including the complexity of the problem, data availability and quality, scalability, and integration.",
-          "range": {
-            "easy": "easy",
-            "difficult": "difficult",
-            "veryDifficult": "very difficult",
-            "impossible": "impossible"
-          }
+          "range": ["easy", "difficult", "very difficult", "impossible"]
         },
         "cost": {
           "label": "Cost Efficiency",
           "tooltip": "Think about the costs of building and running the AI, including initial development and setup costs, ongoing maintenance and support, training and operational costs, return on investment (ROI), and alternative solutions.",
-          "range": {
-            "lowCost": "low cost",
-            "mediumCost": "medium cost",
-            "highCost": "high cost",
-            "unaffordable": "unaffordable"
-          }
+          "range": ["low cost", "medium cost", "high cost", "unaffordable"]
         }
       }
     },
+
     "ending": {
       "title": "Congratulations",
       "message": "You have completed the Generative AI module."

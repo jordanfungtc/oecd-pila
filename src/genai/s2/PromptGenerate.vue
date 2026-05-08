@@ -32,8 +32,8 @@ const generateHandler = () => {
   <h2>
     {{
       props.i === "0"
-        ? t("s2.promptGenerate.promptExampleA")
-        : t("s2.promptGenerate.promptExampleB")
+        ? t("s2.promptGenerate.promptExampleSimple")
+        : t("s2.promptGenerate.promptExampleRefined")
     }}
   </h2>
 
@@ -86,8 +86,8 @@ const generateHandler = () => {
       <strong>{{ t("common.task") }} </strong>
       {{
         props.i === "0"
-          ? t("s2.promptGenerate.taskInstructionA")
-          : t("s2.promptGenerate.taskInstructionB")
+          ? t("s2.promptGenerate.taskInstructionSimple")
+          : t("s2.promptGenerate.taskInstructionRefined")
       }}
     </p>
   </div>

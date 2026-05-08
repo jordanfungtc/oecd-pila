@@ -14,7 +14,7 @@ const { t } = useI18n();
 
   <!-- Task Instruction -->
   <p>
-    <strong>{{ t("common.taskLabel") }}</strong>
+    <strong>{{ t("common.task") }}</strong>
     {{ t("s4.caseProsCons.taskInstruction") }}
   </p>
 
@@ -30,10 +30,10 @@ const { t } = useI18n();
       <!-- Pros Inputs -->
       <div class="flex flex-col gap-4">
         <input
-          v-for="(p, i) in [S4.CASE_PRO_1, S4.CASE_PRO_2, S4.CASE_PRO_3]"
+          v-for="p in [S4.CASE_PRO_1, S4.CASE_PRO_2, S4.CASE_PRO_3]"
           type="text"
           class="input input-bordered w-full"
-          :placeholder="t(`s4.caseProsCons.pro${i + 1}`)"
+          :placeholder="t('common.answer')"
           v-model="store.state[p.state]"
         />
       </div>
@@ -50,10 +50,10 @@ const { t } = useI18n();
       <!-- Cons Inputs -->
       <div class="flex flex-col gap-4">
         <input
-          v-for="(c, i) in [S4.CASE_CON_1, S4.CASE_CON_2, S4.CASE_CON_3]"
+          v-for="c in [S4.CASE_CON_1, S4.CASE_CON_2, S4.CASE_CON_3]"
           type="text"
           class="input input-bordered w-full"
-          :placeholder="t(`s4.caseProsCons.con${i + 1}`)"
+          :placeholder="t('common.answer')"
           v-model="store.state[c.state]"
         />
       </div>

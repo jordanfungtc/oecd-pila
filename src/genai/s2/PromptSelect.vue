@@ -52,9 +52,8 @@ const prompts = [
         >
           <label class="label cursor-pointer">
             <span class="label-text text-lg p-2 flex gap-4">
-              <b>{{ t(`s2.promptSelect.example${i + 1}`) }}</b>
-              {{ prompt.emoji }}
-              {{ t(`s2.singleExamples.${prompt.key}.label`) }}
+              <div>{{ prompt.emoji }}</div>
+              <div>{{ t(`s2.singleExamples.${prompt.key}.label`) }}</div>
             </span>
             <input
               type="radio"

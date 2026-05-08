@@ -152,43 +152,43 @@ const rag = {
 
 const biasEmb = {
   "": {
-    "dashboard.table.biasEmb.type": S4.BIAS_TYPE,
-    "dashboard.table.biasEmb.attributeWord": S4.BIAS_ATTRIBUTE,
-    "dashboard.table.biasEmb.target1Similarity": S4.BIAS_TARGET1_SIM,
-    "dashboard.table.biasEmb.target2Similarity": S4.BIAS_TARGET2_SIM,
+    "dashboard.s4.type": S4.BIAS_TYPE,
+    "dashboard.s4.attributeWord": S4.BIAS_ATTRIBUTE,
+    "dashboard.s4.target1Similarity": S4.BIAS_TARGET1_SIM,
+    "dashboard.s4.target2Similarity": S4.BIAS_TARGET2_SIM,
   },
 };
 
 const biasLlm = {
-  "dashboard.table.biasLlm.explanation": S4.BIAS_LLM,
+  "dashboard.s4.explanation": S4.BIAS_LLM,
 };
 
 const regs = {
   "": {
-    "dashboard.table.regs.jobRecruiting": S4.REG_RISK_JOB,
-    "dashboard.table.regs.homeworkLlm": S4.REG_RISK_HOMEWORK,
-    "dashboard.table.regs.fakeNews": S4.REG_RISK_FAKE,
-    "dashboard.table.regs.judgeCases": S4.REG_RISK_JUDGE,
-    "dashboard.table.regs.predictivePolicing": S4.REG_RISK_POLICE,
+    "dashboard.s4.jobRecruiting": S4.REG_RISK_JOB,
+    "dashboard.s4.homeworkLlm": S4.REG_RISK_HOMEWORK,
+    "dashboard.s4.fakeNews": S4.REG_RISK_FAKE,
+    "dashboard.s4.judgeCases": S4.REG_RISK_JUDGE,
+    "dashboard.s4.predictivePolicing": S4.REG_RISK_POLICE,
   },
 };
 
 const sustainability = {
-  "dashboard.table.sustainability.longTerm": S4.SUSTAINABILITY_Q,
+  "dashboard.s4.longTerm": S4.SUSTAINABILITY_Q,
 };
 
 const caseStudy = {
-  "dashboard.table.caseStudy.case": S4.CASE_STORY,
-  "s4.caseProsCons.pro1": S4.CASE_PRO_1,
-  "s4.caseProsCons.pro2": S4.CASE_PRO_2,
-  "s4.caseProsCons.pro3": S4.CASE_PRO_3,
-  "s4.caseProsCons.con1": S4.CASE_CON_1,
-  "s4.caseProsCons.con2": S4.CASE_CON_2,
-  "s4.caseProsCons.con3": S4.CASE_CON_3,
-  "dashboard.table.caseStudy.ethical": S4.CASE_ETHICAL,
-  "dashboard.table.caseStudy.technical": S4.CASE_TECHNICAL,
-  "dashboard.table.caseStudy.cost": S4.CASE_COST,
-  "dashboard.table.caseStudy.explanation": S4.CASE_EXPLAIN,
+  "dashboard.s4.case": S4.CASE_STORY,
+  "dashboard.s4.pro1": S4.CASE_PRO_1,
+  "dashboard.s4.pro2": S4.CASE_PRO_2,
+  "dashboard.s4.pro3": S4.CASE_PRO_3,
+  "dashboard.s4.con1": S4.CASE_CON_1,
+  "dashboard.s4.con2": S4.CASE_CON_2,
+  "dashboard.s4.con3": S4.CASE_CON_3,
+  "dashboard.s4.ethical": S4.CASE_ETHICAL,
+  "dashboard.s4.technical": S4.CASE_TECHNICAL,
+  "dashboard.s4.cost": S4.CASE_COST,
+  "dashboard.s4.explanation": S4.CASE_EXPLAIN,
 };
 </script>
 
@@ -292,7 +292,7 @@ const caseStudy = {
       </div>
     </div>
 
-    <!-- Section 4 -->
+    <!-- SECTION 4 -->
     <div class="flex gap-12 p-8 rounded-xl mb-8 bg-white shadow-md">
       <div class="w-1/5">
         <h2 class="mt-0">{{ t("dashboard.s4.label") }}</h2>

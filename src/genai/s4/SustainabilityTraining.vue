@@ -30,7 +30,7 @@ const training = [
 
       <!-- Task Instruction -->
       <p>
-        <strong>{{ t("common.taskLabel") }}</strong>
+        <strong>{{ t("common.task") }}</strong>
         {{ t("s4.sustainabilityTraining.taskInstruction") }}
       </p>
     </div>
@@ -62,10 +62,10 @@ const training = [
         v-model="modelSize"
       />
       <div class="flex w-full justify-between px-2 text-sm mb-8">
-        <span>{{ t("s4.sustainabilityTraining.modelSizes.7b") }}</span>
-        <span>{{ t("s4.sustainabilityTraining.modelSizes.13b") }}</span>
-        <span>{{ t("s4.sustainabilityTraining.modelSizes.33b") }}</span>
-        <span>{{ t("s4.sustainabilityTraining.modelSizes.65b") }}</span>
+        <span>7 B</span>
+        <span>13 B</span>
+        <span>33 B</span>
+        <span>65 B</span>
       </div>
 
       <!-- Statistics -->
@@ -100,7 +100,7 @@ const training = [
           <img :src="carbonIcon" class="w-12 h-auto my-2" />
           <div>
             <p class="my-0">
-              {{ t("s4.sustainabilityTraining.carbonEmission") }}
+              {{ t("s4.sustainability.carbonEmission") }}
             </p>
             <h3 class="my-0">
               {{ training[modelSize].carbon }}
@@ -114,11 +114,11 @@ const training = [
           <img :src="treeIcon" class="w-12 h-auto my-2" />
           <div>
             <p class="my-0">
-              {{ t("s4.sustainabilityTraining.annualCarbonAbsorptionOf") }}
+              {{ t("s4.sustainability.annualCarbonAbsorptionOf") }}
             </p>
             <h3 class="my-0">
               {{ (training[modelSize].carbon / tree).toFixed(0) }}
-              {{ t("s4.sustainabilityTraining.trees") }}
+              {{ t("s4.sustainability.trees") }}
             </h3>
           </div>
         </div>

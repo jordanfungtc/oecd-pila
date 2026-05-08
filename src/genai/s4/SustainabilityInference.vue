@@ -25,7 +25,7 @@ const phone = query / 0.01298;
 
       <!-- Task Instruction -->
       <p>
-        <strong>{{ t("common.taskLabel") }}</strong>
+        <strong>{{ t("common.task") }}</strong>
         {{ t("s4.sustainabilityInference.taskInstruction") }}
       </p>
     </div>
@@ -83,11 +83,11 @@ const phone = query / 0.01298;
           <img :src="googleIcon" class="w-12 h-auto my-2" />
           <div>
             <p class="my-0">
-              {{ t("s4.sustainabilityInference.searchingOnGoogle") }}
+              {{ t("s4.sustainability.searchingOnGoogle") }}
             </p>
             <h3 class="my-0">
               {{ parseFloat((usage * google).toPrecision(2)) }}
-              {{ t("s4.sustainabilityInference.times") }}
+              {{ t("s4.sustainability.times") }}
             </h3>
           </div>
         </div>
@@ -97,11 +97,11 @@ const phone = query / 0.01298;
           <img :src="phoneIcon" class="w-12 h-auto my-2" />
           <div>
             <p class="my-0">
-              {{ t("s4.sustainabilityInference.chargingMobilePhone") }}
+              {{ t("s4.sustainability.chargingMobilePhone") }}
             </p>
             <h3 class="my-0">
               {{ parseFloat((usage * phone).toPrecision(2)) }}
-              {{ t("s4.sustainabilityInference.times") }}
+              {{ t("s4.sustainability.times") }}
             </h3>
           </div>
         </div>
@@ -113,7 +113,7 @@ const phone = query / 0.01298;
           href="https://www.sciencedirect.com/science/article/pii/S2542435123003653"
           target="_blank"
           class="font-normal no-underline"
-          >{{ t("s4.sustainabilityInference.sourceDeVries") }}
+          >{{ t("s4.sustainabilityInference.sourceDeVries") }} {{ " " }}
         </a>
         {{ t("s4.sustainabilityInference.sourceAssumption") }}
       </p>

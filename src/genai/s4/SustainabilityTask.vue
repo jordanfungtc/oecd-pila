@@ -25,7 +25,8 @@ const { t } = useI18n();
             href="https://arxiv.org/abs/2407.21783"
             target="_blank"
             class="font-normal no-underline"
-            >{{ t("s4.sustainabilityTask.llamaFact") }}
+          >
+            {{ t("s4.sustainabilityTask.llamaFact") }}
           </a>
         </span>
       </div>
@@ -48,25 +49,20 @@ const { t } = useI18n();
     <div class="w-1/2">
       <!-- Task Instruction -->
       <p class="mt-12">
-        <strong>{{ t("common.taskLabel") }}</strong>
+        <strong>{{ t("common.task") }}</strong>
         {{ t("s4.sustainabilityTask.taskInstruction") }}
       </p>
 
       <div class="py-3 px-6 border rounded-xl items-center">
         <!-- Question Text -->
         <h4 class="mt-2 mb-4">{{ t("s4.sustainabilityTask.questionType") }}</h4>
-        <p>
-          {{ t("s4.sustainabilityTask.questionText") }}
-        </p>
+        <p>{{ t("s4.sustainabilityTask.questionText") }}</p>
 
         <!-- Answer Selection -->
         <div class="flex gap-2">
           <div
             class="form-control px-2 border rounded-xl w-full"
-            v-for="(option, key) in [
-              t('common.selectTf.trueLabel'),
-              t('common.selectTf.falseLabel'),
-            ]"
+            v-for="(option, key) in [t('common.true'), t('common.false')]"
             :class="{
               'border-neutral': store.state[S4.SUSTAINABILITY_Q.state] === key,
             }"
@@ -96,9 +92,7 @@ const { t } = useI18n();
             class="alert text-sm"
           >
             <span>✅</span>
-            <span>
-              {{ t("s4.sustainabilityTask.successMessage") }}
-            </span>
+            <span>{{ t("s4.sustainabilityTask.successMessage") }}</span>
           </div>
           <div v-else class="alert text-sm">
             <span>❌</span>

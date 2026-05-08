@@ -8,27 +8,27 @@ const { t } = useI18n();
 
 const regs = [
   {
-    descKey: "s4.regTask.regs.job.desc",
+    key: "job",
     recital: "57",
     state: S4.REG_RISK_JOB,
   },
   {
-    descKey: "s4.regTask.regs.homework.desc",
+    key: "homework",
     recital: "133",
     state: S4.REG_RISK_HOMEWORK,
   },
   {
-    descKey: "s4.regTask.regs.fake.desc",
+    key: "fake",
     recital: "29",
     state: S4.REG_RISK_FAKE,
   },
   {
-    descKey: "s4.regTask.regs.judge.desc",
+    key: "judge",
     recital: "61",
     state: S4.REG_RISK_JUDGE,
   },
   {
-    descKey: "s4.regTask.regs.police.desc",
+    key: "police",
     recital: "42",
     state: S4.REG_RISK_POLICE,
   },
@@ -41,7 +41,7 @@ const regs = [
 
   <!-- Task Instruction -->
   <p>
-    <strong>{{ t("common.taskLabel") }}</strong>
+    <strong>{{ t("common.task") }}</strong>
     {{ t("s4.regTask.taskInstruction") }}
   </p>
 
@@ -50,19 +50,18 @@ const regs = [
     <tbody>
       <tr v-for="(reg, reg_i) in regs" :key="reg_i" class="my-0">
         <!-- Recital -->
-        <td class="min-w-32">
+        <td>
           <a
             :href="`https://artificialintelligenceact.eu/recital/${reg.recital}`"
             target="_blank"
-            class="text-primary flex gap-2 items-center no-underline"
+            class="btn btn-sm btn-square"
           >
             <BIconFileEarmarkTextFill />
-            {{ t("s4.regTask.recitalLabel") }} {{ reg.recital }}
           </a>
         </td>
 
         <!-- Description -->
-        <td>{{ t(reg.descKey) }}</td>
+        <td>{{ t(`s4.regTask.regs.${reg.key}`) }}</td>
 
         <!-- Risk Selection -->
         <td>
