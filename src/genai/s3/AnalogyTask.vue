@@ -13,7 +13,7 @@ const { t } = useI18n();
   <!-- Paragraphs -->
   <p>{{ t("s3.analogyTask.paragraph1") }}</p>
   <p>
-    <strong>{{ t("common.taskLabel") }}</strong>
+    <strong>{{ t("common.task") }}</strong>
     {{ t("s3.analogyTask.taskInstruction") }}
   </p>
 

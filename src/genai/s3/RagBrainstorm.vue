@@ -12,7 +12,7 @@ const { t } = useI18n();
 
   <!-- Task Instruction -->
   <p>
-    <strong>{{ t("common.taskLabel") }} </strong>
+    <strong>{{ t("common.task") }} </strong>
     {{ t("s3.ragBrainstorm.taskInstruction") }}
   </p>
 
@@ -23,7 +23,7 @@ const { t } = useI18n();
   <input
     class="input input-lg input-bordered w-full"
     v-model="store.state[S3.RAG_BRAINSTORM_TASK.state]"
-    :placeholder="t('s3.ragBrainstorm.taskPlaceholder')"
+    :placeholder="t('common.answer')"
   />
 
   <!-- Database Instruction -->
@@ -33,6 +33,6 @@ const { t } = useI18n();
   <textarea
     class="textarea textarea-lg textarea-bordered w-full"
     v-model="store.state[S3.RAG_BRAINSTORM_DATABASE.state]"
-    :placeholder="t('s3.ragBrainstorm.databasePlaceholder')"
+    :placeholder="t('common.answer')"
   ></textarea>
 </template>

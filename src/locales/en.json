@@ -1,6 +1,7 @@
 {
   "main": {
     "homeTitle": "OECD PILA Modules",
+    "pilaTitle": "Platform for Innovative Learning Assessments (PILA)",
     "genaiModule": "Generative AI Module",
     "genaiAssessment": "Generative AI Assessment",
     "genaiDashboard": "Generative AI Dashboard",
@@ -69,8 +70,29 @@
       "creatingWordEmbeddings": "Creating Word Embeddings",
       "similarityScore": "Similarity Score",
       "wordAnalogy": "Word Analogy",
-      "wordAnalogyBrainstorming": "Word Analogy Brainstorming",
-      "rag": "Retrieval-Augmented Generation"
+      "wordAnalogyBrainstorm": "Brainstorming Word Analogy",
+      "rag": "Retrieval-Augmented Generation",
+      "dog": "Dog",
+      "car": "Car",
+      "bark": "Bark",
+      "move": "Move",
+      "mammal": "Mammal",
+      "wheel": "Wheel",
+      "tail": "Tail",
+      "similarWords": "Similar Words",
+      "lowerScore": "Lower Score",
+      "king": "King",
+      "male": "Male",
+      "female": "Female",
+      "ruler": "Ruler",
+      "base": "Base",
+      "subtract": "Subtract",
+      "add": "Add",
+      "outputs": "Outputs",
+      "prompt": "Prompt",
+      "generated": "Generated",
+      "task": "Task",
+      "database": "Database"
     },
 
     "s4": {
@@ -83,37 +105,6 @@
     },
 
     "table": {
-      "embs": {
-        "dog": "Dog",
-        "car": "Car",
-        "bark": "Bark",
-        "move": "Move",
-        "mammal": "Mammal",
-        "wheel": "Wheel",
-        "tail": "Tail"
-      },
-      "sim": {
-        "similarWords": "Similar Words",
-        "lowerScore": "Lower Score"
-      },
-      "analogy": {
-        "king": "King",
-        "male": "Male",
-        "female": "Female",
-        "ruler": "Ruler"
-      },
-      "analogyBrainstorm": {
-        "base": "Base",
-        "subtract": "Subtract",
-        "add": "Add",
-        "outputs": "Outputs"
-      },
-      "rag": {
-        "prompt": "Prompt",
-        "generated": "Generated",
-        "task": "Task",
-        "database": "Database"
-      },
       "biasEmb": {
         "type": "Type",
         "attributeWord": "Attribute Word",
@@ -475,12 +466,13 @@
       "paragraph3": "These numerical representations are not only used in LLMs to generate text but also has many other fascinating uses which we will explore in this section.",
       "videoLabel": "IBM Technology: What are Word Embeddings?"
     },
+
     "embIntro": {
       "title": "What are Word Embeddings?",
-      "paragraph1": "When you think of the word \"cat,\" how would you describe it? You may think of it being a mammal, it can move, has a tail, and so on. These are features that can help describe what a cat is. One way of creating word embeddings is by assigning numerical values to a set of features to show how closely related the word are to the features, for example:",
-      "bullet1": "assign 1 to show that the word \"cat\" is associated with the feature (e.g., has a tail)",
-      "bullet2": "assign 0 to show that the word \"cat\" is not associated with the feature (e.g., has wheels)",
-      "paragraph2": "Using the 5 features below, we obtain the word embeddings for \"cat\" to be (0,1,1,0,1):",
+      "paragraph1": "When you think of the word 'cat', how would you describe it? You may think of it being a mammal, it can move, has a tail, and so on. These are features that can help describe what a cat is. One way of creating word embeddings is by assigning numerical values to a set of features to show how closely related the word are to the features, for example:",
+      "bullet1": "assign 1 to show that the word 'cat' is associated with the feature (e.g., has a tail)",
+      "bullet2": "assign 0 to show that the word 'cat' is not associated with the feature (e.g., has wheels)",
+      "paragraph2": "Using the 5 features below, we obtain the word embeddings for 'cat' to be (0,1,1,0,1):",
       "feats": [
         "Can bark",
         "Can move",
@@ -489,16 +481,18 @@
         "Has a tail"
       ]
     },
+
     "embTask": {
       "title": "Creating Word Embeddings",
-      "paragraph1": "Word embeddings help computers understand the meaning of words by looking at their features. For example, \"cat\" and \"dog\" might have similar embeddings because they share features such as \"is a mammal\" and \"has a tail.\" On the other hand, the word \"car\" would have very different embeddings.",
-      "taskInstruction": "Using the same set of features, create the embeddings for the words \"dog\" and \"car\" using the dropdowns below.",
+      "paragraph1": "Word embeddings help computers understand the meaning of words by looking at their features. For example, 'cat' and 'dog' might have similar embeddings because they share features such as 'is a mammal' and 'has a tail.' On the other hand, the word 'car' would have very different embeddings.",
+      "taskInstruction": "Using the same set of features, create the embeddings for the words 'dog' and 'car' using the dropdowns below.",
       "words": {
         "cat": "cat",
         "dog": "dog",
         "car": "car"
       }
     },
+
     "similarityIntro": {
       "title": "Similarity Score",
       "paragraph1": "As humans, we can intuitively understand how similar two words are. But how do computers figure out the similarity between words?",
@@ -508,27 +502,23 @@
       "questions": {
         "q1": {
           "text": "Which of the following pairs of words do you think are more similar in meaning?",
-          "success": "Words that share more features are more similar.",
-          "error": "Think about the features that the words share."
+          "success": "Well done! Words that share more features are more similar.",
+          "error": "Not quite. Think about the features that the words share."
         },
         "q2": {
           "text": "Which of the following pairs of words do you think have a lower cosine similarity score?",
-          "success": "Less similar words have a lower similarity score.",
-          "error": "Refer to the definition of cosine similarity score."
+          "success": "Well done! Less similar words have a lower similarity score.",
+          "error": "Not quite. Refer to the definition of cosine similarity score."
         }
-      },
-      "feedback": {
-        "successPrefix": "Well done!",
-        "errorPrefix": "Not quite."
       }
     },
+
     "similarityCalc": {
       "title": "Calculating Similarity Score",
-      "paragraph1": "Let's take a closer look at the math on the right and calculate the similarity score between \"cat\" (0,1,1,0,1) and \"dog\" (1,1,1,0,1).",
-      "paragraph2": "We obtain that the similarity score between the embeddings of \"cat\" and \"dog\" is 0.866, which shows that they are quite similar.",
+      "paragraph1": "Let's take a closer look at the math on the right and calculate the similarity score between 'cat' (0,1,1,0,1) and 'dog' (1,1,1,0,1).",
+      "paragraph2": "We obtain that the similarity score between the embeddings of 'cat' and 'dog' is 0.866, which shows that they are quite similar.",
       "optionalTaskLabel": "Optional Task:",
-      "optionalTaskTitle": "Optional Task",
-      "optionalTaskInstruction": "Calculate the similarity score between the embeddings of \"cat\" (0,1,1,0,1) and \"car\" (0,1,0,1,0).",
+      "optionalTaskInstruction": "Calculate the similarity score between the embeddings of 'cat' (0,1,1,0,1) and 'car' (0,1,0,1,0).",
       "revealAnswerLabel": "Reveal Answer",
       "steps": {
         "dotProduct": {
@@ -545,18 +535,19 @@
         }
       },
       "optionalTaskConclusion": "As expected, the similarity score between the words 'cat' and 'car' (0.408) is lower than that between 'cat' and 'dog' (0.866), as cars are less similar to cats than dogs are.",
-      "calculatorLinkLabel": "Omni Cosine Similarity Calculator",
-      "closeLabel": "Close"
+      "calculatorLinkLabel": "Omni Cosine Similarity Calculator"
     },
+
     "analogyIntro": {
       "title": "What is a Word Analogy?",
       "paragraph1": "You've now learned that word embeddings represent the meanings of words as numbers and that similarity scores help measure how closely related two words are. But these tools do more than just compare words - they can also help computers understand relationships between words through word analogies.",
-      "paragraph2": "Consider the words \"king\" and \"queen.\" A king is a male ruler, and a queen is a female ruler. Now, think about another pair: \"man\" and \"woman.\" The relationship is similar: one is male, and the other is female. In other words, \"king\" is to \"queen\" as \"man\" is to \"woman,\" or king:queen::man:woman. This is known as a word analogy."
+      "paragraph2": "Consider the words 'king' and 'queen.' A king is a male ruler, and a queen is a female ruler. Now, think about another pair: 'man' and 'woman.' The relationship is similar: one is male, and the other is female. In other words, 'king' is to 'queen' as 'man' is to 'woman,' or king:queen::man:woman. This is known as a word analogy."
     },
+
     "analogyTask": {
       "title": "Word Analogy with Embeddings",
-      "paragraph1": "Since embeddings represent the meaning of words as numbers, we can perform arithmetic operations on them to identify word analogies. By subtracting the embedding of \"woman\" from that of \"queen\", we isolate the meaning of a \"ruler\". Then, by adding the embedding of \"man\" to this result, we get the meaning of a \"male ruler\", or \"king\".",
-      "taskInstruction": "Create the embedding of \"king\" by completing the analogy below using the dropdowns.",
+      "paragraph1": "Since embeddings represent the meaning of words as numbers, we can perform arithmetic operations on them to identify word analogies. By subtracting the embedding of 'woman' from that of 'queen', we isolate the meaning of a 'ruler'. Then, by adding the embedding of 'man' to this result, we get the meaning of a 'male ruler', or 'king'.",
+      "taskInstruction": "Create the embedding of 'king' by completing the analogy below using the dropdowns.",
       "words": {
         "queen": "queen",
         "woman": "woman",
@@ -569,6 +560,7 @@
         "ruler": "ruler"
       }
     },
+
     "analogyBrainstorm": {
       "title": "Brainstorming Word Analogies",
       "paragraph1": "This property of word embeddings is crucial for many natural language processing (NLP) tasks, including for language models like LLMs to understand the relationships between words and generate accurate outputs.",
@@ -587,6 +579,7 @@
       "findLabel": "Find",
       "resultsLabel": "Here are the 5 closest words to the analogy, along with their similarity scores:"
     },
+
     "ragIntro": {
       "title": "Retrieval-Augmented Generation",
       "paragraph1": "In the last section, we learned that LLMs can answer a wide variety of questions. However, when you need an LLM to answer a personal or context-specific question, it might not have the knowledge required because it only knows what's in its general training data.",
@@ -611,6 +604,7 @@
         }
       }
     },
+
     "ragSteps": {
       "title": "RAG for Customer Service Chatbot",
       "paragraph1": "RAG is often used in customer service chatbots to provide accurate and relevant responses to customer queries while maintaining a conversational tone. Here are the steps involved in the RAG process:",
@@ -637,12 +631,14 @@
         }
       }
     },
+
     "ragDatabase": {
       "title": "RAG for Customer Service Chatbot: Database",
       "taskInstruction": "Inspect the RAG database of a customer service chatbot for an online electronics store below. Then, proceed to the next step to select a customer query and generate a response using RAG.",
       "sectionTitle": "Database",
       "tooltip": "Prepare the entries in the database that will be used for the RAG process"
     },
+
     "ragGenerate": {
       "title": "RAG for Customer Service Chatbot: Usage",
       "selectPrompt": "Select a query example",
@@ -665,14 +661,14 @@
         }
       }
     },
+
     "ragBrainstorm": {
       "title": "RAG in Everyday Life",
       "taskInstruction": "Now that you have seen how RAG works, can you think of ways you can use it to assist you in your everyday life? What would the database contain? Write your answers in the fields below.",
       "useInstruction": "I think RAG can be used for:",
-      "taskPlaceholder": "Task",
-      "databaseInstruction": "The database for this RAG system would contain:",
-      "databasePlaceholder": "Database, e.g., websites, documents, books, etc."
+      "databaseInstruction": "The database for this RAG system would contain:"
     },
+
     "ragExamples": {
       "database": [
         "Our online store sells electronic gadgets including smartphones, laptops, home appliances, and accessories.",
@@ -704,6 +700,7 @@
       }
     }
   },
+
   "s4": {
     "intro": {
       "title": "AI Ethics and Sustainability",

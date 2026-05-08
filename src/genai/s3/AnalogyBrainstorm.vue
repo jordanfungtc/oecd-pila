@@ -7,11 +7,13 @@ import { getWordAnalogy } from "../../util/embeddings";
 
 const loading = ref(false);
 const { t, tm } = useI18n();
+
 const examples = computed(
   () => tm("s3.analogyBrainstorm.examples") as string[],
 );
 
 const analogyHandler = async () => {
+  // Use embeddings model to find the analogy
   loading.value = true;
   try {
     delete store.state[S3.ANALOGY_OUT.state];
@@ -34,7 +36,7 @@ const analogyHandler = async () => {
   <!-- Paragraphs -->
   <p>{{ t("s3.analogyBrainstorm.paragraph1") }}</p>
   <p>
-    <strong>{{ t("common.taskLabel") }}</strong>
+    <strong>{{ t("common.task") }}</strong>
     {{ t("s3.analogyBrainstorm.taskInstruction") }}
   </p>
 
@@ -49,7 +51,6 @@ const analogyHandler = async () => {
     </span>
   </div>
 
-  <!-- Analogy Input -->
   <div class="flex flex-row gap-2 items-center my-4">
     <!-- Base Word -->
     <input
@@ -79,10 +80,19 @@ const analogyHandler = async () => {
       v-model="store.state[S3.ANALOGY_ADD.state]"
       @change="store.state[S3.ANALOGY_OUT.state] = []"
     />
-    <b>=</b>
 
     <!-- Find Button -->
-    <button class="btn" @click="analogyHandler" :disabled="loading">
+    <b>=</b>
+    <button
+      class="btn"
+      @click="analogyHandler"
+      :disabled="
+        loading ||
+        !store.state[S3.ANALOGY_BASE.state] ||
+        !store.state[S3.ANALOGY_SUB.state] ||
+        !store.state[S3.ANALOGY_ADD.state]
+      "
+    >
       <span class="loading loading-spinner" v-if="loading"></span>
       <div v-else>{{ t("s3.analogyBrainstorm.findLabel") }}</div>
     </button>

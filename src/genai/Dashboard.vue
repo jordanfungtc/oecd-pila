@@ -101,51 +101,51 @@ const llmBrainstorm = {
 /* SECTION 3 */
 
 const embs = {
-  "dashboard.table.embs.dog": {
-    "dashboard.table.embs.bark": S3.EMB_DOG_BARK,
-    "dashboard.table.embs.move": S3.EMB_DOG_MOVE,
-    "dashboard.table.embs.mammal": S3.EMB_DOG_MAMMAL,
-    "dashboard.table.embs.wheel": S3.EMB_DOG_WHEEL,
-    "dashboard.table.embs.tail": S3.EMB_DOG_TAIL,
+  "dashboard.s3.dog": {
+    "dashboard.s3.bark": S3.EMB_DOG_BARK,
+    "dashboard.s3.move": S3.EMB_DOG_MOVE,
+    "dashboard.s3.mammal": S3.EMB_DOG_MAMMAL,
+    "dashboard.s3.wheel": S3.EMB_DOG_WHEEL,
+    "dashboard.s3.tail": S3.EMB_DOG_TAIL,
   },
-  "dashboard.table.embs.car": {
-    "dashboard.table.embs.bark": S3.EMB_CAR_BARK,
-    "dashboard.table.embs.move": S3.EMB_CAR_MOVE,
-    "dashboard.table.embs.mammal": S3.EMB_CAR_MAMMAL,
-    "dashboard.table.embs.wheel": S3.EMB_CAR_WHEEL,
-    "dashboard.table.embs.tail": S3.EMB_CAR_TAIL,
+  "dashboard.s3.car": {
+    "dashboard.s3.bark": S3.EMB_CAR_BARK,
+    "dashboard.s3.move": S3.EMB_CAR_MOVE,
+    "dashboard.s3.mammal": S3.EMB_CAR_MAMMAL,
+    "dashboard.s3.wheel": S3.EMB_CAR_WHEEL,
+    "dashboard.s3.tail": S3.EMB_CAR_TAIL,
   },
 };
 
 const sim = {
   "": {
-    "dashboard.table.sim.similarWords": S3.SIM_Q1,
-    "dashboard.table.sim.lowerScore": S3.SIM_Q2,
+    "dashboard.s3.similarWords": S3.SIM_Q1,
+    "dashboard.s3.lowerScore": S3.SIM_Q2,
   },
 };
 
 const analogy = {
-  "dashboard.table.analogy.king": {
-    "dashboard.table.analogy.male": S3.EMB_KING_MALE,
-    "dashboard.table.analogy.female": S3.EMB_KING_FEMALE,
-    "dashboard.table.analogy.ruler": S3.EMB_KING_RULER,
+  "dashboard.s3.king": {
+    "dashboard.s3.male": S3.EMB_KING_MALE,
+    "dashboard.s3.female": S3.EMB_KING_FEMALE,
+    "dashboard.s3.ruler": S3.EMB_KING_RULER,
   },
 };
 
 const analogyBrainstorm = {
   "": {
-    "dashboard.table.analogyBrainstorm.base": S3.ANALOGY_BASE,
-    "dashboard.table.analogyBrainstorm.subtract": S3.ANALOGY_SUB,
-    "dashboard.table.analogyBrainstorm.add": S3.ANALOGY_ADD,
-    "dashboard.table.analogyBrainstorm.outputs": S3.ANALOGY_OUT,
+    "dashboard.s3.base": S3.ANALOGY_BASE,
+    "dashboard.s3.subtract": S3.ANALOGY_SUB,
+    "dashboard.s3.add": S3.ANALOGY_ADD,
+    "dashboard.s3.outputs": S3.ANALOGY_OUT,
   },
 };
 
 const rag = {
-  "dashboard.table.rag.prompt": S3.RAG_PROMPT,
-  "dashboard.table.rag.generated": S3.RAG_GENERATED,
-  "dashboard.table.rag.task": S3.RAG_BRAINSTORM_TASK,
-  "dashboard.table.rag.database": S3.RAG_BRAINSTORM_DATABASE,
+  "dashboard.s3.prompt": S3.RAG_PROMPT,
+  "dashboard.s3.generated": S3.RAG_GENERATED,
+  "dashboard.s3.task": S3.RAG_BRAINSTORM_TASK,
+  "dashboard.s3.database": S3.RAG_BRAINSTORM_DATABASE,
 };
 
 /* SECTION 4 */
@@ -257,7 +257,7 @@ const caseStudy = {
       </div>
     </div>
 
-    <!-- Section 3 -->
+    <!-- SECTION 3 -->
     <div class="flex gap-12 p-8 rounded-xl mb-8 bg-white shadow-md">
       <div class="w-1/5">
         <h2 class="mt-0">{{ t("dashboard.s3.label") }}</h2>
@@ -281,7 +281,7 @@ const caseStudy = {
         <DbHorizontal :states="states" :questions="analogy" />
         <h4>
           <div class="badge">3.6</div>
-          {{ t("dashboard.s3.wordAnalogyBrainstorming") }}
+          {{ t("dashboard.s3.wordAnalogyBrainstorm") }}
         </h4>
         <DbHorizontal :states="states" :questions="analogyBrainstorm" />
         <h4>

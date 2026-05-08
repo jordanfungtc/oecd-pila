@@ -8,18 +8,8 @@ const { t, tm } = useI18n();
 const options = computed(() => tm("s3.similarityIntro.options") as string[]);
 
 const questions = [
-  {
-    textKey: "s3.similarityIntro.questions.q1.text",
-    state: S3.SIM_Q1,
-    successKey: "s3.similarityIntro.questions.q1.success",
-    errorKey: "s3.similarityIntro.questions.q1.error",
-  },
-  {
-    textKey: "s3.similarityIntro.questions.q2.text",
-    state: S3.SIM_Q2,
-    successKey: "s3.similarityIntro.questions.q2.success",
-    errorKey: "s3.similarityIntro.questions.q2.error",
-  },
+  { key: "q1", state: S3.SIM_Q1 },
+  { key: "q2", state: S3.SIM_Q2 },
 ];
 </script>
 
@@ -35,7 +25,7 @@ const questions = [
 
       <!-- Task Instruction -->
       <p>
-        <strong>{{ t("common.taskLabel") }}</strong>
+        <strong>{{ t("common.task") }}</strong>
         {{ t("s3.similarityIntro.taskInstruction") }}
       </p>
     </div>
@@ -48,7 +38,14 @@ const questions = [
           :key="i"
         >
           <!-- Question Text -->
-          <h4 class="mt-2 mb-4">{{ i + 1 + ". " + t(question.textKey) }}</h4>
+          <h4 class="mt-2 mb-4">
+            {{
+              i +
+              1 +
+              ". " +
+              t(`s3.similarityIntro.questions.${question.key}.text`)
+            }}
+          </h4>
 
           <!-- Answer Selection -->
           <div class="flex gap-2">
@@ -65,7 +62,7 @@ const questions = [
                   type="radio"
                   class="radio"
                   :checked="store.state[question.state.state] === key"
-                  @change="() => (store.state[question.state.state] = key)"
+                  @change="store.state[question.state.state] = key"
                 />
               </label>
             </div>
@@ -82,15 +79,13 @@ const questions = [
             >
               <span>✅</span>
               <span>
-                {{ t("s3.similarityIntro.feedback.successPrefix") }}
-                {{ t(question.successKey) }}
+                {{ t(`s3.similarityIntro.questions.${question.key}.success`) }}
               </span>
             </div>
             <div v-else class="alert text-sm">
               <span>❌</span>
               <span>
-                {{ t("s3.similarityIntro.feedback.errorPrefix") }}
-                {{ t(question.errorKey) }}
+                {{ t(`s3.similarityIntro.questions.${question.key}.error`) }}
               </span>
             </div>
           </div>

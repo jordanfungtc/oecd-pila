@@ -11,32 +11,12 @@ import {
 const { t } = useI18n();
 
 const steps = [
-  {
-    icon: BIcon1Circle,
-    titleKey: "s3.ragSteps.steps.database.title",
-    descriptionKey: "s3.ragSteps.steps.database.description",
-  },
-  {
-    icon: BIcon2Circle,
-    titleKey: "s3.ragSteps.steps.query.title",
-    descriptionKey: "s3.ragSteps.steps.query.description",
-  },
-  {
-    icon: BIcon3Circle,
-    titleKey: "s3.ragSteps.steps.retrieve.title",
-    descriptionKey: "s3.ragSteps.steps.retrieve.description",
-  },
-  {
-    icon: BIcon4Circle,
-    titleKey: "s3.ragSteps.steps.augment.title",
-    descriptionKey: "s3.ragSteps.steps.augment.description",
-  },
-  {
-    icon: BIcon5Circle,
-    titleKey: "s3.ragSteps.steps.generate.title",
-    descriptionKey: "s3.ragSteps.steps.generate.description",
-  },
-] as const;
+  { icon: BIcon1Circle, key: "database" },
+  { icon: BIcon2Circle, key: "query" },
+  { icon: BIcon3Circle, key: "retrieve" },
+  { icon: BIcon4Circle, key: "augment" },
+  { icon: BIcon5Circle, key: "generate" },
+];
 </script>
 
 <template>
@@ -49,12 +29,12 @@ const steps = [
   <!-- Steps Table -->
   <table class="my-0">
     <tbody>
-      <tr v-for="step in steps" :key="step.titleKey">
+      <tr v-for="step in steps" :key="step.key">
         <td><component :is="step.icon" class="w-5 h-5" /></td>
         <td>
-          <strong>{{ t(step.titleKey) }}</strong>
+          <strong>{{ t(`s3.ragSteps.steps.${step.key}.title`) }}</strong>
         </td>
-        <td>{{ t(step.descriptionKey) }}</td>
+        <td>{{ t(`s3.ragSteps.steps.${step.key}.description`) }}</td>
       </tr>
     </tbody>
   </table>

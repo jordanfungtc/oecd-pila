@@ -60,19 +60,19 @@ const restart = async () => {
       <img src="/oecd-pila-logo.png" class="h-14 my-4" />
 
       <!-- Title -->
-      <div class="text-2xl font-bold my-4">{{ t("main.homeTitle") }}</div>
+      <div class="text-2xl font-bold mt-8 mb-4">{{ t("main.pilaTitle") }}</div>
 
       <!-- Developer -->
       <a
         href="https://jordanfung.com"
         target="_blank"
         rel="noopener noreferrer"
-        class="mt-4 font-normal no-underline hover:underline text-md"
+        class="font-normal no-underline hover:underline text-md text-gray-500"
       >
         {{ t("main.developedBy", { name: "Jordan Fung" }) }}
       </a>
 
-      <!-- Debug Info -->
+      <!-- Debug -->
       <details class="collapse">
         <summary class="collapse-title"></summary>
         <div class="collapse-content text-sm">

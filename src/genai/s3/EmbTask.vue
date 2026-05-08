@@ -9,8 +9,7 @@ const feats = computed(() => tm("s3.embIntro.feats") as string[]);
 
 const embs = {
   dog: {
-    label: "🐶",
-    wordKey: "s3.embTask.words.dog",
+    emoji: "🐶",
     states: [
       S3.EMB_DOG_BARK,
       S3.EMB_DOG_MOVE,
@@ -20,8 +19,7 @@ const embs = {
     ],
   },
   car: {
-    label: "🚗",
-    wordKey: "s3.embTask.words.car",
+    emoji: "🚗",
     states: [
       S3.EMB_CAR_BARK,
       S3.EMB_CAR_MOVE,
@@ -40,7 +38,7 @@ const embs = {
   <!-- Paragraphs -->
   <p>{{ t("s3.embTask.paragraph1") }}</p>
   <p>
-    <strong>{{ t("common.taskLabel") }}</strong>
+    <strong>{{ t("common.task") }}</strong>
     {{ t("s3.embTask.taskInstruction") }}
   </p>
 
@@ -74,8 +72,8 @@ const embs = {
       <tr v-for="(emb, word) in embs" :key="word">
         <td>
           <h3 class="my-0 text-center flex gap-4 items-center">
-            <div class="text-3xl">{{ emb.label }}</div>
-            {{ t(emb.wordKey) }}
+            <div class="text-3xl">{{ emb.emoji }}</div>
+            {{ t(`s3.embTask.words.${word}`) }}
           </h3>
         </td>
         <td v-for="(feat, i) in emb.states" :key="i">

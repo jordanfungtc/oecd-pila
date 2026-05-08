@@ -31,9 +31,12 @@ const examples = {
 };
 
 const generateHandler = async () => {
+  // Check if a prompt is selected
   if (!store.state[S3.RAG_PROMPT.state]) {
     return window.alert(t("s3.ragGenerate.selectPrompt"));
   }
+
+  // Generate each step with loading delay
   generating.value = true;
   store.state[S3.RAG_GENERATED.state] = 0;
   setTimeout(() => (store.state[S3.RAG_GENERATED.state] = 1), 500);

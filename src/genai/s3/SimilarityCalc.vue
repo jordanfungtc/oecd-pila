@@ -37,8 +37,8 @@ const { t } = useI18n();
 
     <div class="w-3/5">
       <div class="flex flex-col gap-4 mt-8">
+        <!-- Dot Product -->
         <div class="pt-3 px-6 border rounded-xl items-center">
-          <!-- Dot Product -->
           <h4 class="mt-0 flex gap-2 items-center">
             <BIcon1Circle class="w-5 h-5" />{{
               t("s3.similarityCalc.steps.dotProduct.title")
@@ -48,14 +48,15 @@ const { t } = useI18n();
             {{ t("s3.similarityCalc.steps.dotProduct.description") }}
           </p>
           <VueLatex
-            class="flex-grow"
+            class="w-full"
             expression="\text{Cat}\cdot\text{Dog}=0\times1+1\times1+1\times1+0\times0+1\times1=3"
             display-mode
             :fontsize="15"
           />
         </div>
+
+        <!-- Magnitudes -->
         <div class="pt-3 px-6 border rounded-xl items-center">
-          <!-- Magnitudes -->
           <h4 class="mt-0 flex gap-2 items-center">
             <BIcon2Circle class="w-5 h-5" />{{
               t("s3.similarityCalc.steps.magnitudes.title")
@@ -64,7 +65,7 @@ const { t } = useI18n();
           <p class="text-sm my-0">
             {{ t("s3.similarityCalc.steps.magnitudes.description") }}
           </p>
-          <div class="flex-grow">
+          <div class="w-full">
             <VueLatex
               expression="\Vert\text{Cat}\Vert=\sqrt{0^2+1^2+1^2+0^2+1^2}=1.732"
               display-mode
@@ -77,8 +78,9 @@ const { t } = useI18n();
             />
           </div>
         </div>
+
+        <!-- Similarity -->
         <div class="pt-3 px-6 border rounded-xl items-center">
-          <!-- Similarity -->
           <h4 class="mt-0 flex gap-2 items-center">
             <BIcon3Circle class="w-5 h-5" />{{
               t("s3.similarityCalc.steps.similarity.title")
@@ -88,7 +90,7 @@ const { t } = useI18n();
             {{ t("s3.similarityCalc.steps.similarity.description") }}
           </p>
           <VueLatex
-            class="flex-grow"
+            class="w-full"
             expression="\text{Similarity}=\frac{\text{Cat}\cdot\text{Dog}}{\Vert\text{Cat}\Vert\cdot\Vert\text{Dog}\Vert}=\frac{3}{1.732\times2}=0.866"
             display-mode
             :fontsize="15"
@@ -101,13 +103,23 @@ const { t } = useI18n();
   <!-- Optional Task Modal -->
   <dialog id="optional_modal" class="modal">
     <div class="modal-box">
-      <h2 class="mt-0">{{ t("s3.similarityCalc.optionalTaskTitle") }}</h2>
+      <!-- Close Button -->
+      <form method="dialog">
+        <button class="btn btn-sm btn-circle absolute right-2 top-2">✕</button>
+      </form>
+
+      <!-- Answer Title -->
+      <h2 class="mt-0">{{ t("common.answer") }}</h2>
+
+      <!-- Task Instruction -->
       <p>{{ t("s3.similarityCalc.optionalTaskInstruction") }}</p>
+
       <!-- Dot Product -->
       <VueLatex
         expression="\text{Cat}\cdot\text{Car}=0\times0+1\times1+1\times0+0\times1+1\times0=1"
         display-mode
       />
+
       <!-- Magnitudes -->
       <div>
         <VueLatex
@@ -119,12 +131,17 @@ const { t } = useI18n();
           display-mode
         />
       </div>
+
       <!-- Task Similarity -->
       <VueLatex
         expression="\text{Similarity}=\frac{\text{Cat}\cdot\text{Car}}{\Vert\text{Cat}\Vert\cdot\Vert\text{Car}\Vert}=\frac{1}{1.732\times1.414}=0.408"
         display-mode
       />
+
+      <!-- Optional Task Conclusion -->
       <p>{{ t("s3.similarityCalc.optionalTaskConclusion") }}</p>
+
+      <!-- Calculator Link -->
       <a
         href="https://www.omnicalculator.com/math/cosine-similarity"
         target="_blank"
@@ -132,11 +149,6 @@ const { t } = useI18n();
       >
         <BIconCalculator /> {{ t("s3.similarityCalc.calculatorLinkLabel") }}
       </a>
-      <div class="modal-action">
-        <form method="dialog">
-          <button class="btn">{{ t("s3.similarityCalc.closeLabel") }}</button>
-        </form>
-      </div>
     </div>
   </dialog>
 </template>
