@@ -6,7 +6,6 @@ import {
   BIconArrowClockwise,
   BIconBoxArrowRight,
   BIconInfo,
-  BIconCodeSlash,
 } from "bootstrap-icons-vue";
 
 const { t } = useI18n();
