@@ -26,7 +26,9 @@
     "highRisk": "ความเสี่ยงสูง",
     "unacceptableRisk": "ความเสี่ยงที่ยอมรับไม่ได้",
     "task": "โจทย์",
-    "answer": "คำตอบ"
+    "answer": "คำตอบ",
+    "input": "ข้อมูลนำเข้า",
+    "output": "ผลลัพธ์"
   },
 
   "dashboard": {
@@ -35,10 +37,6 @@
 
     "s1": {
       "label": "ส่วนที่ 1",
-      "identifyingInputsOutputs": "การระบุข้อมูลนำเข้าและผลลัพธ์",
-      "designingAiSystem": "การออกแบบระบบ AI",
-      "input": "ข้อมูลนำเข้า",
-      "output": "ผลลัพธ์",
       "academic": "ผลการเรียน",
       "medical": "การแพทย์",
       "video": "วิดีโอ",
@@ -50,9 +48,6 @@
 
     "s2": {
       "label": "ส่วนที่ 2",
-      "promptEngineering": "วิศวกรรมพรอมต์",
-      "limitationsOfLlms": "ข้อจำกัดของ LLMs",
-      "llmsInEverydayLife": "LLMs ในชีวิตประจำวัน",
       "selectedPrompt": "พรอมต์ที่เลือก",
       "generatedSimple": "สร้างแล้ว (แบบง่าย)",
       "generatedRefined": "สร้างแล้ว (แบบปรับปรุง)",
@@ -61,17 +56,13 @@
       "factCheckIpoa": "ตรวจสอบข้อเท็จจริง (IPOA)",
       "factCheckNasa": "ตรวจสอบข้อเท็จจริง (NASA)",
       "factCheckEureo": "ตรวจสอบข้อเท็จจริง (EUREO)",
-      "task": "โจทย์",
       "prompt": "พรอมต์"
     },
 
     "s3": {
       "label": "ส่วนที่ 3",
-      "creatingWordEmbeddings": "การสร้าง Word Embeddings",
-      "similarityScore": "คะแนนความคล้ายคลึง",
       "wordAnalogy": "อุปมาอุปไมยของคำ",
       "wordAnalogyBrainstorm": "การระดมความคิดอุปมาอุปไมยของคำ",
-      "rag": "การสร้างผลลัพธ์โดยใช้ข้อมูลที่ค้นคืน",
       "dog": "สุนัข",
       "car": "รถ",
       "bark": "เห่า",
@@ -91,22 +82,15 @@
       "outputs": "ผลลัพธ์",
       "prompt": "พรอมต์",
       "generated": "สร้างแล้ว",
-      "task": "โจทย์",
       "database": "ฐานข้อมูล"
     },
 
     "s4": {
       "label": "ส่วนที่ 4",
-      "biasInWordEmbeddings": "อคติใน Word Embeddings",
-      "biasInLlmResponses": "อคติในคำตอบของ LLM",
-      "identifyingAiRiskLevel": "การระบุระดับความเสี่ยงของ AI",
-      "sustainabilityOfAi": "ความยั่งยืนของ AI",
-      "caseStudy": "กรณีศึกษา",
       "type": "ประเภท",
       "attributeWord": "คำคุณลักษณะ",
       "target1Similarity": "ความคล้ายคลึงของเป้าหมาย 1",
       "target2Similarity": "ความคล้ายคลึงของเป้าหมาย 2",
-      "explanation": "คำอธิบาย",
       "jobRecruiting": "การสรรหางาน",
       "homeworkLlm": "การบ้านด้วย LLM",
       "fakeNews": "ข่าวปลอม",
@@ -165,8 +149,6 @@
 
     "ioTask": {
       "taskInstruction": "ในการใช้ AI กับแอปพลิเคชันนี้ คุณพอจะเดาได้ไหมว่าข้อมูลนำเข้าของระบบ AI ควรเป็นอะไร และผลลัพธ์ที่คาดหวังคืออะไร เลือกคำตอบที่ถูกต้องจากเมนูแบบเลื่อนลงด้านล่าง แล้วอ่านคำอธิบายเพื่อเรียนรู้เพิ่มเติม",
-      "inputPlaceholder": "ข้อมูลนำเข้า",
-      "outputPlaceholder": "ผลลัพธ์",
       "inputs": {
         "sentiment": "รีวิวจากลูกค้าเกี่ยวกับสินค้า",
         "academic": "พฤติกรรมการเรียนและผลการเรียนที่ผ่านมา",

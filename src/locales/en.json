@@ -26,7 +26,9 @@
     "highRisk": "High Risk",
     "unacceptableRisk": "Unacceptable Risk",
     "task": "Task",
-    "answer": "Answer"
+    "answer": "Answer",
+    "input": "Input",
+    "output": "Output"
   },
 
   "dashboard": {
@@ -35,10 +37,6 @@
 
     "s1": {
       "label": "Section 1",
-      "identifyingInputsOutputs": "Identifying Inputs and Outputs",
-      "designingAiSystem": "Designing an AI System",
-      "input": "Input",
-      "output": "Output",
       "academic": "Academic",
       "medical": "Medical",
       "video": "Video",
@@ -50,9 +48,6 @@
 
     "s2": {
       "label": "Section 2",
-      "promptEngineering": "Prompt Engineering",
-      "limitationsOfLlms": "Limitations of LLMs",
-      "llmsInEverydayLife": "LLMs in Everyday Life",
       "selectedPrompt": "Selected Prompt",
       "generatedSimple": "Generated (Simple)",
       "generatedRefined": "Generated (Refined)",
@@ -61,17 +56,13 @@
       "factCheckIpoa": "Fact Check (IPOA)",
       "factCheckNasa": "Fact Check (NASA)",
       "factCheckEureo": "Fact Check (EUREO)",
-      "task": "Task",
       "prompt": "Prompt"
     },
 
     "s3": {
       "label": "Section 3",
-      "creatingWordEmbeddings": "Creating Word Embeddings",
-      "similarityScore": "Similarity Score",
       "wordAnalogy": "Word Analogy",
       "wordAnalogyBrainstorm": "Brainstorming Word Analogy",
-      "rag": "Retrieval-Augmented Generation",
       "dog": "Dog",
       "car": "Car",
       "bark": "Bark",
@@ -91,22 +82,15 @@
       "outputs": "Outputs",
       "prompt": "Prompt",
       "generated": "Generated",
-      "task": "Task",
       "database": "Database"
     },
 
     "s4": {
       "label": "Section 4",
-      "biasInWordEmbeddings": "Bias in Word Embeddings",
-      "biasInLlmResponses": "Bias in LLM Responses",
-      "identifyingAiRiskLevel": "Identifying AI Risk Level",
-      "sustainabilityOfAi": "Sustainability of AI",
-      "caseStudy": "Case Study",
       "type": "Type",
       "attributeWord": "Attribute Word",
       "target1Similarity": "Target 1 Similarity",
       "target2Similarity": "Target 2 Similarity",
-      "explanation": "Explanation",
       "jobRecruiting": "Job Recruiting",
       "homeworkLlm": "Homework LLM",
       "fakeNews": "Fake News",
@@ -165,8 +149,6 @@
 
     "ioTask": {
       "taskInstruction": "To use AI for this application, can you guess what the inputs to the AI system would be and what the expected outputs are? Select the correct options from the dropdowns below, then read the explanation to learn more.",
-      "inputPlaceholder": "Input",
-      "outputPlaceholder": "Output",
       "inputs": {
         "sentiment": "Product customer reviews",
         "academic": "Study habits and past performance",

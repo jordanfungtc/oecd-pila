@@ -50,14 +50,14 @@ watch(selectedUser, () => {
 /* SECTION 1 */
 
 const appMatch = {
-  "dashboard.s1.input": {
+  "common.input": {
     "dashboard.s1.academic": S1.APP_ACADEMIC_IN,
     "dashboard.s1.medical": S1.APP_MEDICAL_IN,
     "dashboard.s1.video": S1.APP_VIDEO_IN,
     "dashboard.s1.sentiment": S1.APP_SENTIMENT_IN,
     "dashboard.s1.fraud": S1.APP_FRAUD_IN,
   },
-  "dashboard.s1.output": {
+  "common.output": {
     "dashboard.s1.academic": S1.APP_ACADEMIC_OUT,
     "dashboard.s1.medical": S1.APP_MEDICAL_OUT,
     "dashboard.s1.video": S1.APP_VIDEO_OUT,
@@ -69,8 +69,8 @@ const appMatch = {
 const appBrainstorm = {
   "dashboard.s1.sector": S1.APP_BRAINSTORM_SECTOR,
   "dashboard.s1.problem": S1.APP_BRAINSTORM_PROBLEM,
-  "dashboard.s1.input": S1.APP_BRAINSTORM_INPUT,
-  "dashboard.s1.output": S1.APP_BRAINSTORM_OUTPUT,
+  "common.input": S1.APP_BRAINSTORM_INPUT,
+  "common.output": S1.APP_BRAINSTORM_OUTPUT,
 };
 
 /* SECTION 2 */
@@ -94,7 +94,7 @@ const llmConv = {
 };
 
 const llmBrainstorm = {
-  "dashboard.s2.task": S2.LLM_BRAINSTORM_TASK,
+  "common.task": S2.LLM_BRAINSTORM_TASK,
   "dashboard.s2.prompt": S2.LLM_BRAINSTORM_PROMPT,
 };
 
@@ -144,7 +144,7 @@ const analogyBrainstorm = {
 const rag = {
   "dashboard.s3.prompt": S3.RAG_PROMPT,
   "dashboard.s3.generated": S3.RAG_GENERATED,
-  "dashboard.s3.task": S3.RAG_BRAINSTORM_TASK,
+  "common.task": S3.RAG_BRAINSTORM_TASK,
   "dashboard.s3.database": S3.RAG_BRAINSTORM_DATABASE,
 };
 
@@ -160,7 +160,7 @@ const biasEmb = {
 };
 
 const biasLlm = {
-  "dashboard.s4.explanation": S4.BIAS_LLM,
+  "s4.caseWorth.explanationTitle": S4.BIAS_LLM,
 };
 
 const regs = {
@@ -221,12 +221,12 @@ const caseStudy = {
       <div class="w-4/5 flex flex-col">
         <h4 class="mt-0">
           <div class="badge">1.3 - 1.7</div>
-          {{ t("dashboard.s1.identifyingInputsOutputs") }}
+          {{ t("s1.ioIntro.title") }}
         </h4>
         <DbHorizontal :states="states" :questions="appMatch" />
         <h4>
           <div class="badge">1.8 - 1.10</div>
-          {{ t("dashboard.s1.designingAiSystem") }}
+          {{ t("s1.brainstormIntro.title") }}
         </h4>
         <DbVertical :states="states" :questions="appBrainstorm" />
       </div>
@@ -241,17 +241,17 @@ const caseStudy = {
       <div class="w-4/5 flex flex-col">
         <h4 class="mt-0">
           <div class="badge">2.2 - 2.5</div>
-          {{ t("dashboard.s2.promptEngineering") }}
+          {{ t("s2.promptSelect.title") }}
         </h4>
         <DbHorizontal :states="states" :questions="llmSingle" />
         <h4>
           <div class="badge">2.6 - 2.7</div>
-          {{ t("dashboard.s2.limitationsOfLlms") }}
+          {{ t("s2.limitationsIntro.title") }}
         </h4>
         <DbHorizontal :states="states" :questions="llmConv" />
         <h4>
           <div class="badge">2.9</div>
-          {{ t("dashboard.s2.llmsInEverydayLife") }}
+          {{ t("s2.brainstorm.title") }}
         </h4>
         <DbVertical :states="states" :questions="llmBrainstorm" />
       </div>
@@ -266,12 +266,12 @@ const caseStudy = {
       <div class="w-4/5 flex flex-col">
         <h4 class="mt-0">
           <div class="badge">3.2 - 3.3</div>
-          {{ t("dashboard.s3.creatingWordEmbeddings") }}
+          {{ t("s3.embTask.title") }}
         </h4>
         <DbHorizontal :states="states" :questions="embs" />
         <h4>
           <div class="badge">3.4</div>
-          {{ t("dashboard.s3.similarityScore") }}
+          {{ t("s3.similarityIntro.title") }}
         </h4>
         <DbHorizontal :states="states" :questions="sim" />
         <h4>
@@ -286,7 +286,7 @@ const caseStudy = {
         <DbHorizontal :states="states" :questions="analogyBrainstorm" />
         <h4>
           <div class="badge">3.9 - 3.10</div>
-          {{ t("dashboard.s3.rag") }}
+          {{ t("s3.ragIntro.title") }}
         </h4>
         <DbVertical :states="states" :questions="rag" />
       </div>
@@ -301,27 +301,27 @@ const caseStudy = {
       <div class="w-4/5 flex flex-col">
         <h4 class="mt-0">
           <div class="badge">4.2</div>
-          {{ t("dashboard.s4.biasInWordEmbeddings") }}
+          {{ t("s4.biasEmbeddings.title") }}
         </h4>
         <DbHorizontal :states="states" :questions="biasEmb" />
         <h4>
           <div class="badge">4.3</div>
-          {{ t("dashboard.s4.biasInLlmResponses") }}
+          {{ t("s4.biasLlm.title") }}
         </h4>
         <DbVertical :states="states" :questions="biasLlm" />
         <h4>
           <div class="badge">4.5</div>
-          {{ t("dashboard.s4.identifyingAiRiskLevel") }}
+          {{ t("s4.regTask.title") }}
         </h4>
         <DbHorizontal :states="states" :questions="regs" />
         <h4>
           <div class="badge">4.6 - 4.7</div>
-          {{ t("dashboard.s4.sustainabilityOfAi") }}
+          {{ t("s4.sustainability.title") }}
         </h4>
         <DbVertical :states="states" :questions="sustainability" />
         <h4>
           <div class="badge">4.9 - 4.10</div>
-          {{ t("dashboard.s4.caseStudy") }}
+          {{ t("s4.caseSelect.title") }}
         </h4>
         <DbVertical :states="states" :questions="caseStudy" />
       </div>

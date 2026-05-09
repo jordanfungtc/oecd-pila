@@ -114,7 +114,7 @@ const outputKeys = [
       }"
     >
       <option :value="undefined" selected disabled>
-        {{ t("s1.ioTask.inputPlaceholder") }}
+        {{ t("common.input") }}
       </option>
       <option v-for="input in inputKeys" :key="input" :value="input">
         {{ t(`s1.ioTask.inputs.${input}`) }}
@@ -137,7 +137,7 @@ const outputKeys = [
       }"
     >
       <option :value="undefined" selected disabled>
-        {{ t("s1.ioTask.outputPlaceholder") }}
+        {{ t("common.output") }}
       </option>
       <option v-for="output in outputKeys" :key="output" :value="output">
         {{ t(`s1.ioTask.outputs.${output}`) }}
