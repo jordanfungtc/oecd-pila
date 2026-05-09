@@ -68,7 +68,7 @@ const generateHandler = () => {
 
   <div class="h-[16rem] overflow-y-auto my-4 border rounded-xl p-4">
     <!-- Response Title -->
-    <h4 class="mt-0">{{ t("s2.promptGenerate.responseTitle") }}</h4>
+    <h4 class="mt-0">{{ t("common.response") }}</h4>
 
     <!-- Response Text -->
     <div

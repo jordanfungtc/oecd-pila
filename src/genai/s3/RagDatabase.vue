@@ -20,7 +20,7 @@ const database = computed(() => tm("s3.ragExamples.database") as string[]);
   <!-- Database Section -->
   <div class="flex gap-2 items-center mb-4">
     <BIcon1Circle class="w-5 h-5" />
-    <h4 class="my-0">{{ t("s3.ragDatabase.sectionTitle") }}</h4>
+    <h4 class="my-0">{{ t("s3.ragSteps.steps.database.title") }}</h4>
     <div class="flex-grow"></div>
     <div class="tooltip tooltip-left" :data-tip="t('s3.ragDatabase.tooltip')">
       <button class="btn btn-xs btn-circle">?</button>

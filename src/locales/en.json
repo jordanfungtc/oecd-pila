@@ -28,7 +28,9 @@
     "task": "Task",
     "answer": "Answer",
     "input": "Input",
-    "output": "Output"
+    "output": "Output",
+    "prompt": "Prompt",
+    "response": "Response"
   },
 
   "dashboard": {
@@ -55,14 +57,12 @@
       "generated": "Generated",
       "factCheckIpoa": "Fact Check (IPOA)",
       "factCheckNasa": "Fact Check (NASA)",
-      "factCheckEureo": "Fact Check (EUREO)",
-      "prompt": "Prompt"
+      "factCheckEureo": "Fact Check (EUREO)"
     },
 
     "s3": {
       "label": "Section 3",
       "wordAnalogy": "Word Analogy",
-      "wordAnalogyBrainstorm": "Brainstorming Word Analogy",
       "dog": "Dog",
       "car": "Car",
       "bark": "Bark",
@@ -80,7 +80,6 @@
       "subtract": "Subtract",
       "add": "Add",
       "outputs": "Outputs",
-      "prompt": "Prompt",
       "generated": "Generated",
       "database": "Database"
     },
@@ -299,7 +298,6 @@
       "promptExampleSimple": "Prompt Example: Simple",
       "promptExampleRefined": "Prompt Example: Refined",
       "selectPrompt": "Select a prompt example",
-      "responseTitle": "Response",
       "taskInstructionSimple": "For the prompt above, click the button to generate with the LLM simulator and observe the response.",
       "taskInstructionRefined": "Similarly, click the button to generate a response using the prompt above and compare the responses to the previous prompt. Can you see the importance of prompt engineering?"
     },
@@ -323,8 +321,6 @@
       "paragraph1": "You can also engage in conversations with LLMs. This is done by providing it with previous prompts and responses so it remembers what you've said. This allows LLMs to generate more relevant responses over time, without the need for you to repeat information.",
       "taskInstruction": "Generate and examine the responses in a conversation where a student asks for help with an essay on climate change.",
       "historyTitle": "Conversation History",
-      "userPromptLabel": "User Prompt",
-      "llmResponseLabel": "LLM Response",
       "conversationEnded": "Conversation ended"
     },
 
@@ -606,30 +602,17 @@
     "ragDatabase": {
       "title": "RAG for Customer Service Chatbot: Database",
       "taskInstruction": "Inspect the RAG database of a customer service chatbot for an online electronics store below. Then, proceed to the next step to select a customer query and generate a response using RAG.",
-      "sectionTitle": "Database",
       "tooltip": "Prepare the entries in the database that will be used for the RAG process"
     },
 
     "ragGenerate": {
       "title": "RAG for Customer Service Chatbot: Usage",
       "selectPrompt": "Select a query example",
-      "sections": {
-        "query": {
-          "title": "Query",
-          "tooltip": "Select a query and start the RAG process using the database"
-        },
-        "retrieve": {
-          "title": "Retrieve",
-          "tooltip": "Similarity scores between the query and every entry in the database"
-        },
-        "augment": {
-          "title": "Augment",
-          "tooltip": "Augmented prompt with the entry that has the highest similarity score"
-        },
-        "generate": {
-          "title": "Generate",
-          "tooltip": "Response from the LLM generated using the augmented prompt"
-        }
+      "tooltips": {
+        "query": "Select a query and start the RAG process using the database",
+        "retrieve": "Similarity scores between the query and every entry in the database",
+        "augment": "Augmented prompt with the entry that has the highest similarity score",
+        "generate": "Response from the LLM generated using the augmented prompt"
       }
     },
 

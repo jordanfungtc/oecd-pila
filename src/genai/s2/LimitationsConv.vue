@@ -68,7 +68,7 @@ const convHandler = () => {
           <!-- User Bubble (unformatted) -->
           <div :id="`conv-user-${i - 1}`" class="chat chat-end">
             <div class="chat-header">
-              {{ t("s2.limitationsConv.userPromptLabel") }}
+              {{ t("common.prompt") }}
             </div>
             <div class="chat-bubble bg-gray-100 text-neutral text-sm py-0">
               <p>{{ t(`s2.convExample.${i - 1}.user`) }}</p>
@@ -78,7 +78,7 @@ const convHandler = () => {
           <!-- LLM Bubble (HTML formatted) -->
           <div class="chat chat-start">
             <div class="chat-header">
-              {{ t("s2.limitationsConv.llmResponseLabel") }}
+              {{ t("common.response") }}
             </div>
             <div
               class="chat-bubble bg-blue-100 text-neutral text-sm py-0"

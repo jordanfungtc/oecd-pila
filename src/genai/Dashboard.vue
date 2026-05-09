@@ -95,7 +95,7 @@ const llmConv = {
 
 const llmBrainstorm = {
   "common.task": S2.LLM_BRAINSTORM_TASK,
-  "dashboard.s2.prompt": S2.LLM_BRAINSTORM_PROMPT,
+  "common.prompt": S2.LLM_BRAINSTORM_PROMPT,
 };
 
 /* SECTION 3 */
@@ -142,7 +142,7 @@ const analogyBrainstorm = {
 };
 
 const rag = {
-  "dashboard.s3.prompt": S3.RAG_PROMPT,
+  "common.prompt": S3.RAG_PROMPT,
   "dashboard.s3.generated": S3.RAG_GENERATED,
   "common.task": S3.RAG_BRAINSTORM_TASK,
   "dashboard.s3.database": S3.RAG_BRAINSTORM_DATABASE,
@@ -188,7 +188,7 @@ const caseStudy = {
   "dashboard.s4.ethical": S4.CASE_ETHICAL,
   "dashboard.s4.technical": S4.CASE_TECHNICAL,
   "dashboard.s4.cost": S4.CASE_COST,
-  "dashboard.s4.explanation": S4.CASE_EXPLAIN,
+  "s4.caseWorth.explanationTitle": S4.CASE_EXPLAIN,
 };
 </script>
 
@@ -281,7 +281,7 @@ const caseStudy = {
         <DbHorizontal :states="states" :questions="analogy" />
         <h4>
           <div class="badge">3.6</div>
-          {{ t("dashboard.s3.wordAnalogyBrainstorm") }}
+          {{ t("s3.analogyBrainstorm.title") }}
         </h4>
         <DbHorizontal :states="states" :questions="analogyBrainstorm" />
         <h4>

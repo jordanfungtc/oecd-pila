@@ -58,11 +58,11 @@ const generateHandler = async () => {
       <!-- Query Section -->
       <div class="flex gap-2 items-center mb-4">
         <BIcon2Circle class="w-5 h-5" />
-        <h4 class="my-0">{{ t("s3.ragGenerate.sections.query.title") }}</h4>
+        <h4 class="my-0">{{ t("s3.ragSteps.steps.query.title") }}</h4>
         <div class="flex-grow"></div>
         <div
           class="tooltip tooltip-left"
-          :data-tip="t('s3.ragGenerate.sections.query.tooltip')"
+          :data-tip="t('s3.ragGenerate.tooltips.query')"
         >
           <button class="btn btn-xs btn-circle">?</button>
         </div>
@@ -137,11 +137,11 @@ const generateHandler = async () => {
       <!-- Retrieve Section -->
       <div class="flex gap-2 items-center my-4">
         <BIcon3Circle class="w-5 h-5" />
-        <h4 class="my-0">{{ t("s3.ragGenerate.sections.retrieve.title") }}</h4>
+        <h4 class="my-0">{{ t("s3.ragSteps.steps.retrieve.title") }}</h4>
         <div class="flex-grow"></div>
         <div
           class="tooltip tooltip-left"
-          :data-tip="t('s3.ragGenerate.sections.retrieve.tooltip')"
+          :data-tip="t('s3.ragGenerate.tooltips.retrieve')"
         >
           <button class="btn btn-xs btn-circle">?</button>
         </div>
@@ -177,11 +177,11 @@ const generateHandler = async () => {
       <!-- Augmented Prompt Section -->
       <div class="flex gap-2 items-center mb-4">
         <BIcon4Circle class="w-5 h-5" />
-        <h4 class="my-0">{{ t("s3.ragGenerate.sections.augment.title") }}</h4>
+        <h4 class="my-0">{{ t("s3.ragSteps.steps.augment.title") }}</h4>
         <div class="flex-grow"></div>
         <div
           class="tooltip tooltip-left"
-          :data-tip="t('s3.ragGenerate.sections.augment.tooltip')"
+          :data-tip="t('s3.ragGenerate.tooltips.augment')"
         >
           <button class="btn btn-xs btn-circle">?</button>
         </div>
@@ -207,11 +207,11 @@ const generateHandler = async () => {
       <!-- Generate Section -->
       <div class="flex gap-2 items-center my-4">
         <BIcon5Circle class="w-5 h-5" />
-        <h4 class="my-0">{{ t("s3.ragGenerate.sections.generate.title") }}</h4>
+        <h4 class="my-0">{{ t("s3.ragSteps.steps.generate.title") }}</h4>
         <div class="flex-grow"></div>
         <div
           class="tooltip tooltip-left"
-          :data-tip="t('s3.ragGenerate.sections.generate.tooltip')"
+          :data-tip="t('s3.ragGenerate.tooltips.generate')"
         >
           <button class="btn btn-xs btn-circle">?</button>
         </div>
