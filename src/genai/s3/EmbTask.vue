@@ -77,7 +77,9 @@ const embs = {
           </h3>
         </td>
         <td v-for="(feat, i) in emb.states" :key="i">
-          <SelectEmb :state="feat.state" :answer="feat.answer" />
+          <div class="flex justify-center">
+            <SelectEmb :state="feat.state" :answer="feat.answer" />
+          </div>
         </td>
       </tr>
     </tbody>

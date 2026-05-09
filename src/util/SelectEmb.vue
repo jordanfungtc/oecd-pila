@@ -6,7 +6,7 @@ const props = defineProps(["state", "answer"]);
 
 <template>
   <select
-    class="select select-bordered w-full min-w-24 bg-white"
+    class="select select-bordered w-24 bg-white"
     v-model="store.state[props.state]"
     v-bind:class="{
       'select-success': store.state[props.state] == parseInt(props.answer),
