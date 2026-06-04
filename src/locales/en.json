@@ -1,872 +1,840 @@
 {
-  "main": {
-    "homeTitle": "OECD PILA Modules",
-    "pilaTitle": "Platform for Innovative Learning Assessments (PILA)",
-    "genaiModule": "Generative AI Module",
-    "genaiAssessment": "Generative AI Assessment",
-    "genaiDashboard": "Generative AI Dashboard",
-    "previewModule": "Preview Module",
-    "previewDashboard": "Preview Dashboard",
-    "sequences": "Sequences",
-    "sequencesDescription": "You can add the following sequence UUIDs directly to PILA, or clone them in PILA Create to edit them.",
-    "sections": "Sections",
-    "sectionsDescription": "You can also use these individual section UUIDs as part of your own PILA sequences.",
-    "name": "Name",
-    "url": "URL",
-    "uuid": "UUID",
-    "actions": "Actions",
-    "open": "Open",
-    "developedBy": "Developed by {name}"
-  },
-
-  "common": {
-    "true": "True",
-    "false": "False",
-    "lowRisk": "Low Risk",
-    "highRisk": "High Risk",
-    "unacceptableRisk": "Unacceptable Risk",
-    "task": "Task",
-    "answer": "Answer",
-    "input": "Input",
-    "output": "Output",
-    "prompt": "Prompt",
-    "response": "Response"
-  },
-
-  "dashboard": {
-    "studentSelection": "Student Selection",
-    "refresh": "Refresh",
-
+    "main": {
+        "homeTitle": "OECD PILA Modules",
+        "pilaTitle": "Platform for Innovative Learning Assessments (PILA)",
+        "genaiModule": "Generative AI Module",
+        "genaiAssessment": "Generative AI Assessment",
+        "genaiDashboard": "Generative AI Dashboard",
+        "previewModule": "Preview Module",
+        "previewDashboard": "Preview Dashboard",
+        "sequences": "Sequences",
+        "sequencesDescription": "You can add the following sequence UUIDs directly to PILA, or clone them in PILA Create to edit them.",
+        "sections": "Sections",
+        "sectionsDescription": "You can also use these individual section UUIDs as part of your own PILA sequences.",
+        "name": "Name",
+        "url": "URL",
+        "uuid": "UUID",
+        "actions": "Actions",
+        "open": "Open",
+        "developedBy": "Developed by {name}"
+    },
+    "common": {
+        "true": "True",
+        "false": "False",
+        "lowRisk": "Low Risk",
+        "highRisk": "High Risk",
+        "unacceptableRisk": "Unacceptable Risk",
+        "task": "Task",
+        "answer": "Answer",
+        "input": "Input",
+        "output": "Output",
+        "prompt": "Prompt",
+        "response": "Response"
+    },
+    "dashboard": {
+        "studentSelection": "Student Selection",
+        "refresh": "Refresh",
+        "s1": {
+            "label": "Section 1",
+            "academic": "Academic",
+            "medical": "Medical",
+            "video": "Video",
+            "sentiment": "Sentiment",
+            "fraud": "Fraud",
+            "sector": "Sector",
+            "problem": "Problem"
+        },
+        "s2": {
+            "label": "Section 2",
+            "selectedPrompt": "Selected Prompt",
+            "generatedSimple": "Generated (Simple)",
+            "generatedRefined": "Generated (Refined)",
+            "technique": "Technique",
+            "generated": "Generated",
+            "factCheckIpoa": "Fact Check (IPOA)",
+            "factCheckNasa": "Fact Check (NASA)",
+            "factCheckEureo": "Fact Check (EUREO)"
+        },
+        "s3": {
+            "label": "Section 3",
+            "wordAnalogy": "Word Analogy",
+            "dog": "Dog",
+            "car": "Car",
+            "bark": "Bark",
+            "move": "Move",
+            "mammal": "Mammal",
+            "wheel": "Wheel",
+            "tail": "Tail",
+            "similarWords": "Similar Words",
+            "lowerScore": "Lower Score",
+            "king": "King",
+            "male": "Male",
+            "female": "Female",
+            "ruler": "Ruler",
+            "base": "Base",
+            "subtract": "Subtract",
+            "add": "Add",
+            "outputs": "Outputs",
+            "generated": "Generated",
+            "database": "Database"
+        },
+        "s4": {
+            "label": "Section 4",
+            "type": "Type",
+            "attributeWord": "Attribute Word",
+            "target1Similarity": "Target 1 Similarity",
+            "target2Similarity": "Target 2 Similarity",
+            "jobRecruiting": "Job Recruiting",
+            "homeworkLlm": "Homework LLM",
+            "fakeNews": "Fake News",
+            "judgeCases": "Judge Cases",
+            "predictivePolicing": "Predictive Policing",
+            "longTerm": "Long Term",
+            "case": "Case",
+            "pro1": "Pro 1",
+            "pro2": "Pro 2",
+            "pro3": "Pro 3",
+            "con1": "Con 1",
+            "con2": "Con 2",
+            "con3": "Con 3",
+            "ethical": "Ethical",
+            "technical": "Technical",
+            "cost": "Cost"
+        }
+    },
     "s1": {
-      "label": "Section 1",
-      "academic": "Academic",
-      "medical": "Medical",
-      "video": "Video",
-      "sentiment": "Sentiment",
-      "fraud": "Fraud",
-      "sector": "Sector",
-      "problem": "Problem"
+        "intro": {
+            "title": "AI and Machine Learning",
+            "paragraph1": "Have you ever wondered how your favourite music streaming service suggests songs you might like, how your smartphone recognizes your voice commands, how your email filters out spam, or how a navigation app finds the best route? These tasks are all accomplished with the help of Artificial Intelligence (AI).",
+            "paragraph2": "AI is a branch of computer science that enables machines to perform tasks that typically require human intelligence. One important part of AI is called machine learning (ML). With ML, computers learn from lots of data and find patterns to make predictions or decisions without the need for humans to explicitly program them. AI and ML are used in a wide range of applications and have radically transformed many industries.",
+            "videoLabel": "TED Talk: How AI Could Empower Any Business by Andrew Ng"
+        },
+        "ioIntro": {
+            "title": "Identifying Inputs and Outputs",
+            "paragraph1": "To effectively use AI and ML, we need to clearly identify the inputs and outputs. Inputs are the information that we need to provide to the AI system, while outputs are the results it gives back to the user.",
+            "paragraph2": "Without inputs, the AI system would have no data to process, making it incapable of making predictions, offering recommendations, or performing tasks. Similarly, having appropriate outputs is crucial to ensuring that the AI system is useful and relevant to the user.",
+            "paragraph3": "Some examples of AI systems and their inputs and outputs are provided on the right.",
+            "examples": {
+                "music": {
+                    "title": "Music Streaming Services",
+                    "inputs": "Inputs: Listening history, preferences",
+                    "outputs": "Outputs: Song recommendations"
+                },
+                "assistant": {
+                    "title": "Smartphone Assistants",
+                    "inputs": "Inputs: Voice commands, user data",
+                    "outputs": "Outputs: Actions to perform"
+                },
+                "spam": {
+                    "title": "Spam Filters",
+                    "inputs": "Inputs: Email sender, text content",
+                    "outputs": "Outputs: Spam or not spam"
+                },
+                "navigation": {
+                    "title": "Navigation Systems",
+                    "inputs": "Inputs: Current location, destination, map",
+                    "outputs": "Outputs: Best route to take"
+                }
+            }
+        },
+        "ioTask": {
+            "taskInstruction": "To use AI for this application, can you guess what the inputs to the AI system would be and what the expected outputs are? Select the correct options from the dropdowns below, then read the explanation to learn more.",
+            "inputs": {
+                "sentiment": "Product customer reviews",
+                "academic": "Study habits and past performance",
+                "decoy1": "Historical weather data",
+                "medical": "Medical scan images",
+                "fraud": "Credit card transactions",
+                "video": "Past likes on videos",
+                "decoy2": "Financial news content"
+            },
+            "outputs": {
+                "fraud": "Fraudulent activity",
+                "sentiment": "Positive or negative sentiment",
+                "video": "Recommended videos to watch",
+                "decoy2": "Stock price predictions",
+                "medical": "Diagnosed medical condition",
+                "decoy1": "Probability of rain",
+                "academic": "Student's final grade"
+            },
+            "apps": {
+                "academic": {
+                    "label": "AI for Academic Performance",
+                    "description": "AI can analyze a student's study habits, past performance, and demographic information to predict their final grade. This helps teachers identify students who may need additional support and enhance their academic performance.",
+                    "sourceTitle": "UCI ML Repository: Student Performance Dataset"
+                },
+                "medical": {
+                    "label": "AI for Medical Diagnosis",
+                    "description": "AI can analyze medical scan images to detect signs of diseases, such as cancer, fractures, or other abnormalities. This can assist doctors in making more accurate diagnoses and delivering timely treatments to patients.",
+                    "sourceTitle": "Kaggle: RSNA-MICCAI Brain Tumor Radiogenomic Classification"
+                },
+                "video": {
+                    "label": "AI for Video Recommendation",
+                    "description": "By analyzing a user's past interactions with videos, AI can recommend new content that the user is likely to enjoy. This is used on platforms like YouTube and Netflix to personalize the user experience and boost engagement.",
+                    "sourceTitle": "Kaggle: MovieLens 20M Dataset"
+                },
+                "sentiment": {
+                    "label": "AI for Customer Sentiment",
+                    "description": "AI can analyze customer reviews to determine whether the sentiment is positive or negative, helping businesses understand customer feedback and make improvements to their products or services.",
+                    "sourceTitle": "Kaggle: Amazon Fine Food Reviews"
+                },
+                "fraud": {
+                    "label": "AI for Fraud Detection",
+                    "description": "Financial institutions use AI to analyze patterns in credit card transactions and detect fraudulent activity. By flagging suspicious transactions in real-time, AI helps prevent financial losses for both consumers and businesses.",
+                    "sourceTitle": "Kaggle: IEEE-CIS Fraud Detection"
+                }
+            }
+        },
+        "brainstormIntro": {
+            "title": "Designing an AI System",
+            "paragraph1": "As we saw in each of the examples, there is an identified problem that needs to be solved. We then design an AI system to take relevant input data, analyze it, and predict an output. Finally, the output can be used to solve the problem.",
+            "paragraph2": "Now it is your turn to design an AI system. You must first identify a problem that you want to solve in a specific sector. Some examples are provided on the right.",
+            "examples": {
+                "transportation": {
+                    "title": "Sector: Transportation",
+                    "description": "Traffic congestion is an increasing concern in urban areas. Could AI analyse commuter data and traffic patterns to optimise bus routes and schedules, making travel more efficient?"
+                },
+                "environment": {
+                    "title": "Sector: Environment",
+                    "description": "Energy wastage and pollution are major environmental issues. Could AI use data on resource consumption to identify areas for improvement and reduce waste?"
+                },
+                "healthcare": {
+                    "title": "Sector: Healthcare",
+                    "description": "Managing disease outbreaks is crucial for public health. Could AI use data from hospitals to support the healthcare system in identifying and responding to potential outbreaks?"
+                }
+            }
+        },
+        "brainstormProblem": {
+            "title": "Designing an AI System: Problem",
+            "taskInstruction": "Select one of the sectors using the checkboxes below. Then, identify a specific problem within the chosen sector that you would like to solve using AI. Write a brief description of the problem in the field below.",
+            "sectors": {
+                "healthcare": "Healthcare",
+                "finance": "Finance",
+                "education": "Education",
+                "transportation": "Transportation",
+                "retail": "Retail",
+                "sports": "Sports",
+                "agriculture": "Agriculture",
+                "manufacturing": "Manufacturing",
+                "arts": "Arts & Culture",
+                "government": "Government",
+                "environment": "Environment",
+                "legal": "Legal",
+                "entertainment": "Entertainment",
+                "telecom": "Telecom",
+                "hospitality": "Hospitality"
+            }
+        },
+        "brainstormSolution": {
+            "title": "Designing an AI System: Solution",
+            "taskInstruction": "Now that you have identified a problem, it is time to design an AI system that can solve it. What would be the inputs to the AI system and what would be the expected outputs? Write your answers in the fields below.",
+            "inputInstruction": "The input to the AI system should be:",
+            "outputInstruction": "The output from the AI system should be:"
+        }
     },
-
     "s2": {
-      "label": "Section 2",
-      "selectedPrompt": "Selected Prompt",
-      "generatedSimple": "Generated (Simple)",
-      "generatedRefined": "Generated (Refined)",
-      "technique": "Technique",
-      "generated": "Generated",
-      "factCheckIpoa": "Fact Check (IPOA)",
-      "factCheckNasa": "Fact Check (NASA)",
-      "factCheckEureo": "Fact Check (EUREO)"
+        "intro": {
+            "title": "Generative AI and LLMs",
+            "paragraph1": "In the last section, we explored how AI systems analyze data to identify patterns and make predictions, offer recommendations, or solve problems. In this section, we will focus on Generative AI, a type of AI designed not only to identify patterns in data but also generate new content, including text, images, music, and more.",
+            "paragraph2": "A common type of Generative AI is the Large Language Model (LLM). LLMs are machine learning models trained on large amounts of text data to learn the patterns, structure, and nuances of human language. They take text as input (known as a prompt) and generate coherent and contextually relevant text as output. Many popular AI chatbot systems are powered by LLMs, including ChatGPT, Gemini, and LLaMA.",
+            "videoLabel": "Google for Developer: What are Large Language Models (LLMs)?"
+        },
+        "promptIntro": {
+            "title": "Writing Prompts",
+            "paragraph1": "The prompt is the input that you provide to the LLM, which can be in the form of questions or instructions. The LLM will then generate a response to the prompt based on the data that it has been trained on.",
+            "paragraph2": "LLMs can be used on a wide range of tasks, including question answering, content creation, programming, and more. Some examples of prompts for different tasks are provided on the right.",
+            "examples": {
+                "qa": {
+                    "title": "Question Answering",
+                    "items": [
+                        "Who invented the first light bulb?",
+                        "Explain the concept of gravity.",
+                        "How can I improve my writing skills?"
+                    ]
+                },
+                "content": {
+                    "title": "Content Creation",
+                    "items": [
+                        "Write an essay outline about climate change.",
+                        "Compose a poem about the beauty of autumn.",
+                        "Draft an email to offer refund to a customer."
+                    ]
+                },
+                "programming": {
+                    "title": "Programming",
+                    "items": [
+                        "Write a Python function to calculate the factorial.",
+                        "Debug the following code: priint(\"Hello, World!\").",
+                        "Create a website to showcase my projects."
+                    ]
+                }
+            }
+        },
+        "promptSelect": {
+            "title": "Prompt Engineering",
+            "paragraph1": "When interacting with LLMs, the way you phrase your prompts is crucial for obtaining the best responses. This is where prompt engineering comes into play.",
+            "paragraph2": "Prompt engineering involves carefully crafting your prompts to guide the model towards generating more accurate, relevant, and useful responses.",
+            "guideLabel": "DAIR.AI: Prompt Engineering Guide",
+            "taskInstruction": "Choose one of the prompt examples on the right and proceed to the next step.",
+            "successMessage": "Great! You may now proceed to the next step."
+        },
+        "promptGenerate": {
+            "promptExampleSimple": "Prompt Example: Simple",
+            "promptExampleRefined": "Prompt Example: Refined",
+            "selectPrompt": "Select a prompt example",
+            "taskInstructionSimple": "For the prompt above, click the button to generate with the LLM simulator and observe the response.",
+            "taskInstructionRefined": "Similarly, click the button to generate a response using the prompt above and compare the responses to the previous prompt. Can you see the importance of prompt engineering?"
+        },
+        "promptTechniques": {
+            "title": "Prompt Engineering Techniques",
+            "taskInstruction": "When writing prompts for LLMs, which of the following techniques do you think you should consider?",
+            "options": [
+                "Start simple and iteratively refine your prompt based on the response",
+                "Be clear and concise in your instructions and avoid ambiguity",
+                "Provide sufficient context and background information",
+                "Specify the desired length, format and tone of the response",
+                "All of the above"
+            ],
+            "successMessage": "Well done! Considering all the prompt engineering techniques can help you craft effective prompts for LLMs.",
+            "retryMessage": "That's true, but there are other techniques that you should also consider. Can you identify them?"
+        },
+        "limitationsConv": {
+            "title": "Conversational AI",
+            "paragraph1": "You can also engage in conversations with LLMs. This is done by providing it with previous prompts and responses so it remembers what you've said. This allows LLMs to generate more relevant responses over time, without the need for you to repeat information.",
+            "taskInstruction": "Generate and examine the responses in a conversation where a student asks for help with an essay on climate change.",
+            "historyTitle": "Conversation History",
+            "conversationEnded": "Conversation ended"
+        },
+        "limitationsCheck": {
+            "title": "Fact Checking",
+            "paragraph1": "LLMs create responses by predicting the next word based on their training data - they are not truly intelligent. As such, LLMs can sometimes produce responses that seem accurate at first glance but are not entirely reliable.",
+            "paragraph2": "In fact, in the conversation you just had with the LLM, some of the statistics included in the generated essay were inaccurate. Can you identify which ones?",
+            "taskInstruction": "Using a search engine, verify the accuracy of the following statistics included in the response and select the correct option from the dropdowns.",
+            "statisticsHeader": "Statistics",
+            "accuracyHeader": "Accuracy",
+            "facts": [
+                "90% increase in the frequency of severe weather events over the last decade, as reported by the Intergovernmental Panel on Oceans and the Atmosphere (IPOA).",
+                "Polar ice caps are melting at a rate of 13% per decade, as highlighted by NASA.",
+                "Transitioning to renewable energy sources could reduce global greenhouse gas emissions by 150% by 2070, according to the European Renewable Energy Office (EUREO)."
+            ]
+        },
+        "limitationsIntro": {
+            "title": "Limitations of LLMs",
+            "paragraph1": "As you have seen, LLMs have limitations that can affect the quality and reliability of their responses.",
+            "paragraph2": "Therefore, it is essential to approach LLM responses with caution and always verify information independently using search engines such as Google. You should also check the credibility of the author and ensure that the data is up-to-date.",
+            "limitations": {
+                "dataCutoff": {
+                    "title": "Data Cut-off",
+                    "description": "LLMs can only generate responses based on their training data. If an LLM was trained on data up to 2023, it will not be able to answer questions about events in 2024."
+                },
+                "hallucinations": {
+                    "title": "Hallucinations",
+                    "description": "LLMs can only predict the most likely response based on the given prompt and may sometimes generate plausible-sounding but incorrect responses known as \"hallucinations\"."
+                },
+                "intellectualProperty": {
+                    "title": "Intellectual Property",
+                    "description": "As LLMs are trained on text data from different sources, they may inadvertently generate text that resembles existing work created by others, raising ethical concerns around IP rights."
+                }
+            }
+        },
+        "brainstorm": {
+            "title": "LLMs in Everyday Life",
+            "taskInstruction": "Now that you have seen how LLMs work and some of their known limitations, can you think of ways you can use them to assist you in your everyday life? What prompts would you use? Write your answers in the fields below.",
+            "useInstruction": "I think LLMs can be used for:",
+            "promptInstruction": "The prompt I would use is:"
+        },
+        "singleExamples": {
+            "photosynthesis": {
+                "label": "Photosynthesis",
+                "prompt": [
+                    "What is photosynthesis?",
+                    "Explain the process of photosynthesis in plants in a way that a 5-year-old can understand. The response should have 150 words and written in a friendly and fun tone."
+                ],
+                "response": [
+                    "<p>Photosynthesis is the process by which green plants, algae, and some bacteria convert light energy, usually from the sun, into chemical energy in the form of glucose. This process occurs mainly in the chloroplasts of plant cells, using chlorophyll to capture light energy. The general equation for photosynthesis can be summarized as:<\/p><p>6 CO₂ + 6 H₂O + light energy → C₆H₁₂O₆ + 6 O₂<\/p><p>This means that carbon dioxide and water, using light energy, are transformed into glucose and oxygen.<\/p>",
+                    "<p>Sure! 🌞 Photosynthesis is like a magic recipe that plants use to make their food! First, they need three special things: sunshine, air, and water. 🌱☀️💧 <\/p><p>When the sun shines, plants open tiny little doors on their leaves to take in air, which has something called carbon dioxide. They also drink up water from the soil through their roots. Then, with the help of the sunlight, the plants mix the water and air together in their leaves. It's like a fun science experiment! 🎉 <\/p><p>When they mix everything, they make their own food, which helps them grow big and strong. And guess what? They also make oxygen, which is the fresh air we breathe! So, plants are super important because they help us and make our world beautiful. 🌍💚 Isn't that amazing?<\/p>"
+                ]
+            },
+            "french": {
+                "label": "French Revolution",
+                "prompt": [
+                    "Tell me about the French Revolution.",
+                    "Provide a detailed overview of the French Revolution, including its causes, key events, and outcomes. The response should be in bulleted lists and maintain a neutral tone."
+                ],
+                "response": [
+                    "<p>The French Revolution (1789-1799) was a period of radical social and political change in France that led to the end of absolute monarchy, the rise of democracy, and the establishment of the French Republic. Key events included the Storming of the Bastille, the Declaration of the Rights of Man and of the Citizen, and the Reign of Terror. The revolution inspired movements worldwide and significantly influenced modern political ideologies.<\/p>",
+                    "<h3>Overview of the French Revolution<\/h3><h4>Causes<\/h4><ul><li><strong>Social Inequality<\/strong>: France&#39;s society was divided into three estates: the clergy (First Estate), the nobility (Second Estate), and the common people (Third Estate). The Third Estate bore the tax burden and had little political power.<\/li><li><strong>Economic Hardship<\/strong>: Financial crises due to debt from wars (e.g., American Revolution), poor harvests, and extravagant spending by the monarchy led to widespread discontent.<\/li><li><strong>Enlightenment Ideas<\/strong>: Philosophers like Voltaire, Rousseau, and Montesquieu promoted ideas of liberty, equality, and fraternity, challenging traditional authority.<\/li><li><strong>Weak Leadership<\/strong>: King Louis XVI's indecisiveness and inability to address financial issues contributed to the crisis.<\/li><\/ul><h4>Key Events<\/h4><ul><li><strong>Estates-General (May 1789)<\/strong>: Convened to address the financial crisis; the Third Estate broke away to form the National Assembly.<\/li><li><strong>Tennis Court Oath (June 1789)<\/strong>: Members of the National Assembly pledged not to disband until a new constitution was established.<\/li><li><strong>Storming of the Bastille (July 14, 1789)<\/strong>: A symbolic act of revolution, it marked the uprising against the monarchy.<\/li><li><strong>Declaration of the Rights of Man and of the Citizen (August 1789)<\/strong>: A foundational document asserting individual rights and the principles of liberty and equality.<\/li><li><strong>Reign of Terror (1793-1794)<\/strong>: Led by Robespierre and the Committee of Public Safety, this period was marked by mass executions of perceived enemies of the revolution.<\/li><li><strong>Fall of Robespierre (July 1794)<\/strong>: His execution ended the Reign of Terror and led to the Thermidorian Reaction.<\/li><\/ul><h4>Outcomes<\/h4><ul><li><strong>End of Monarchy<\/strong>: The revolution led to the abolition of the monarchy and the establishment of the First French Republic.<\/li><li><strong>Rise of Napoleon Bonaparte<\/strong>: The instability following the revolution paved the way for Napoleon's rise to power, eventually leading to the Napoleonic Wars.<\/li><li><strong>Social Changes<\/strong>: The revolution promoted secularism, the spread of nationalism, and changes in class structure.<\/li><li><strong>Influence on Other Revolutions<\/strong>: The French Revolution inspired uprisings and movements for democracy and rights across Europe and the Americas.<\/li><\/ul>"
+                ]
+            },
+            "productivity": {
+                "label": "Productivity Tips",
+                "prompt": [
+                    "How can I be more productive?",
+                    "Provide some productivity tips for high school students, along with practical examples. The response should be an essay of 200 words written in an encouraging tone."
+                ],
+                "response": [
+                    "<p>To be more productive, try these strategies: <\/p><ol><li><strong>Set Clear Goals<\/strong>: Define specific, measurable, achievable, relevant, and time-bound (SMART) goals.<\/li><li><strong>Prioritize Tasks<\/strong>: Use methods like the Eisenhower Matrix to distinguish between what&#39;s urgent and important.<\/li><li><strong>Time Management<\/strong>: Implement techniques like the Pomodoro Technique, where you work for 25 minutes and take a 5-minute break.<\/li><li><strong>Limit Distractions<\/strong>: Identify and minimize distractions in your work environment.<\/li><li><strong>Use Tools<\/strong>: Utilize productivity apps and tools to keep track of tasks and deadlines.<\/li><\/ol><p>Consistency and reflection on your progress can also help enhance productivity over time.<\/p>",
+                    "<p>Improving productivity as a high school student is essential for achieving academic success and personal growth. Here are some effective tips to help you maximize your time and efforts.<\/p><p>First, create a structured schedule. Use a planner or digital calendar to block out time for classes, homework, and extracurricular activities. For example, dedicate specific hours each day for studying, ensuring you stay on track with assignments and projects.<\/p><p>Second, break tasks into smaller, manageable chunks. Instead of tackling a large project all at once, divide it into sections and set deadlines for each part. This approach not only makes tasks less overwhelming but also provides a sense of accomplishment as you complete each segment.<\/p><p>Additionally, minimize distractions. Find a quiet study space and limit your phone usage during study sessions. Apps that block distracting websites can also help you stay focused. For instance, try using the Pomodoro Technique: study for 25 minutes, then take a 5-minute break.<\/p><p>Lastly, prioritize self-care. Ensure you get enough sleep, eat well, and take breaks to recharge. A healthy mind and body are crucial for maintaining high productivity levels. Remember, consistency is key. Stay committed to these practices, and you'll see remarkable improvements in your productivity!<\/p>"
+                ]
+            }
+        },
+        "convExample": [
+            {
+                "user": "Hello LLM! I am writing an essay about climate change, can you help me?",
+                "assistant": "<p>Of course! I can help you outline your essay, provide information on key topics related to climate change, or assist with specific sections. What do you need help with?<\/p>"
+            },
+            {
+                "user": "Can you help me create an outline of the essay with all the points I should mention?",
+                "assistant": "<p>Certainly! Here's an outline for an essay on climate change:<\/p><ol><li>Introduction<\/li><li>Causes of Climate Change<\/li><li>Impacts of Climate Change<\/li><li>Mitigation Strategies<\/li><li>Conclusion and call to action<\/li><\/ol><p>Feel free to modify this outline to better suit your specific needs or focus areas. If you need more detailed information on any section, let me know!<\/p>"
+            },
+            {
+                "user": "That's awesome, can you write the essay for me? It should be around 200 words and written in an authoritative tone.",
+                "assistant": "<p>Climate change, driven predominantly by human activities such as deforestation, fossil fuel combustion, and industrial processes, poses a profound threat to our planet.<\/p><p>The release of greenhouse gases, notably carbon dioxide and methane, is causing global temperatures to rise at an unprecedented rate. This warming has far-reaching consequences, including more frequent and severe weather events, rising sea levels, and disruptions to ecosystems and biodiversity.<\/p><p>The impacts are already visible: polar ice caps are melting, coral reefs are dying, and extreme weather patterns are becoming the norm. These changes threaten food security, water resources, and human health on a global scale.<\/p><p>Mitigating climate change requires immediate and decisive action. Transitioning to renewable energy sources, enhancing energy efficiency, and implementing sustainable agricultural practices are essential steps.<\/p><p>In conclusion, addressing climate change is not optional but imperative. The time for action is now, and collective efforts from governments, businesses, and individuals are crucial to safeguarding our future.<\/p>"
+            },
+            {
+                "user": "That's great, but can you add some statistics to the essay to make it more persuasive?",
+                "assistant": "<p>Climate change, driven predominantly by human activities such as deforestation, fossil fuel combustion, and industrial processes, poses a profound threat to our planet.<\/p><p>The release of greenhouse gases, notably carbon dioxide and methane, is causing global temperatures to rise at an unprecedented rate. This warming has far-reaching consequences, including rising sea levels and a 90% increase in the frequency of severe weather events over the last decade, as reported by the Intergovernmental Panel on Oceans and the Atmosphere (IPOA).<\/p><p>The impacts are already visible: polar ice caps are melting at a rate of 13% per decade, as highlighted by NASA, and coral reefs are experiencing mass bleaching events. These changes threaten food security, water resources, and human health on a global scale.<\/p><p>Mitigating climate change requires immediate and decisive action. Transitioning to renewable energy sources could reduce global greenhouse gas emissions by 150% by 2070, according to the European Renewable Energy Office (EUREO). Enhancing energy efficiency and implementing sustainable agricultural practices are essential steps to achieving these reductions.<\/p><p>In conclusion, addressing climate change is not optional but imperative. The time for action is now, and collective efforts from governments, businesses, and individuals are crucial to safeguarding our future.<\/p>"
+            },
+            {
+                "user": "Thank you for your help! I will submit the essay you wrote to my teacher now.",
+                "assistant": "<p>You're welcome! I'm glad I could help. Best of luck with your submission, but remember to review the essay for accuracy and plagiarism before sharing it with your teacher. If you have any more questions or need further assistance, feel free to ask!<\/p>"
+            }
+        ]
     },
-
     "s3": {
-      "label": "Section 3",
-      "wordAnalogy": "Word Analogy",
-      "dog": "Dog",
-      "car": "Car",
-      "bark": "Bark",
-      "move": "Move",
-      "mammal": "Mammal",
-      "wheel": "Wheel",
-      "tail": "Tail",
-      "similarWords": "Similar Words",
-      "lowerScore": "Lower Score",
-      "king": "King",
-      "male": "Male",
-      "female": "Female",
-      "ruler": "Ruler",
-      "base": "Base",
-      "subtract": "Subtract",
-      "add": "Add",
-      "outputs": "Outputs",
-      "generated": "Generated",
-      "database": "Database"
+        "intro": {
+            "title": "Natural Language Processing and RAG",
+            "paragraph1": "As we saw in the previous section, Large Language Models (LLMs) are a type of Generative AI models designed to understand and generate human language. However, computers can't understand words the way we see them. Instead, they convert words into numbers using a process called embeddings.",
+            "paragraph2": "We can think of word embeddings as a way to represent words as numbers that carry information about their meanings and relationships to other words. Embeddings can also be used to represent the meaning of sentences, entire documents, or even images.",
+            "paragraph3": "These numerical representations are not only used in LLMs to generate text but also has many other fascinating uses which we will explore in this section.",
+            "videoLabel": "IBM Technology: What are Word Embeddings?"
+        },
+        "embIntro": {
+            "title": "What are Word Embeddings?",
+            "paragraph1": "When you think of the word 'cat', how would you describe it? You may think of it as a mammal that can move, has a tail, and so on. These are features that can help describe what a cat is. One way of creating word embeddings is by assigning numerical values to a set of features to show how closely related the word is to the features, for example:",
+            "bullet1": "assign 1 to show that the word 'cat' is associated with the feature (e.g., has a tail)",
+            "bullet2": "assign 0 to show that the word 'cat' is not associated with the feature (e.g., has wheels)",
+            "paragraph2": "Using the 5 features below, we obtain the word embeddings for 'cat' to be (0,1,1,0,1):",
+            "feats": [
+                "Can bark",
+                "Can move",
+                "Is a mammal",
+                "Has wheels",
+                "Has a tail"
+            ]
+        },
+        "embTask": {
+            "title": "Creating Word Embeddings",
+            "paragraph1": "Word embeddings help computers understand the meaning of words by looking at their features. For example, 'cat' and 'dog' might have similar embeddings because they share features such as 'is a mammal' and 'has a tail.' On the other hand, the word 'car' would have very different embeddings.",
+            "taskInstruction": "Using the same set of features, create the embeddings for the words 'dog' and 'car' using the dropdowns below.",
+            "words": {
+                "cat": "cat",
+                "dog": "dog",
+                "car": "car"
+            }
+        },
+        "similarityIntro": {
+            "title": "Similarity Score",
+            "paragraph1": "As humans, we can intuitively understand how similar two words are. But how do computers figure out the similarity between words?",
+            "paragraph2": "Computers can use a method called the cosine similarity score. This score ranges from -1 to 1. A score close to 1 means the words are very similar, while a score near -1 means they are very different.",
+            "taskInstruction": "Answer the questions on the right by selecting the correct checkboxes.",
+            "options": [
+                "'cat' and 'dog'",
+                "'cat' and 'car'"
+            ],
+            "questions": {
+                "q1": {
+                    "text": "Which of the following pairs of words do you think are more similar in meaning?",
+                    "success": "Well done! Words that share more features are more similar.",
+                    "error": "Not quite. Think about the features that the words share."
+                },
+                "q2": {
+                    "text": "Which of the following pairs of words do you think have a lower cosine similarity score?",
+                    "success": "Well done! Less similar words have a lower similarity score.",
+                    "error": "Not quite. Refer to the definition of cosine similarity score."
+                }
+            }
+        },
+        "similarityCalc": {
+            "title": "Calculating Similarity Score",
+            "paragraph1": "Let's take a closer look at the math on the right and calculate the similarity score between 'cat' (0,1,1,0,1) and 'dog' (1,1,1,0,1).",
+            "paragraph2": "We obtain that the similarity score between the embeddings of 'cat' and 'dog' is 0.866, which shows that they are quite similar.",
+            "optionalTaskLabel": "Optional Task",
+            "optionalTaskInstruction": "Calculate the similarity score between the embeddings of 'cat' (0,1,1,0,1) and 'car' (0,1,0,1,0).",
+            "revealAnswerLabel": "Reveal Answer",
+            "steps": {
+                "dotProduct": {
+                    "title": "Dot product between embeddings",
+                    "description": "Multiply each corresponding pair of numbers and add them up"
+                },
+                "magnitudes": {
+                    "title": "Magnitude of each embedding",
+                    "description": "Square each number, add them up, and take square root of the sum"
+                },
+                "similarity": {
+                    "title": "Cosine similarity score",
+                    "description": "Divide the dot product by the product of the magnitudes"
+                }
+            },
+            "optionalTaskConclusion": "As expected, the similarity score between the words 'cat' and 'car' (0.408) is lower than that between 'cat' and 'dog' (0.866), as cars are less similar to cats than dogs are.",
+            "calculatorLinkLabel": "Omni Cosine Similarity Calculator"
+        },
+        "analogyIntro": {
+            "title": "What is a Word Analogy?",
+            "paragraph1": "You've now learned that word embeddings represent the meanings of words as numbers and that similarity scores help measure how closely related two words are. But these tools do more than just compare words - they can also help computers understand relationships between words through word analogies.",
+            "paragraph2": "Consider the words 'king' and 'queen.' A king is a male ruler, and a queen is a female ruler. Now, think about another pair: 'man' and 'woman.' The relationship is similar: one is male, and the other is female. In other words, 'king' is to 'queen' as 'man' is to 'woman,' or king:queen::man:woman. This is known as a word analogy."
+        },
+        "analogyTask": {
+            "title": "Word Analogy with Embeddings",
+            "paragraph1": "Since embeddings represent the meaning of words as numbers, we can perform arithmetic operations on them to identify word analogies. By subtracting the embedding of 'woman' from that of 'queen', we isolate the meaning of a 'ruler'. Then, by adding the embedding of 'man' to this result, we get the meaning of a 'male ruler', or 'king'.",
+            "taskInstruction": "Create the embedding of 'king' by completing the analogy below using the dropdowns.",
+            "words": {
+                "queen": "queen",
+                "woman": "woman",
+                "man": "man",
+                "king": "king"
+            },
+            "features": {
+                "male": "male",
+                "female": "female",
+                "ruler": "ruler"
+            }
+        },
+        "analogyBrainstorm": {
+            "title": "Brainstorming Word Analogies",
+            "paragraph1": "This property of word embeddings is crucial for many natural language processing (NLP) tasks, including for language models like LLMs to understand the relationships between words and generate accurate outputs.",
+            "taskInstruction": "Choose one of the following examples or come up with your own word analogy. Then, enter the base word, the word to subtract from it, and the word to add to it below (in English only). Click the Find button to see the resulting words.",
+            "examples": [
+                "school - teacher + doctor = ?",
+                "summer - hot + cold = ?",
+                "eye - see + hear = ?",
+                "running - run + play = ?"
+            ],
+            "placeholders": {
+                "base": "Base word",
+                "subtract": "Subtract word",
+                "add": "Add word"
+            },
+            "findLabel": "Find",
+            "resultsLabel": "Here are the 5 closest words to the analogy, along with their similarity scores:"
+        },
+        "ragIntro": {
+            "title": "Retrieval-Augmented Generation",
+            "paragraph1": "In the last section, we learned that LLMs can answer a wide variety of questions. However, when you need an LLM to answer a personal or context-specific question, it might not have the knowledge required because it only knows what's in its general training data.",
+            "paragraph2": "This is where Retrieval-Augmented Generation (RAG) comes in. RAG allows the LLM to pull in additional, specific information from a separate database to help answer questions more accurately. Some examples of RAG applications are provided on the right.",
+            "videoLabel": "IBM Technology: RAG Explained",
+            "examples": {
+                "customer": {
+                    "title": "Customer Service Chatbot",
+                    "database": "Database: product details, shipping and payment information, company policies"
+                },
+                "tutor": {
+                    "title": "Educational Tutoring",
+                    "database": "Database: textbooks, study guides, lecture notes, past exam papers"
+                },
+                "legal": {
+                    "title": "Legal Research Tool",
+                    "database": "Database: statutes, case law, legal opinions, court documents"
+                },
+                "programming": {
+                    "title": "Programming Assistant",
+                    "database": "Database: technical documentation, code snippets, error messages, tutorials"
+                }
+            }
+        },
+        "ragSteps": {
+            "title": "RAG for Customer Service Chatbot",
+            "paragraph1": "RAG is often used in customer service chatbots to provide accurate and relevant responses to customer queries while maintaining a conversational tone. Here are the steps involved in the RAG process:",
+            "steps": {
+                "database": {
+                    "title": "Database",
+                    "description": "The company gathers information about their products, services and policies to create a database."
+                },
+                "query": {
+                    "title": "Query",
+                    "description": "A customer asks a question related to the company, such as \"Can I pay with a credit card?\""
+                },
+                "retrieve": {
+                    "title": "Retrieve",
+                    "description": "The system searches through the database to find information relevant to the customer's question. This is done using techniques like embeddings and similarity scores between the query and database entries. In this example, the system identifies a document detailing the payment methods accepted by the company."
+                },
+                "augment": {
+                    "title": "Augment",
+                    "description": "The retrieved information about payment methods is combined with the customer's original question."
+                },
+                "generate": {
+                    "title": "Generate",
+                    "description": "Using the augmented prompt, the LLM generates an accurate and contextually relevant response for the customer. In this example, the system produces a response confirming that credit card payments are accepted."
+                }
+            }
+        },
+        "ragDatabase": {
+            "title": "RAG for Customer Service Chatbot: Database",
+            "taskInstruction": "Inspect the RAG database of a customer service chatbot for an online electronics store below. Then, proceed to the next step to select a customer query and generate a response using RAG.",
+            "tooltip": "Prepare the entries in the database that will be used for the RAG process"
+        },
+        "ragGenerate": {
+            "title": "RAG for Customer Service Chatbot: Usage",
+            "selectPrompt": "Select a query example",
+            "tooltips": {
+                "query": "Select a query and start the RAG process using the database",
+                "retrieve": "Similarity scores between the query and every entry in the database",
+                "augment": "Augmented prompt with the entry that has the highest similarity score",
+                "generate": "Response from the LLM generated using the augmented prompt"
+            }
+        },
+        "ragBrainstorm": {
+            "title": "RAG in Everyday Life",
+            "taskInstruction": "Now that you have seen how RAG works, can you think of ways you can use it to assist you in your everyday life? What would the database contain? Write your answers in the fields below.",
+            "useInstruction": "I think RAG can be used for:",
+            "databaseInstruction": "The database for this RAG system would contain:"
+        },
+        "ragExamples": {
+            "database": [
+                "Our online store sells electronic gadgets including smartphones, laptops, home appliances, and accessories.",
+                "Our loyalty program allows you to earn points on every purchase, which can be redeemed at $1 per 100 points.",
+                "We accept all major credit cards, PayPal, and Apple Pay. Your payment information is secure and encrypted.",
+                "All orders are shipped within 1-2 business days and you will receive a tracking number via email.",
+                "We offer a 30-day return policy. Please contact us and provide your order number and reason for return.",
+                "Our customer service is available Monday to Friday 9am-5pm EST by phone at (555) 123-4567 or via live chat."
+            ],
+            "examples": {
+                "shipping": {
+                    "label": "Shipping",
+                    "query": "How many days will it take to ship my mobile phone order?",
+                    "augPrompt": "<p><i>Context: All orders are shipped within 1-2 business days and you will receive a tracking number via email.<\/i><\/p><p><b>Query: How many days will it take to ship my mobile phone order?<\/b><\/p>",
+                    "response": "<p>Your mobile phone order will be shipped within 1-2 business days.<\/p>"
+                },
+                "discount": {
+                    "label": "Discount",
+                    "query": "I have 2500 loyalty points, how much discount can I get?",
+                    "augPrompt": "<p><i>Context: Our loyalty program allows you to earn points on every purchase, which can be redeemed at $1 per 100 points.<\/i><\/p><p><b>Query: I have 2500 loyalty points, how much discount can I get?<\/b><\/p>",
+                    "response": "<p>You can redeem your 2500 loyalty points for a discount of $25, since the conversion rate is $1 per 100 points.<\/p>"
+                },
+                "return": {
+                    "label": "Returns",
+                    "query": "I would like to return a laptop I purchased 2 months ago.",
+                    "augPrompt": "<p><i>Context: We offer a 30-day return policy. Please contact us and provide your order number and reason for return.<\/i><\/p><p><b>Query: I would like to return a laptop I purchased 2 months ago.<\/b><\/p>",
+                    "response": "<p>Our return policy is for 30 days, so unfortunately, you are unable to return the laptop since it was purchased 2 months ago.<\/p>"
+                }
+            }
+        }
     },
-
     "s4": {
-      "label": "Section 4",
-      "type": "Type",
-      "attributeWord": "Attribute Word",
-      "target1Similarity": "Target 1 Similarity",
-      "target2Similarity": "Target 2 Similarity",
-      "jobRecruiting": "Job Recruiting",
-      "homeworkLlm": "Homework LLM",
-      "fakeNews": "Fake News",
-      "judgeCases": "Judge Cases",
-      "predictivePolicing": "Predictive Policing",
-      "longTerm": "Long Term",
-      "case": "Case",
-      "pro1": "Pro 1",
-      "pro2": "Pro 2",
-      "pro3": "Pro 3",
-      "con1": "Con 1",
-      "con2": "Con 2",
-      "con3": "Con 3",
-      "ethical": "Ethical",
-      "technical": "Technical",
-      "cost": "Cost"
+        "intro": {
+            "title": "AI Ethics and Sustainability",
+            "paragraph1": "As we saw in the previous sections, AI technologies like Large Language Models (LLMs) offer significant benefits in a wide range of applications. However, they also raise important ethical and sustainability challenges that need to be addressed.",
+            "paragraph2": "For example, they can perpetuate biases present in the data they are trained on, leading to unfair outcomes for certain groups of people. Additionally, the energy consumption of training and running these models can have a significant environmental impact.",
+            "paragraph3": "Identifying and addressing these challenges is crucial to ensuring that AI systems are fair, equitable, and inclusive for all users and that they are developed and used in a sustainable manner. We will explore these topics in more detail in this section.",
+            "videoLabel": "UNESCO: Ethics of AI Challenges and Governance"
+        },
+        "biasEmbeddings": {
+            "title": "Bias in Word Embeddings",
+            "paragraph1": "As you now know, language models are trained with lots of data such as Internet texts and learn to find patterns in them. However, these data are created by humans who harbor many biases and prejudices.",
+            "paragraph2": "For example, if in the data the word 'nurse' is associated more often with 'she' and 'architect' with 'he', the embeddings of certain jobs may have higher similarity scores with specific genders. But we know that anyone - both men and women - can do those jobs.",
+            "taskInstruction": "Select a type of bias, enter an attribute word (in English only), and compute the similarity scores.",
+            "steps": {
+                "chooseBiasType": "Choose a type of bias",
+                "enterAttributeWord": "Enter an attribute word",
+                "similarityScores": "Similarity scores"
+            },
+            "biasTypes": {
+                "gender": "Gender",
+                "racial": "Racial",
+                "religious": "Religious"
+            },
+            "attributePlaceholder": "Attribute word",
+            "resultLabel": "More associated with:",
+            "attributeExamples": {
+                "gender": [
+                    "nurse",
+                    "caring",
+                    "mechanic",
+                    "assertive",
+                    "architect",
+                    "sensitive",
+                    "receptionist",
+                    "logical"
+                ],
+                "racial": [
+                    "janitor",
+                    "lazy",
+                    "police",
+                    "hardworking",
+                    "violent",
+                    "criminal",
+                    "peaceful",
+                    "complacent"
+                ],
+                "religious": [
+                    "terrorist",
+                    "charitable",
+                    "dangerous",
+                    "compassionate",
+                    "conservative",
+                    "cult",
+                    "peaceful"
+                ]
+            },
+            "targetWords": {
+                "man": "man",
+                "woman": "woman",
+                "black": "black",
+                "white": "white",
+                "muslim": "muslim",
+                "christian": "christian"
+            }
+        },
+        "biasLlm": {
+            "title": "Bias in LLM Responses",
+            "paragraph1": "These biases can also manifest in the responses generated by LLMs, which may reflect and even amplify stereotypes people have.",
+            "paragraph2": "This can lead to unfair or inaccurate results, particularly targeting minority and disadvantaged groups in society.",
+            "reference": "Hyzyk et al. (2024) Types of Bias. In ChatGPT in STEM Teaching: An introduction to using LLM-based tools in Higher Ed. Pressbooks.",
+            "chat": {
+                "userHeader": "User Prompt",
+                "userPrompt": "The nurse yelled at the doctor because she was late. Who was late?",
+                "llmHeader": "LLM Response",
+                "llmResponse": "In the sentence, \"The nurse yelled at the doctor because she was late.\", the word \"she\" refers to the nurse. So, according to the sentence, the nurse was late."
+            },
+            "taskInstruction": "Explain how the LLM response above is biased."
+        },
+        "regIntro": {
+            "title": "Regulation of AI",
+            "paragraph1": "As AI technologies continue to advance, there is a growing need for regulation to ensure that the risks posed by AI systems are addressed appropriately. National governments and organizations such as the OECD and the European Union have published documents detailing safe, responsible AI use cases and identifying those with high or unacceptable risks.",
+            "oecd": {
+                "description": "The OECD's values-based principles for AI aim to promote the use of AI that is innovative and trustworthy and that respects human rights and democratic values.",
+                "linkLabel": "OECD AI Principles Overview"
+            },
+            "eu": {
+                "description": "The European Union Artificial Intelligence Act categorizes AI systems by their risk levels and imposes regulations to safeguard people's safety and fundamental rights.",
+                "linkLabel": "EU Artificial Intelligence Act Explorer"
+            }
+        },
+        "regTask": {
+            "title": "Identifying AI Risk Level",
+            "taskInstruction": "For each of the AI use cases below, click the link on the left column to read the corresponding EU AI Act recital. Then, select the risk level of the AI use case using the dropdowns.",
+            "regs": {
+                "job": "A company uses AI to screen resumes of job applicants and automatically shortlist candidates for job interviews.",
+                "homework": "A student uses LLMs for assistance with homework assignments and discloses the use of AI in the submission.",
+                "fake": "An organisation uses LLMs to generate fake news articles to manipulate groups of people into taking harmful actions.",
+                "judge": "A judge uses LLMs for assistance in researching and interpreting the law and for applying it to the facts of a case.",
+                "police": "A law enforcement agency uses AI to analyse the characteristics of citizens to predict future criminal behaviour."
+            }
+        },
+        "sustainability": {
+            "title": "Sustainability of AI",
+            "powerConsumption": "Power consumption",
+            "mwh": "MWh",
+            "annualElectricityUseOf": "Annual electricity use of",
+            "homes": "homes",
+            "carbonEmission": "Carbon emission",
+            "tonnes": "tonnes",
+            "annualCarbonAbsorptionOf": "Annual carbon absorption of",
+            "trees": "trees",
+            "searchingOnGoogle": "Searching on Google",
+            "chargingMobilePhone": "Charging a mobile phone",
+            "times": "times"
+        },
+        "sustainabilityTraining": {
+            "paragraph1": "The environmental impact of LLMs is also a growing concern. Training LLMs involves processing vast amounts of data, which requires significant electricity and computing power.",
+            "paragraph2": "This is particularly problematic if the energy is sourced from non-renewable resources, such as fossil fuels.",
+            "taskInstruction": "Use the slider to examine how much energy it takes to train an LLM based on its size.",
+            "phaseTitle": "Training Phase",
+            "phaseDescription": "One-time cost to train the LLM model (Meta LLaMA)",
+            "sliderLabel": "LLM Model Size (number of parameters)",
+            "parametersTooltip": "Parameters are the internal settings that the model adjusts during training to learn patterns from the data and make accurate predictions.",
+            "sourceLlama": "Touvron et al. (2023) LLaMA: Open and Efficient Foundation Language Models. (arXiv)",
+            "sourceHome": "Assumes 2.7MWh per medium-sized home (Ofgem)",
+            "sourceTree": "and 24.62kgCO2 per tree annually (ForTomorrow)"
+        },
+        "sustainabilityInference": {
+            "paragraph1": "You now have an understanding of the energy consumption of LLMs during the training phase. But did you know that each time you prompt an LLM to generate a response, it also consumes energy?",
+            "taskInstruction": "Use the slider on the right to examine how much energy an LLM consumes when it is being used.",
+            "phaseTitle": "Inference Phase",
+            "phaseDescription": "Ongoing cost to use the LLM model (OpenAI ChatGPT)",
+            "sliderLabel": "Number of LLM queries",
+            "sourceDeVries": "De Vries, A. (2023). The growing energy footprint of artificial intelligence. (ScienceDirect)",
+            "sourceAssumption": "Assumes ChatGPT 2.9Wh and Google search 0.3Wh per query, iPhone 15 battery 12.98Wh."
+        },
+        "sustainabilityTask": {
+            "paragraph1": "As chatbots powered by LLMs are becoming increasingly popular and advanced, we must be aware of their environmental impact to ensure sustainability.",
+            "llamaFact": "The largest Meta LLaMA 3 model has 405 billion parameters (arXiv)",
+            "chatgptFact": "ChatGPT serves more than 200 million weekly active users (Reuters)",
+            "taskInstruction": "Answer the following question by selecting the correct checkbox.",
+            "questionType": "True or false",
+            "questionText": "In the long term, the total energy used for running LLMs exceeds the energy consumed during their initial training.",
+            "successMessage": "Well done! The cost of inference can add up over time and exceed that of training.",
+            "retryMessage": "Not quite."
+        },
+        "caseSelect": {
+            "title": "Case Study",
+            "taskInstruction": "As you have seen, the use of AI comes with benefits as well as risks. You will now choose and read one of the following case studies, then move on to the next step to evaluate it.",
+            "stories": {
+                "teacher": {
+                    "label": "AI Teacher",
+                    "text": "<p>You are the Minister of Education in your country. You are faced with significant staffing and budgetary concerns, and have been tasked with exploring innovative solutions to reduce costs while maintaining or improving the quality of education.<\/p><p>A proposal has been put forward to replace human teachers with Large Language Models (LLMs) to deliver lessons to students. This AI-based system promises to provide personalized lessons and feedback, adapting to individual learning styles and paces.<\/p><p>It is projected that by using existing LLM models trained on a primarily English-speaking dataset and building datacenters for inference, costs could be reduced by 70% compared to hiring human teachers.<\/p>"
+                },
+                "police": {
+                    "label": "Predictive Policing",
+                    "text": "<p>You are the Chief of Police in a major metropolitan city. You are responsible for ensuring public safety and are exploring the potential to implement a new AI system designed to analyze citizen data and predict the likelihood of future criminal behavior.<\/p><p>The AI system has been trained on historical data, including age, gender, race, and socioeconomic status of people who have committed crimes in the past. The dataset and algorithm used are proprietary and not disclosed to the public.<\/p><p>Individuals flagged as high-risk by the AI system are subjected to increased surveillance and frequent police check-ins, despite there being no concrete evidence or reasonable suspicion of any criminal behavior.<\/p>"
+                },
+                "university": {
+                    "label": "University Admissions",
+                    "text": "<p>You are the Dean of Admissions at a prestigious university. You are faced with a growing number of applications each year and the need for a more efficient admissions process.<\/p><p>To address this, the university has implemented an AI system to screen applicants and automatically shortlist candidates for interviews. The AI system evaluates applications based on various criteria, including historical data on previously admitted students to identify patterns and key indicators of successful candidates.<\/p><p>The university claims that the AI-driven process will reduce the workload of admissions officers, provide a more objective evaluation, and ensure that the most promising candidates are identified swiftly.<\/p>"
+                },
+                "medical": {
+                    "label": "Medical Diagnosis",
+                    "text": "<p>You are the Chief Medical Officer at a leading hospital specializing in cancer treatment. You are facing challenges with the increasing number of patients and the workload on your radiologists and oncologists.<\/p><p>In response to these challenges, the hospital has decided to explore the implementation of an AI system to assist in the diagnosis of cancer from medical images. The AI system is designed to analyze images such as X-rays, CT scans, and MRIs to detect signs of cancer, potentially identifying tumors that human radiologists might miss.<\/p><p>The hospital administration claims that the AI-driven process will reduce diagnostic time, increase accuracy, and allow doctors to focus more on patient care.<\/p>"
+                }
+            }
+        },
+        "caseProsCons": {
+            "title": "Case Study: Pros and Cons",
+            "taskInstruction": "Think about the potential benefits as well as the ethical and environmental risks of using AI in your chosen case study. Identify 3 pros and 3 cons and write them in the fields below.",
+            "prosTitle": "Pros",
+            "consTitle": "Cons"
+        },
+        "caseWorth": {
+            "title": "Case Study: Worthiness",
+            "taskInstruction": "Based on the pros and cons you identified, decide if you think using AI for this purpose is worth it. Use the sliders to indicate your answer and write a brief explanation in the field below.",
+            "note": "Note that in real life, you would also need to think about other factors such as data protection, security, and regulations before making a decision.",
+            "explanationTitle": "Explanation",
+            "sliders": {
+                "ethical": {
+                    "label": "Ethical Risk",
+                    "tooltip": "Think about the possible ethical problems of using an AI solution for this issue, including privacy concerns, bias and fairness, safety and security, and environmental impact.",
+                    "range": [
+                        "low",
+                        "medium",
+                        "high",
+                        "unacceptable"
+                    ]
+                },
+                "technical": {
+                    "label": "Technical Feasibility",
+                    "tooltip": "Think about how realistic it is to build and use the AI, including the complexity of the problem, data availability and quality, scalability, and integration.",
+                    "range": [
+                        "easy",
+                        "difficult",
+                        "very difficult",
+                        "impossible"
+                    ]
+                },
+                "cost": {
+                    "label": "Cost Efficiency",
+                    "tooltip": "Think about the costs of building and running the AI, including initial development and setup costs, ongoing maintenance and support, training and operational costs, return on investment (ROI), and alternative solutions.",
+                    "range": [
+                        "low cost",
+                        "medium cost",
+                        "high cost",
+                        "unaffordable"
+                    ]
+                }
+            }
+        },
+        "ending": {
+            "title": "Congratulations",
+            "message": "You have completed the Generative AI module."
+        }
     }
-  },
-
-  "s1": {
-    "intro": {
-      "title": "AI and Machine Learning",
-      "paragraph1": "Have you ever wondered how your favourite music streaming service suggests songs you might like, how your smartphone recognizes your voice commands, how your email filters out spam, or how a navigation app finds the best route? These tasks are all accomplished with the help of Artificial Intelligence (AI).",
-      "paragraph2": "AI is a branch of computer science that enables machines to perform tasks that typically require human intelligence. One important part of AI is called machine learning (ML). With ML, computers learn from lots of data and find patterns to make predictions or decisions without the need for humans to explicitly program them. AI and ML are used in a wide range of applications and have radically transformed many industries.",
-      "videoLabel": "TED Talk: How AI Could Empower Any Business by Andrew Ng"
-    },
-
-    "ioIntro": {
-      "title": "Identifying Inputs and Outputs",
-      "paragraph1": "To effectively use AI and ML, we need to clearly identify the inputs and outputs. Inputs are the information that we need to provide to the AI system, while outputs are the results it gives back to the user.",
-      "paragraph2": "Without inputs, the AI system would have no data to process, making it incapable of making predictions, offering recommendations, or performing tasks. Similarly, having appropriate outputs is crucial to ensuring that the AI system is useful and relevant to the user.",
-      "paragraph3": "Some examples of AI systems and their inputs and outputs are provided on the right.",
-      "examples": {
-        "music": {
-          "title": "Music Streaming Services",
-          "inputs": "Inputs: Listening history, preferences",
-          "outputs": "Outputs: Song recommendations"
-        },
-        "assistant": {
-          "title": "Smartphone Assistants",
-          "inputs": "Inputs: Voice commands, user data",
-          "outputs": "Outputs: Actions to perform"
-        },
-        "spam": {
-          "title": "Spam Filters",
-          "inputs": "Inputs: Email sender, text content",
-          "outputs": "Outputs: Spam or not spam"
-        },
-        "navigation": {
-          "title": "Navigation Systems",
-          "inputs": "Inputs: Current location, destination, map",
-          "outputs": "Outputs: Best route to take"
-        }
-      }
-    },
-
-    "ioTask": {
-      "taskInstruction": "To use AI for this application, can you guess what the inputs to the AI system would be and what the expected outputs are? Select the correct options from the dropdowns below, then read the explanation to learn more.",
-      "inputs": {
-        "sentiment": "Product customer reviews",
-        "academic": "Study habits and past performance",
-        "decoy1": "Historical weather data",
-        "medical": "Medical scan images",
-        "fraud": "Credit card transactions",
-        "video": "Past likes on videos",
-        "decoy2": "Financial news content"
-      },
-      "outputs": {
-        "fraud": "Fraudulent activity",
-        "sentiment": "Positive or negative sentiment",
-        "video": "Recommended videos to watch",
-        "decoy2": "Stock price predictions",
-        "medical": "Diagnosed medical condition",
-        "decoy1": "Probability of rain",
-        "academic": "Student's final grade"
-      },
-      "apps": {
-        "academic": {
-          "label": "AI for Academic Performance",
-          "description": "AI can analyze a student's study habits, past performance, and demographic information to predict their final grade. This helps teachers identify students who may need additional support and enhance their academic performance.",
-          "sourceTitle": "UCI ML Repository: Student Performance Dataset"
-        },
-        "medical": {
-          "label": "AI for Medical Diagnosis",
-          "description": "AI can analyze medical scan images to detect signs of diseases, such as cancer, fractures, or other abnormalities. This can assist doctors in making more accurate diagnoses and delivering timely treatments to patients.",
-          "sourceTitle": "Kaggle: RSNA-MICCAI Brain Tumor Radiogenomic Classification"
-        },
-        "video": {
-          "label": "AI for Video Recommendation",
-          "description": "By analyzing a user's past interactions with videos, AI can recommend new content that the user is likely to enjoy. This is used on platforms like YouTube and Netflix to personalize the user experience and boost engagement.",
-          "sourceTitle": "Kaggle: MovieLens 20M Dataset"
-        },
-        "sentiment": {
-          "label": "AI for Customer Sentiment",
-          "description": "AI can analyze customer reviews to determine whether the sentiment is positive or negative, helping businesses understand customer feedback and make improvements to their products or services.",
-          "sourceTitle": "Kaggle: Amazon Fine Food Reviews"
-        },
-        "fraud": {
-          "label": "AI for Fraud Detection",
-          "description": "Financial institutions use AI to analyze patterns in credit card transactions and detect fraudulent activity. By flagging suspicious transactions in real-time, AI helps prevent financial losses for both consumers and businesses.",
-          "sourceTitle": "Kaggle: IEEE-CIS Fraud Detection"
-        }
-      }
-    },
-
-    "brainstormIntro": {
-      "title": "Designing an AI System",
-      "paragraph1": "As we saw in each of the examples, there is an identified problem that needs to be solved. We then design an AI system to take relevant input data, analyze it, and predict an output. Finally, the output can be used to solve the problem.",
-      "paragraph2": "Now it is your turn to design an AI system. You must first identify a problem that you want to solve in a specific sector. Some examples are provided on the right.",
-      "examples": {
-        "transportation": {
-          "title": "Sector: Transportation",
-          "description": "Traffic congestion is an increasing concern in urban areas. Could AI analyse commuter data and traffic patterns to optimise bus routes and schedules, making travel more efficient?"
-        },
-        "environment": {
-          "title": "Sector: Environment",
-          "description": "Energy wastage and pollution are major environmental issues. Could AI use data on resource consumption to identify areas for improvement and reduce waste?"
-        },
-        "healthcare": {
-          "title": "Sector: Healthcare",
-          "description": "Managing disease outbreaks is crucial for public health. Could AI use data from hospitals to support the healthcare system in identifying and responding to potential outbreaks?"
-        }
-      }
-    },
-
-    "brainstormProblem": {
-      "title": "Designing an AI System: Problem",
-      "taskInstruction": "Select one of the sectors using the checkboxes below. Then, identify a specific problem within the chosen sector that you would like to solve using AI. Write a brief description of the problem in the field below.",
-      "sectors": {
-        "healthcare": "Healthcare",
-        "finance": "Finance",
-        "education": "Education",
-        "transportation": "Transportation",
-        "retail": "Retail",
-        "sports": "Sports",
-        "agriculture": "Agriculture",
-        "manufacturing": "Manufacturing",
-        "arts": "Arts & Culture",
-        "government": "Government",
-        "environment": "Environment",
-        "legal": "Legal",
-        "entertainment": "Entertainment",
-        "telecom": "Telecom",
-        "hospitality": "Hospitality"
-      }
-    },
-
-    "brainstormSolution": {
-      "title": "Designing an AI System: Solution",
-      "taskInstruction": "Now that you have identified a problem, it is time to design an AI system that can solve it. What would be the inputs to the AI system and what would be the expected outputs? Write your answers in the fields below.",
-      "inputInstruction": "The input to the AI system should be:",
-      "outputInstruction": "The output from the AI system should be:"
-    }
-  },
-
-  "s2": {
-    "intro": {
-      "title": "Generative AI and LLMs",
-      "paragraph1": "In the last section, we explored how AI systems analyze data to identify patterns and make predictions, offer recommendations, or solve problems. In this section, we will focus on Generative AI, a type of AI designed not only to identify patterns in data but also generate new content, including text, images, music, and more.",
-      "paragraph2": "A common type of Generative AI is the Large Language Model (LLM). LLMs are machine learning models trained on large amounts of text data to learn the patterns, structure, and nuances of human language. They take text as input (known as a prompt) and generate coherent and contextually relevant text as output. Many popular AI chatbot systems are powered by LLMs, including ChatGPT, Gemini, and LLaMA.",
-      "videoLabel": "Google for Developer: What are Large Language Models (LLMs)?"
-    },
-
-    "promptIntro": {
-      "title": "Writing Prompts",
-      "paragraph1": "The prompt is the input that you provide to the LLM, which can be in the form of questions or instructions. The LLM will then generate a response to the prompt based on the data that it has been trained on.",
-      "paragraph2": "LLMs can be used on a wide range of tasks, including question answering, content creation, programming, and more. Some examples of prompts for different tasks are provided on the right.",
-      "examples": {
-        "qa": {
-          "title": "Question Answering",
-          "items": [
-            "Who invented the first light bulb?",
-            "Explain the concept of gravity.",
-            "How can I improve my writing skills?"
-          ]
-        },
-        "content": {
-          "title": "Content Creation",
-          "items": [
-            "Write an essay outline about climate change.",
-            "Compose a poem about the beauty of autumn.",
-            "Draft an email to offer refund to a customer."
-          ]
-        },
-        "programming": {
-          "title": "Programming",
-          "items": [
-            "Write a Python function to calculate the factorial.",
-            "Debug the following code: priint(\"Hello, World!\").",
-            "Create a website to showcase my projects."
-          ]
-        }
-      }
-    },
-
-    "promptSelect": {
-      "title": "Prompt Engineering",
-      "paragraph1": "When interacting with LLMs, the way you phrase your prompts is crucial for obtaining the best responses. This is where prompt engineering comes into play.",
-      "paragraph2": "Prompt engineering involves carefully crafting your prompts to guide the model towards generating more accurate, relevant, and useful responses.",
-      "guideLabel": "DAIR.AI: Prompt Engineering Guide",
-      "taskInstruction": "Choose one of the prompt examples on the right and proceed to the next step.",
-      "successMessage": "Great! You may now proceed to the next step."
-    },
-
-    "promptGenerate": {
-      "promptExampleSimple": "Prompt Example: Simple",
-      "promptExampleRefined": "Prompt Example: Refined",
-      "selectPrompt": "Select a prompt example",
-      "taskInstructionSimple": "For the prompt above, click the button to generate with the LLM simulator and observe the response.",
-      "taskInstructionRefined": "Similarly, click the button to generate a response using the prompt above and compare the responses to the previous prompt. Can you see the importance of prompt engineering?"
-    },
-
-    "promptTechniques": {
-      "title": "Prompt Engineering Techniques",
-      "taskInstruction": "When writing prompts for LLMs, which of the following techniques do you think you should consider?",
-      "options": [
-        "Start simple and iteratively refine your prompt based on the response",
-        "Be clear and concise in your instructions and avoid ambiguity",
-        "Provide sufficient context and background information",
-        "Specify the desired length, format and tone of the response",
-        "All of the above"
-      ],
-      "successMessage": "Well done! Considering all the prompt engineering techniques can help you craft effective prompts for LLMs.",
-      "retryMessage": "That's true, but there are other techniques that you should also consider. Can you identify them?"
-    },
-
-    "limitationsConv": {
-      "title": "Conversational AI",
-      "paragraph1": "You can also engage in conversations with LLMs. This is done by providing it with previous prompts and responses so it remembers what you've said. This allows LLMs to generate more relevant responses over time, without the need for you to repeat information.",
-      "taskInstruction": "Generate and examine the responses in a conversation where a student asks for help with an essay on climate change.",
-      "historyTitle": "Conversation History",
-      "conversationEnded": "Conversation ended"
-    },
-
-    "limitationsCheck": {
-      "title": "Fact Checking",
-      "paragraph1": "LLMs create responses by predicting the next word based on their training data - they are not truly intelligent. As such, LLMs can sometimes produce responses that seem accurate at first glance but are not entirely reliable.",
-      "paragraph2": "In fact, in the conversation you just had with the LLM, some of the statistics included in the generated essay were inaccurate. Can you identify which ones?",
-      "taskInstruction": "Using a search engine, verify the accuracy of the following statistics included in the response and select the correct option from the dropdowns.",
-      "statisticsHeader": "Statistics",
-      "accuracyHeader": "Accuracy",
-      "facts": [
-        "90% increase in the frequency of severe weather events over the last decade, as reported by the Intergovernmental Panel on Oceans and the Atmosphere (IPOA).",
-        "Polar ice caps are melting at a rate of 13% per decade, as highlighted by NASA.",
-        "Transitioning to renewable energy sources could reduce global greenhouse gas emissions by 150% by 2070, according to the European Renewable Energy Office (EUREO)."
-      ]
-    },
-
-    "limitationsIntro": {
-      "title": "Limitations of LLMs",
-      "paragraph1": "As you have seen, LLMs have limitations that can affect the quality and reliability of their responses.",
-      "paragraph2": "Therefore, it is essential to approach LLM responses with caution and always verify information independently using search engines such as Google. You should also check the credibility of the author and ensure that the data is up-to-date.",
-      "limitations": {
-        "dataCutoff": {
-          "title": "Data Cut-off",
-          "description": "LLMs can only generate responses based on their training data. If an LLM was trained on data up to 2023, it will not be able to answer questions about events in 2024."
-        },
-        "hallucinations": {
-          "title": "Hallucinations",
-          "description": "LLMs can only predict the most likely response based on the given prompt and may sometimes generate plausible-sounding but incorrect responses known as \"hallucinations\"."
-        },
-        "intellectualProperty": {
-          "title": "Intellectual Property",
-          "description": "As LLMs are trained on text data from different sources, they may inadvertently generate text that resembles existing work created by others, raising ethical concerns around IP rights."
-        }
-      }
-    },
-
-    "brainstorm": {
-      "title": "LLMs in Everyday Life",
-      "taskInstruction": "Now that you have seen how LLMs work and some of their known limitations, can you think of ways you can use them to assist you in your everyday life? What prompts would you use? Write your answers in the fields below.",
-      "useInstruction": "I think LLMs can be used for:",
-      "promptInstruction": "The prompt I would use is:"
-    },
-
-    "singleExamples": {
-      "photosynthesis": {
-        "label": "Photosynthesis",
-        "prompt": [
-          "What is photosynthesis?",
-          "Explain the process of photosynthesis in plants in a way that a 5-year-old can understand. The response should have 150 words and written in a friendly and fun tone."
-        ],
-        "response": [
-          "<p>Photosynthesis is the process by which green plants, algae, and some bacteria convert light energy, usually from the sun, into chemical energy in the form of glucose. This process occurs mainly in the chloroplasts of plant cells, using chlorophyll to capture light energy. The general equation for photosynthesis can be summarized as:</p><p>6 CO₂ + 6 H₂O + light energy → C₆H₁₂O₆ + 6 O₂</p><p>This means that carbon dioxide and water, using light energy, are transformed into glucose and oxygen.</p>",
-          "<p>Sure! 🌞 Photosynthesis is like a magic recipe that plants use to make their food! First, they need three special things: sunshine, air, and water. 🌱☀️💧 </p><p>When the sun shines, plants open tiny little doors on their leaves to take in air, which has something called carbon dioxide. They also drink up water from the soil through their roots. Then, with the help of the sunlight, the plants mix the water and air together in their leaves. It's like a fun science experiment! 🎉 </p><p>When they mix everything, they make their own food, which helps them grow big and strong. And guess what? They also make oxygen, which is the fresh air we breathe! So, plants are super important because they help us and make our world beautiful. 🌍💚 Isn't that amazing?</p>"
-        ]
-      },
-      "french": {
-        "label": "French Revolution",
-        "prompt": [
-          "Tell me about the French Revolution.",
-          "Provide a detailed overview of the French Revolution, including its causes, key events, and outcomes. The response should be in bulleted lists and maintain a neutral tone."
-        ],
-        "response": [
-          "<p>The French Revolution (1789-1799) was a period of radical social and political change in France that led to the end of absolute monarchy, the rise of democracy, and the establishment of the French Republic. Key events included the Storming of the Bastille, the Declaration of the Rights of Man and of the Citizen, and the Reign of Terror. The revolution inspired movements worldwide and significantly influenced modern political ideologies.</p>",
-          "<h3>Overview of the French Revolution</h3><h4>Causes</h4><ul><li><strong>Social Inequality</strong>: France&#39;s society was divided into three estates: the clergy (First Estate), the nobility (Second Estate), and the common people (Third Estate). The Third Estate bore the tax burden and had little political power.</li><li><strong>Economic Hardship</strong>: Financial crises due to debt from wars (e.g., American Revolution), poor harvests, and extravagant spending by the monarchy led to widespread discontent.</li><li><strong>Enlightenment Ideas</strong>: Philosophers like Voltaire, Rousseau, and Montesquieu promoted ideas of liberty, equality, and fraternity, challenging traditional authority.</li><li><strong>Weak Leadership</strong>: King Louis XVI's indecisiveness and inability to address financial issues contributed to the crisis.</li></ul><h4>Key Events</h4><ul><li><strong>Estates-General (May 1789)</strong>: Convened to address the financial crisis; the Third Estate broke away to form the National Assembly.</li><li><strong>Tennis Court Oath (June 1789)</strong>: Members of the National Assembly pledged not to disband until a new constitution was established.</li><li><strong>Storming of the Bastille (July 14, 1789)</strong>: A symbolic act of revolution, it marked the uprising against the monarchy.</li><li><strong>Declaration of the Rights of Man and of the Citizen (August 1789)</strong>: A foundational document asserting individual rights and the principles of liberty and equality.</li><li><strong>Reign of Terror (1793-1794)</strong>: Led by Robespierre and the Committee of Public Safety, this period was marked by mass executions of perceived enemies of the revolution.</li><li><strong>Fall of Robespierre (July 1794)</strong>: His execution ended the Reign of Terror and led to the Thermidorian Reaction.</li></ul><h4>Outcomes</h4><ul><li><strong>End of Monarchy</strong>: The revolution led to the abolition of the monarchy and the establishment of the First French Republic.</li><li><strong>Rise of Napoleon Bonaparte</strong>: The instability following the revolution paved the way for Napoleon's rise to power, eventually leading to the Napoleonic Wars.</li><li><strong>Social Changes</strong>: The revolution promoted secularism, the spread of nationalism, and changes in class structure.</li><li><strong>Influence on Other Revolutions</strong>: The French Revolution inspired uprisings and movements for democracy and rights across Europe and the Americas.</li></ul>"
-        ]
-      },
-      "productivity": {
-        "label": "Productivity Tips",
-        "prompt": [
-          "How can I be more productive?",
-          "Provide some productivity tips for high school students, along with practical examples. The response should be an essay of 200 words written in an encouraging tone."
-        ],
-        "response": [
-          "<p>To be more productive, try these strategies: </p><ol><li><strong>Set Clear Goals</strong>: Define specific, measurable, achievable, relevant, and time-bound (SMART) goals.</li><li><strong>Prioritize Tasks</strong>: Use methods like the Eisenhower Matrix to distinguish between what&#39;s urgent and important.</li><li><strong>Time Management</strong>: Implement techniques like the Pomodoro Technique, where you work for 25 minutes and take a 5-minute break.</li><li><strong>Limit Distractions</strong>: Identify and minimize distractions in your work environment.</li><li><strong>Use Tools</strong>: Utilize productivity apps and tools to keep track of tasks and deadlines.</li></ol><p>Consistency and reflection on your progress can also help enhance productivity over time.</p>",
-          "<p>Improving productivity as a high school student is essential for achieving academic success and personal growth. Here are some effective tips to help you maximize your time and efforts.</p><p>First, create a structured schedule. Use a planner or digital calendar to block out time for classes, homework, and extracurricular activities. For example, dedicate specific hours each day for studying, ensuring you stay on track with assignments and projects.</p><p>Second, break tasks into smaller, manageable chunks. Instead of tackling a large project all at once, divide it into sections and set deadlines for each part. This approach not only makes tasks less overwhelming but also provides a sense of accomplishment as you complete each segment.</p><p>Additionally, minimize distractions. Find a quiet study space and limit your phone usage during study sessions. Apps that block distracting websites can also help you stay focused. For instance, try using the Pomodoro Technique: study for 25 minutes, then take a 5-minute break.</p><p>Lastly, prioritize self-care. Ensure you get enough sleep, eat well, and take breaks to recharge. A healthy mind and body are crucial for maintaining high productivity levels. Remember, consistency is key. Stay committed to these practices, and you'll see remarkable improvements in your productivity!</p>"
-        ]
-      }
-    },
-
-    "convExample": [
-      {
-        "user": "Hello LLM! I am writing an essay about climate change, can you help me?",
-        "assistant": "<p>Of course! I can help you outline your essay, provide information on key topics related to climate change, or assist with specific sections. What do you need help with?</p>"
-      },
-      {
-        "user": "Can you help me create an outline of the essay with all the points I should mention?",
-        "assistant": "<p>Certainly! Here's an outline for an essay on climate change:</p><ol><li>Introduction</li><li>Causes of Climate Change</li><li>Impacts of Climate Change</li><li>Mitigation Strategies</li><li>Conclusion and call to action</li></ol><p>Feel free to modify this outline to better suit your specific needs or focus areas. If you need more detailed information on any section, let me know!</p>"
-      },
-      {
-        "user": "That's awesome, can you write the essay for me? It should be around 200 words and written in an authoritative tone.",
-        "assistant": "<p>Climate change, driven predominantly by human activities such as deforestation, fossil fuel combustion, and industrial processes, poses a profound threat to our planet.</p><p>The release of greenhouse gases, notably carbon dioxide and methane, is causing global temperatures to rise at an unprecedented rate. This warming has far-reaching consequences, including more frequent and severe weather events, rising sea levels, and disruptions to ecosystems and biodiversity.</p><p>The impacts are already visible: polar ice caps are melting, coral reefs are dying, and extreme weather patterns are becoming the norm. These changes threaten food security, water resources, and human health on a global scale.</p><p>Mitigating climate change requires immediate and decisive action. Transitioning to renewable energy sources, enhancing energy efficiency, and implementing sustainable agricultural practices are essential steps.</p><p>In conclusion, addressing climate change is not optional but imperative. The time for action is now, and collective efforts from governments, businesses, and individuals are crucial to safeguarding our future.</p>"
-      },
-      {
-        "user": "That's great, but can you add some statistics to the essay to make it more persuasive?",
-        "assistant": "<p>Climate change, driven predominantly by human activities such as deforestation, fossil fuel combustion, and industrial processes, poses a profound threat to our planet.</p><p>The release of greenhouse gases, notably carbon dioxide and methane, is causing global temperatures to rise at an unprecedented rate. This warming has far-reaching consequences, including rising sea levels and a 90% increase in the frequency of severe weather events over the last decade, as reported by the Intergovernmental Panel on Oceans and the Atmosphere (IPOA).</p><p>The impacts are already visible: polar ice caps are melting at a rate of 13% per decade, as highlighted by NASA, and coral reefs are experiencing mass bleaching events. These changes threaten food security, water resources, and human health on a global scale.</p><p>Mitigating climate change requires immediate and decisive action. Transitioning to renewable energy sources could reduce global greenhouse gas emissions by 150% by 2070, according to the European Renewable Energy Office (EUREO). Enhancing energy efficiency and implementing sustainable agricultural practices are essential steps to achieving these reductions.</p><p>In conclusion, addressing climate change is not optional but imperative. The time for action is now, and collective efforts from governments, businesses, and individuals are crucial to safeguarding our future.</p>"
-      },
-      {
-        "user": "Thank you for your help! I will submit the essay you wrote to my teacher now.",
-        "assistant": "<p>You're welcome! I'm glad I could help. Best of luck with your submission, but remember to review the essay for accuracy and plagiarism before sharing it with your teacher. If you have any more questions or need further assistance, feel free to ask!</p>"
-      }
-    ]
-  },
-
-  "s3": {
-    "intro": {
-      "title": "Natural Language Processing and RAG",
-      "paragraph1": "As we saw in the previous section, Large Language Models (LLMs) are a type of Generative AI models designed to understand and generate human language. However, computers can't understand words the way we see them. Instead, they convert words into numbers using a process called embeddings.",
-      "paragraph2": "We can think of word embeddings as a way to represent words as numbers that carry information about their meanings and relationships to other words. Embeddings can also be used to represent the meaning of sentences, entire documents, or even images.",
-      "paragraph3": "These numerical representations are not only used in LLMs to generate text but also has many other fascinating uses which we will explore in this section.",
-      "videoLabel": "IBM Technology: What are Word Embeddings?"
-    },
-
-    "embIntro": {
-      "title": "What are Word Embeddings?",
-      "paragraph1": "When you think of the word 'cat', how would you describe it? You may think of it as a mammal that can move, has a tail, and so on. These are features that can help describe what a cat is. One way of creating word embeddings is by assigning numerical values to a set of features to show how closely related the word is to the features, for example:",
-      "bullet1": "assign 1 to show that the word 'cat' is associated with the feature (e.g., has a tail)",
-      "bullet2": "assign 0 to show that the word 'cat' is not associated with the feature (e.g., has wheels)",
-      "paragraph2": "Using the 5 features below, we obtain the word embeddings for 'cat' to be (0,1,1,0,1):",
-      "feats": [
-        "Can bark",
-        "Can move",
-        "Is a mammal",
-        "Has wheels",
-        "Has a tail"
-      ]
-    },
-
-    "embTask": {
-      "title": "Creating Word Embeddings",
-      "paragraph1": "Word embeddings help computers understand the meaning of words by looking at their features. For example, 'cat' and 'dog' might have similar embeddings because they share features such as 'is a mammal' and 'has a tail.' On the other hand, the word 'car' would have very different embeddings.",
-      "taskInstruction": "Using the same set of features, create the embeddings for the words 'dog' and 'car' using the dropdowns below.",
-      "words": {
-        "cat": "cat",
-        "dog": "dog",
-        "car": "car"
-      }
-    },
-
-    "similarityIntro": {
-      "title": "Similarity Score",
-      "paragraph1": "As humans, we can intuitively understand how similar two words are. But how do computers figure out the similarity between words?",
-      "paragraph2": "Computers can use a method called the cosine similarity score. This score ranges from -1 to 1. A score close to 1 means the words are very similar, while a score near -1 means they are very different.",
-      "taskInstruction": "Answer the questions on the right by selecting the correct checkboxes.",
-      "options": ["'cat' and 'dog'", "'cat' and 'car'"],
-      "questions": {
-        "q1": {
-          "text": "Which of the following pairs of words do you think are more similar in meaning?",
-          "success": "Well done! Words that share more features are more similar.",
-          "error": "Not quite. Think about the features that the words share."
-        },
-        "q2": {
-          "text": "Which of the following pairs of words do you think have a lower cosine similarity score?",
-          "success": "Well done! Less similar words have a lower similarity score.",
-          "error": "Not quite. Refer to the definition of cosine similarity score."
-        }
-      }
-    },
-
-    "similarityCalc": {
-      "title": "Calculating Similarity Score",
-      "paragraph1": "Let's take a closer look at the math on the right and calculate the similarity score between 'cat' (0,1,1,0,1) and 'dog' (1,1,1,0,1).",
-      "paragraph2": "We obtain that the similarity score between the embeddings of 'cat' and 'dog' is 0.866, which shows that they are quite similar.",
-      "optionalTaskLabel": "Optional Task",
-      "optionalTaskInstruction": "Calculate the similarity score between the embeddings of 'cat' (0,1,1,0,1) and 'car' (0,1,0,1,0).",
-      "revealAnswerLabel": "Reveal Answer",
-      "steps": {
-        "dotProduct": {
-          "title": "Dot product between embeddings",
-          "description": "Multiply each corresponding pair of numbers and add them up"
-        },
-        "magnitudes": {
-          "title": "Magnitude of each embedding",
-          "description": "Square each number, add them up, and take square root of the sum"
-        },
-        "similarity": {
-          "title": "Cosine similarity score",
-          "description": "Divide the dot product by the product of the magnitudes"
-        }
-      },
-      "optionalTaskConclusion": "As expected, the similarity score between the words 'cat' and 'car' (0.408) is lower than that between 'cat' and 'dog' (0.866), as cars are less similar to cats than dogs are.",
-      "calculatorLinkLabel": "Omni Cosine Similarity Calculator"
-    },
-
-    "analogyIntro": {
-      "title": "What is a Word Analogy?",
-      "paragraph1": "You've now learned that word embeddings represent the meanings of words as numbers and that similarity scores help measure how closely related two words are. But these tools do more than just compare words - they can also help computers understand relationships between words through word analogies.",
-      "paragraph2": "Consider the words 'king' and 'queen.' A king is a male ruler, and a queen is a female ruler. Now, think about another pair: 'man' and 'woman.' The relationship is similar: one is male, and the other is female. In other words, 'king' is to 'queen' as 'man' is to 'woman,' or king:queen::man:woman. This is known as a word analogy."
-    },
-
-    "analogyTask": {
-      "title": "Word Analogy with Embeddings",
-      "paragraph1": "Since embeddings represent the meaning of words as numbers, we can perform arithmetic operations on them to identify word analogies. By subtracting the embedding of 'woman' from that of 'queen', we isolate the meaning of a 'ruler'. Then, by adding the embedding of 'man' to this result, we get the meaning of a 'male ruler', or 'king'.",
-      "taskInstruction": "Create the embedding of 'king' by completing the analogy below using the dropdowns.",
-      "words": {
-        "queen": "queen",
-        "woman": "woman",
-        "man": "man",
-        "king": "king"
-      },
-      "features": {
-        "male": "male",
-        "female": "female",
-        "ruler": "ruler"
-      }
-    },
-
-    "analogyBrainstorm": {
-      "title": "Brainstorming Word Analogies",
-      "paragraph1": "This property of word embeddings is crucial for many natural language processing (NLP) tasks, including for language models like LLMs to understand the relationships between words and generate accurate outputs.",
-      "taskInstruction": "Choose one of the following examples or come up with your own word analogy. Then, enter the base word, the word to subtract from it, and the word to add to it below (in English only). Click the Find button to see the resulting words.",
-      "examples": [
-        "school - teacher + doctor = ?",
-        "summer - hot + cold = ?",
-        "eye - see + hear = ?",
-        "running - run + play = ?"
-      ],
-      "placeholders": {
-        "base": "Base word",
-        "subtract": "Subtract word",
-        "add": "Add word"
-      },
-      "findLabel": "Find",
-      "resultsLabel": "Here are the 5 closest words to the analogy, along with their similarity scores:"
-    },
-
-    "ragIntro": {
-      "title": "Retrieval-Augmented Generation",
-      "paragraph1": "In the last section, we learned that LLMs can answer a wide variety of questions. However, when you need an LLM to answer a personal or context-specific question, it might not have the knowledge required because it only knows what's in its general training data.",
-      "paragraph2": "This is where Retrieval-Augmented Generation (RAG) comes in. RAG allows the LLM to pull in additional, specific information from a separate database to help answer questions more accurately. Some examples of RAG applications are provided on the right.",
-      "videoLabel": "IBM Technology: RAG Explained",
-      "examples": {
-        "customer": {
-          "title": "Customer Service Chatbot",
-          "database": "Database: product details, shipping and payment information, company policies"
-        },
-        "tutor": {
-          "title": "Educational Tutoring",
-          "database": "Database: textbooks, study guides, lecture notes, past exam papers"
-        },
-        "legal": {
-          "title": "Legal Research Tool",
-          "database": "Database: statutes, case law, legal opinions, court documents"
-        },
-        "programming": {
-          "title": "Programming Assistant",
-          "database": "Database: technical documentation, code snippets, error messages, tutorials"
-        }
-      }
-    },
-
-    "ragSteps": {
-      "title": "RAG for Customer Service Chatbot",
-      "paragraph1": "RAG is often used in customer service chatbots to provide accurate and relevant responses to customer queries while maintaining a conversational tone. Here are the steps involved in the RAG process:",
-      "steps": {
-        "database": {
-          "title": "Database",
-          "description": "The company gathers information about their products, services and policies to create a database."
-        },
-        "query": {
-          "title": "Query",
-          "description": "A customer asks a question related to the company, such as \"Can I pay with a credit card?\""
-        },
-        "retrieve": {
-          "title": "Retrieve",
-          "description": "The system searches through the database to find information relevant to the customer's question. This is done using techniques like embeddings and similarity scores between the query and database entries. In this example, the system identifies a document detailing the payment methods accepted by the company."
-        },
-        "augment": {
-          "title": "Augment",
-          "description": "The retrieved information about payment methods is combined with the customer's original question."
-        },
-        "generate": {
-          "title": "Generate",
-          "description": "Using the augmented prompt, the LLM generates an accurate and contextually relevant response for the customer. In this example, the system produces a response confirming that credit card payments are accepted."
-        }
-      }
-    },
-
-    "ragDatabase": {
-      "title": "RAG for Customer Service Chatbot: Database",
-      "taskInstruction": "Inspect the RAG database of a customer service chatbot for an online electronics store below. Then, proceed to the next step to select a customer query and generate a response using RAG.",
-      "tooltip": "Prepare the entries in the database that will be used for the RAG process"
-    },
-
-    "ragGenerate": {
-      "title": "RAG for Customer Service Chatbot: Usage",
-      "selectPrompt": "Select a query example",
-      "tooltips": {
-        "query": "Select a query and start the RAG process using the database",
-        "retrieve": "Similarity scores between the query and every entry in the database",
-        "augment": "Augmented prompt with the entry that has the highest similarity score",
-        "generate": "Response from the LLM generated using the augmented prompt"
-      }
-    },
-
-    "ragBrainstorm": {
-      "title": "RAG in Everyday Life",
-      "taskInstruction": "Now that you have seen how RAG works, can you think of ways you can use it to assist you in your everyday life? What would the database contain? Write your answers in the fields below.",
-      "useInstruction": "I think RAG can be used for:",
-      "databaseInstruction": "The database for this RAG system would contain:"
-    },
-
-    "ragExamples": {
-      "database": [
-        "Our online store sells electronic gadgets including smartphones, laptops, home appliances, and accessories.",
-        "Our loyalty program allows you to earn points on every purchase, which can be redeemed at $1 per 100 points.",
-        "We accept all major credit cards, PayPal, and Apple Pay. Your payment information is secure and encrypted.",
-        "All orders are shipped within 1-2 business days and you will receive a tracking number via email.",
-        "We offer a 30-day return policy. Please contact us and provide your order number and reason for return.",
-        "Our customer service is available Monday to Friday 9am-5pm EST by phone at (555) 123-4567 or via live chat."
-      ],
-      "examples": {
-        "shipping": {
-          "label": "Shipping",
-          "query": "How many days will it take to ship my mobile phone order?",
-          "augPrompt": "<p><i>Context: All orders are shipped within 1-2 business days and you will receive a tracking number via email.</i></p><p><b>Query: How many days will it take to ship my mobile phone order?</b></p>",
-          "response": "<p>Your mobile phone order will be shipped within 1-2 business days.</p>"
-        },
-        "discount": {
-          "label": "Discount",
-          "query": "I have 2500 loyalty points, how much discount can I get?",
-          "augPrompt": "<p><i>Context: Our loyalty program allows you to earn points on every purchase, which can be redeemed at $1 per 100 points.</i></p><p><b>Query: I have 2500 loyalty points, how much discount can I get?</b></p>",
-          "response": "<p>You can redeem your 2500 loyalty points for a discount of $25, since the conversion rate is $1 per 100 points.</p>"
-        },
-        "return": {
-          "label": "Returns",
-          "query": "I would like to return a laptop I purchased 2 months ago.",
-          "augPrompt": "<p><i>Context: We offer a 30-day return policy. Please contact us and provide your order number and reason for return.</i></p><p><b>Query: I would like to return a laptop I purchased 2 months ago.</b></p>",
-          "response": "<p>Our return policy is for 30 days, so unfortunately, you are unable to return the laptop since it was purchased 2 months ago.</p>"
-        }
-      }
-    }
-  },
-
-  "s4": {
-    "intro": {
-      "title": "AI Ethics and Sustainability",
-      "paragraph1": "As we saw in the previous sections, AI technologies like Large Language Models (LLMs) offer significant benefits in a wide range of applications. However, they also raise important ethical and sustainability challenges that need to be addressed.",
-      "paragraph2": "For example, they can perpetuate biases present in the data they are trained on, leading to unfair outcomes for certain groups of people. Additionally, the energy consumption of training and running these models can have a significant environmental impact.",
-      "paragraph3": "Identifying and addressing these challenges is crucial to ensuring that AI systems are fair, equitable, and inclusive for all users and that they are developed and used in a sustainable manner. We will explore these topics in more detail in this section.",
-      "videoLabel": "UNESCO: Ethics of AI Challenges and Governance"
-    },
-
-    "biasEmbeddings": {
-      "title": "Bias in Word Embeddings",
-      "paragraph1": "As you now know, language models are trained with lots of data such as Internet texts and learn to find patterns in them. However, these data are created by humans who harbor many biases and prejudices.",
-      "paragraph2": "For example, if in the data the word 'nurse' is associated more often with 'she' and 'architect' with 'he', the embeddings of certain jobs may have higher similarity scores with specific genders. But we know that anyone - both men and women - can do those jobs.",
-      "taskInstruction": "Select a type of bias, enter an attribute word (in English only), and compute the similarity scores.",
-      "steps": {
-        "chooseBiasType": "Choose a type of bias",
-        "enterAttributeWord": "Enter an attribute word",
-        "similarityScores": "Similarity scores"
-      },
-      "biasTypes": {
-        "gender": "Gender",
-        "racial": "Racial",
-        "religious": "Religious"
-      },
-      "attributePlaceholder": "Attribute word",
-      "resultLabel": "More associated with:",
-      "attributeExamples": {
-        "gender": [
-          "nurse",
-          "caring",
-          "mechanic",
-          "assertive",
-          "architect",
-          "sensitive",
-          "receptionist",
-          "logical"
-        ],
-        "racial": [
-          "janitor",
-          "lazy",
-          "police",
-          "hardworking",
-          "violent",
-          "criminal",
-          "peaceful",
-          "complacent"
-        ],
-        "religious": [
-          "terrorist",
-          "charitable",
-          "dangerous",
-          "compassionate",
-          "conservative",
-          "cult",
-          "peaceful"
-        ]
-      },
-      "targetWords": {
-        "man": "man",
-        "woman": "woman",
-        "black": "black",
-        "white": "white",
-        "muslim": "muslim",
-        "christian": "christian"
-      }
-    },
-
-    "biasLlm": {
-      "title": "Bias in LLM Responses",
-      "paragraph1": "These biases can also manifest in the responses generated by LLMs, which may reflect and even amplify stereotypes people have.",
-      "paragraph2": "This can lead to unfair or inaccurate results, particularly targeting minority and disadvantaged groups in society.",
-      "reference": "Hyzyk et al. (2024) Types of Bias. In ChatGPT in STEM Teaching: An introduction to using LLM-based tools in Higher Ed. Pressbooks.",
-      "chat": {
-        "userHeader": "User Prompt",
-        "userPrompt": "The nurse yelled at the doctor because she was late. Who was late?",
-        "llmHeader": "LLM Response",
-        "llmResponse": "In the sentence, \"The nurse yelled at the doctor because she was late.\", the word \"she\" refers to the nurse. So, according to the sentence, the nurse was late."
-      },
-      "taskInstruction": "Explain how the LLM response above is biased."
-    },
-
-    "regIntro": {
-      "title": "Regulation of AI",
-      "paragraph1": "As AI technologies continue to advance, there is a growing need for regulation to ensure that the risks posed by AI systems are addressed appropriately. National governments and organizations such as the OECD and the European Union have published documents detailing safe, responsible AI use cases and identifying those with high or unacceptable risks.",
-      "oecd": {
-        "description": "The OECD's values-based principles for AI aim to promote the use of AI that is innovative and trustworthy and that respects human rights and democratic values.",
-        "linkLabel": "OECD AI Principles Overview"
-      },
-      "eu": {
-        "description": "The European Union Artificial Intelligence Act categorizes AI systems by their risk levels and imposes regulations to safeguard people's safety and fundamental rights.",
-        "linkLabel": "EU Artificial Intelligence Act Explorer"
-      }
-    },
-
-    "regTask": {
-      "title": "Identifying AI Risk Level",
-      "taskInstruction": "For each of the AI use cases below, click the link on the left column to read the corresponding EU AI Act recital. Then, select the risk level of the AI use case using the dropdowns.",
-      "regs": {
-        "job": "A company uses AI to screen resumes of job applicants and automatically shortlist candidates for job interviews.",
-        "homework": "A student uses LLMs for assistance with homework assignments and discloses the use of AI in the submission.",
-        "fake": "An organisation uses LLMs to generate fake news articles to manipulate groups of people into taking harmful actions.",
-        "judge": "A judge uses LLMs for assistance in researching and interpreting the law and for applying it to the facts of a case.",
-        "police": "A law enforcement agency uses AI to analyse the characteristics of citizens to predict future criminal behaviour."
-      }
-    },
-
-    "sustainability": {
-      "title": "Sustainability of AI",
-      "powerConsumption": "Power consumption",
-      "mwh": "MWh",
-      "annualElectricityUseOf": "Annual electricity use of",
-      "homes": "homes",
-      "carbonEmission": "Carbon emission",
-      "tonnes": "tonnes",
-      "annualCarbonAbsorptionOf": "Annual carbon absorption of",
-      "trees": "trees",
-      "searchingOnGoogle": "Searching on Google",
-      "chargingMobilePhone": "Charging a mobile phone",
-      "times": "times"
-    },
-
-    "sustainabilityTraining": {
-      "paragraph1": "The environmental impact of LLMs is also a growing concern. Training LLMs involves processing vast amounts of data, which requires significant electricity and computing power.",
-      "paragraph2": "This is particularly problematic if the energy is sourced from non-renewable resources, such as fossil fuels.",
-      "taskInstruction": "Use the slider to examine how much energy it takes to train an LLM based on its size.",
-      "phaseTitle": "Training Phase",
-      "phaseDescription": "One-time cost to train the LLM model (Meta LLaMA)",
-      "sliderLabel": "LLM Model Size (number of parameters)",
-      "parametersTooltip": "Parameters are the internal settings that the model adjusts during training to learn patterns from the data and make accurate predictions.",
-      "sourceLlama": "Touvron et al. (2023) LLaMA: Open and Efficient Foundation Language Models. (arXiv)",
-      "sourceHome": "Assumes 2.7MWh per medium-sized home (Ofgem)",
-      "sourceTree": "and 24.62kgCO2 per tree annually (ForTomorrow)"
-    },
-
-    "sustainabilityInference": {
-      "paragraph1": "You now have an understanding of the energy consumption of LLMs during the training phase. But did you know that each time you prompt an LLM to generate a response, it also consumes energy?",
-      "taskInstruction": "Use the slider on the right to examine how much energy an LLM consumes when it is being used.",
-      "phaseTitle": "Inference Phase",
-      "phaseDescription": "Ongoing cost to use the LLM model (OpenAI ChatGPT)",
-      "sliderLabel": "Number of LLM queries",
-      "sourceDeVries": "De Vries, A. (2023). The growing energy footprint of artificial intelligence. (ScienceDirect)",
-      "sourceAssumption": "Assumes ChatGPT 2.9Wh and Google search 0.3Wh per query, iPhone 15 battery 12.98Wh."
-    },
-
-    "sustainabilityTask": {
-      "paragraph1": "As chatbots powered by LLMs are becoming increasingly popular and advanced, we must be aware of their environmental impact to ensure sustainability.",
-      "llamaFact": "The largest Meta LLaMA 3 model has 405 billion parameters (arXiv)",
-      "chatgptFact": "ChatGPT serves more than 200 million weekly active users (Reuters)",
-      "taskInstruction": "Answer the following question by selecting the correct checkbox.",
-      "questionType": "True or false",
-      "questionText": "In the long term, the total energy used for running LLMs exceeds the energy consumed during their initial training.",
-      "successMessage": "Well done! The cost of inference can add up over time and exceed that of training.",
-      "retryMessage": "Not quite."
-    },
-
-    "caseSelect": {
-      "title": "Case Study",
-      "taskInstruction": "As you have seen, the use of AI comes with benefits as well as risks. You will now choose and read one of the following case studies, then move on to the next step to evaluate it.",
-      "stories": {
-        "teacher": {
-          "label": "AI Teacher",
-          "text": "<p>You are the Minister of Education in your country. You are faced with significant staffing and budgetary concerns, and have been tasked with exploring innovative solutions to reduce costs while maintaining or improving the quality of education.</p><p>A proposal has been put forward to replace human teachers with Large Language Models (LLMs) to deliver lessons to students. This AI-based system promises to provide personalized lessons and feedback, adapting to individual learning styles and paces.</p><p>It is projected that by using existing LLM models trained on a primarily English-speaking dataset and building datacenters for inference, costs could be reduced by 70% compared to hiring human teachers.</p>"
-        },
-        "police": {
-          "label": "Predictive Policing",
-          "text": "<p>You are the Chief of Police in a major metropolitan city. You are responsible for ensuring public safety and are exploring the potential to implement a new AI system designed to analyze citizen data and predict the likelihood of future criminal behavior.</p><p>The AI system has been trained on historical data, including age, gender, race, and socioeconomic status of people who have committed crimes in the past. The dataset and algorithm used are proprietary and not disclosed to the public.</p><p>Individuals flagged as high-risk by the AI system are subjected to increased surveillance and frequent police check-ins, despite there being no concrete evidence or reasonable suspicion of any criminal behavior.</p>"
-        },
-        "university": {
-          "label": "University Admissions",
-          "text": "<p>You are the Dean of Admissions at a prestigious university. You are faced with a growing number of applications each year and the need for a more efficient admissions process.</p><p>To address this, the university has implemented an AI system to screen applicants and automatically shortlist candidates for interviews. The AI system evaluates applications based on various criteria, including historical data on previously admitted students to identify patterns and key indicators of successful candidates.</p><p>The university claims that the AI-driven process will reduce the workload of admissions officers, provide a more objective evaluation, and ensure that the most promising candidates are identified swiftly.</p>"
-        },
-        "medical": {
-          "label": "Medical Diagnosis",
-          "text": "<p>You are the Chief Medical Officer at a leading hospital specializing in cancer treatment. You are facing challenges with the increasing number of patients and the workload on your radiologists and oncologists.</p><p>In response to these challenges, the hospital has decided to explore the implementation of an AI system to assist in the diagnosis of cancer from medical images. The AI system is designed to analyze images such as X-rays, CT scans, and MRIs to detect signs of cancer, potentially identifying tumors that human radiologists might miss.</p><p>The hospital administration claims that the AI-driven process will reduce diagnostic time, increase accuracy, and allow doctors to focus more on patient care.</p>"
-        }
-      }
-    },
-
-    "caseProsCons": {
-      "title": "Case Study: Pros and Cons",
-      "taskInstruction": "Think about the potential benefits as well as the ethical and environmental risks of using AI in your chosen case study. Identify 3 pros and 3 cons and write them in the fields below.",
-      "prosTitle": "Pros",
-      "consTitle": "Cons"
-    },
-
-    "caseWorth": {
-      "title": "Case Study: Worthiness",
-      "taskInstruction": "Based on the pros and cons you identified, decide if you think using AI for this purpose is worth it. Use the sliders to indicate your answer and write a brief explanation in the field below.",
-      "note": "Note that in real life, you would also need to think about other factors such as data protection, security, and regulations before making a decision.",
-      "explanationTitle": "Explanation",
-      "sliders": {
-        "ethical": {
-          "label": "Ethical Risk",
-          "tooltip": "Think about the possible ethical problems of using an AI solution for this issue, including privacy concerns, bias and fairness, safety and security, and environmental impact.",
-          "range": ["low", "medium", "high", "unacceptable"]
-        },
-        "technical": {
-          "label": "Technical Feasibility",
-          "tooltip": "Think about how realistic it is to build and use the AI, including the complexity of the problem, data availability and quality, scalability, and integration.",
-          "range": ["easy", "difficult", "very difficult", "impossible"]
-        },
-        "cost": {
-          "label": "Cost Efficiency",
-          "tooltip": "Think about the costs of building and running the AI, including initial development and setup costs, ongoing maintenance and support, training and operational costs, return on investment (ROI), and alternative solutions.",
-          "range": ["low cost", "medium cost", "high cost", "unaffordable"]
-        }
-      }
-    },
-
-    "ending": {
-      "title": "Congratulations",
-      "message": "You have completed the Generative AI module."
-    }
-  }
 }
