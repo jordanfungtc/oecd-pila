@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { store } from "../store";
 import Frame from "../util/Frame.vue";
 import Intro from "./s3/Intro.vue";
 import EmbIntro from "./s3/EmbIntro.vue";
@@ -14,8 +13,9 @@ import RagSteps from "./s3/RagSteps.vue";
 import RagDatabase from "./s3/RagDatabase.vue";
 import RagGenerate from "./s3/RagGenerate.vue";
 import RagBrainstorm from "./s3/RagBrainstorm.vue";
+import { store } from "../store";
 
-store.title = "Generative AI Module";
+store.titleKey = "main.genaiModule";
 </script>
 
 <template>

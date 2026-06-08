@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { VueLatex } from "vatex";
+import { useI18n } from "vue-i18n";
 import { BIconCalculator } from "bootstrap-icons-vue";
 import {
   BIcon1Circle,
@@ -7,57 +8,64 @@ import {
   BIcon3Circle,
   BIconEyeFill,
 } from "bootstrap-icons-vue";
+
+const { t } = useI18n();
 </script>
 
 <template>
   <div class="flex gap-12">
     <div class="w-2/5">
-      <h2>Calculating Similarity Score</h2>
+      <!-- Title -->
+      <h2>{{ t("s3.similarityCalc.title") }}</h2>
+
+      <!-- Paragraphs -->
+      <p>{{ t("s3.similarityCalc.paragraph1") }}</p>
+      <p>{{ t("s3.similarityCalc.paragraph2") }}</p>
+
+      <!-- Optional Task Instruction -->
       <p>
-        Let’s take a closer look at the math on the right and calculate the
-        similarity score between “cat” (0,1,1,0,1) and “dog” (1,1,1,0,1).
+        <strong>{{ t("s3.similarityCalc.optionalTaskLabel") }}:</strong>
+        {{ t("s3.similarityCalc.optionalTaskInstruction") }}
       </p>
-      <p>
-        We obtain that the similarity score between the embeddings of "cat" and
-        "dog" is 0.866, which shows that they are quite similar.
-      </p>
-      <p>
-        <strong>Optional Task:</strong>
-        Calculate the similarity score between the embeddings of "cat"
-        (0,1,1,0,1) and "car" (0,1,0,1,0).
-      </p>
+
+      <!-- Reveal Answer Button -->
       <button class="btn" onclick="optional_modal.showModal()">
         <BIconEyeFill class="w-5 h-5" />
-        Reveal Answer
+        {{ t("s3.similarityCalc.revealAnswerLabel") }}
       </button>
     </div>
 
     <div class="w-3/5">
       <div class="flex flex-col gap-4 mt-8">
+        <!-- Dot Product -->
         <div class="pt-3 px-6 border rounded-xl items-center">
-          <!-- Dot Product -->
           <h4 class="mt-0 flex gap-2 items-center">
-            <BIcon1Circle class="w-5 h-5" />Dot product between embeddings
+            <BIcon1Circle class="w-5 h-5" />{{
+              t("s3.similarityCalc.steps.dotProduct.title")
+            }}
           </h4>
           <p class="text-sm my-0">
-            Multiply each corresponding pair of numbers and add them up
+            {{ t("s3.similarityCalc.steps.dotProduct.description") }}
           </p>
           <VueLatex
-            class="flex-grow"
+            class="w-full"
             expression="\text{Cat}\cdot\text{Dog}=0\times1+1\times1+1\times1+0\times0+1\times1=3"
             display-mode
             :fontsize="15"
           />
         </div>
+
+        <!-- Magnitudes -->
         <div class="pt-3 px-6 border rounded-xl items-center">
-          <!-- Magnitudes -->
           <h4 class="mt-0 flex gap-2 items-center">
-            <BIcon2Circle class="w-5 h-5" />Magnitudes of each embeddings
+            <BIcon2Circle class="w-5 h-5" />{{
+              t("s3.similarityCalc.steps.magnitudes.title")
+            }}
           </h4>
           <p class="text-sm my-0">
-            Square each number, add them up, and take square root of the sum
+            {{ t("s3.similarityCalc.steps.magnitudes.description") }}
           </p>
-          <div class="flex-grow">
+          <div class="w-full">
             <VueLatex
               expression="\Vert\text{Cat}\Vert=\sqrt{0^2+1^2+1^2+0^2+1^2}=1.732"
               display-mode
@@ -70,16 +78,19 @@ import {
             />
           </div>
         </div>
+
+        <!-- Similarity -->
         <div class="pt-3 px-6 border rounded-xl items-center">
-          <!-- Similarity -->
           <h4 class="mt-0 flex gap-2 items-center">
-            <BIcon3Circle class="w-5 h-5" />Cosine similarity score
+            <BIcon3Circle class="w-5 h-5" />{{
+              t("s3.similarityCalc.steps.similarity.title")
+            }}
           </h4>
           <p class="text-sm my-0">
-            Divide the dot product by the product of the magnitudes
+            {{ t("s3.similarityCalc.steps.similarity.description") }}
           </p>
           <VueLatex
-            class="flex-grow"
+            class="w-full"
             expression="\text{Similarity}=\frac{\text{Cat}\cdot\text{Dog}}{\Vert\text{Cat}\Vert\cdot\Vert\text{Dog}\Vert}=\frac{3}{1.732\times2}=0.866"
             display-mode
             :fontsize="15"
@@ -92,16 +103,23 @@ import {
   <!-- Optional Task Modal -->
   <dialog id="optional_modal" class="modal">
     <div class="modal-box">
-      <h2 class="mt-0">Optional Task</h2>
-      <p>
-        Calculate the similarity score between the embeddings of "cat"
-        (0,1,1,0,1) and "car" (0,1,0,1,0).
-      </p>
+      <!-- Close Button -->
+      <form method="dialog">
+        <button class="btn btn-sm btn-circle absolute right-2 top-2">✕</button>
+      </form>
+
+      <!-- Answer Title -->
+      <h2 class="mt-0">{{ t("common.answer") }}</h2>
+
+      <!-- Task Instruction -->
+      <p>{{ t("s3.similarityCalc.optionalTaskInstruction") }}</p>
+
       <!-- Dot Product -->
       <VueLatex
         expression="\text{Cat}\cdot\text{Car}=0\times0+1\times1+1\times0+0\times1+1\times0=1"
         display-mode
       />
+
       <!-- Magnitudes -->
       <div>
         <VueLatex
@@ -113,28 +131,24 @@ import {
           display-mode
         />
       </div>
+
       <!-- Task Similarity -->
       <VueLatex
         expression="\text{Similarity}=\frac{\text{Cat}\cdot\text{Car}}{\Vert\text{Cat}\Vert\cdot\Vert\text{Car}\Vert}=\frac{1}{1.732\times1.414}=0.408"
         display-mode
       />
-      <p>
-        As expected, the similarity score between the words 'cat' and 'car'
-        (0.408) is lower than that between 'cat' and 'dog' (0.866), as cars are
-        less similar to cats than dogs are.
-      </p>
+
+      <!-- Optional Task Conclusion -->
+      <p>{{ t("s3.similarityCalc.optionalTaskConclusion") }}</p>
+
+      <!-- Calculator Link -->
       <a
         href="https://www.omnicalculator.com/math/cosine-similarity"
         target="_blank"
         class="no-underline flex gap-2 items-center text-primary mt-8"
       >
-        <BIconCalculator /> Omni Cosine Similarity Calculator
+        <BIconCalculator /> {{ t("s3.similarityCalc.calculatorLinkLabel") }}
       </a>
-      <div class="modal-action">
-        <form method="dialog">
-          <button class="btn">Close</button>
-        </form>
-      </div>
     </div>
   </dialog>
 </template>

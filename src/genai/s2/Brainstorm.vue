@@ -1,27 +1,39 @@
 <script setup lang="ts">
+import { useI18n } from "vue-i18n";
 import { store } from "../../store";
 import { S2 } from "../states";
+
+const { t } = useI18n();
 </script>
 
 <template>
-  <h2>LLMs in Everyday Life</h2>
+  <!-- Title -->
+  <h2>{{ t("s2.brainstorm.title") }}</h2>
+
+  <!-- Task Instruction -->
   <p>
-    <strong>Task: </strong>
-    Now that you have seen how LLMs work and some of their known limitations,
-    can you think of ways you can use them to assist you in your everyday life?
-    What prompts would you use? Write your answers in the fields below.
+    <strong>{{ t("common.task") }}:</strong>
+    {{ t("s2.brainstorm.taskInstruction") }}
   </p>
-  <h4>I think LLMs can be used for:</h4>
+
+  <!-- Task Instruction -->
+  <h4>{{ t("s2.brainstorm.useInstruction") }}</h4>
+
+  <!-- Task Textarea -->
   <input
     class="input input-lg input-bordered w-full"
     v-model="store.state[S2.LLM_BRAINSTORM_TASK.state]"
-    placeholder="Task"
+    :placeholder="t('common.answer')"
   />
-  <h4>The prompt I would use is:</h4>
+
+  <!-- Prompt Instruction -->
+  <h4>{{ t("s2.brainstorm.promptInstruction") }}</h4>
+
+  <!-- Prompt Textarea -->
   <textarea
     class="textarea textarea-lg textarea-bordered w-full leading-normal"
     v-model="store.state[S2.LLM_BRAINSTORM_PROMPT.state]"
-    placeholder="Prompt"
+    :placeholder="t('common.answer')"
     rows="3"
   ></textarea>
 </template>

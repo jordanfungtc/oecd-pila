@@ -1,43 +1,35 @@
 <script setup lang="ts">
+import { computed } from "vue";
+import { useI18n } from "vue-i18n";
 import { store } from "../../store";
 import { S3 } from "../states";
 
-const options = ["'cat' and 'dog'", "'cat' and 'car'"];
+const { t, tm } = useI18n();
+const options = computed(() => tm("s3.similarityIntro.options") as string[]);
 
 const questions = [
-  {
-    text: "Which of the following pairs of words do you think are more similar in meaning?",
-    state: S3.SIM_Q1,
-    success: "Words that share more features are more similar.",
-    error: "Think about the features that the words share.",
-  },
-  {
-    text: "Which of the following pairs of words do you think have a lower cosine similarity score?",
-    state: S3.SIM_Q2,
-    success: "Less similar words have a lower similarity score.",
-    error: "Refer to the definition of cosine similarity score.",
-  },
+  { key: "q1", state: S3.SIM_Q1 },
+  { key: "q2", state: S3.SIM_Q2 },
 ];
 </script>
 
 <template>
   <div class="flex gap-12">
     <div class="w-2/5">
-      <h2>Similarity Score</h2>
+      <!-- Title -->
+      <h2>{{ t("s3.similarityIntro.title") }}</h2>
+
+      <!-- Paragraphs -->
+      <p>{{ t("s3.similarityIntro.paragraph1") }}</p>
+      <p>{{ t("s3.similarityIntro.paragraph2") }}</p>
+
+      <!-- Task Instruction -->
       <p>
-        As humans, we can intuitively understand how similar two words are. But
-        how do computers figure out the similarity between words?
-      </p>
-      <p>
-        Computers can use a method called the cosine similarity score. This
-        score ranges from -1 to 1. A score close to 1 means the words are very
-        similar, while a score near -1 means they are very different.
-      </p>
-      <p>
-        <strong>Task:</strong>
-        Answer the questions on the right by selecting the correct checkboxes.
+        <strong>{{ t("common.task") }}:</strong>
+        {{ t("s3.similarityIntro.taskInstruction") }}
       </p>
     </div>
+
     <div class="w-3/5">
       <div class="flex flex-col gap-4 mt-8">
         <div
@@ -46,7 +38,15 @@ const questions = [
           :key="i"
         >
           <!-- Question Text -->
-          <h4 class="mt-2 mb-4">{{ i + 1 + ". " + question.text }}</h4>
+          <h4 class="mt-2 mb-4">
+            {{
+              i +
+              1 +
+              ". " +
+              t(`s3.similarityIntro.questions.${question.key}.text`)
+            }}
+          </h4>
+
           <!-- Answer Selection -->
           <div class="flex gap-2">
             <div
@@ -62,11 +62,12 @@ const questions = [
                   type="radio"
                   class="radio"
                   :checked="store.state[question.state.state] === key"
-                  @change="() => (store.state[question.state.state] = key)"
+                  @change="store.state[question.state.state] = key"
                 />
               </label>
             </div>
           </div>
+
           <!-- Feedback Message -->
           <div
             v-if="store.state[question.state.state] !== undefined"
@@ -77,11 +78,15 @@ const questions = [
               class="alert text-sm"
             >
               <span>✅</span>
-              <span> Well done! {{ question.success }}</span>
+              <span>
+                {{ t(`s3.similarityIntro.questions.${question.key}.success`) }}
+              </span>
             </div>
             <div v-else class="alert text-sm">
               <span>❌</span>
-              <span> Not quite. {{ question.error }}</span>
+              <span>
+                {{ t(`s3.similarityIntro.questions.${question.key}.error`) }}
+              </span>
             </div>
           </div>
         </div>

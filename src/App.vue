@@ -2,6 +2,7 @@
 import Agent from "@knowlearning/agents/browser.js";
 import { store } from "./store";
 import NavBar from "./util/NavBar.vue";
+import LangSelector from "./util/LangSelector.vue";
 import { inject } from "@vercel/analytics";
 
 Agent.environment().then(async ({ auth }) => {
@@ -28,10 +29,14 @@ inject();
   </div>
 
   <!-- Main App -->
-  <div v-else class="prose-headings:font-['Rubik']">
+  <div
+    v-else
+    class="flex flex-col prose-headings:font-['Rubik'] bg-blue-100 min-h-screen"
+  >
     <NavBar />
-    <div class="flex p-10 prose max-w-none justify-center bg-blue-100">
+    <div class="p-10 prose max-w-none justify-center">
       <RouterView />
     </div>
+    <LangSelector />
   </div>
 </template>

@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { store } from "../store";
 import Frame from "../util/Frame.vue";
 import Intro from "./s1/Intro.vue";
 import IoIntro from "./s1/IoIntro.vue";
@@ -7,8 +6,9 @@ import IoTask from "./s1/IoTask.vue";
 import BrainstormIntro from "./s1/BrainstormIntro.vue";
 import BrainstormProblem from "./s1/BrainstormProblem.vue";
 import BrainstormSolution from "./s1/BrainstormSolution.vue";
+import { store } from "../store";
 
-store.title = "Generative AI Module";
+store.titleKey = "main.genaiModule";
 </script>
 
 <template>

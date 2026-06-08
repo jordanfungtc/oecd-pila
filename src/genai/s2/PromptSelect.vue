@@ -1,69 +1,77 @@
 <script setup lang="ts">
 import { BIconFileEarmarkTextFill } from "bootstrap-icons-vue";
-import { singleExamples } from "./gptExamples";
+import { useI18n } from "vue-i18n";
 import { store } from "../../store";
 import { S2 } from "../states";
+
+const { t } = useI18n();
+
+const prompts = [
+  { key: "photosynthesis", emoji: "🌿" },
+  { key: "french", emoji: "🇫🇷" },
+  { key: "productivity", emoji: "🚀" },
+];
 </script>
 
 <template>
   <div class="flex gap-12 items-center">
     <div class="w-1/2">
-      <h2>Prompt Engineering</h2>
-      <p>
-        When interacting with LLMs, the way you phrase your prompts is crucial
-        for obtaining the best responses. This is where prompt engineering comes
-        into play.
-      </p>
-      <p>
-        Prompt engineering involves carefully crafting your prompts to guide the
-        model towards generating more accurate, relevant, and useful responses.
-      </p>
+      <!-- Title -->
+      <h2>{{ t("s2.promptSelect.title") }}</h2>
+
+      <!-- Paragraphs -->
+      <p>{{ t("s2.promptSelect.paragraph1") }}</p>
+      <p>{{ t("s2.promptSelect.paragraph2") }}</p>
+
+      <!-- Guide Link -->
       <a
         href="https://www.promptingguide.ai/"
         target="_blank"
         class="no-underline flex gap-2 items-center text-primary"
       >
-        <BIconFileEarmarkTextFill /> DAIR.AI: Prompt Engineering Guide
+        <BIconFileEarmarkTextFill /> {{ t("s2.promptSelect.guideLabel") }}
       </a>
+
+      <!-- Task Instruction -->
       <p>
-        <strong>Task: </strong>
-        Choose one of the prompt examples on the right and proceed to the next
-        step.
+        <strong>{{ t("common.task") }}:</strong>
+        {{ t("s2.promptSelect.taskInstruction") }}
       </p>
     </div>
+
     <div class="w-1/2 mt-8">
       <!-- Prompt Selection -->
       <div class="flex flex-col gap-4">
         <div
-          v-for="(key, i) in Object.keys(singleExamples)"
+          v-for="(prompt, i) in prompts"
           :key="i"
           class="form-control px-2 border rounded-xl"
           :class="{
-            'border-neutral': store.state[S2.LLM_PROMPT.state] === key,
+            'border-neutral': store.state[S2.LLM_PROMPT.state] === prompt.key,
           }"
         >
           <label class="label cursor-pointer">
             <span class="label-text text-lg p-2 flex gap-4">
-              <b>Example {{ i + 1 }}</b>
-              {{ singleExamples[key as keyof typeof singleExamples].label }}
+              <div>{{ prompt.emoji }}</div>
+              <div>{{ t(`s2.singleExamples.${prompt.key}.label`) }}</div>
             </span>
             <input
               type="radio"
               class="radio"
-              :checked="store.state[S2.LLM_PROMPT.state] === key"
-              @change="store.state[S2.LLM_PROMPT.state] = key"
+              :checked="store.state[S2.LLM_PROMPT.state] === prompt.key"
+              @change="store.state[S2.LLM_PROMPT.state] = prompt.key"
             />
           </label>
         </div>
       </div>
 
-      <!-- Feedback Message -->
+      <!-- Feedback -->
       <div
         v-if="store.state[S2.LLM_PROMPT.state] !== undefined"
         class="mt-4 alert text-sm"
       >
         <span>✅</span>
-        <span> Great! You may now proceed to the next step.</span>
+        <span> {{ t("s2.promptSelect.successMessage") }}</span>
       </div>
     </div>
   </div>

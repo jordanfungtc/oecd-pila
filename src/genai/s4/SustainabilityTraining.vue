@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import { ref } from "vue";
+import { useI18n } from "vue-i18n";
 import carbonIcon from "/s4/carbon.png";
 import treeIcon from "/s4/tree.png";
 import powerIcon from "/s4/power.png";
 import homeIcon from "/s4/home.png";
 
+const { t } = useI18n();
 const modelSize = ref(0);
 const home = 2.7;
 const tree = 0.02462;
@@ -19,33 +21,34 @@ const training = [
 <template>
   <div class="flex gap-12">
     <div class="w-1/3">
-      <h2>Sustainability of AI</h2>
+      <!-- Title -->
+      <h2>{{ t("s4.sustainability.title") }}</h2>
+
+      <!-- Paragraphs -->
+      <p>{{ t("s4.sustainabilityTraining.paragraph1") }}</p>
+      <p>{{ t("s4.sustainabilityTraining.paragraph2") }}</p>
+
+      <!-- Task Instruction -->
       <p>
-        The environmental impact of LLMs is also a growing concern. Training
-        LLMs involves processing vast amounts of data, which requires
-        significant electricity and computing power.
-      </p>
-      <p>
-        This is particularly problematic if the energy is sourced from
-        non-renewable resources, such as fossil fuels.
-      </p>
-      <p>
-        <strong>Task: </strong>
-        Use the slider to examine how much energy it takes to train an LLM based
-        on their size.
+        <strong>{{ t("common.task") }}:</strong>
+        {{ t("s4.sustainabilityTraining.taskInstruction") }}
       </p>
     </div>
+
     <div class="w-2/3">
-      <h3 class="mt-12">Training Phase</h3>
-      <p>One-time cost to train the LLM model (Meta LLaMA)</p>
+      <!-- Phase Title -->
+      <h3 class="mt-12">{{ t("s4.sustainabilityTraining.phaseTitle") }}</h3>
+
+      <!-- Phase Description -->
+      <p>{{ t("s4.sustainabilityTraining.phaseDescription") }}</p>
 
       <!-- Slider -->
       <div class="justify-center items-center flex gap-2">
-        <strong>LLM Model Size (number of parameters)</strong>
+        <strong>{{ t("s4.sustainabilityTraining.sliderLabel") }}</strong>
 
         <div
           class="tooltip"
-          data-tip="Parameters are the internal settings that the model adjusts during training to learn patterns from the data and make accurate predictions."
+          :data-tip="t('s4.sustainabilityTraining.parametersTooltip')"
         >
           <button class="btn btn-xs btn-circle">?</button>
         </div>
@@ -59,43 +62,63 @@ const training = [
         v-model="modelSize"
       />
       <div class="flex w-full justify-between px-2 text-sm mb-8">
-        <span>7 bilion</span>
-        <span>13 billion</span>
-        <span>33 billion</span>
-        <span>65 billion</span>
+        <span>7 B</span>
+        <span>13 B</span>
+        <span>33 B</span>
+        <span>65 B</span>
       </div>
 
       <!-- Statistics -->
       <div class="grid grid-cols-2 gap-2">
+        <!-- Power Consumption -->
         <div class="flex gap-4 items-center">
           <img :src="powerIcon" class="w-12 h-auto my-2" />
           <div>
-            <p class="my-0">Power consumption</p>
-            <h3 class="my-0">{{ training[modelSize].power }} MWh</h3>
-          </div>
-        </div>
-        <div class="flex gap-4 items-center">
-          <img :src="homeIcon" class="w-12 h-auto my-2" />
-          <div>
-            <p class="my-0">Annual electricity use of</p>
+            <p class="my-0">{{ t("s4.sustainability.powerConsumption") }}</p>
             <h3 class="my-0">
-              {{ (training[modelSize].power / home).toFixed(0) }} homes
+              {{ training[modelSize].power }} {{ t("s4.sustainability.mwh") }}
             </h3>
           </div>
         </div>
+
+        <!-- Annual Electricity Use of Homes -->
+        <div class="flex gap-4 items-center">
+          <img :src="homeIcon" class="w-12 h-auto my-2" />
+          <div>
+            <p class="my-0">
+              {{ t("s4.sustainability.annualElectricityUseOf") }}
+            </p>
+            <h3 class="my-0">
+              {{ (training[modelSize].power / home).toFixed(0) }}
+              {{ t("s4.sustainability.homes") }}
+            </h3>
+          </div>
+        </div>
+
+        <!-- Carbon Emission -->
         <div class="flex gap-4 items-center">
           <img :src="carbonIcon" class="w-12 h-auto my-2" />
           <div>
-            <p class="my-0">Carbon emission</p>
-            <h3 class="my-0">{{ training[modelSize].carbon }} tonnes</h3>
+            <p class="my-0">
+              {{ t("s4.sustainability.carbonEmission") }}
+            </p>
+            <h3 class="my-0">
+              {{ training[modelSize].carbon }}
+              {{ t("s4.sustainability.tonnes") }}
+            </h3>
           </div>
         </div>
+
+        <!-- Annual Carbon Absorption of Trees -->
         <div class="flex gap-4 items-center">
           <img :src="treeIcon" class="w-12 h-auto my-2" />
           <div>
-            <p class="my-0">Annual carbon absoprtion of</p>
+            <p class="my-0">
+              {{ t("s4.sustainability.annualCarbonAbsorptionOf") }}
+            </p>
             <h3 class="my-0">
-              {{ (training[modelSize].carbon / tree).toFixed(0) }} trees
+              {{ (training[modelSize].carbon / tree).toFixed(0) }}
+              {{ t("s4.sustainability.trees") }}
             </h3>
           </div>
         </div>
@@ -103,20 +126,27 @@ const training = [
 
       <!-- Sources -->
       <p class="text-xs my-8">
-        Touvron et al. (2023) LLaMA: Open and Efficient Foundation Language
-        Models.
-        <a href="https://arxiv.org/abs/2302.13971" target="_blank"> (arXiv)</a>.
-        Assumes 2.7MWh per medium-sized home
+        <a
+          href="https://arxiv.org/abs/2302.13971"
+          target="_blank"
+          class="font-normal no-underline"
+        >
+          {{ t("s4.sustainabilityTraining.sourceLlama") }} {{ " " }}
+        </a>
         <a
           href="https://www.ofgem.gov.uk/average-gas-and-electricity-usage"
           target="_blank"
+          class="font-normal no-underline"
         >
-          (Ofgem)</a
+          {{ t("s4.sustainabilityTraining.sourceHome") }} {{ " " }}
+        </a>
+        <a
+          href="https://www.fortomorrow.eu/en/blog/co2-tree"
+          target="_blank"
+          class="font-normal no-underline"
         >
-        and 24.62kgCO2 per tree annually
-        <a href="https://www.fortomorrow.eu/en/blog/co2-tree" target="_blank">
-          (ForTomorrow)</a
-        >.
+          {{ t("s4.sustainabilityTraining.sourceTree") }}.
+        </a>
       </p>
     </div>
   </div>

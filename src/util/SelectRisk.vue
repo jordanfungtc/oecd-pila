@@ -1,7 +1,9 @@
 <script setup lang="ts">
+import { useI18n } from "vue-i18n";
 import { store } from "../store";
 
 const props = defineProps(["state", "answer"]);
+const { t } = useI18n();
 </script>
 
 <template>
@@ -16,8 +18,8 @@ const props = defineProps(["state", "answer"]);
     }"
   >
     <option :value="undefined" disabled>-</option>
-    <option :value="1">Low Risk</option>
-    <option :value="2">High Risk</option>
-    <option :value="3">Unacceptable Risk</option>
+    <option :value="1">{{ t("common.lowRisk") }}</option>
+    <option :value="2">{{ t("common.highRisk") }}</option>
+    <option :value="3">{{ t("common.unacceptableRisk") }}</option>
   </select>
 </template>

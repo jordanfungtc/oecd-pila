@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { computed, ref } from "vue";
+import { useI18n } from "vue-i18n";
 import {
   BIcon2Circle,
   BIcon3Circle,
@@ -9,14 +10,28 @@ import {
 } from "bootstrap-icons-vue";
 import { S3 } from "../states";
 import { store } from "../../store";
-import { database, examples } from "./ragExamples";
 
+const { t, tm } = useI18n();
 const generating = ref(false);
+const database = computed(() => tm("s3.ragExamples.database") as string[]);
+
+const examples = {
+  shipping: {
+    emoji: "🚚",
+    simScores: [0.309, 0.174, 0.049, 0.454, 0.329, 0.331],
+  },
+  discount: {
+    emoji: "💸",
+    simScores: [0.141, 0.533, 0.287, 0.247, 0.308, 0.235],
+  },
+  return: {
+    emoji: "📦",
+    simScores: [0.313, 0.223, 0.155, 0.286, 0.621, 0.282],
+  },
+};
 
 const generateHandler = async () => {
-  if (!store.state[S3.RAG_PROMPT.state]) {
-    return window.alert("Please select a query example.");
-  }
+  // Generate each step with loading delay
   generating.value = true;
   store.state[S3.RAG_GENERATED.state] = 0;
   setTimeout(() => (store.state[S3.RAG_GENERATED.state] = 1), 500);
@@ -34,21 +49,26 @@ const generateHandler = async () => {
 </script>
 
 <template>
-  <h2>RAG for Customer Service Chatbot: Usage</h2>
+  <!-- Title -->
+  <h2>{{ t("s3.ragGenerate.title") }}</h2>
+
+  <!-- Sections -->
   <div class="grid grid-cols-2 gap-8">
     <div>
       <!-- Query Section -->
       <div class="flex gap-2 items-center mb-4">
         <BIcon2Circle class="w-5 h-5" />
-        <h4 class="my-0">Query</h4>
+        <h4 class="my-0">{{ t("s3.ragSteps.steps.query.title") }}</h4>
         <div class="flex-grow"></div>
         <div
           class="tooltip tooltip-left"
-          data-tip="Select a query and start the RAG process using the database"
+          :data-tip="t('s3.ragGenerate.tooltips.query')"
         >
           <button class="btn btn-xs btn-circle">?</button>
         </div>
       </div>
+
+      <!-- Example Selection -->
       <div class="mt-0 mb-2 grid grid-cols-3 gap-2">
         <div
           v-for="(example, key) in examples"
@@ -59,25 +79,42 @@ const generateHandler = async () => {
           }"
         >
           <label class="label cursor-pointer">
-            <span class="label-text">{{ example.label }}</span>
+            <span class="label-text">{{
+              example.emoji + " " + t(`s3.ragExamples.examples.${key}.label`)
+            }}</span>
             <input
               type="radio"
               name="radio-10"
               class="radio"
               :checked="store.state[S3.RAG_PROMPT.state] === key"
-              @change="store.state[S3.RAG_PROMPT.state] = key"
+              @change="
+                () => {
+                  store.state[S3.RAG_PROMPT.state] = key;
+                  store.state[S3.RAG_GENERATED.state] = 0;
+                }
+              "
             />
           </label>
         </div>
       </div>
+
       <div class="flex flex-row gap-4 items-center">
+        <!-- Example Prompt -->
         <textarea
           type="text"
           class="textarea textarea-lg textarea-bordered w-full leading-normal"
-          :value="store.state[S3.RAG_PROMPT.state] ? examples[store.state[S3.RAG_PROMPT.state] as keyof typeof examples].query : ''"
-          placeholder="Select a query example"
+          :value="
+            store.state[S3.RAG_PROMPT.state]
+              ? t(
+                  `s3.ragExamples.examples.${store.state[S3.RAG_PROMPT.state]}.query`,
+                )
+              : ''
+          "
+          :placeholder="t('s3.ragGenerate.selectPrompt')"
           readonly
         ></textarea>
+
+        <!-- Generate Button -->
         <div class="indicator">
           <span
             v-if="
@@ -86,7 +123,11 @@ const generateHandler = async () => {
             "
             class="indicator-item badge badge-sm badge-error"
           ></span>
-          <button class="btn" @click="generateHandler" :disabled="generating">
+          <button
+            class="btn"
+            @click="generateHandler"
+            :disabled="generating || !store.state[S3.RAG_PROMPT.state]"
+          >
             <span v-if="generating" class="loading"></span>
             <span v-else><BIconArrowRightSquare class="w-5 h-5" /></span>
           </button>
@@ -96,79 +137,100 @@ const generateHandler = async () => {
       <!-- Retrieve Section -->
       <div class="flex gap-2 items-center my-4">
         <BIcon3Circle class="w-5 h-5" />
-        <h4 class="my-0">Retrieve</h4>
+        <h4 class="my-0">{{ t("s3.ragSteps.steps.retrieve.title") }}</h4>
         <div class="flex-grow"></div>
         <div
           class="tooltip tooltip-left"
-          data-tip="Similarity scores between the query and every entry in the database"
+          :data-tip="t('s3.ragGenerate.tooltips.retrieve')"
         >
           <button class="btn btn-xs btn-circle">?</button>
         </div>
       </div>
+
+      <!-- Retrieve Results -->
       <div
         v-for="i in Math.min(
           database.length,
-          store.state[S3.RAG_GENERATED.state] || 0
+          store.state[S3.RAG_GENERATED.state] || 0,
         )"
         :key="i"
         class="text-sm"
       >
         <div class="flex items-center gap-4 w-full">
           <div class="line-clamp-1 w-full">
-            {{ database[i - 1] }}
+            {{ t(database[i - 1]) }}
           </div>
           <div class="font-bold">
             {{
-              examples[
-                store.state[S3.RAG_PROMPT.state] as keyof typeof examples
-              ].simScores[i - 1].toFixed(3)
+              store.state[S3.RAG_PROMPT.state]
+                ? examples[
+                    store.state[S3.RAG_PROMPT.state] as keyof typeof examples
+                  ].simScores[i - 1].toFixed(3)
+                : ""
             }}
           </div>
         </div>
       </div>
     </div>
+
     <div>
       <!-- Augmented Prompt Section -->
       <div class="flex gap-2 items-center mb-4">
         <BIcon4Circle class="w-5 h-5" />
-        <h4 class="my-0">Augment</h4>
+        <h4 class="my-0">{{ t("s3.ragSteps.steps.augment.title") }}</h4>
         <div class="flex-grow"></div>
         <div
           class="tooltip tooltip-left"
-          :data-tip="`Augmented prompt with the entry that has the highest similarity score`"
+          :data-tip="t('s3.ragGenerate.tooltips.augment')"
         >
           <button class="btn btn-xs btn-circle">?</button>
         </div>
       </div>
+
+      <!-- Augmented Prompt -->
       <div
         class="chat chat-end"
         v-if="store.state[S3.RAG_GENERATED.state] >= 7"
       >
         <div
           class="chat-bubble bg-gray-100 text-neutral text-sm py-0"
-          v-html="examples[store.state[S3.RAG_PROMPT.state] as keyof typeof examples].augPrompt"
+          v-html="
+            store.state[S3.RAG_PROMPT.state]
+              ? t(
+                  `s3.ragExamples.examples.${store.state[S3.RAG_PROMPT.state]}.augPrompt`,
+                )
+              : ''
+          "
         ></div>
       </div>
 
       <!-- Generate Section -->
       <div class="flex gap-2 items-center my-4">
         <BIcon5Circle class="w-5 h-5" />
-        <h4 class="my-0">Generate</h4>
+        <h4 class="my-0">{{ t("s3.ragSteps.steps.generate.title") }}</h4>
         <div class="flex-grow"></div>
         <div
           class="tooltip tooltip-left"
-          data-tip="Response from the LLM generated using the augmented prompt"
+          :data-tip="t('s3.ragGenerate.tooltips.generate')"
         >
           <button class="btn btn-xs btn-circle">?</button>
         </div>
       </div>
+
+      <!-- Generated Response -->
       <div
         class="chat chat-start"
         v-if="store.state[S3.RAG_GENERATED.state] === 8"
       >
         <div
           class="chat-bubble bg-blue-100 text-neutral text-sm py-0"
-          v-html="examples[store.state[S3.RAG_PROMPT.state] as keyof typeof examples].response"
+          v-html="
+            store.state[S3.RAG_PROMPT.state]
+              ? t(
+                  `s3.ragExamples.examples.${store.state[S3.RAG_PROMPT.state]}.response`,
+                )
+              : ''
+          "
         ></div>
       </div>
     </div>

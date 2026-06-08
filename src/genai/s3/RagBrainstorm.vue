@@ -1,26 +1,38 @@
 <script setup lang="ts">
+import { useI18n } from "vue-i18n";
 import { S3 } from "../states";
 import { store } from "../../store";
+
+const { t } = useI18n();
 </script>
 
 <template>
-  <h2>RAG in Everyday Life</h2>
+  <!-- Title -->
+  <h2>{{ t("s3.ragBrainstorm.title") }}</h2>
+
+  <!-- Task Instruction -->
   <p>
-    <strong>Task: </strong>
-    Now that you have seen how RAG works, can you think of ways you can use it
-    to assist you in your everyday life? What would the database contain? Write
-    your answers in the fields below.
+    <strong>{{ t("common.task") }}:</strong>
+    {{ t("s3.ragBrainstorm.taskInstruction") }}
   </p>
-  <h4>I think RAG can be used for:</h4>
+
+  <!-- Use Instruction -->
+  <h4>{{ t("s3.ragBrainstorm.useInstruction") }}</h4>
+
+  <!-- Task Textarea -->
   <input
     class="input input-lg input-bordered w-full"
     v-model="store.state[S3.RAG_BRAINSTORM_TASK.state]"
-    placeholder="Task"
+    :placeholder="t('common.answer')"
   />
-  <h4>The database for this RAG system would contain:</h4>
+
+  <!-- Database Instruction -->
+  <h4>{{ t("s3.ragBrainstorm.databaseInstruction") }}</h4>
+
+  <!-- Database Textarea -->
   <textarea
     class="textarea textarea-lg textarea-bordered w-full"
     v-model="store.state[S3.RAG_BRAINSTORM_DATABASE.state]"
-    placeholder="Database, e.g., websites, documents, books, etc."
+    :placeholder="t('common.answer')"
   ></textarea>
 </template>
